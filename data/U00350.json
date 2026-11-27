@@ -31,7 +31,7 @@
     },
     {
       "source_doc_id": null,
-      "causal_salience": "supporting",
+      "causal_salience": "secondary",
       "text": "C3.ai delivered a better-than-expected revenue forecast and analysts noted that the launch of ChatGPT was amplifying investor euphoria around generative AI. The news sparked a rally in AI-linked shares as investors saw the upbeat outlook as evidence that generative AI could be commercially monetised.",
       "date": "2023-03-03",
       "entities": [

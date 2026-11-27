@@ -3,7 +3,9 @@
   "causal_structure_type": "single_cause_single_effect",
   "is_self_causal": false,
   "causes": [
-    {
+    {      
+      "source_doc_id": null,
+      "causal_salience": "primary"
       "text": "In late October 2023, CVS Health announced that its pharmacies would exclusively stock GSK's newly launched RSV vaccine Arexvy, rather than offering Pfizer's rival shot. Analysts noted that CVS's decision, combined with a competitive price point, helped GSK capture roughly two-thirds of all RSV vaccinations in the U.S. during the vaccine's first month on the market.",
       "date": "2023-10-30",
       "entities": [
@@ -26,9 +28,8 @@
         "published_date": "2023-10-30",
         "publisher": "Reuters"
       },
-      "causal_strength_score": 6,
-      "source_doc_id": null,
-      "causal_salience": null
+      "causal_strength_score": 6
+
     }
   ],
   "effects": [

@@ -30,7 +30,7 @@
     },
     {
       "source_doc_id": "D-HCA-2024-0130-VOLUMES",
-      "causal_salience": "supporting",
+      "causal_salience": "secondary",
       "text": "Around the same period, a major hospital operator reported rising admissions and robust procedure volumes, underscoring persistent demand for medical services. Strong hospital volumes tend to translate into higher claims for insurers unless offset by pricing and benefit changes.",
       "date": "2024-01-30",
       "entities": [

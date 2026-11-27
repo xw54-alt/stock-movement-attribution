@@ -30,7 +30,7 @@
     },
     {
       "source_doc_id": null,
-      "causal_salience": "supporting",
+      "causal_salience": "secondary",
       "text": "Earlier in January, reports emerged that 3M was facing legal and operational challenges in the Southeast US, raising investor concerns.",
       "date": "2020-01-02",
       "entities": [
