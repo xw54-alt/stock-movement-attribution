@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00196",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On March 27, 2025, the United States announced a 25% tariff on auto imports effective April 3. Ferrari responded by raising U.S. prices by up to 10% on cars delivered after April 2, warning the tariff could shave about 50 basis points from profit margins.",
+      "date": "2025-03-27",
+      "entities": [
+        "Ferrari",
+        "United States"
+      ],
+      "sectors": [
+        "automotive"
+      ],
+      "country": "Italy",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Ferrari"
+      },
+      "source_info": {
+        "title": "Ferrari raises some prices in response to U.S auto tariffs",
+        "url": "https://www.reuters.com/business/autos-transportation/ferrari-says-us-auto-tariffs-will-not-impact-2025-financial-targets-2025-03-27/",
+        "published_date": "2025-03-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "On July 31, 2025, the U.S. and EU agreed to cut the auto tariff to 15%. Ferrari said it would roll back the April price hikes and remove the margin risk. Despite this relief, its shares fell as much as 11% as investors feared lower prices would slow revenue growth.",
+      "date": "2025-07-31",
+      "entities": [
+        "Ferrari"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Italy",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Ferrari"
+      },
+      "stock_change_pct": 11,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Ferrari has scope to trim US premium after EU tariff deal",
+        "url": "https://www.reuters.com/business/autos-transportation/ferrari-has-scope-trim-us-premium-after-eu-tariff-deal-2025-07-31/",
+        "published_date": "2025-07-31",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The U.S. imposed a 25% tariff, prompting Ferrari to raise U.S. prices by up to 10% to shield margins.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Several months later, the U.S. and EU reduced the tariff to 15%, leading Ferrari to roll back its price hikes.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors viewed the rollback as weakening pricing power. On 2025-07-31, Ferrari's stock dropped about 11%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The tariff shock forced Ferrari into two pricing shifts. While the later cut eased cost pressure, it also signaled reduced pricing leverage, which investors interpreted as a drag on growth, driving the share decline.",
+  "counterfactual_analysis": "Had the 25% tariff remained, Ferrari could have sustained higher U.S. prices, preserved margins, and potentially avoided the July share selloff.",
+  "adversarial_confounders": [
+    {
+      "text": "Softening luxury car demand",
+      "impact": "May have weighed on Ferrari's shares independently of tariffs."
+    },
+    {
+      "text": "Competitors' discounting",
+      "impact": "Rival pricing moves might have influenced investor sentiment regardless of the policy shift."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Trade policy changes",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "The sudden imposition of a 25% U.S. auto tariff was a political shock that threatened to erode margins on imported luxury cars. When negotiations reduced the tariff to 15%, the easing of policy risk directly improved Ferrari's earnings outlook and helped drive the stock higher as it rolled back price hikes."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "high",
+        "commentary": "Ferrari's willingness to raise prices in response to the tariff without immediately losing customers underscored the strength of its brand and the limited substitutes at the very high end. Once the tariff burden eased, that same pricing power allowed Ferrari to recalibrate its offer to protect volumes and maintain exclusivity, reinforcing its competitive position."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00160",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The Swiss National Bank stated the troubled lender had adequate capital and liquidity and publicly pledged to provide liquidity assistance if needed, signaling official support for the bank.",
+      "date": "2023-03-15",
+      "entities": [
+        "Swiss National Bank"
+      ],
+      "sectors": [
+        "central banking",
+        "financial services"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "troubled lender"
+      },
+      "source_info": {
+        "title": "Credit Suisse capital, liquidity adequate: central bank",
+        "url": "https://www.rfi.fr/en/business-and-tech/20230315-credit-suisse-shares-sink-as-top-shareholder-rules-out-more-cash",
+        "published_date": "2023-03-15",
+        "publisher": "RFI"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Credit Suisse announced it would borrow up to 50 billion Swiss francs from the Swiss National Bank; investors welcomed the lifeline and the bank's shares surged more than 30%, trading 32.59% higher at 2.22 Swiss francs after falling sharply the previous day.",
+      "date": "2023-03-16",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 20,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Credit Suisse shares soar after the bank secures a $54 billion lifeline",
+        "url": "https://www.npr.org/2023/03/16/1163837728/credit-suisse-banking-stock-markets",
+        "published_date": "2023-03-16",
+        "publisher": "RFI"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "On 2023-03-15, Switzerland's central bank stated the lender's capital and liquidity were adequate and pledged liquidity support if needed, signaling authorities were prepared to stabilize the institution."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The public assurance restored a measure of confidence; on the following day the bank announced it would borrow up to 50 billion Swiss francs, showing access to substantial liquidity and addressing solvency fears."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "The central bank pledge plus the borrowing announcement sparked a sharp rebound; on 2023-03-16 shares jumped over 20%, trading at 2.22 Swiss francs."
+    }
+  ],
+  "rationale": "The central bank's explicit liquidity backstop alleviated fears of imminent collapse. The decision to draw on the facility then confirmed a credible lifeline, prompting investors to re-price the stock upward.",
+  "counterfactual_analysis": "If the central bank had not publicized or provided a liquidity backstop, the bank might have remained in a confidence crisis and its shares could have stayed depressed or fallen further instead of rebounding.",
+  "adversarial_confounders": [
+    {
+      "text": "General market optimism following other interventions in the banking sector could have buoyed financial stocks regardless of this specific support.",
+      "impact": "A broader recovery in European bank shares may have contributed to the price rebound even without the central bank pledge."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "1 days",
+        "conditions_score": 0.85,
+        "commentary": "The Swiss National Bank's statement of support and the large liquidity line reassured markets that Credit Suisse could meet outflows. As the bank tapped the facility and stabilized funding, investor confidence improved, lifting the share price and further easing immediate run risk."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Central bank liquidity backstop to stem a banking panic",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "By offering targeted liquidity, the central bank intervened directly in market functioning to prevent destabilizing contagion. This policy response changed the economic backdrop for Credit Suisse overnight, enabling a sharp relief rally even as fundamental challenges remained."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

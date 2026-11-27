@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00143",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On February 10 2023, Kraken agreed to pay a US$30 million settlement to the U.S. Securities and Exchange Commission and shutter its crypto-staking service. The settlement highlighted regulatory pressure on staking products offered by exchanges.",
+      "date": "2023-02-10",
+      "entities": [
+        "Kraken",
+        "Securities and Exchange Commission"
+      ],
+      "sectors": [
+        "Cryptocurrency Exchange"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Crypto exchanges"
+      },
+      "source_info": {
+        "title": "Crypto exchange Kraken pays $30M fine to SEC and shuts down staking in the US",
+        "url": "https://siliconangle.com/2023/02/10/crypto-exchange-kraken-pays-30m-fine-sec-shuts-staking-us/",
+        "published_date": "2023-02-10",
+        "publisher": "siliconangle.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Following Kraken's settlement, shares of Coinbase plunged roughly 14%-their steepest drop in more than six months-as investors anticipated similar scrutiny and revenue hit on competing exchanges.",
+      "date": "2023-02-10",
+      "entities": [
+        "Coinbase"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Coinbase"
+      },
+      "stock_change_pct": 14,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Coinbase Drops Most Since July as SEC Cracks Down on Crypto Staking",
+        "url": "https://www.bloomberg.com/news/articles/2023-02-09/coinbase-shares-tumbles-as-sec-cracks-down-on-crypto-staking",
+        "published_date": "2023-02-10",
+        "publisher": "bloomberg.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Kraken's settlement with the SEC signaled heightened regulatory scrutiny over staking services offered by exchanges.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors extrapolated that other exchanges might face similar penalties or be forced to shut their staking programs.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Concerns over lost revenue streams and increased compliance costs led to a sharp sell-off in Coinbase shares, which fell about 14%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Staking has been an important source of yield for crypto platforms. The SEC's action against Kraken created expectations that other exchanges would have to discontinue staking or pay fines, undermining a key revenue line. Consequently, investors penalized Coinbase by driving its stock down sharply.",
+  "counterfactual_analysis": "Without the SEC's crackdown on Kraken's staking service, investors would not have adjusted their expectations for Coinbase's revenue, and the stock likely would not have experienced a double-digit decline on that day.",
+  "adversarial_confounders": [
+    {
+      "text": "Contemporaneous declines in cryptocurrency prices may have exacerbated the drop in Coinbase shares.",
+      "impact": "Crypto volatility could intensify investor reaction to regulatory news."
+    }
+  ],
+  "confidence_score": 0.95,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic/Technological - Pandemic-driven surge in retail trading and options activity",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Low interest rates, stimulus checks and stay-at-home conditions encouraged a wave of retail speculation in stocks and options. Robinhood's easy-to-use app sat at the center of this trading boom, enabling it to monetize elevated volumes and option flows during its early hypergrowth phase."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.85,
+        "commentary": "As more users traded on Robinhood and posted gains online, social proof encouraged additional sign-ups and engagement. Higher activity boosted payment-for-order-flow revenue, which funded further product and marketing efforts, reinforcing the growth loop until market conditions normalized."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

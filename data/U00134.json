@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00134",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On March 16, 2020, major restaurant chains such as McDonald's and Starbucks announced the closure of dine-in service across the United States as state and local governments ordered restaurants and bars to close to slow the spread of COVID-19. Patrons were limited to drive-thru, delivery and takeaway, severely curtailing consumption of fountain drinks and other beverages at restaurants.",
+      "date": "2020-03-16",
+      "entities": [
+        "McDonald's",
+        "Starbucks"
+      ],
+      "sectors": [
+        "Restaurant",
+        "Quick-Service"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Restaurant Industry"
+      },
+      "source_info": {
+        "title": "Coronavirus outbreak prompts growing number of states to ban dining in at restaurants",
+        "url": "https://www.cnbc.com/2020/03/16/coronavirus-outbreak-prompts-states-to-ban-restaurant-dining.html",
+        "published_date": "2020-03-16",
+        "publisher": "cnbc"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On April 21, 2020, The Coca-Cola Company reported that global unit case volumes fell about 25% as the closure of restaurants, movie theatres and sporting venues cut beverage sales; its shares dropped roughly 4% following the announcement.",
+      "date": "2020-04-21",
+      "entities": [
+        "Coca-Cola"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Coca-Cola"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Coca-Cola sales volumes plunge as coronavirus guzzles demand",
+        "url": "https://nypost.com/2020/04/21/coca-cola-sales-volumes-plunge-as-coronavirus-guzzles-demand/",
+        "published_date": "2020-04-21",
+        "publisher": "nypost.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Government-mandated closures forced restaurants and cafes to suspend dine-in service, eliminating a major channel for on-premise beverage consumption.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "With consumers no longer ordering fountain drinks at restaurants, demand for Coca-Cola's syrup and concentrate dropped sharply.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2020-04-21, Coca-Cola's shares fell about 4% following the company's update that global unit case volumes were down roughly 25%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cause article shows that major restaurant chains closed their dine-in areas due to COVID-19 restrictions, drastically reducing beverage consumption outside the home. Coca-Cola generates a significant portion of its sales from fountain drinks in restaurants and theatres. As these venues shut, Coca-Cola experienced a steep drop in volume and its stock fell. The timing and industry link create a direct causal connection.",
+  "counterfactual_analysis": "Had restaurants remained open or shifted to alternative service models sooner, beverage demand would not have collapsed as severely. Coca-Cola's volumes might have remained steadier and its shares would likely have avoided such a sharp decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Panic buying of shelf-stable beverages at grocery stores",
+      "impact": "Could have offset some loss of on-premise sales, partially mitigating the volume decline"
+    },
+    {
+      "text": "Monetary stimulus measures",
+      "impact": "May have influenced investor sentiment independently of restaurant closures"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological/Economic - Surge in crypto trading and digital asset speculation",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "A wave of retail and institutional interest in cryptocurrencies drove trading volumes and volatility to unusual highs. This speculative boom created ideal conditions for Coinbase's fee-based business model, supporting rapid revenue growth and strong early share-price performance after the IPO."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

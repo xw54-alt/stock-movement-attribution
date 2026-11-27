@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00101",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Apple delayed the production ramp-up of its 2020 flagship iPhones by about a month amid pandemic disruptions.",
+      "date": "2020-07-30",
+      "entities": [
+        "Apple"
+      ],
+      "sectors": [
+        "smartphone",
+        "electronics"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Apple"
+      },
+      "source_info": {
+        "title": "Apple to delay mass production of 2020 flagship iPhones",
+        "url": "https://www.reuters.com/article/technology/apple-to-delay-mass-production-of-2020-flagship-iphones-wsj-idUSKCN2291BP/",
+        "published_date": "2020-07-30",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Broadcom indicated the annual iPhone-related chip shipment ramp would occur one quarter later than usual.",
+      "date": "2020-09-03",
+      "entities": [
+        "Broadcom"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "guidance_update",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Broadcom"
+      },
+      "stock_change_pct": 1.7,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Broadcom signals delay in iPhone chip ramp-up, pointing to later release date",
+        "url": "https://www.reuters.com/article/technology/broadcom-signals-delay-in-iphone-chip-ramp-up-pointing-to-later-release-date-idUSKBN25U2Z4/",
+        "published_date": "2020-09-03",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Apple's 2020 iPhone mass-production ramp was pushed back by about one month due to COVID-19 disruptions, indicating a later-than-usual launch window for the cycle.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Because Apple is a major downstream demand driver-and accounted for roughly one-fifth of Broadcom's 2019 revenue-the slip in Apple's schedule shifted suppliers' shipment seasonality by one quarter (from the typical late Q3 ramp toward Q4), reducing near-term order visibility and cash collection.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On Sep 3, 2020, Broadcom said its annual iPhone-related chip ramp would run into the final calendar quarter (about one quarter later than most years) and guided fiscal Q4 revenue to about $6.4B.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Market reaction: Broadcom (AVGO) shares rose about 1.7% in extended trading on Sep 3, 2020 following the update and guidance.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters linked the iPhone production delay to Broadcom's later ramp commentary, aligning supplier seasonality with Apple's shifted schedule.",
+  "counterfactual_analysis": "If iPhone production had proceeded on the usual timeline, Broadcom's wireless revenue ramp would likely have occurred a quarter earlier.",
+  "adversarial_confounders": [
+    {
+      "text": "General COVID-era logistics constraints",
+      "impact": "Could independently delay component shipments regardless of Apple's schedule."
+    }
+  ],
+  "confidence_score": 0.82,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "35 days",
+        "conditions_score": 0.75,
+        "commentary": "Apple's decision to delay its iPhone launch shifts Broadcom's usual shipment ramp into a later quarter, creating a temporary dip followed by a catch-up in orders. That timing shift smooths out over the product cycle, but it still changes the quarterly revenue profile enough for investors to adjust near-term expectations."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "pair_id": "U00156",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Tokio Marine halted insurance coverage for Greensill Capital's trade-finance assets, cutting off a critical credit backstop and triggering Greensill's rapid collapse. The World Socialist Web Site reported the insurer's withdrawal on 2021-03-09.",
+      "date": "2021-03-09",
+      "entities": [
+        "Tokio Marine",
+        "Greensill Capital"
+      ],
+      "sectors": [
+        "Financial Services",
+        "Insurance"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Greensill Capital"
+      },
+      "source_info": {
+        "title": "The demise of Greensill: Another expression of financial rot and decay",
+        "url": "https://www.wsws.org/en/articles/2021/03/09/gree-m09.html",
+        "published_date": "2021-03-09",
+        "publisher": "World Socialist Web Site"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Credit Suisse shuttered roughly $10 billion of supply-chain finance funds tied to Greensill, warned it might incur significant charges and noted that its shares had fallen more than 10 % since the funds were suspended. Reuters reported the closure on 2021-03-16.",
+      "date": "2021-03-16",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 10,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Credit Suisse flags financial hit from Greensill collapse",
+        "url": "https://www.reuters.com/business/finance/credit-suisse-flags-financial-hit-greensill-collapse-2021-03-16/",
+        "published_date": "2021-03-16",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2021-03-09, Tokio Marine withdrew insurance cover for Greensill Capital's receivables, undermining confidence in the company and precipitating its collapse.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The loss of insurance meant Greensill could no longer securitise invoices. Investors pulled funds and Greensill filed for insolvency, leaving Credit Suisse's supply-chain finance funds exposed to doubtful assets.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2021-03-16, Credit Suisse closed about $10 billion of supply-chain finance funds and warned of potential charges; management noted shares had dropped over 10 % since the suspension as investors reacted to the Greensill shock.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "With insurance withdrawn, the credit enhancement underpinning Greensill's receivables vanished, forcing Greensill into collapse. Credit Suisse, whose funds were exposed to those assets, moved to close the vehicles and faced a double-digit share-price decline.",
+  "counterfactual_analysis": "Had Tokio Marine renewed the insurance, Greensill might have continued funding client receivables and Credit Suisse would likely not have needed to close its funds, avoiding related charges and the share-price drop.",
+  "adversarial_confounders": [
+    {
+      "text": "General deterioration in risk appetite during the pandemic period.",
+      "impact": "Broader market stress could have contributed to investor redemptions and the stock decline independent of the insurance withdrawal."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "7 days",
+        "conditions_score": 0.85,
+        "commentary": "When Tokio Marine withdrew insurance cover, confidence in Greensill's notes evaporated and redemptions surged. As Credit Suisse was forced to freeze and then close the funds, loss recognition further undermined trust in its risk controls, intensifying investor withdrawals and reputational damage."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic/Legal - Withdrawal of insurance exposing fragility in supply-chain finance",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "The insurer's decision highlighted structural weaknesses in a complex funding model that had grown quickly in a low-rate environment. This economic and legal shock forced regulators and investors to reassess non-bank credit vehicles, with Credit Suisse bearing heavy write-downs in the process."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

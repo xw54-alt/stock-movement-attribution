@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00151",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "After mid-2022, shipping congestion eased and ocean freight rates plunged as container shortages were resolved. Improved port efficiency and declining freight costs reduced the need for retailers to rely on private charter vessels. The global logistics environment became more predictable than during the height of the pandemic.",
+      "date": "2022-10-01",
+      "entities": [
+        "Ocean freight industry"
+      ],
+      "sectors": [
+        "Logistics"
+      ],
+      "country": "International",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.6,
+        "target": "Logistics sector"
+      },
+      "source_info": {
+        "title": "Container Shipping Rates Drop 90% Since Early 2022",
+        "url": "https://www.pymnts.com/shipping/2023/container-shipping-rates-drop-90percent-since-early-2022/",
+        "published_date": "2022-10-09",
+        "publisher": "pymnts.com"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "With shipping delays subsiding, Costco said it would slow its use of chartered vessels and recorded a $93 million charge to downsize its charter shipping activities, noting that improved shipping conditions and lower costs meant charters were no longer needed for a quarter of its transpacific needs.",
+      "date": "2022-12-14",
+      "entities": [
+        "Costco"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "neutral",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.6,
+        "target": "Costco"
+      },
+      "stock_change_pct": 0.96,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Costco slows chartered ship use as supply chain congestion eases",
+        "url": "https://www.supplychaindive.com/news/costco-slows-chartered-ship-use-as-supply-chain-congestion-eases/638510/",
+        "published_date": "2022-12-14",
+        "publisher": "Supply Chain Dive"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "As global shipping congestion eased in late 2022, container prices fell and transit times shortened. Retailers regained confidence in the reliability of traditional carriers.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Costco determined that the cost advantage of private charters had eroded and decided to unwind part of its program, incurring a one-time $93 million charge tied to downsizing charter commitments.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-12-14, as the announcement was digested, COST fell about 0.96 % to $464.73 from the prior close of $469.22 (share price change −0.96 %).",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Normalization of ocean logistics reduced the need for contingency charters. Costco's pivot and related charge reflected a reversion to standard shipping channels, with a modest, same-day dip in shares as investors priced the expense and shift.",
+  "counterfactual_analysis": "If congestion and elevated freight costs had persisted, Costco likely would have maintained its chartered capacity and avoided the unwinding charge.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide declines in freight rates and contemporaneous market moves may have influenced COST's price action on the day.",
+      "impact": "Makes it harder to isolate the stock move attributable solely to Costco's logistics update."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "input_cost_shift",
+        "industry_barriers": "medium",
+        "commentary": "As port congestion eased and container rates fell, shipping lines lost some of the pricing power they held during the pandemic. With supplier leverage normalizing, Costco could exit expensive charter arrangements and rely more on standard contracts without jeopardizing service levels."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "60 days",
+        "conditions_score": 0.8,
+        "commentary": "Improving logistics reliability reduced the need for emergency capacity, allowing Costco to unwind temporary charter usage over time. This gradual shift back to regular shipping lanes helped normalize costs and inventory flows, bringing its supply chain closer to a pre-pandemic equilibrium."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

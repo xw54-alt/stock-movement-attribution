@@ -1,0 +1,131 @@
+{
+  "pair_id": "U00200",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "AP-20210608-E",
+      "causal_salience": "primary",
+      "text": "On June 8, 2021, the U.S. government released a national strategy blueprint aimed at building a secure domestic supply chain for critical goods like large-capacity batteries, signaling federal policy support for EV supply chain onshoring.",
+      "date": "2021-06-08",
+      "entities": [
+        "U.S. Government"
+      ],
+      "sectors": [
+        "Government Policy",
+        "Manufacturing",
+        "Electric Vehicles"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Domestic Manufacturing"
+      },
+      "source_info": {
+        "title": "Biden reveals plan to solve crippling shortages of computer chips, batteries, and medicine",
+        "url": "https://www.businessinsider.com/biden-supply-chain-shortages-plan-semiconductors-batteries-trade-manufacturing-strategy-2021-6",
+        "published_date": "2021-06-08",
+        "publisher": "businessinsider.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On September 27, 2021, Ford and SK Innovation announced their BlueOval SK joint venture, investing $11.4 billion to build U.S. electric vehicle assembly and battery plants, signaling a strong alignment with both strategic goals and federal policy.",
+      "date": "2021-09-27",
+      "entities": [
+        "Ford Motor Company",
+        "SK Innovation"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Ford Motor Company"
+      },
+      "stock_change_pct": 2.8,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Ford, SK to invest $11.4 bln to add electric F-150 plant, three battery factories",
+        "url": "https://www.reuters.com/business/autos-transportation/ford-sk-invest-114-bln-add-electric-f-150-plant-three-battery-factories-2021-09-27/",
+        "published_date": "2021-09-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The federal strategy established a favorable policy environment for domestic EV battery production.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Ford aligned with this direction by pursuing a large-scale joint venture to secure its domestic EV and battery manufacturing capabilities.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Ford's announcement of the $11.4 billion BlueOval SK investment reinforced its strategic alignment with policy goals, strengthening investor confidence.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 4,
+      "description": "Following the news, Ford's stock price jumped approximately 2.8% during the trading day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The U.S. government's industrial policy encouraged onshoring of EV-critical components. Ford responded by announcing a record-scale joint venture to build EV battery capacity domestically-an alignment of strategy and policy that investors positively rewarded.",
+  "counterfactual_analysis": "Without policy-driven incentives, Ford may have opted for smaller or offshore battery investments, which likely wouldn't have garnered the same investor enthusiasm.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market enthusiasm for EV infrastructure investments at the time.",
+      "impact": "This could have supported share performance independently, but the timing and magnitude strongly correspond to Ford's JV announcement."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Government incentives for domestic manufacturing",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "The U.S. strategy to build a domestic battery supply chain signaled durable political support for onshoring key EV components. That policy backing reduced regulatory and permitting uncertainty around large battery projects, encouraging Ford and SK to commit to the BlueOval SK venture."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "supply_chain_risk",
+        "industry_barriers": "high",
+        "commentary": "By locking in local battery production, Ford reduced its dependence on overseas suppliers for a critical input. Stronger control over this part of the value chain lowered supply-chain substitution risk and improved its competitive position versus automakers still reliant on imports."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "111 days",
+        "conditions_score": 0.85,
+        "commentary": "Policy support and the BlueOval SK announcement reinforced each other in building confidence around U.S. EV manufacturing. As investors saw concrete projects follow the strategy blueprint, it became easier to justify further public and private investment, creating a reinforcing loop that benefited Ford's long-term story."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

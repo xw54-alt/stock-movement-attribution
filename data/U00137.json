@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00137",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On April 25, 2023, PepsiCo raised its annual revenue and profit forecasts after multiple price increases and steady demand boosted its quarterly results. The company said average selling prices jumped and volumes held up, leading its shares to gain about 2%.",
+      "date": "2023-04-25",
+      "entities": [
+        "PepsiCo"
+      ],
+      "sectors": [
+        "Beverages"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "PepsiCo"
+      },
+      "source_info": {
+        "title": " PepsiCo's price hikes, steady demand add sparkle to annual forecast",
+        "url": "https://www.reuters.com/business/retail-consumer/pepsico-raises-annual-forecasts-buoyant-demand-price-hikes-2023-04-25/",
+        "published_date": "2023-04-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "On October 24, 2023, Coca-Cola raised its annual sales and profit forecasts after resilient demand and price increases helped it beat third-quarter estimates; its shares climbed about 3%.",
+      "date": "2023-10-24",
+      "entities": [
+        "Coca-Cola"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Coca-Cola"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Coca-Cola lifts forecasts as earnings sparkle on higher prices, steady demand",
+        "url": "https://www.reuters.com/business/retail-consumer/coca-cola-raises-annual-sales-forecast-steady-demand-higher-prices-2023-10-24/",
+        "published_date": "2023-10-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "PepsiCo's strong quarterly results demonstrated that consumers were tolerating higher soft-drink prices while still purchasing beverages.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The success of a major competitor signalled that pricing power existed in the soda market, encouraging investors to expect similar resilience from Coca-Cola.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When Coca-Cola subsequently posted its own price-driven revenue growth and raised guidance, the market interpreted it as confirmation, and the stock climbed about 3%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "PepsiCo and Coca-Cola operate in the same beverage market. PepsiCo's ability to raise prices without hurting demand in April 2023 indicated that consumers were willing to pay more for soft drinks. This signalled to investors that Coca-Cola could do the same. When Coca-Cola announced stronger-than-expected results and raised its forecasts in October, investors responded positively, consistent with expectations set by the competitor's earlier performance.",
+  "counterfactual_analysis": "If PepsiCo had suffered volume declines after raising prices, investors might have doubted Coca-Cola's ability to pass on costs. In that scenario, Coca-Cola's forecast raise may not have produced a strong share price reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Changes in consumer preferences for zero-sugar products",
+      "impact": "Could influence sales independently of competitor performance"
+    },
+    {
+      "text": "Macroeconomic factors such as interest-rate changes",
+      "impact": "Might affect investor sentiment toward beverage stocks regardless of pricing strategies"
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "As more exchanges and trading platforms entered the crypto market, competition for active traders intensified. Coinbase's need to respond with new products and marketing raised its cost base and made it harder to sustain premium fees, weighing on profitability expectations."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

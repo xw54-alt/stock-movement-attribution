@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00138",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On July 22, 2025, consumer advocacy groups and health campaigners intensified calls for soft-drink makers to reduce their use of high-fructose corn syrup and introduce cane-sugar formulations. The pressure followed a long campaign linking artificial sweeteners and corn syrup to health risks and demanded that beverage firms provide natural sweetener options.",
+      "date": "2025-07-22",
+      "entities": [
+        "Health Campaigners",
+        "Consumer Advocacy Groups"
+      ],
+      "sectors": [
+        "Public Health",
+        "Consumer Rights"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Soft-Drink Industry"
+      },
+      "source_info": {
+        "title": "Coca-Cola beats on zero-sugar sodas, higher prices; to launch cane sugar-based drink",
+        "url": "https://www.reuters.com/business/coca-cola-beats-zero-sugar-sodas-higher-prices-launch-cane-sugar-based-drink-2025-07-22/",
+        "published_date": "2025-07-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 6, 2025, shares of Coca-Cola bottlers Coca-Cola HBC and Coca-Cola Europacific Partners fell around 10% after trade tensions and consumer boycotts in Indonesia and Egypt, partly driven by criticism of sugary drinks and political conflicts, weighed on sentiment.",
+      "date": "2025-08-06",
+      "entities": [
+        "Coca-Cola",
+        "Coca-Cola Europacific Partners"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United Kingdom",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Coca-Cola"
+      },
+      "stock_change_pct": 10,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Shares in Coca-Cola bottlers drop sharply on weak outlook",
+        "url": "https://www.reuters.com/markets/europe/shares-coca-cola-bottlers-drop-sharply-weak-outlook-2025-08-06/",
+        "published_date": "2025-08-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Health campaigners and consumer groups intensified advocacy for natural sweeteners, increasing scrutiny of sugary sodas and their ingredients.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "This activism, combined with geopolitical tensions in the Middle East and Southeast Asia, fuelled consumer boycotts of Western-branded products, including Coca-Cola bottlers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Negative sentiment toward sugar-laden drinks and political backlash led investors to sell shares of Coca-Cola's bottling partners, causing their stocks to plunge about -10%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Advocacy groups' long-running health campaigns increased public awareness of the risks of high-fructose corn syrup, pressuring soda makers to adopt cane sugar. Coupled with regional boycotts linked to geopolitical conflicts, this scrutiny hurt the reputation of Coca-Cola's bottling partners. As investors anticipated weaker sales and reputational damage, the bottlers' shares tumbled.",
+  "counterfactual_analysis": "If health campaigns had not escalated and geopolitical tensions had not triggered consumer boycotts, the bottling partners' shares might have remained stable or even benefited from premium cane-sugar product launches.",
+  "adversarial_confounders": [
+    {
+      "text": "Changes in commodity prices such as aluminum and sugar",
+      "impact": "Could have affected bottler profitability independently of consumer boycotts"
+    },
+    {
+      "text": "Currency fluctuations in markets where bottlers operate",
+      "impact": "May influence share prices regardless of activism and political tensions"
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic/Technological - Renewed interest in crypto trading and institutional adoption",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "A rebound in crypto prices and progress on institutional products such as ETFs revived trading activity and sentiment around digital assets. This improved environment supported higher volumes on Coinbase's platform and made its role as a regulated U.S. exchange more valuable in investors' eyes."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

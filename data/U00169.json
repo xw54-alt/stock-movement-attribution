@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00169",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On 2025-08-05, Caterpillar warned that new U.S. tariffs on imported parts would raise costs by up to $1.5 billion in 2025 and $400-$500 million in Q3; shares fell about 1% on the news.",
+      "date": "2025-08-05",
+      "entities": [
+        "Caterpillar"
+      ],
+      "sectors": [
+        "heavy machinery"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Caterpillar"
+      },
+      "source_info": {
+        "title": "Caterpillar warns of $1.5 billion hit as tariffs to hurt profit more in second half",
+        "url": "https://www.reuters.com/world/china/caterpillar-warns-15-billion-hit-tariffs-hurt-profit-more-second-half-2025-08-05/",
+        "published_date": "2025-08-05",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2025-08-14, Deere reported a quarterly profit decline and warned of a bigger tariff hit (nearly $600 million for the year); shares fell about 7% in morning trade.",
+      "date": "2025-08-14",
+      "entities": [
+        "Deere & Company"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Deere & Company"
+      },
+      "stock_change_pct": 7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Deere warns of bigger tariff hit after quarterly profit declines",
+        "url": "https://www.reuters.com/business/deere-warns-bigger-tariff-hit-after-quarterly-profit-declines-2025-08-14/",
+        "published_date": "2025-08-14",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Caterpillar said U.S. tariffs on imported components would raise its costs by up to $1.5B in 2025 (including a $400-$500M Q3 hit), highlighting broad input-cost pressure across heavy-equipment supply chains; its shares slipped ~1%."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The warning underscored that peers relying on imported parts, such as Deere, were also exposed. Analysts and investors began to factor larger tariff costs and margin pressure into expectations across the sector."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-08-14, Deere reported lower quarterly profit and raised its tariff impact estimate to nearly $600M for the year; investors reacted to the confirmation of higher costs and DE shares fell about 7% that morning."
+    }
+  ],
+  "rationale": "A prominent peer's tariff-cost warning primed the market to expect margin pressure across heavy machinery. When Deere confirmed a larger tariff hit alongside weaker profit, the sector-wide policy shock translated into a sharp negative move in Deere's stock.",
+  "counterfactual_analysis": "Without Caterpillar's tariff-warning signal or if tariffs had been eased, expectations for peers' cost inflation would have been lower; Deere's update might have caused a smaller selloff or a more neutral reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Commodity price swings and end-market demand cycles.",
+      "impact": "Lower crop prices or weaker construction demand could depress orders and earnings irrespective of tariff effects."
+    },
+    {
+      "text": "Company-specific cost controls and product mix.",
+      "impact": "Operational efficiency or mix shifts could offset or exacerbate margin pressure independent of sector signals."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - U.S. import tariffs on parts and components",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.8,
+        "commentary": "New U.S. tariffs on imported parts are a political shock that directly raise input costs for heavy-equipment manufacturers. As the policy impact filters through supply chains, it squeezes margins for Deere and its peers and forces management to revise profit expectations lower."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "9 days",
+        "conditions_score": 0.7,
+        "commentary": "Caterpillar's early tariff warning provided a leading indicator of cost pressures that would soon hit the wider sector. Deere's subsequent profit warning and share-price drop illustrate how tariff-driven cost shocks propagate through manufacturers' earnings over the following quarter."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

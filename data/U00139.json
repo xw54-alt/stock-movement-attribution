@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00139",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On May 18, 2021 the Chinese Banking Association, an industry group linked to the banking sector, cautioned its members against providing services using digital currencies. The association said firms should resolutely refrain from conducting or participating in cryptocurrency transactions, a warning that heightened regulatory scrutiny and spooked investors.",
+      "date": "2021-05-18",
+      "entities": [
+        "Chinese Banking Association"
+      ],
+      "sectors": [
+        "Banking",
+        "Cryptocurrency"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Cryptocurrency industry"
+      },
+      "source_info": {
+        "title": "China bans financial, payment institutions from cryptocurrency business",
+        "url": "https://www.reuters.com/technology/chinese-financial-payment-bodies-barred-cryptocurrency-business-2021-05-18/",
+        "published_date": "2021-05-18",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Following the warning, a broad sell-off in digital assets ensued; Bitcoin slumped and shares of Coinbase Global Inc. fell about 5.4% as traders worried that China's stance would curb crypto adoption.",
+      "date": "2021-05-24",
+      "entities": [
+        "Coinbase"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "Coinbase"
+      },
+      "stock_change_pct": 5.4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Why is the price of bitcoin and other cryptocurrencies falling?",
+        "url": "https://www.cbsnews.com/news/crypto-price-bitcoin-down-2021-05-24/",
+        "published_date": "2021-05-24",
+        "publisher": "CBS News"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "China's banking association issued a negative statement on digital currencies, signalling official disapproval.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Market participants interpreted the warning as tightening regulatory risk and sold off cryptocurrencies.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "The resulting plunge in crypto prices reduced investor confidence in exchanges, leading Coinbase's stock to decline about 5.4%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The industry group's call for banks to avoid crypto services was perceived as an extension of China's crackdown on digital assets. Such regulatory signals often spook investors globally. When prices of Bitcoin and other tokens fell, equities tied to the crypto ecosystem, including Coinbase, also dropped as investors feared reduced trading volumes and revenue.",
+  "counterfactual_analysis": "Had the Chinese Banking Association not issued the warning, crypto markets might have remained more stable. Without the immediate price drop in Bitcoin, Coinbase's stock would likely not have suffered a similar decline.",
+  "adversarial_confounders": [
+    {
+      "text": "A concurrent risk-off sentiment in global equities could have amplified the sell-off in crypto stocks.",
+      "impact": "General market weakness may have also contributed to Coinbase's decline."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - SEC enforcement actions and evolving rules for crypto trading",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "SEC lawsuits and guidance increased uncertainty over which digital assets might be treated as securities and how platforms should register. This legal overhang raised compliance risk and potential limits on product scope for Coinbase, constraining its growth narrative and depressing its valuation."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

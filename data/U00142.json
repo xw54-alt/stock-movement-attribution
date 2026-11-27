@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00142",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On May 8 2023, Binance temporarily suspended bitcoin withdrawals due to heavy transaction volumes and rising network fees. The company said it needed to clear a backlog of transactions before resuming service.",
+      "date": "2023-05-08",
+      "entities": [
+        "Binance"
+      ],
+      "sectors": [
+        "Cryptocurrency Exchange"
+      ],
+      "country": "International",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Crypto market"
+      },
+      "source_info": {
+        "title": "Binance lifts block on bitcoin withdrawals amid heavy volumes",
+        "url": "https://www.cnbc.com/2023/05/08/binance-lifts-block-on-bitcoin-withdrawals-amid-heavy-volumes.html",
+        "published_date": "2023-05-08",
+        "publisher": "cnbc"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "The suspension sowed panic across the market. Shares of cryptocurrency-related companies slumped, with Coinbase stock falling about 4% as traders worried that operational hiccups at Binance signalled broader fragility.",
+      "date": "2023-05-08",
+      "entities": [
+        "Coinbase"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Coinbase"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Crypto stocks drop after Binance halts bitcoin withdrawals for hours",
+        "url": "https://www.reuters.com/technology/crypto-stocks-fall-after-binance-halts-bitcoin-withdrawals-hours-2023-05-08/",
+        "published_date": "2023-05-08",
+        "publisher": "reuters.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Binance halted bitcoin withdrawals due to network congestion, raising concerns about liquidity and stability.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Market participants interpreted the pause as a sign of underlying stress in crypto infrastructure.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Fears of cascading outages led investors to sell shares of other exchanges, pushing Coinbase's stock down about 4%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Temporary operational disruptions at a major exchange like Binance can dent investor trust in the broader system. Because trading and custody of digital assets depend on multiple platforms, even a short-lived outage signals potential systemic risk. As such, Coinbase's stock declined when Binance froze withdrawals.",
+  "counterfactual_analysis": "Had Binance maintained uninterrupted withdrawals, there would have been no market perception of instability. Coinbase's shares might have remained largely unchanged rather than falling about 4%.",
+  "adversarial_confounders": [
+    {
+      "text": "Daily volatility in cryptocurrency prices could have amplified investor sensitivity to operational news.",
+      "impact": "If bitcoin prices were already falling, this may have worsened the stock reaction."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "As more online brokers and fintech apps offered low-cost equity trading, competitive pressure in retail brokerage intensified. Robinhood's slowing user growth and shrinking assets under custody signaled that it was losing momentum in that rivalry, prompting investors to reassess its growth premium."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

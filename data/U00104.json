@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00104",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Amazon warned of a slowdown in Amazon Web Services cloud growth as customers optimized spending.",
+      "date": "2023-04-27",
+      "entities": [
+        "Amazon"
+      ],
+      "sectors": [
+        "cloud",
+        "data center"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Amazon Web Services"
+      },
+      "source_info": {
+        "title": "Amazon sees cloud slowdown in April, shares erase gains",
+        "url": "https://www.reuters.com/technology/amazon-reports-quarterly-revenue-above-estimates-2023-04-27/",
+        "published_date": "2023-04-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Broadcom forecast Q4 2023 revenue slightly below Wall Street estimates citing weak enterprise spending and competition; shares fell about 3.4% after hours.",
+      "date": "2023-08-31",
+      "entities": [
+        "Broadcom"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "guidance_update",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "Broadcom"
+      },
+      "stock_change_pct": 3.4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Broadcom forecasts Q4 revenue slightly below estimates on weak enterprise spending",
+        "url": "https://www.reuters.com/technology/broadcom-forecasts-fourth-quarter-revenue-above-wall-street-expectations-2023-08-31/",
+        "published_date": "2023-08-31",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On Apr 27, 2023, Amazon signaled continued AWS bill-optimization by customers and said April cloud growth was about 5 percentage points lower than Q1, pointing to tighter enterprise cloud budgets.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Tighter IT/cloud budgets translated into softer near-term demand for data-center networking and custom silicon, pressuring order visibility for suppliers exposed to enterprise workloads.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On Aug 31, 2023, Broadcom guided fiscal Q4 revenue slightly below Street estimates, citing weak enterprise spending and competition in networking despite AI tailwinds.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Market reaction: Broadcom (AVGO) fell about 3.4% in after-hours trading on Aug 31, 2023 following the guidance update.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported slower cloud growth at Amazon ahead of Broadcom's below-estimate outlook citing weak enterprise spending; softness at a major cloud provider read through to networking demand.",
+  "counterfactual_analysis": "If enterprise spending had remained robust, Broadcom's late-2023 guidance likely would have been higher with a milder stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Inventory digestion among cloud providers",
+      "impact": "May also slow orders regardless of enterprise demand."
+    }
+  ],
+  "confidence_score": 0.55,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Broadcom competes with other large chipmakers for sockets in high-end smartphones, networking gear and data centers. When rivals warn about weaker demand or inventory corrections, investors worry that Broadcom will face similar headwinds, even if its own guidance remains solid."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

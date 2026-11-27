@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00116",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On November 24, 2021 Sony warned that the global semiconductor shortage was more serious than expected, forcing the company to halt production of several mirrorless cameras and leaving many of its products in low or no stock due to difficulty procuring parts.",
+      "date": "2021-11-24",
+      "entities": [
+        "Sony"
+      ],
+      "sectors": [
+        "Consumer electronics",
+        "Semiconductors"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Sony"
+      },
+      "source_info": {
+        "title": "Sony: Global Chip Shortage 'More Serious' Than Expected",
+        "url": "https://petapixel.com/2021/11/24/sony-global-chip-shortage-more-serious-than-expected/",
+        "published_date": "2021-11-24",
+        "publisher": "PetaPixel"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "Canon's financial results for Q2 2022 showed its gross profit increased 11.1% year-over-year to ¥464 billion and operating profit rose 27.4% to ¥98.5 billion. Canon credited the growth to increased product supply and strong sales in its printing segment despite lingering supply constraints, which contrasted with competitor shortages.",
+      "date": "2022-08-04",
+      "entities": [
+        "Canon"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Japan",
+      "effect_type": "earnings_surprise",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Canon"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Canon gross profit up 11 per cent YoY in Q2 2022",
+        "url": "https://www.sprinter.com.au/canon-gross-profit-up-11-per-cent-yoy-in-q2-2022/",
+        "published_date": "2022-08-04",
+        "publisher": "Sprinter"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Sony's announcement that it could not obtain enough semiconductors to manufacture popular mirrorless cameras curtailed supply from a key rival and highlighted industry-wide component shortages.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "With Sony's production constrained, customers sought alternatives, allowing Canon to capture additional market share and increase shipments. Canon's Q2 2022 results reflected stronger product supply, higher gross profit and robust sales in its printing segment.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "The improved earnings and market-share gains boosted investor confidence; Canon's stock rose roughly 4% after the results, signalling optimism that it could weather supply-chain disruptions better than its competitors.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Sony's admission of severe chip shortages removed capacity from the mirrorless camera market. Canon, less exposed to the shortage, was able to supply products and benefit from unmet demand, leading to improved financial results.",
+  "counterfactual_analysis": "If Sony had maintained normal production, competition would have remained fiercer and Canon's gross profit growth might have been smaller, possibly limiting the stock's post-earnings appreciation.",
+  "adversarial_confounders": [
+    {
+      "text": "Pent-up consumer demand following pandemic lockdowns",
+      "impact": "A general rebound in spending may have lifted Canon's sales independent of Sony's shortages."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "365 days",
+        "conditions_score": 0.8,
+        "commentary": "As BYD scaled its battery and vehicle production, it benefited from learning curves and cost reductions that strengthened its price advantage. Lower costs supported further price cuts to gain share, which in turn drove higher volumes and deeper scale economies, reinforcing its competitive position over time."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

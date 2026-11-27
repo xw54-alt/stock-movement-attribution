@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00106",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Apple warned it would miss its quarterly revenue guidance due to COVID-19 disrupting iPhone supply and demand.",
+      "date": "2020-02-17",
+      "entities": [
+        "Apple"
+      ],
+      "sectors": [
+        "smartphone",
+        "electronics"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Apple"
+      },
+      "source_info": {
+        "title": "Investor update on quarterly guidance",
+        "url": "https://www.apple.com/newsroom/2020/02/investor-update-on-quarterly-guidance/",
+        "published_date": "2020-02-17",
+        "publisher": "Apple Newsroom"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Broadcom withdrew its 2020 revenue forecast citing coronavirus-related demand and supply disruptions.",
+      "date": "2020-03-12",
+      "entities": [
+        "Broadcom"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "guidance_update",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Broadcom"
+      },
+      "stock_change_pct": 11,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Broadcom withdraws 2020 revenue forecast on coronavirus worries",
+        "url": "https://www.reuters.com/article/technology/broadcom-withdraws-2020-revenue-forecast-on-coronavirus-worries-idUSKBN20Z3GJ/",
+        "published_date": "2020-03-12",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On Feb 17, 2020, Apple issued an investor update saying it would miss March-quarter revenue guidance because COVID-19 constrained iPhone supply and dampened China demand, signaling ecosystem-wide disruption risk.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Because Apple is a key downstream demand driver for smartphone components and accounted for ~20% of Broadcom's 2019 revenue, suppliers exposed to the iPhone cycle faced order pushouts and sharply reduced visibility.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As uncertainty mounted across handset supply chains, Broadcom withdrew its full-year 2020 guidance on Mar 12, 2020 and guided Q2 revenue to $5.7B, citing COVID-19 demand and supply disruptions.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Market reaction: Broadcom(AVGO) closed down 11% on Mar 12, 2020 amid the selloff and fell nearly a further 9% in after-hours trading following the withdrawal announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported Broadcom pulled its 2020 outlook due to COVID-19 disruptions soon after Apple's own guidance warning, linking supply-chain and demand shocks from smartphones to chip suppliers.",
+  "counterfactual_analysis": "Absent Apple's early warning of iPhone disruptions, supplier uncertainty might have appeared less acute and Broadcom may have maintained guidance longer.",
+  "adversarial_confounders": [
+    {
+      "text": "Global lockdowns and factory shutdowns beyond Apple-specific effects",
+      "impact": "Also reduced chip demand and muddied forecasting."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Generative AI and cloud services reshaping software demand",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "The rise of AI-enhanced software and cloud-delivered services changed how enterprises value infrastructure and application platforms. Broadcom's VMware acquisition positioned it to tap into those trends, but also raised concerns about integration, pricing and customer churn that investors weighed in the share reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

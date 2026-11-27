@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00141",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On November 11 2022, the cryptocurrency exchange FTX filed for Chapter 11 bankruptcy after a liquidity crisis and allegations of misappropriated customer funds. The bankruptcy was one of the largest in the digital-asset industry and triggered fears of contagion throughout the crypto ecosystem.",
+      "date": "2022-11-11",
+      "entities": [
+        "FTX"
+      ],
+      "sectors": [
+        "Cryptocurrency Exchange"
+      ],
+      "country": "Bahamas",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "FTX"
+      },
+      "source_info": {
+        "title": "The Collapse of FTX: What Went Wrong With the Crypto Exchange?",
+        "url": "https://www.investopedia.com/what-went-wrong-with-ftx-6828447",
+        "published_date": "2022-11-11",
+        "publisher": "Investopedia"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "As the FTX bankruptcy sent shock waves through the crypto industry, investors fled from other exchanges. Coinbase's stock slumped to about $40.62 on November 21 2022-its lowest level since going public-reflecting fears of systemic risk.",
+      "date": "2022-11-21",
+      "entities": [
+        "Coinbase"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Coinbase"
+      },
+      "stock_change_pct": 10,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Coinbase Hits Record Low as Crypto Contagion Anxiety Intensifies",
+        "url": "https://www.bloomberg.com/news/articles/2022-11-21/coinbase-coin-hits-record-low-as-crypto-contagion-anxiety-intensifies",
+        "published_date": "2022-11-21",
+        "publisher": "bloomberg.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "FTX's sudden bankruptcy shattered confidence in centralized exchanges and revealed systemic risks in crypto markets.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Market participants anticipated tighter scrutiny and reduced liquidity across exchanges, leading to heavy selling of crypto assets.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Fears of contagion drove investors to dump shares of other exchanges; Coinbase fell about 10% intraday to about $40.62 on 2022-11-21.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "FTX's failure highlighted fragility in the crypto infrastructure. Even companies with strong balance sheets were not immune to the loss of market trust. Investors extrapolated FTX's mismanagement to other platforms, leading to broad selling pressure on Coinbase as traders withdrew from centralized exchanges.",
+  "counterfactual_analysis": "If FTX had not collapsed, the contagion fear would have been absent. In such a scenario, Coinbase's shares might have traded near their pre-crisis level instead of collapsing to a record low.",
+  "adversarial_confounders": [
+    {
+      "text": "A concurrent decline in equity markets and higher interest rates could have added to pressure on growth stocks.",
+      "impact": "Macro headwinds may have deepened the fall in Coinbase's share price beyond the FTX effect."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal/Economic - Collapse of a major exchange undermining trust in crypto markets",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "FTX's bankruptcy exposed governance failures and misuse of customer funds, shaking confidence in centralized crypto platforms. That legal and economic shock triggered broad deleveraging and risk aversion, which spilled over into Coinbase's valuation despite its more regulated profile."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "10 days",
+        "conditions_score": 0.85,
+        "commentary": "As fear spread after FTX's collapse, traders pulled assets and reduced activity, depressing liquidity and widening spreads. Lower volumes and falling token prices hurt Coinbase's earnings outlook, which in turn deepened investor pessimism and reinforced the downward spiral in its share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00158",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The Russian invasion of Ukraine on 2022-02-24 sparked a sharp sell-off in European bank shares; the euro-zone banks index plunged about 8.6 % as investors fretted over credit exposures and sanctions.",
+      "date": "2022-02-24",
+      "entities": [
+        "Euro-zone banks index",
+        "Investors"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Eurozone",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Euro-zone banks index"
+      },
+      "source_info": {
+        "title": "Euro zone banks plunge, erasing 2022 gains as Russia invades Ukraine",
+        "url": "https://www.reuters.com/business/finance/euro-zone-banks-plunge-erasing-2022-gains-russia-invades-ukraine-2022-02-24/",
+        "published_date": "2022-02-24",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 3
+    }
+  ],
+  "effects": [
+    {
+      "text": "Facing heightened market volatility and funding pressure, Credit Suisse on 2022-10-27 announced a comprehensive restructuring, including a CHF 4 billion capital raise and thousands of job cuts. The announcement sent the bank's shares down 18.6 %.",
+      "date": "2022-10-27",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 18.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Credit Suisse seeks billions from investors in make-or-break shake-up",
+        "url": "https://www.reuters.com/business/finance/credit-suisse-says-raise-4-billion-francs-capital-2022-10-27/",
+        "published_date": "2022-10-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The Russian invasion of Ukraine triggered panic in financial markets on 2022-02-24, driving the euro-zone banks index down more than 8% and raising concerns over credit and sanction exposure.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Persistent geopolitical uncertainty, higher funding costs and investor risk aversion forced banks to reassess their capital positions. Credit Suisse, already weakened by earlier scandals, faced mounting outflows and volatility.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-10-27, Credit Suisse unveiled a CHF 4 billion capital raise and radical restructuring; the stock fell 18.6 % as investors digested the plan (share price change −18.6%).",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The war in Ukraine shook European banking shares and increased market volatility. These pressures compounded Credit Suisse's existing challenges and contributed to its decision to raise capital and restructure, which investors perceived negatively.",
+  "counterfactual_analysis": "Absent the geopolitical shock and resulting risk aversion, Credit Suisse might have implemented a more measured transformation without an emergency capital raise, potentially avoiding the sharp share-price fall.",
+  "adversarial_confounders": [
+    {
+      "text": "Ongoing losses from Greensill and Archegos",
+      "impact": "Legacy scandals also weakened the bank's capital, making a restructuring inevitable regardless of the war."
+    }
+  ],
+  "confidence_score": 0.55,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "240 days",
+        "conditions_score": 0.85,
+        "commentary": "War-related volatility and funding stress put Credit Suisse into a negative spiral of outflows and rising risk premia. The restructuring plan and capital raise sought to break that loop by shrinking risk-weighted assets and bolstering capital, even at the cost of heavy dilution."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "funding_pressure",
+        "industry_barriers": "high",
+        "commentary": "Spooked depositors and wholesale lenders could shift their funds to stronger competitors, increasing Credit Suisse's dependence on more expensive or shorter-term funding. This erosion of client and investor confidence weakened the bank's bargaining position and pushed management toward a radical restructuring and asset sales."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - War in Ukraine and sanctions reshaping European banking risks",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Russia's invasion and subsequent sanctions disrupted markets and raised uncertainty around cross-border exposures and collateral values. For Credit Suisse, this political shock compounded existing vulnerabilities and made a decisive restructuring necessary to reassure regulators and markets."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

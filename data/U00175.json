@@ -1,0 +1,132 @@
+{
+  "pair_id": "U00175",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20230313_PBS_SVB_Signature",
+      "causal_salience": "primary",
+      "text": "In March 2023, Silicon Valley Bank and Signature Bank failed after rapid deposit runs amid rising interest rates, jolting confidence in banks exposed to tech and startup clients.",
+      "date": "2023-03-13",
+      "entities": [
+        "Silicon Valley Bank",
+        "Signature Bank"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "U.S. regional banking sector"
+      },
+      "source_info": {
+        "title": "What to know about the Silicon Valley Bank collapse",
+        "url": "https://www.pbs.org/newshour/economy/what-to-know-about-the-silicon-valley-bank-collapse",
+        "published_date": "2023-03-13",
+        "publisher": "PBS NewsHour"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2023-03-24, amid contagion fears, Deutsche Bank shares fell as much as about 14% intraday and closed down about 8.5%.",
+      "date": "2023-03-24",
+      "entities": [
+        "Deutsche Bank"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Deutsche Bank"
+      },
+      "stock_change_pct": 8.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Deutsche Bank tumbles as jittery investors seek safer shores",
+        "url": "https://www.reuters.com/business/finance/deutsche-bank-ubs-hit-bank-fears-spark-stress-signals-2023-03-24/",
+        "published_date": "2023-03-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "SVB and Signature failed following rapid deposit withdrawals and rate-driven losses on securities, prompting U.S. authorities to seize the banks and sparking broad concern about interest rate and liquidity risk."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors globally scrutinized other banks for similar vulnerabilities such as losses on bond portfolios and concentrated deposit bases, raising sector risk premia and triggering de-risking."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2023-03-24, Deutsche Bank was swept up in the sell-off: shares plunged intraday and finished about 8.5% lower as contagion fears intensified."
+    }
+  ],
+  "rationale": "High-profile U.S. bank failures elevated perceived systemic and counterparty risk across global banking. Investors priced potential spillovers into European banks; Deutsche Bank, already closely watched, experienced outsized selling pressure.",
+  "counterfactual_analysis": "Absent the collapses of SVB and Signature Bank, or with swift confidence-restoring measures, contagion fears would likely have been milder and Deutsche Bank's same-day decline on 2023-03-24 might have been far smaller or not occurred.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent Credit Suisse turmoil and headlines.",
+      "impact": "Credit Suisse's stress independently amplified concerns about the European banking system, reinforcing selling pressure."
+    },
+    {
+      "text": "Macro data and policy expectations.",
+      "impact": "Inflation and interest rate expectations weighed on bank valuations and interacted with SVB and Signature headlines."
+    },
+    {
+      "text": "Rising stress in CDS and funding markets.",
+      "impact": "Wider bank CDS and deteriorating liquidity conditions accelerated downside beyond what the news alone would explain."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "11 days",
+        "conditions_score": 0.8,
+        "commentary": "The failures of Silicon Valley Bank and Signature Bank ignited a cycle of deposit flight and equity selling across the banking sector. As each bout of stress fueled fresh concerns about unrealized losses and liquidity, contagion fears built over the following days and culminated in a sharp markdown of Deutsche Bank's stock."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "flight_to_safety",
+        "industry_barriers": "high",
+        "commentary": "During turmoil, investors can substitute bank shares and even deposits with safer assets like government bonds or money-market funds. This shift in preferences reduced demand for bank equity, leaving Deutsche Bank more exposed to a rapid swing out of the sector despite high regulatory barriers to entry."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Interest-rate shock and stress on bank funding models",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Rapid rate hikes strained banks that were reliant on flighty deposits and held longer-dated assets with mark-to-market losses. In that fragile macro environment, the U.S. bank failures made investors assume similar vulnerabilities at European lenders, amplifying the sell-off in Deutsche Bank's shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

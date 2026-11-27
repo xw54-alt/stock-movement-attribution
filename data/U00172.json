@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00172",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Archegos Capital Management used high leverage via swaps to build concentrated positions. When prices moved against it, Archegos defaulted on margin calls, forcing brokers to liquidate and leaving firms like Nomura and Credit Suisse facing multi-billion-dollar losses, prompting regulatory scrutiny.",
+      "date": "2021-03-29",
+      "entities": [
+        "Archegos Capital Management",
+        "Nomura",
+        "Credit Suisse"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "global prime brokerage"
+      },
+      "source_info": {
+        "title": "Regulators around the world monitor collapse of US hedge fund",
+        "url": "https://www.theguardian.com/business/2021/mar/29/credit-suisse-nomura-archegos-sell-off-hedge-fund",
+        "published_date": "2021-03-29",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2021-03-29, amid concerns over hidden exposures to Archegos across prime brokers, Deutsche Bank's shares fell about 5% as investors reassessed counterparty and contagion risks.",
+      "date": "2021-03-29",
+      "entities": [
+        "Deutsche Bank"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Deutsche Bank"
+      },
+      "stock_change_pct": 5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Global banks face billions in losses after Archegos defaults",
+        "url": "https://www.reuters.com/business/finance/large-block-trades-tied-archegos-raise-worries-about-trading-this-week-2021-03-28/",
+        "published_date": "2021-03-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Archegos used significant leverage via total-return swaps; when positions fell, it failed margin calls and prime brokers dumped collateral. Nomura and Credit Suisse signaled multi-billion losses, spiking perceived counterparty risk."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The prospect of large losses at multiple brokers raised systemic-risk concerns. Investors extrapolated potential exposures to other prime brokerage franchises and rotated out of bank equities."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2021-03-29, Deutsche Bank-despite reporting hedged exposures-was caught in the sector sell-off; its stock fell 5% that day as contagion fears drove de-risking."
+    }
+  ],
+  "rationale": "A sudden, opaque leverage unwind can propagate through shared counterparties, elevating perceived systemic and counterparty risk. Even banks with limited direct loss risk can face valuation pressure as investors price broader contagion.",
+  "counterfactual_analysis": "If Archegos had not defaulted-or had maintained prudent leverage-brokers would not have rushed to liquidate, and investors likely would not have priced in sector-wide counterparty risk; Deutsche Bank's shares likely would not have dropped ~5% on 2021-03-29.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent global equity volatility and macro headlines.",
+      "impact": "A general risk-off session could independently depress European bank shares, exaggerating the move attributed to Archegos."
+    },
+    {
+      "text": "Deutsche Bank-specific regulatory/legal overhangs.",
+      "impact": "Legacy issues might amplify downside regardless of Archegos-related contagion."
+    },
+    {
+      "text": "Moves in bank CDS and funding markets.",
+      "impact": "Widening CDS spreads can signal idiosyncratic risk, contributing to stock declines independent of the Archegos event."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "0 days",
+        "conditions_score": 0.8,
+        "commentary": "Archegos's forced unwinds triggered rapid selling and losses across several prime brokers, shaking confidence in how leverage was managed. As headlines highlighted hidden exposures, investors extrapolated the risk to other banks, causing Deutsche Bank's shares to fall immediately alongside the rest of the sector."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - High leverage and margin-call dynamics in prime brokerage",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "The Archegos episode exposed how opaque, swap-based leverage can create sudden and sizable losses when markets turn. This macro-financial backdrop made investors more cautious about the economics of prime brokerage, prompting them to mark down Deutsche Bank's earnings and risk profile."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

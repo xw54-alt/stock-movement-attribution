@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00125",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On July 27, 2022, the Federal Open Market Committee raised the federal funds rate by 75 basis points to a target range of 2.25%-2.50% to fight persistent inflation, lifting short-term yields across cash alternatives.",
+      "date": "2022-07-27",
+      "entities": [
+        "Federal Reserve"
+      ],
+      "sectors": [
+        "central banking",
+        "monetary policy"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "banks"
+      },
+      "source_info": {
+        "title": "Fed jacks rates again, Powell vows no surrender in inflation battle",
+        "url": "https://www.reuters.com/markets/us/fed-unveil-another-big-rate-hike-signs-economic-slowdown-grow-2022-07-27/",
+        "published_date": "2022-07-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "By April 2023, clients' ‘cash sorting' reduced Schwab's bank deposits, which fell 11% quarter-over-quarter to about $325.7 billion (roughly 30% lower year-over-year), pressuring net interest revenue and earnings.",
+      "date": "2023-04-17",
+      "entities": [
+        "Charles Schwab"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "earnings_surprise",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Charles Schwab"
+      },
+      "stock_change_pct": 3.9,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "US financial institutions hit by deposit flight as clients seek higher returns",
+        "url": "https://www.reuters.com/business/finance/charles-schwab-beats-profit-estimates-higher-rates-deposits-drop-2023-04-17/",
+        "published_date": "2023-04-17",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The July 2022 75-bp hike lifted short-term rates, increasing yields on money-market funds, CDs and high-yield savings.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Higher competing yields made low-yield sweep deposits less attractive, prompting Schwab clients to reallocate idle cash (‘cash sorting').",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By the April 2023 quarter, Schwab's bank deposits had declined 11% to about $325.7 billion, reducing net interest revenue and weighing on earnings quality; on April 17, 2023, Schwab's shares nevertheless closed up about 3.9%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Rapid monetary tightening raised the opportunity cost of idle cash, accelerating client moves from sweep deposits to higher-yield vehicles. The resulting deposit decline pressured net interest revenue, a key earnings driver for Schwab's bank subsidiary.",
+  "counterfactual_analysis": "If policy rates had remained low, yields on alternative cash vehicles would have been less competitive, likely slowing cash sorting, limiting deposit compression and stabilizing Schwab's net interest revenue.",
+  "adversarial_confounders": [
+    {
+      "text": "March 2023 regional-bank turmoil",
+      "impact": "Sector-wide confidence shocks may have independently accelerated cash sorting and deposit outflows beyond what rate differentials alone would imply."
+    }
+  ],
+  "confidence_score": 0.55,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political/Economic - Sanctions and geopolitical tensions reshaping Russian energy exports",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Western sanctions and the war in Ukraine disrupted traditional trade flows for Russian oil and gas, forcing producers like Rosneft to reroute volumes and negotiate new terms. This geopolitical backdrop increased uncertainty around pricing, logistics and access to technology, weighing on investors' assessment of Rosneft's long-term prospects."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "365 days",
+        "conditions_score": 0.75,
+        "commentary": "As sanctions limited Rosneft's access to Western markets and financing, the company sought alternative buyers and partners to stabilize exports. Over time, these adjustments partially offset the initial shock but also locked Rosneft into more constrained trading relationships, moderating the impact rather than fully restoring the old growth path."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

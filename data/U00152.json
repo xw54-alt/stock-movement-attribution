@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00152",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "High inflation and economic uncertainties in 2023 caused shoppers to pull back on non-essential purchases such as furniture, jewelry and electronics, focusing instead on essential groceries. This shift in consumer behavior eroded sales of high-margin discretionary items at many retailers.",
+      "date": "2023-05-27",
+      "entities": [
+        "Consumers"
+      ],
+      "sectors": [
+        "Retail",
+        "Macroeconomy"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Retail sector"
+      },
+      "source_info": {
+        "title": "Costco misses quarterly earnings estimates as shoppers pull back",
+        "url": "https://www.linkedin.com/pulse/us-consumers-under-rising-inflation-behavior-shifts-mcqueen-caidm-jtwre",
+        "published_date": "2023-05-27",
+        "publisher": "linkedin.com"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On March 8, 2024, Costco's shares fell 7.6 %, its worst day since May 2022, after the company reported second-quarter revenue below analyst expectations. Lower gasoline prices contributed to the sales miss, and investors took the pullback in discretionary spending as a sign that growth was slowing.",
+      "date": "2024-03-08",
+      "entities": [
+        "Costco"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Costco"
+      },
+      "stock_change_pct": 7.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Costco shares tumble after revenue miss",
+        "url": "https://www.reuters.com/business/retail-consumer/costco-stock-set-worst-day-near-two-years-quarterly-revenue-miss-2024-03-08/",
+        "published_date": "2024-03-08",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Throughout 2023, persistent inflation and economic uncertainty led U.S. households to tighten budgets, particularly on big-ticket discretionary items. Consumers prioritized necessities over discretionary goods.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Costco, which sells high-margin categories like home furnishings and electronics, saw slower sales growth as shoppers traded down and deferred purchases.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When Costco posted second-quarter revenue below expectations on 2024-03-08, investors concluded the consumer slowdown was materially affecting results; the stock fell about 7.6 % that day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reduced discretionary spending due to inflation set the stage for Costco's revenue miss and the subsequent stock decline.",
+  "counterfactual_analysis": "Had inflation cooled sooner and consumers maintained discretionary spending levels, Costco's revenue would likely have met or exceeded expectations and its stock may not have suffered a steep drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Lower gasoline prices also contributed to the revenue miss and could explain part of the stock decline.",
+      "impact": "Makes it difficult to attribute the entire stock move to consumer spending alone."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "demand_sensitivity",
+        "industry_barriers": "medium",
+        "commentary": "High inflation and tighter household budgets made Costco's shoppers more selective, increasing their willingness to trade down or defer big-ticket purchases. This shift in buyer power pressured discretionary categories and contributed to the sales miss that investors punished with a sharp share-price decline."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Persistent inflation and macro uncertainty weighing on consumer spending",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Elevated prices for essentials and uncertainty about the economic outlook curbed demand for higher-margin discretionary items. These macro conditions amplified the impact of Costco's softer results, leading markets to reassess near-term growth and margin assumptions."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

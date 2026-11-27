@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00197",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On February 1, 2024, Ferrari emphasized that its order book was exceptionally strong, with visibility stretching well into 2026, and suggested it was on track to reach the high end of its medium-term targets. However, management refrained from raising its official full-year guidance. By choosing to keep forecasts conservative, Ferrari signaled to the market that, despite healthy demand, leadership remained cautious and preferred to maintain a buffer against potential economic or operational risks.",
+      "date": "2024-02-01",
+      "entities": [
+        "Ferrari"
+      ],
+      "sectors": [
+        "automotive"
+      ],
+      "country": "Italy",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.7,
+        "target": "Ferrari"
+      },
+      "source_info": {
+        "title": "Ferrari sets record market cap but keeps guidance conservative",
+        "url": "https://www.reuters.com/business/autos-transportation/ferrari-sees-2024-full-year-revenues-core-profits-growing-further-2024-02-01/",
+        "published_date": "2024-02-01",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "On May 6, 2024, Ferrari released its first-quarter results. The company reported a 13% increase in core earnings and an 11% rise in revenue, showing that demand for luxury vehicles remained robust. Yet instead of revising its forecasts upward to reflect the strong start, Ferrari reiterated the same full-year guidance it had set earlier in the year. This decision frustrated investors, many of whom had expected that management would seize the opportunity to raise targets. The reaffirmation of conservative guidance, despite clear evidence of strong performance, led to disappointment and a swift market reaction: Ferrari's shares fell around 4.1% on the day of the announcement.",
+      "date": "2024-05-06",
+      "entities": [
+        "Ferrari"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Italy",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Ferrari"
+      },
+      "stock_change_pct": 4.1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Ferrari stock dips as strong Q1 fails to lift guidance",
+        "url": "https://www.investing.com/news/stock-market-news/ferrari-stock-dips-as-guidance-falls-short-of-expectations-4024029",
+        "published_date": "2024-05-06",
+        "publisher": "investing.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In February 2024, Ferrari presented record order visibility and ambitious long-term targets but kept its official forecast unchanged. This created an implicit expectation that management would continue exercising caution, even in the face of strong demand signals.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "When Ferrari reported Q1 results in May 2024, the numbers confirmed robust demand: double-digit growth in both earnings and revenue. Nevertheless, management chose to maintain its earlier conservative stance and did not revise full-year guidance upward, effectively reinforcing the cautious message from February.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "This decision clashed with investor expectations. Market participants had anticipated that Ferrari would reward strong results with more ambitious targets. The absence of an upgrade was taken as a signal that management doubted the sustainability of momentum. Consequently, on 2024-05-06, Ferrari's shares fell about 4.1% as disappointment translated into selling pressure.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "This self-causal chain illustrates how Ferrari's own communication strategy shaped market outcomes. By first signaling conservatism in February and then reaffirming that stance in May despite strong quarterly results, management sent a consistent but cautious message. Investors, who were looking for a more optimistic adjustment, reacted negatively when those expectations were not met. The share decline was therefore not driven by external shocks but directly by Ferrari's decisions regarding guidance and communication.",
+  "counterfactual_analysis": "If Ferrari had chosen to raise its full-year guidance either in February or after reporting strong Q1 results in May, investors would likely have interpreted the move as confidence in sustained growth. In that scenario, the share price might have risen rather than fallen, as expectations would have aligned with management's communication.",
+  "adversarial_confounders": [
+    {
+      "text": "Lingering macroeconomic uncertainty in early 2024",
+      "impact": "Global risks such as slowing growth or inflationary pressures may have independently influenced management to remain conservative, regardless of demand strength."
+    },
+    {
+      "text": "Competitive moves by rival luxury automakers",
+      "impact": "Announcements or pricing strategies from peers could have affected investor sentiment toward Ferrari independently of its own guidance decisions."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Global demand uncertainty",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.7,
+        "commentary": "Global growth worries and market volatility made the durability of luxury demand a key macro question for investors. By keeping guidance unchanged despite strong results, Ferrari signaled caution about that backdrop, amplifying disappointment among shareholders who had hoped for a more upbeat view."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "95 days",
+        "conditions_score": 0.75,
+        "commentary": "Several quarters of strong execution had lifted expectations for Ferrari's earnings going into the update. When management declined to raise full-year targets, it broke that reinforcing optimism and triggered a balancing correction in the form of a moderate share-price pullback."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00136",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "A November 10, 2021 report noted that U.S. consumer goods companies from Procter & Gamble to cereal maker Kellogg were raising prices as they grappled with soaring raw-material, labour and transportation costs.  The wave of price hikes underscored broad inflationary pressures across the sector.",
+      "date": "2021-11-10",
+      "entities": [
+        "Procter & Gamble",
+        "Kellogg"
+      ],
+      "sectors": [
+        "Consumer Goods",
+        "Food"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Consumer Goods Industry"
+      },
+      "source_info": {
+        "title": "Surging gasoline, food prices fan U.S. inflation",
+        "url": "https://www.reuters.com/business/us-consumer-prices-surge-weekly-jobless-claims-fall-2021-11-10/",
+        "published_date": "2021-11-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "During its February 10, 2022 earnings call, Coca-Cola said it would raise beverage prices further to offset soaring costs for ingredients and logistics.  Investors interpreted the company's ability to pass on inflation as a sign of resilience, nudging its shares up around 1.3%.",
+      "date": "2022-02-10",
+      "entities": [
+        "Coca-Cola"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.55,
+        "target": "Coca-Cola"
+      },
+      "stock_change_pct": 1.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Coca-Cola, PepsiCo warn of inflation bite as higher prices lift sales",
+        "url": "https://www.reuters.com/business/retail-consumer/pepsico-forecasts-full-year-earnings-below-estimates-2022-02-10/",
+        "published_date": "2022-02-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "By late 2021, consumer goods firms widely increased prices to counter rising input costs, signalling persistent inflation across the supply chain.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The broad pricing environment created expectations that beverage companies would follow suit to protect margins.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Coca-Cola's announcement of further price hikes affirmed these expectations, and investors rewarded the stock with a rise of about 1.3%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cross-industry wave of price hikes described in November 2021 signalled that inflationary pressures would persist.  This set the stage for Coca-Cola to announce its own price increases a few months later.  Because the market perceived that other consumer goods companies were successfully passing through costs, Coca-Cola's similar move was taken positively.",
+  "counterfactual_analysis": "If other consumer goods companies had absorbed rising costs instead of raising prices, investors might have questioned Coca-Cola's ability to pass on inflation, potentially weakening its share reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Currency movements impacting international earnings",
+      "impact": "Could influence Coca-Cola's results and investor response irrespective of industry pricing trends"
+    },
+    {
+      "text": "Changes in consumer preferences for diet drinks",
+      "impact": "May affect demand and pricing power independent of inflation"
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal/Technological - Regulatory and technical risks surrounding new crypto products",
+        "pestel_impact_score": 0.75,
+        "conditions_score": 0.7,
+        "commentary": "Regulators raised questions about the structure, disclosure and market impact of Coinbase's planned lending and derivative offerings. These legal and technical uncertainties limited the company's ability to diversify revenue, contributing to more cautious guidance and investor skepticism."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

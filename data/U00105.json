@@ -1,0 +1,145 @@
+{
+  "pair_id": "U00105",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "Nvidia delivered a blowout forecast that reignited the AI-chip trade and lifted semiconductor peers.",
+      "date": "2024-02-21",
+      "entities": [
+        "Nvidia"
+      ],
+      "sectors": [
+        "AI",
+        "semiconductor"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Nvidia"
+      },
+      "source_info": {
+        "title": "Nvidia stock surges as revenue forecast tops estimates, AI demand continues",
+        "url": "https://www.reuters.com/technology/nvidia-forecasts-first-quarter-revenue-above-estimates-2024-02-21/",
+        "published_date": "2024-02-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Broadcom announced a 10-for-1 stock split alongside a 10% raise to its 2024 AI-chip revenue forecast to about $11 billion.",
+      "date": "2024-06-12",
+      "entities": [
+        "Broadcom"
+      ],
+      "sectors": [
+        "AI",
+        "semiconductor"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Broadcom"
+      },
+      "source_info": {
+        "title": "Broadcom boosts revenue forecast from AI chips, unveils stock split",
+        "url": "https://www.reuters.com/technology/chipmaker-broadcom-raises-annual-revenue-forecast-2024-06-12/",
+        "published_date": "2024-06-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Broadcom shares surged following the AI revenue forecast raise and the 10-for-1 stock split announcement.",
+      "date": "2024-06-13",
+      "entities": [
+        "Broadcom"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "guidance_update",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Broadcom"
+      },
+      "stock_change_pct": 15,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Broadcom soars as demand for AI chips powers forecast raise",
+        "url": "https://www.reuters.com/technology/broadcom-soars-demand-ai-chips-power-forecast-raise-2024-06-13/",
+        "published_date": "2024-06-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On Feb 21, 2024, Nvidia's blowout outlook re-energized the AI-chip trade, lifting expectations for sustained AI infrastructure capex across the supply chain.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "On Jun 12, 2024, Broadcom separately announced a 10-for-1 stock split and raised its 2024 AI-chip revenue forecast by 10% to about $11B, signaling stronger monetization of AI demand.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors priced in both the improved AI outlook and split-driven accessibility/flow dynamics, reinforcing positive sentiment toward Broadcom's AI positioning.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Market reaction: Broadcom (AVGO) jumped about 15% on Jun 13, 2024 following the forecast raise and 10-for-1 stock split announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Nvidia's February results catalyzed broad AI-chip enthusiasm. Broadcom's June split and AI-forecast raise provided direct catalysts for re-rating, culminating in a sharp, single-day gain.",
+  "counterfactual_analysis": "Absent Nvidia's February catalyst or Broadcom's split announcement, the June 13 re-rating likely would have been smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "General tech market rally",
+      "impact": "Could amplify stock reactions beyond AI-specific drivers."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - AI and cloud workloads driving demand for advanced networking and compute",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Explosive growth in cloud and AI workloads increased the need for high-bandwidth networking, accelerators and custom silicon. Broadcom's exposure to these segments made it a prime beneficiary of this technological shift, underpinning the strong earnings beat and bullish multiyear outlook."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.85,
+        "commentary": "As hyperscalers invest more in AI infrastructure, Broadcom wins larger, longer-term chip contracts that support recurring revenue and further R&D. Those reinvestments deepen customer ties and help Broadcom secure additional design wins, creating a reinforcing loop between AI adoption, demand for its chips and investor confidence."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

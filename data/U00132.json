@@ -1,0 +1,152 @@
+{
+  "pair_id": "U00132",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "OPEC+ continued to restrict output, maintaining only gradual increases that kept oil supply tight and prices elevated into 2022.",
+      "date": "2021-10-04",
+      "entities": [
+        "OPEC+",
+        "Saudi Arabia",
+        "Russia"
+      ],
+      "sectors": [
+        "Oil & Gas"
+      ],
+      "country": "Saudi Arabia",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Oil prices"
+      },
+      "source_info": {
+        "title": "OPEC+ sticks to plan for gradual oil output hike, price roars higher",
+        "url": "https://www.reuters.com/business/energy/opec-seen-keeping-oil-output-policy-unchanged-opec-sources-say-2021-10-04/",
+        "published_date": "2021-10-04",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "Russia ordered troops into eastern Ukraine, prompting sanctions and pushing Brent crude toward $100 per barrel as markets priced in supply disruptions.",
+      "date": "2022-02-22",
+      "entities": [
+        "Russia",
+        "Ukraine"
+      ],
+      "sectors": [
+        "Oil & Gas",
+        "Geopolitics"
+      ],
+      "country": "Russia",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Global stability"
+      },
+      "source_info": {
+        "title": "ANALYST VIEW: Escalating Russia-Ukraine crisis ripples through markets",
+        "url": "https://www.reuters.com/markets/europe/analyst-view-escalating-russia-ukraine-crisis-ripples-through-markets-2022-02-22/",
+        "published_date": "2022-02-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Chevron reported a record quarterly profit of $11.62 billion amid soaring energy prices; shares rose about 8% intraday to roughly $162 as the company lifted buyback guidance.",
+      "date": "2022-07-29",
+      "entities": [
+        "Chevron"
+      ],
+      "sectors": [
+        "Energy & Utilities"
+      ],
+      "country": "United States",
+      "effect_type": "earnings_surprise",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Chevron"
+      },
+      "stock_change_pct": 8,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Chevron says it ‘can do it all', after record profit and buyback lift",
+        "url": "https://www.reuters.com/business/energy/chevron-posts-record-profit-lifts-buyback-guidance-2022-07-29/",
+        "published_date": "2022-07-29",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "OPEC+ maintained output restraints, keeping supply tight and underpinning higher benchmark prices.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Russia's move into eastern Ukraine heightened geopolitical risk and disrupted energy trade flows, pushing Brent and gas prices toward multi-year highs.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "The combination of constrained supply and geopolitical shock drove a sharp spike in global energy prices and producer margins.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Chevron capitalized on elevated realizations to deliver a record profit of $11.62 billion and increased its share-buyback target.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 5,
+      "description": "On July 29, 2022, Chevron's stock rose about 8% intraday to roughly $162 after the earnings release and buyback update.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Tight OPEC+ supply policy and the sudden geopolitical shock from Russia's actions jointly lifted oil and gas benchmarks. As a major integrated producer, Chevron translated these market conditions into record profits and a positive share-price reaction.",
+  "counterfactual_analysis": "If OPEC+ had boosted output aggressively or Russia had not escalated in Ukraine, energy prices likely would have been lower and Chevron's profits and share-price response would have been less pronounced.",
+  "adversarial_confounders": [
+    {
+      "text": "Post-pandemic demand recovery in 2022",
+      "impact": "Stronger demand may have independently supported prices and earnings alongside supply constraints and war."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal/Economic - Sanctions and conflict reshaping Russian energy flows and prices",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Western sanctions and Russia's invasion of Ukraine disrupted traditional oil and gas trade routes and contributed to higher, more volatile prices. That legal and economic shock raised both the earnings potential and the risk profile for companies like Chevron, which investors had to factor into their expectations."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "When Russian exports are constrained, non-Russian majors compete to capture the resulting gaps in supply while also facing calls for windfall taxes and more investment. Chevron's exposure to advantaged assets positioned it to benefit from tighter markets, but also sharpened scrutiny of how it balanced growth, returns and political pressures versus peers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

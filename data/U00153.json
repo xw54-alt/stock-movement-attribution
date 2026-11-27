@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00153",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The Costco Teamsters union authorized a strike while negotiating a new contract, pressing for higher wages and improved benefits for the retailer's warehouse workers. The union vote increased pressure on Costco's management to reach an agreement.",
+      "date": "2025-01-31",
+      "entities": [
+        "Costco"
+      ],
+      "sectors": [
+        "Labor",
+        "Retail"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Costco Wholesale"
+      },
+      "source_info": {
+        "title": "Costco raises pay above $30 an hour for many, as Teamsters union threatens strike",
+        "url": "https://www.npr.org/2025/01/31/nx-s1-5280640/costco-pay-raises-teamsters-union-threatens-strike",
+        "published_date": "2025-01-31",
+        "publisher": "npr.org"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "In March 2025, Costco's new employee agreement increased the top-of-scale hourly wage by roughly $1 to $31.90 and raised the minimum wage to $20. CFO Gary Millerchip said this wage hike would be a headwind for selling, general and administrative costs, but the company planned to offset the impact through productivity gains and other efficiencies.",
+      "date": "2025-03-10",
+      "entities": [
+        "Costco"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.7,
+        "target": "Costco"
+      },
+      "stock_change_pct": 1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Costco CFO says 50 cent wage increase poses expense ‘headwind'",
+        "url": "https://www.cfodive.com/news/costco-raises-minimum-hourly-wage-20-compensation/742075/",
+        "published_date": "2025-03-10",
+        "publisher": "CFO Dive"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "During contract talks in early 2025, the Teamsters union representing Costco warehouse workers authorized a strike, signaling willingness to walk out if wage demands were not met. The looming strike threatened to disrupt operations and tarnish Costco's reputation.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Facing this pressure, Costco negotiated a new agreement that raised entry-level pay to $20 per hour and increased top-of-scale wages by about $1, aiming to avert a strike and maintain a motivated workforce.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-03-10, management acknowledged the wage increases would pressure SG&A, and COST edged lower around the update; by week's end, the shares were down about 1%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A credible strike threat increased labor bargaining power, compelling Costco to lift wages; management subsequently flagged the cost headwind.",
+  "counterfactual_analysis": "Absent the strike authorization, Costco might have negotiated smaller raises and avoided part of the SG&A headwind.",
+  "adversarial_confounders": [
+    {
+      "text": "Tight labor markets and competition for retail workers could have driven wage increases regardless of union pressure.",
+      "impact": "Complicates attribution of the pay raise solely to the strike threat."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "input_cost_shift",
+        "industry_barriers": "medium",
+        "commentary": "The Teamsters' strike authorization showed that organized labor at Costco could credibly threaten disruption to secure better terms. This higher supplier leverage translated into a richer wage and benefit package, raising Costco's structural labor cost base in its U.S. operations."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Social - Stronger worker activism and focus on frontline pay and benefits",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.8,
+        "commentary": "Public attention to essential workers and living wages increased expectations for retailers to share more of their profits with staff. In this social climate, Costco faced pressure to agree to a more generous contract, accepting near-term cost headwinds to preserve its reputation and employee relations."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "365 days",
+        "conditions_score": 0.75,
+        "commentary": "Higher guaranteed pay raises Costco's SG&A, but can also support lower turnover and better service over time. Those operational improvements help offset some of the wage inflation, creating a balancing dynamic between labor costs and productivity gains in future periods."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

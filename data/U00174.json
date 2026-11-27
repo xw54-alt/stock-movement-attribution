@@ -1,0 +1,132 @@
+{
+  "pair_id": "U00174",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "During a Reuters interview on 2023-03-15, Saudi National Bank chairman Ammar Al Khudairy said the bank could not raise its stake in Credit Suisse above 10% due to regulatory limits. The comment signaled limited support for the struggling lender and hit market confidence.",
+      "date": "2023-03-15",
+      "entities": [
+        "Saudi National Bank",
+        "Credit Suisse"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Credit Suisse"
+      },
+      "source_info": {
+        "title": "Credit Suisse's biggest backer says can't put up more cash; share down by a fifth",
+        "url": "https://www.reuters.com/business/finance/credit-suisses-saudi-backer-happy-with-transformation-plan-doesnt-think-extra-2023-03-15/",
+        "published_date": "2023-03-15",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2023-03-15, European bank stocks slumped after the SNB remark; Deutsche Bank shares fell about 8.4% in Frankfurt trading as contagion fears spread.",
+      "date": "2023-03-15",
+      "entities": [
+        "Deutsche Bank"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Deutsche Bank"
+      },
+      "stock_change_pct": 8.4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "European banks battered as Credit Suisse drops over 20%",
+        "url": "https://www.reuters.com/business/finance/european-banks-battered-credit-suisse-drops-20-2023-03-15/",
+        "published_date": "2023-03-15",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Al Khudairy stated SNB could not increase its Credit Suisse stake beyond 10% for regulatory reasons, signaling limited incremental support during an already fragile period for the Swiss bank."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors interpreted the statement as a confidence shock and extrapolated funding and capital-raising risks at Credit Suisse, elevating perceived sector contagion risk."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2023-03-15, European bank stocks sold off; Deutsche Bank's shares fell about 8.4% as investors de-risked across peers, pricing in contagion from Credit Suisse's turmoil."
+    }
+  ],
+  "rationale": "A major shareholder's public refusal to add capital is a strong negative signal for a stressed bank and can rapidly spill over to peers via contagion channels and risk repricing.",
+  "counterfactual_analysis": "Had SNB indicated willingness to provide further support-or avoided public comments-market confidence in Credit Suisse's funding options might have held better, likely reducing the sector-wide sell-off and limiting Deutsche Bank's decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent macro headlines and overall risk-off sentiment.",
+      "impact": "Broader market volatility could have depressed European bank shares independent of the SNB comment."
+    },
+    {
+      "text": "Bank-specific news flow at Credit Suisse and other peers.",
+      "impact": "Additional disclosures or regulatory reports could amplify sell-offs irrespective of the shareholder remark."
+    },
+    {
+      "text": "Derivatives and funding market stress (e.g., CDS widening).",
+      "impact": "Rising CDS and liquidity concerns can drive price moves beyond equity-specific narratives."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Signals about capital support and funding confidence",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "The Saudi National Bank chairman's remark signaled that one key investor was unwilling or unable to inject more capital into Credit Suisse. That public constraint undermined confidence in the broader European banking system's access to backstop capital, helping to drive risk premiums higher for peers like Deutsche Bank."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "capital_providers",
+        "industry_barriers": "high",
+        "commentary": "Shareholders and bondholders act as suppliers of capital to banks, and their willingness to provide fresh funds affects perceived solvency buffers. When a major investor signaled limits on additional support, it highlighted how constrained that bargaining power could become, prompting investors to demand higher returns from banks across the region."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "0 days",
+        "conditions_score": 0.75,
+        "commentary": "A visible pullback in support for one weak bank can quickly spark doubts about others, leading to broad-based selling and tighter funding conditions. Those price moves then reinforce fears of fragility, creating a fast-moving contagion loop that dragged Deutsche Bank's shares sharply lower on the same day."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

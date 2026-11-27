@@ -1,0 +1,146 @@
+{
+  "pair_id": "U00112",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The Russian invasion of Ukraine disrupted global commodity supplies, causing nickel, palladium and other battery metals to surge in price and prompting analysts to warn that electric car makers would need to rethink supply chains to avoid skyrocketing production costs.",
+      "date": "2022-03-14",
+      "entities": [
+        "RBC",
+        "electric car makers"
+      ],
+      "sectors": [
+        "automotive",
+        "commodities"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "electric car makers"
+      },
+      "source_info": {
+        "title": "Electric-car makers should rethink raw material supply chains -RBC",
+        "url": "https://www.reuters.com/business/autos-transportation/electric-car-makers-should-rethink-raw-material-supply-chains-rbc-2022-03-14/",
+        "published_date": "2022-03-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "China's Ministry of Finance announced that subsidies for new energy vehicles would be cut by 30% in 2022 and withdrawn entirely by the end of the year, signalling tighter fiscal support for electric car makers.",
+      "date": "2021-12-31",
+      "entities": [
+        "Chinese Ministry of Finance"
+      ],
+      "sectors": [
+        "automotive",
+        "policy"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "electric car makers"
+      },
+      "source_info": {
+        "title": "China to cut new energy vehicle subsidies by 30% in 2022",
+        "url": "https://www.reuters.com/world/china/china-cut-new-energy-vehicle-subsidies-by-30-2022-2021-12-31/",
+        "published_date": "2021-12-31",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "BYD raised the prices of several electric cars by 3,000-6,000 yuan, citing surging battery metal costs and the reduction of government subsidies for new-energy vehicles.",
+      "date": "2022-03-16",
+      "entities": [
+        "BYD"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "neutral",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.7,
+        "target": "BYD"
+      },
+      "stock_change_pct": 1.5,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "BYD raises car prices as raw material costs and subsidy cuts squeeze margins",
+        "url": "https://www.bloomberg.com/news/articles/2022-03-16/byd-follows-tesla-in-hiking-prices-on-rising-raw-materials-costs",
+        "published_date": "2022-03-15",
+        "publisher": "bloomberg"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Russia's invasion of Ukraine triggered a surge in battery metal prices such as nickel and palladium, dramatically increasing the cost of electric-vehicle production and putting pressure on manufacturers.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "China's government concurrently announced a 30% cut to subsidies for new energy vehicles, reducing incentives for buyers and adding financial headwinds for car makers.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Faced with higher input costs and lower subsidies, BYD raised prices on its electric cars by 3,000-6,000 yuan to preserve margins.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Following the price increase announcement, BYD's share price edged up around 1.5% as investors viewed the move as protecting profitability despite potential sales headwinds.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The surge in battery metal costs caused by geopolitical disruptions and the simultaneous reduction in Chinese EV subsidies squeezed margins across the industry. BYD responded by raising prices to offset the dual pressures, suggesting that its pricing decision was causally linked to these external shocks.",
+  "counterfactual_analysis": "If battery metal prices had remained stable and government subsidies had not been reduced, BYD would have had less need to pass on costs to consumers and might have kept prices unchanged, preserving sales volumes.",
+  "adversarial_confounders": [
+    {
+      "text": "General inflationary pressures",
+      "impact": "Rising costs across the economy might also have influenced BYD's decision to adjust prices independently of commodity spikes and policy changes"
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Post-pandemic slowdown and intense competition in China's EV market",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "As China's economy cooled and subsidies faded, EV demand growth slowed while many new models crowded the market. These economic and competitive pressures pushed weaker players like Evergrande into crisis and forced others to adjust pricing and strategy, which BYD had to navigate carefully."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Falling prices and a proliferation of EV brands intensified rivalry, leaving little room for laggards to recover. While Evergrande's struggles removed a potential competitor, the broader price war still pressured BYD to balance growth, profitability and market share in an increasingly crowded field."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

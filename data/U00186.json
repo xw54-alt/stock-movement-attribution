@@ -1,0 +1,154 @@
+{
+  "pair_id": "U00186",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On May 1 2025, CVS Health's pharmacy benefits manager Caremark announced that it would drop Eli Lilly's obesity drug Zepbound from certain reimbursement lists in favor of competitor Novo Nordisk's Wegovy. Lilly said the change affected less than 1 percent of existing Zepbound patients, but investors feared that the exclusion could blunt sales momentum and spur price competition.",
+      "date": "2025-05-01",
+      "entities": [
+        "CVS Health",
+        "Caremark"
+      ],
+      "sectors": [
+        "healthcare",
+        "insurance"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Eli Lilly"
+      },
+      "source_info": {
+        "title": "Eli Lilly downplays CVS move to drop Zepbound coverage; shares plunge",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/eli-lilly-beats-q1-profit-estimates-strength-diabetes-drug-2025-05-01/",
+        "published_date": "2025-05-01",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "On July 29 2025, Novo Nordisk slashed its forecast for 2025 sales and operating profit growth, citing slower U.S. obesity-drug uptake and intensifying competition. The surprise profit warning shocked investors and raised fears that price cuts or weakened demand could ripple across the sector, sending Lilly's shares down nearly 5 percent that day.",
+      "date": "2025-07-29",
+      "entities": [
+        "Novo Nordisk"
+      ],
+      "sectors": [
+        "pharmaceuticals"
+      ],
+      "country": "Denmark",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Eli Lilly"
+      },
+      "source_info": {
+        "title": "Lilly set for strong quarter after Novo profit warning",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/lilly-set-strong-quarter-after-novo-profit-warning-2025-07-29/",
+        "published_date": "2025-07-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 7 2025, Lilly reported that its once-daily oral obesity pill orforglipron helped people without diabetes lose 12.4 percent of body weight - less than the 14.9 percent seen with Novo Nordisk's Wegovy in earlier studies. The underwhelming efficacy and high drop-out rate undermined hopes that Lilly's pill would revolutionize the market, and its shares tumbled more than 11 percent as investors who were already uneasy after the CVS and Novo setbacks sold aggressively.",
+      "date": "2025-08-07",
+      "entities": [
+        "Eli Lilly"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Eli Lilly"
+      },
+      "stock_change_pct": 11,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Eli Lilly shares fall as weight-loss pill study overshadows earnings",
+        "url": "https://www.investing.com/news/stock-market-news/eli-lilly-shares-fall-as-weight-loss-pill-study-overshadows-earnings-4175936",
+        "published_date": "2025-08-07",
+        "publisher": "Investing.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "CVS Health's decision to remove Zepbound from preferred coverage lists signaled that payers might curb access to Lilly's obesity drug. This surprising exclusion raised investor concerns about market share and pricing power, weakening confidence in Lilly's near-term sales trajectory.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Less than three months later, Novo Nordisk issued a profit warning for 2025, blaming slower U.S. growth and intense competition. The warning suggested that the obesity-drug boom might be stalling and that rival companies could start cutting prices to stimulate demand, further dampening sentiment toward Lilly.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "These successive negative signals created a fragile backdrop in which investors were primed to react strongly to any disappointing news. Sentiment toward Lilly was already bearish due to fears of reimbursement challenges and sector-wide slowdowns.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "When Lilly disclosed on 2025-08-07 that its oral pill orforglipron only achieved 12.4 percent weight loss - well below some expectations - the market responded with an aggressive sell-off. The stock plunged more than 11 percent, reflecting the cumulative effect of prior headwinds and the fresh disappointment in the trial results.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A coverage cut by CVS and a profit warning from Novo Nordisk set a pessimistic tone around obesity drugs. These events lowered tolerance for negative surprises. When Lilly's trial underperformed, the compounding effect of earlier shocks led to an outsized decline in the stock.",
+  "counterfactual_analysis": "If CVS had maintained Zepbound coverage and Novo had not warned of slowing sales, investor sentiment might have been more resilient. Under such circumstances, Lilly's disappointing trial data might have resulted in a smaller decline or a temporary pullback rather than a double-digit plunge.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market volatility and interest-rate hikes during mid-2025",
+      "impact": "General risk-off sentiment could have amplified selling pressure beyond what drug-specific news would imply."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_positioning",
+        "industry_barriers": "high",
+        "commentary": "Nvidia's strong AI-chip guidance and Meta's plan to spend heavily on AI infrastructure underscored the centrality of high-end GPUs to the next computing cycle. That spending race highlighted how much cloud and internet platforms could expand capex on Apple's suppliers and peers, but left investors questioning Apple's relative AI story."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological/Economic - AI investment cycle and hardware demand",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "A surge in demand for AI compute reshaped expectations for which companies would capture the bulk of incremental hardware and data-center spending. As Nvidia and other chipmakers rallied on AI-driven upgrades, investors began to see Apple's product mix as less directly leveraged to this capex boom, contributing to the stock's drag."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "126 days",
+        "conditions_score": 0.85,
+        "commentary": "Each positive AI update from Nvidia or Meta reinforced the narrative that leadership in AI hardware and services would drive the next leg of tech outperformance. As capital and attention rotated toward perceived AI winners, Apple's relative underexposure created a self-reinforcing gap in sentiment and share performance."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

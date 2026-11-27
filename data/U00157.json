@@ -1,0 +1,150 @@
+{
+  "pair_id": "U00157",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Tokio Marine halted insurance coverage for Greensill Capital's trade-finance assets, cutting off a critical credit backstop and triggering Greensill's rapid collapse. The World Socialist Web Site reported the insurer's withdrawal on 2021-03-09.",
+      "date": "2021-03-09",
+      "entities": [
+        "Tokio Marine",
+        "Greensill Capital"
+      ],
+      "sectors": [
+        "Financial Services",
+        "Insurance"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Greensill Capital"
+      },
+      "source_info": {
+        "title": "The demise of Greensill: Another expression of financial rot and decay",
+        "url": "https://www.wsws.org/en/articles/2021/03/09/gree-m09.html",
+        "published_date": "2021-03-09",
+        "publisher": "World Socialist Web Site"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Nomura Holdings warned that it could incur around US$2 billion in losses after a U.S. client, later revealed as Archegos Capital, defaulted on margin calls. The disclosure on 2021-03-29 sent Nomura's shares tumbling as investors braced for a prime-brokerage loss.",
+      "date": "2021-03-28",
+      "entities": [
+        "Nomura Holdings",
+        "Archegos Capital Management"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Nomura Holdings"
+      },
+      "source_info": {
+        "title": "Japan's Nomura flags $2 bln loss at U.S. unit, cancels bond issue",
+        "url": "https://www.reuters.com/business/finance/nomura-flags-potential-significant-loss-us-unit-2021-03-29/",
+        "published_date": "2021-03-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Credit Suisse's 2021 results were dominated by a CHF 1.7 billion loss on Archegos, contributing to a CHF 2.2 billion fourth-quarter loss. The bank's shares slid about 5.6 % as it warned of another loss in 2022.",
+      "date": "2022-02-10",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "earnings_surprise",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 5.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Credit Suisse flags weak 2022, ends torrid year with $2.2 bln quarterly loss",
+        "url": "https://www.reuters.com/business/finance/credit-suisse-posts-2-billion-swiss-franc-q4-loss-2022-02-10/",
+        "published_date": "2022-02-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "First, Tokio Marine's withdrawal of insurance triggered Greensill's collapse. Shortly after, Nomura's warning exposed enormous losses at Archegos.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "These twin shocks left Credit Suisse nursing losses on supply-chain finance funds and prime-brokerage exposures. Investors questioned management and capital buffers as the bank grappled with multiple scandals.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "When Credit Suisse reported its 2021 results on 2022-02-10, it revealed a CHF 2.2 billion quarterly loss driven by the Greensill and Archegos debacles, and the stock fell about 5.6 %.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The Greensill and Archegos collapses occurred within weeks of each other and jointly devastated Credit Suisse's earnings. The bank's 2021 results provide clear evidence that both events were material contributors to its losses and share-price decline.",
+  "counterfactual_analysis": "If either Greensill or Archegos had remained solvent, Credit Suisse's losses would have been lower. Without both scandals, the bank might have reported a modest profit and avoided investor backlash.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market volatility in 2021.",
+      "impact": "Macro conditions may have depressed earnings and share price independently of the two scandals."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "300 days",
+        "conditions_score": 0.85,
+        "commentary": "Successive hits from Greensill and Archegos eroded Credit Suisse's capital and credibility, making it harder to restore confidence. Each new loss and provision reinforced investor concerns, tightening market scrutiny and feeding back into higher funding costs and weaker client activity."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "reputational_positioning",
+        "industry_barriers": "high",
+        "commentary": "In global investment banking and wealth management, clients can shift mandates toward institutions seen as more stable. Credit Suisse's missteps weakened its competitive standing versus peers, encouraging some customers to reallocate business and further pressuring its revenue base."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Regulatory investigations and enforcement following risk management failures",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Supervisors launched reviews and enforcement actions after the Greensill and Archegos losses exposed control weaknesses. The resulting legal scrutiny raised compliance costs and constrained strategic flexibility, reinforcing the drag on Credit Suisse's profitability."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

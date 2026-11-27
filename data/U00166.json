@@ -1,0 +1,115 @@
+{
+  "pair_id": "U00166",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On 2021-10-14, more than 10,000 John Deere workers represented by the United Auto Workers went on strike after rejecting a contract offer, halting production across multiple plants.",
+      "date": "2021-10-14",
+      "entities": [
+        "John Deere",
+        "United Auto Workers"
+      ],
+      "sectors": [
+        "agricultural machinery",
+        "labor relations"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "John Deere"
+      },
+      "source_info": {
+        "title": "More than 10,000 John Deere workers go on strike",
+        "url": "https://www.pbs.org/newshour/economy/more-than-10000-john-deere-workers-go-on-strike",
+        "published_date": "2021-10-14",
+        "publisher": "Associated Press"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2022-05-20, Reuters reported that supply-chain bottlenecks forced Deere to hold back equipment sales and miss revenue expectations; shares fell about 14% on the news.",
+      "date": "2022-05-20",
+      "entities": [
+        "Deere & Company"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Deere & Company"
+      },
+      "stock_change_pct": 14,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Deere's supply chain issues hit revenue, shares plunge",
+        "url": "https://www.reuters.com/business/deere-quarterly-profit-rises-higher-equipment-demand-2022-05-20/",
+        "published_date": "2022-05-20",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Over 10,000 workers at 14 John Deere facilities began a strike, pausing production of tractors and combines."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The work stoppage disrupted Deere's manufacturing schedule and parts orders, creating a backlog of unfinished machines and compounding wider supply-chain constraints even after the strike ended."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "When Deere reported results on 2022-05-20, it cited supply bottlenecks that left many machines unshipped; revenue missed expectations and the stock fell about 14% that day."
+    }
+  ],
+  "rationale": "The late-2021 strike reduced output and contributed to an inventory backlog. Combined with ongoing supply-chain issues, Deere could not ship planned volumes by May 2022, leading to a revenue miss and a roughly 14% stock drop.",
+  "counterfactual_analysis": "Absent the strike, Deere's factories would have produced more inventory, making it more likely the company met sales targets and avoided the 14% share-price decline on 2022-05-20.",
+  "adversarial_confounders": [
+    {
+      "text": "Pandemic-era supply-chain disruptions and semiconductor shortages affected component availability across manufacturers.",
+      "impact": "These macro factors could have constrained Deere's shipments independent of the strike, contributing to the revenue miss."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "218 days",
+        "conditions_score": 0.75,
+        "commentary": "The John Deere strike abruptly removed labour capacity from multiple plants, creating bottlenecks that rippled through production and inventory cycles. Months later, the resulting supply constraints showed up in weaker shipments and missed revenue targets, illustrating a delayed balancing response to the earlier disruption."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Global supply-chain bottlenecks",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.8,
+        "commentary": "Labour relations and broader supply-chain strains became important economic and social risks for capital-goods makers during this period. The UAW strike magnified those pressures for Deere, turning workplace conflict into concrete operational and financial headwinds."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00135",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "McDonald's reported on April 29, 2021 that its first-quarter comparable sales exceeded pre-pandemic 2019 levels as customers returned to restaurants, buoyed by government stimulus checks and new chicken sandwiches. The company said easing restrictions and promotions drove a 7.5% jump in global sales, signalling robust demand for out-of-home dining.",
+      "date": "2021-04-29",
+      "entities": [
+        "McDonald's"
+      ],
+      "sectors": [
+        "Restaurant",
+        "Quick-Service"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "McDonald's"
+      },
+      "source_info": {
+        "title": "McDonald's sales growth breaches 2019 levels as pandemic curbs ease",
+        "url": "https://www.reuters.com/business/retail-consumer/mcdonalds-sales-soar-consumers-binge-chicken-sandwiches-2021-04-29/",
+        "published_date": "2021-04-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On October 27, 2021, Coca-Cola raised its full-year profit forecast after a rebound in soft-drink demand boosted third-quarter revenue by 16%. As cinemas, stadiums and restaurants reopened, the strong sales allowed Coca-Cola to lift its outlook and its shares rose about 2.3%.",
+      "date": "2021-10-27",
+      "entities": [
+        "Coca-Cola"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.65,
+        "target": "Coca-Cola"
+      },
+      "stock_change_pct": 2.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Coca-Cola raises profit forecast as strong soda sales counter cost pressures",
+        "url": "https://www.reuters.com/business/retail-consumer/coca-cola-raises-full-year-profit-forecast-2021-10-27/",
+        "published_date": "2021-10-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "As vaccines rolled out and restrictions eased in early 2021, McDonald's reported a surge in sales driven by customers returning to restaurants and new menu items.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The recovery in quick-service restaurant traffic indicated broad consumer appetite for on-premise dining and beverages.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2021-10-27, Coca-Cola raised its profit forecast after reporting 16% revenue growth; shares gained about 2.3% as investors priced in the recovery.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cause article shows a marked recovery in restaurant sales as public-health restrictions eased. Because Coca-Cola supplies fountain drinks to restaurant chains, improved traffic at McDonald's signalled that out-of-home beverage consumption would rebound. This demand recovery contributed to Coca-Cola's ability to lift its profit forecast in October 2021 and propelled its stock higher.",
+  "counterfactual_analysis": "If restaurant traffic had remained weak in 2021 despite easing restrictions, Coca-Cola would have struggled to grow on-premise volumes and might not have raised its full-year guidance, tempering investor enthusiasm.",
+  "adversarial_confounders": [
+    {
+      "text": "Home consumption of sodas through grocery channels",
+      "impact": "Could have driven Coca-Cola's sales irrespective of restaurant traffic"
+    },
+    {
+      "text": "Marketing campaigns for Coca-Cola's own brands",
+      "impact": "May have contributed to strong demand independently of the restaurant sector recovery"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic/Legal - Tightening monetary policy and regulatory scrutiny of crypto",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Rising interest rates and mounting regulatory questions cooled enthusiasm for speculative assets, including cryptocurrencies. This shift in the macro and legal environment reduced trading activity and increased compliance costs for Coinbase, pressuring its top line and margins."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "180 days",
+        "conditions_score": 0.75,
+        "commentary": "As crypto prices fell and volatility subsided, retail traders pulled back, shrinking volumes and fee revenue for Coinbase. Lower activity and weaker earnings dampened investor appetite for the stock, reinforcing a downcycle that only stabilizes once speculative excess has been fully worked off."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

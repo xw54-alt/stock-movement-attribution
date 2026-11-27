@@ -1,0 +1,146 @@
+{
+  "pair_id": "U00177",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Reliance-controlled Viacom18 won the digital streaming rights to the Indian Premier League cricket tournament, meaning Disney's Hotstar service lost the ability to stream the matches that drew millions of viewers in India.",
+      "date": "2022-06-14",
+      "entities": [
+        "Viacom18",
+        "Indian Premier League"
+      ],
+      "sectors": [
+        "Media & Entertainment",
+        "Sports"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Disney"
+      },
+      "source_info": {
+        "title": "IPL broadcast deal fetches $6.2 bln; Disney, Viacom18 bag rights",
+        "url": "https://www.reuters.com/lifestyle/sports/disneys-star-pays-302-bln-ipl-2023-27-tv-rights-2022-06-14/",
+        "published_date": "2022-06-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "Disney announced that it would raise the monthly price of its ad-free Disney+ subscription by 38% to $10.99, and increase Hulu prices, starting in December 2022, signaling a shift toward profitability over aggressive subscriber growth.",
+      "date": "2022-08-10",
+      "entities": [
+        "Disney"
+      ],
+      "sectors": [
+        "Media & Entertainment",
+        "Streaming"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Subscribers"
+      },
+      "source_info": {
+        "title": "Disney tops Netflix on streaming subscribers, sets higher prices",
+        "url": "https://www.reuters.com/technology/disney-tops-netflix-streaming-subscribers-raises-prices-ad-free-options-2022-08-10/",
+        "published_date": "2022-08-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "Disney reported that total Disney+ subscribers fell by roughly 4 million, with most defections coming from Hotstar after losing IPL cricket rights and about 300,000 cancellations in the United States and Canada following price increases. Investors responded by sending Disney's shares down about 4.4% after hours.",
+      "date": "2023-05-10",
+      "entities": [
+        "Disney"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Disney"
+      },
+      "stock_change_pct": 4.4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Disney shares slip as streaming losses narrow but some subscribers leave",
+        "url": "https://www.reuters.com/business/media-telecom/disney-cuts-streaming-losses-resurgent-parks-boost-results-2023-05-10/",
+        "published_date": "2023-05-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "By winning the exclusive digital rights to the Indian Premier League, Viacom18 deprived Disney's Hotstar platform of a marquee sports property that drove subscriber acquisition and retention in India. Without live cricket, millions of viewers had less incentive to remain subscribed.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "At the same time, Disney chose to raise subscription prices for its ad-free Disney+ tier and Hulu to improve profitability. Higher subscription fees increased the cost burden on consumers in the United States and Canada, making the service less attractive relative to competitors.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "The combination of losing exclusive cricket content in India and increasing prices in North America weakened Disney+'s value proposition, leading to a sizable exodus of Hotstar subscribers and a smaller but significant drop in U.S. and Canadian customers. Analysts and investors focused on the subscriber losses, interpreting them as a sign of slowing growth.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "When Disney reported the 4 million subscriber decline in May 2023, the market reacted negatively. The share price fell about 4.4% after hours as investors reassessed the company's streaming prospects in light of competitive pressures and its own pricing decisions.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Losing the IPL streaming rights removed a major draw for Disney's Hotstar service, while simultaneous price hikes reduced affordability in other markets. Together, these factors drove significant subscriber churn, which in turn alarmed investors and caused the share price to decline.",
+  "counterfactual_analysis": "If Disney had retained the IPL streaming rights or kept prices stable, Hotstar and Disney+ may have maintained or grown subscribers. In that alternate scenario, investor sentiment would have been more positive, and the stock might not have dropped sharply after the earnings report.",
+  "adversarial_confounders": [
+    {
+      "text": "A general slowdown in the streaming market and intensifying competition from Netflix and Amazon could also contribute to subscriber losses.",
+      "impact": "Sector-wide saturation may explain some of the churn, making it harder to isolate the impact of cricket rights and price hikes."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "medium",
+        "commentary": "The sharp price increase for Disney+ and Hulu raised the effective cost of Disney's streaming bundle for households. Higher prices made some subscribers more willing to cancel or downgrade, revealing limits to Disney's short-term pricing power when growth and competition remain important."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "content_churn_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Losing exclusive IPL cricket rights gave rival platforms a strong substitute for Hotstar's must-see sports content. With alternative services offering the marquee matches, Disney faced greater churn risk in India, contributing to the subscriber declines that disappointed investors."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "pair_id": "U00124",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Silicon Valley Bank was shut down by regulators on March 10, 2023 after a rapid run on deposits, sparking fears of a broader banking crisis and undermining confidence in the financial sector.",
+      "date": "2023-03-10",
+      "entities": [
+        "Silicon Valley Bank"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Silicon Valley Bank"
+      },
+      "source_info": {
+        "title": "Explainer: What caused Silicon Valley Bank's failure?",
+        "url": "https://www.reuters.com/business/finance/what-caused-silicon-valley-banks-failure-2023-03-10/",
+        "published_date": "2023-03-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "New York's regulator closed Signature Bank on March 12, 2023 amid a crisis of confidence following SVB's failure, reinforcing contagion concerns across regional lenders.",
+      "date": "2023-03-12",
+      "entities": [
+        "Signature Bank"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Signature Bank"
+      },
+      "source_info": {
+        "title": "Signature Bank's closure had 'nothing to do with crypto,' New York regulator says",
+        "url": "https://www.reuters.com/business/finance/signature-banks-closure-had-nothing-do-with-crypto-new-york-regulator-2023-03-14/",
+        "published_date": "2023-03-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On March 13, 2023, Charles Schwab's shares tumbled about 11.56% as investors feared the brokerage could face liquidity stress similar to regional banks; the sell-off reflected contagion concerns triggered by the bank failures.",
+      "date": "2023-03-13",
+      "entities": [
+        "Charles Schwab"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Charles Schwab"
+      },
+      "stock_change_pct": 11.56,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Sliding bank shares drag Wall Street down in choppy trade",
+        "url": "https://www.reuters.com/markets/us/futures-rise-bets-likely-rate-hike-pause-after-svb-collapse-2023-03-13/",
+        "published_date": "2023-03-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In early March 2023, the sudden failure of Silicon Valley Bank led to panicked withdrawals and heightened worries about the solvency of regional lenders.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Shortly thereafter, Signature Bank was shut down amid a crisis of confidence, reinforcing perceptions of systemic weakness in the U.S. banking system.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors extrapolated the bank failures to discount brokerages like Charles Schwab, fearing vulnerabilities in sweep deposits and liquidity backstops.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On March 13, 2023, contagion anxiety triggered a sharp sell-off in Schwab's stock, which fell about 11.56% that day as market participants reassessed risk.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "SVB's collapse and Signature's closure undermined confidence beyond regional banks. Parallels with Schwab's sweep-deposit funding model prompted investors to price in elevated liquidity risk, producing a double-digit decline in the shares.",
+  "counterfactual_analysis": "Absent SVB's failure and Signature's closure, liquidity fears would have been lower, and investor scrutiny of non-bank financials like Schwab would likely have been less acute, reducing the probability of an 11%-plus one-day drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market volatility and recession fears in March 2023",
+      "impact": "Risk-off sentiment may have amplified Schwab's decline independent of banking contagion."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "365 days",
+        "conditions_score": 0.9,
+        "commentary": "OPEC+ production cuts tightened global oil supply, supporting higher prices and cash generation for integrated majors like Chevron. Those stronger cash flows funded dividends and buybacks that attracted more investors, creating a reinforcing loop between commodity prices, shareholder payouts and share-price performance."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Within a concentrated group of large integrated producers, maintaining capital discipline and returning cash became a key way to differentiate. Chevron's willingness to prioritize shareholder payouts in a high-price environment highlighted its competitive positioning, helping it stand out to investors versus peers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00161",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "In September 2019, former Credit Suisse wealth manager Iqbal Khan confronted a private detective who had been tailing him and his wife through Zurich, exposing a corporate espionage scheme linked to the bank's executives.",
+      "date": "2019-09-17",
+      "entities": [
+        "Credit Suisse Group",
+        "Iqbal Khan",
+        "Private detective"
+      ],
+      "sectors": [
+        "financial services",
+        "private investigations"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Credit Suisse Group"
+      },
+      "source_info": {
+        "title": "Credit Suisse CEO Thiam toppled by espionage scandal",
+        "url": "https://www.reuters.com/article/world/credit-suisse-ceo-thiam-toppled-by-espionage-scandal-idUSKBN2010KN/",
+        "published_date": "2020-02-07",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2020-02-07, amid mounting public outcry and regulatory scrutiny, Credit Suisse's chief executive Tidjane Thiam resigned. The bank's shares fell about 5% in early trading as investors reacted to the leadership upheaval.",
+      "date": "2020-02-07",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Credit Suisse CEO Thiam toppled by espionage scandal",
+        "url": "https://www.reuters.com/article/world/credit-suisse-ceo-thiam-toppled-by-espionage-scandal-idUSKBN2010KN/",
+        "published_date": "2020-02-07",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A damaging espionage scandal erupted when Iqbal Khan discovered he was being tailed by private detectives allegedly linked to Credit Suisse, raising serious concerns about culture and governance at the bank."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Regulators opened inquiries and media scrutiny intensified, triggering internal turmoil and a boardroom rift that eroded stakeholder trust over the subsequent months."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2020-02-07, CEO Tidjane Thiam resigned; investors read the leadership exit as confirmation of governance failures, and the shares dropped around 5% in early trade before paring losses."
+    }
+  ],
+  "rationale": "The surveillance scandal directly undermined governance credibility and prompted regulatory scrutiny, culminating in the CEO's resignation; the immediate stock reaction reflects investors' reassessment of governance risk.",
+  "counterfactual_analysis": "Absent the surveillance scandal, the CEO likely would have remained in place, avoiding the leadership shock and the associated share-price decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Elevated market volatility tied to early COVID-19 headlines in early 2020.",
+      "impact": "Sector-wide risk-off sentiment could have amplified the stock's downside around the resignation date."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "143 days",
+        "conditions_score": 0.75,
+        "commentary": "Public revelations about the spying scandal triggered escalating scrutiny and board-level pressure, pushing toward a leadership reset. Thiam's resignation and the share-price drop acted as a balancing response aimed at stabilising governance and rebuilding trust."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Corporate surveillance scandal and regulatory scrutiny",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.7,
+        "commentary": "Legal and regulatory concerns around corporate surveillance exposed governance failures and raised the risk of sanctions or lawsuits. This legal pressure constrained the board's options and accelerated the decision to remove the CEO to contain further damage."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

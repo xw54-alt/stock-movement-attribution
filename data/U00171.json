@@ -1,0 +1,159 @@
+{
+  "pair_id": "U00171",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Following rapid withdrawals and rising rates, Silicon Valley Bank and Signature Bank collapsed in March 2023; U.S. regulators seized both institutions, the largest U.S. bank failures since 2008, jolting confidence in the sector.",
+      "date": "2023-03-13",
+      "entities": [
+        "Silicon Valley Bank",
+        "Signature Bank"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "banking sector"
+      },
+      "source_info": {
+        "title": "What to know about the Silicon Valley Bank collapse",
+        "url": "https://www.pbs.org/newshour/economy/what-to-know-about-the-silicon-valley-bank-collapse",
+        "published_date": "2023-03-13",
+        "publisher": "PBS NewsHour"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "Swiss authorities brokered an emergency takeover: UBS agreed to buy Credit Suisse for 3 billion Swiss francs and assume up to 5.4 billion francs in losses to stem market turmoil.",
+      "date": "2023-03-19",
+      "entities": [
+        "UBS",
+        "Credit Suisse"
+      ],
+      "sectors": [
+        "banking",
+        "financial services"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "European banking sector"
+      },
+      "source_info": {
+        "title": "Central banks try to calm markets after UBS deal to buy Credit Suisse",
+        "url": "https://www.reuters.com/business/crunch-time-credit-suisse-talks-ubs-seeks-swiss-assurances-2023-03-19/",
+        "published_date": "2023-03-19",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2023-03-24, amid contagion fears, Deutsche Bank's shares fell as much as ~14% intraday and closed down about 8.5%.",
+      "date": "2023-03-24",
+      "entities": [
+        "Deutsche Bank"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Deutsche Bank"
+      },
+      "stock_change_pct": 14,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Deutsche Bank tumbles as jittery investors seek safer shores",
+        "url": "https://www.reuters.com/business/finance/deutsche-bank-ubs-hit-bank-fears-spark-stress-signals-2023-03-24/",
+        "published_date": "2023-03-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Rapid withdrawals and rate shocks precipitated the collapses of SVB and Signature; U.S. regulators seized both, shaking confidence in banks."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Soon after, Swiss authorities engineered UBS's takeover of Credit Suisse to contain turmoil, signalling acute systemic stress in European banking."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "With contagion fears elevated, Deutsche Bank came under pressure on 2023-03-24: shares dropped 14% intraday and finished down 8.5% that day."
+    }
+  ],
+  "rationale": "Consecutive bank failures in the U.S. and an emergency Swiss rescue amplified global risk aversion and scrutiny of European banks. As stress indicators rose, Deutsche Bank-already under the microscope-saw outsized selling as investors de-risked across the sector.",
+  "counterfactual_analysis": "Absent the high-profile U.S. bank collapses and the forced Credit Suisse takeover, perceived systemic risk would likely have been lower; Deutsche Bank's price action on 2023-03-24 plausibly would have been less severe.",
+  "adversarial_confounders": [
+    {
+      "text": "General market volatility from inflation and rapid rate hikes.",
+      "impact": "Broader risk-off moves could have driven European bank shares lower independent of specific failure/takeover headlines."
+    },
+    {
+      "text": "Deutsche Bank credit default swap (CDS) spread widening.",
+      "impact": "Rising CDS may signal idiosyncratic risk perceptions, contributing to the sell-off beyond cross-bank contagion."
+    },
+    {
+      "text": "Ongoing regulatory/legal overhang specific to Deutsche Bank.",
+      "impact": "Legacy issues and regulatory scrutiny could amplify downside regardless of U.S. and Swiss events."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "11 days",
+        "conditions_score": 0.8,
+        "commentary": "Failures at SVB and Signature, followed by the forced rescue of Credit Suisse, set off a self-reinforcing wave of skepticism about bank balance sheets. Each new shock deepened concerns about hidden losses and liquidity, encouraging investors to sell more bank stocks and pushing Deutsche Bank into the next leg of the panic."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "flight_to_safety",
+        "industry_barriers": "high",
+        "commentary": "As confidence cracked, depositors and investors shifted funds toward perceived safe substitutes such as government bonds and money-market funds. This flight to safety reduced risk appetite for bank equity, weakening Deutsche Bank's market valuation even though its fundamentals had not suddenly changed."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Rapid rate hikes and liquidity stress in banking",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Aggressive monetary tightening left many banks exposed to unrealized losses and more sensitive to deposit outflows. In that stressed macro setting, the U.S. and Swiss failures made investors far more willing to assume similar vulnerabilities at Deutsche Bank, amplifying the sell-off."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

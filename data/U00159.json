@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00159",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "European bank shares dropped about 1 % on 2023-03-13 after the collapse of Silicon Valley Bank sparked fears of contagion.  Reuters noted that U.S. authorities had intervened to protect depositors.",
+      "date": "2023-03-13",
+      "entities": [
+        "Silicon Valley Bank",
+        "European banks"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Eurozone",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Silicon Valley Bank"
+      },
+      "source_info": {
+        "title": "European bank shares slide as Silicon Valley Bank collapses",
+        "url": "https://www.reuters.com/article/business/media-telecom/european-bank-shares-slide-1-as-svb-collapse-rattles-markets-idUSL8N35L1RM/",
+        "published_date": "2023-03-13",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2023-03-13, Credit Suisse shares plummeted more than 12 %, falling to 2.20 Swiss francs and marking a fresh record low as investors fled bank stocks amid contagion fears.",
+      "date": "2023-03-13",
+      "entities": [
+        "Credit Suisse Group"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Switzerland",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Credit Suisse Group"
+      },
+      "stock_change_pct": 12,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Credit Suisse shares hit new low",
+        "url": "https://www.reuters.com/business/finance/credit-suisse-shares-reach-new-record-low-2023-03-13/",
+        "published_date": "2023-03-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The sudden failure of Silicon Valley Bank and Signature Bank over the weekend triggered fears of a wider banking crisis, causing European bank stocks to slide about 1 % on 2023-03-13.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Credit Suisse was already vulnerable due to past scandals and deposit outflows.  The prospect of contagion led investors to dump its shares and bonds, amplifying market anxiety.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By the end of 2023-03-13, Credit Suisse's stock had tumbled more than 12 % to 2.20 Swiss francs, setting a new record low.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The collapse of SVB spooked global investors and reignited concerns about bank solvency.  Credit Suisse's fragile position made it particularly susceptible, translating the broader sell-off into a sharp decline in its shares.",
+  "counterfactual_analysis": "If SVB's collapse had been contained or communicated more effectively, investor panic may have been muted, and Credit Suisse's shares might not have fallen to a record low on that day.",
+  "adversarial_confounders": [
+    {
+      "text": "Persistent worries over Credit Suisse's own governance",
+      "impact": "Existing scepticism about the bank's health could mean its shares would have fallen even without the SVB shock."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "0 days",
+        "conditions_score": 0.85,
+        "commentary": "Contagion fears after U.S. bank failures triggered immediate selling pressure on European lenders such as Credit Suisse. Each leg down in the share price undermined confidence further, encouraging more investors and counterparties to pull back in a self-reinforcing panic."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "funding_pressure",
+        "industry_barriers": "high",
+        "commentary": "When investors and depositors doubt a bank's resilience, they can reallocate funds quickly to perceived safe havens. This shift in the bargaining position of capital providers left Credit Suisse paying a higher risk premium or losing business altogether, worsening its market standing."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Rising rates and banking-sector stress heightening risk aversion",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Rapid interest-rate hikes and high-profile bank failures made markets more sensitive to balance-sheet weaknesses. In this environment, even modest negative headlines around Credit Suisse had an outsized impact on sentiment and valuations across the sector."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

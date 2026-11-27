@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00154",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "In November 2022, environmental investment firm Green Century filed a climate proposal at Costco's annual meeting, urging the retailer to set full value chain greenhouse-gas reduction targets, including Scope 3 emissions. The resolution received 70 % shareholder support despite opposition from the board, signaling strong investor concern about Costco's environmental impact.",
+      "date": "2022-11-16",
+      "entities": [
+        "Green Century",
+        "Costco shareholders"
+      ],
+      "sectors": [
+        "Sustainability"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Costco"
+      },
+      "source_info": {
+        "title": "Shareholders press Costco to adopt climate targets",
+        "url": "https://www.reuters.com/business/cop/costco-set-new-emission-cut-targets-deal-with-activist-firm-2022-11-16/",
+        "published_date": "2022-11-16",
+        "publisher": "reuters.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2023-10-10, Costco pledged to disclose its plastic footprint and develop a five-year action plan to reduce plastic use. The company committed to provide an initial disclosure by July 2024 and release the reduction action plan by December 2024 after discussions with Green Century.",
+      "date": "2023-10-10",
+      "entities": [
+        "Costco"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Costco"
+      },
+      "stock_change_pct": 1.5,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Costco Commits to Plastic Reduction Plan Following Shareholder Engagement",
+        "url": "https://www.esgtoday.com/costco-commits-to-plastic-reduction-action-plan-following-shareholder-engagement/",
+        "published_date": "2023-10-10",
+        "publisher": "ESG Today"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Investors increased pressure on retailers to address environmental impacts. In November 2022, Green Century filed a shareholder resolution calling on Costco to set comprehensive emissions reduction targets and highlighting the lack of climate commitments.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The proposal passed with 70 % support, demonstrating that a majority of shareholders wanted stronger sustainability actions. The strong vote created reputational and governance risks if Costco failed to respond.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Less than a year later, on 2023-10-10, Costco announced it would disclose its plastic footprint and develop a five-year reduction plan. The commitment signaled a response to investor demands; shares gained about 1.5 % over the following week.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The successful shareholder resolution prompted Costco to adopt concrete sustainability measures, illustrating the influence of investor activism on corporate policy.",
+  "counterfactual_analysis": "Without the high-support resolution, Costco might not have prioritized plastic footprint disclosure or a formal reduction plan.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader regulatory trends and customer preferences for sustainable products may also have influenced Costco's decision.",
+      "impact": "External pressures mean the change may not be solely attributable to the shareholder vote."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - Investor and stakeholder pressure to cut plastic waste",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "A shareholder resolution with strong support signaled that plastics reduction had become a material environmental concern for Costco's owners. This pressure encouraged management to commit to detailed disclosure and a reduction plan, aligning corporate strategy more closely with sustainability expectations."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "reputation_and_switching",
+        "industry_barriers": "medium",
+        "commentary": "Environmentally conscious customers can shift spend toward retailers perceived as more responsible on packaging and waste. By responding to plastic concerns, Costco aimed to protect demand and mitigate the risk that members migrate to rivals with greener reputations."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "365 days",
+        "conditions_score": 0.8,
+        "commentary": "Early commitments on plastic disclosure can build investor trust and attract further support for sustainability initiatives. As Costco reports progress and sees reputational benefits, it has greater incentive to deepen waste-reduction efforts, reinforcing the shift toward more sustainable operations."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}
