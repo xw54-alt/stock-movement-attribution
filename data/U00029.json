@@ -56,8 +56,8 @@
       "effect_strength_score": 8,
       "impact_strength_score": 7,
       "effect_type": "stock_movement",
-      "impact_direction": null,
-      "direct_or_indirect": null
+      "impact_direction": "positive",
+      "direct_or_indirect": "indirect"
     }
   ],
   "causal_reasoning_chain": [
