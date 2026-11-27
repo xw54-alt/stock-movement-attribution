@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00445",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D20008",
+      "causal_salience": "primary",
+      "text": "T-Mobile announced a share repurchase program authorized up to $14B through September 2023 and said it expected to commence buybacks immediately. Such a large authorization signaled management's confidence in durable free cash flow and intrinsic value. Immediate execution reduces share count and can be accretive to per-share metrics.",
+      "date": "2022-09-08",
+      "entities": [
+        "T-Mobile"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.76,
+        "target": "T-Mobile"
+      },
+      "source_info": {
+        "title": "T-Mobile announces $14 billion share buyback",
+        "url": "https://www.reuters.com/business/media-telecom/t-mobile-announces-14-billion-share-buyback-2022-09-08/",
+        "published_date": "2022-09-08",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "T-Mobile's stock rose in aftermarket trading as investors priced in the accretive impact of immediate buybacks and lower free float. The reaction reflected both a supply-demand effect in the shares and a positive read-through on capital allocation discipline. Investors often reward credible repurchase programs that begin without delay.",
+      "date": "2022-09-08",
+      "entities": [
+        "T-Mobile"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.74,
+        "target": "T-Mobile"
+      },
+      "source_info": {
+        "title": "T-Mobile announces $14 billion share buyback; shares rise after hours",
+        "url": "https://www.reuters.com/business/media-telecom/t-mobile-announces-14-billion-share-buyback-2022-09-08/",
+        "published_date": "2022-09-08",
+        "publisher": "reuters.com"
+      },
+      "stock_change_pct": 2.8,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "logic_operator": "cause_event",
+      "description": "A large, near-term buyback reduces the share count and signals confidence in durable cash generation. Markets typically revalue per-share metrics upward when repurchases begin.",
+      "step_id": 1
+    },
+    {
+      "logic_operator": "THEN",
+      "description": "Lower float and committed repurchase demand increase marginal buying pressure while shrinking available supply. The clearing price often lifts as liquidity providers adjust quotes.",
+      "step_id": 2
+    },
+    {
+      "logic_operator": "RESULT",
+      "description": "On 2022-09-08, T-Mobile's shares rose 2.8% (up) after hours, as reported. The move reflected both supply-demand mechanics and a positive signal about management's valuation view.",
+      "step_id": 3
+    }
+  ],
+  "rationale": "Repurchases alter capital structure and near-term supply while broadcasting confidence in free cash flow, producing a rapid valuation response.",
+  "counterfactual_analysis": "Without an authorized buyback, investors would not price in immediate share count reduction, making a same-day 2-3% increase less likely.",
+  "adversarial_confounders": [
+    {
+      "text": "After-hours liquidity effects",
+      "impact": "Thin liquidity can exaggerate price reactions beyond the buyback news."
+    },
+    {
+      "text": "Concurrent sector headlines",
+      "impact": "Other telecom or macro headlines may have influenced the after-hours move."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "Announcing a large 14 billion dollar share buyback decreased T-Mobile's expected free float and signaled that management saw the stock as undervalued. That combination of tighter share supply and confidence messaging drew in more investor demand, lifting the price and reinforcing the appeal of future repurchases."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

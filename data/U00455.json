@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00455",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-APPLE-20221106",
+      "causal_salience": "primary",
+      "text": "Apple warned that iPhone 14 Pro shipments would be lower than previously expected due to disruptions at a key supplier factory in China. The notice signaled softer near-term device output.",
+      "date": "2022-11-06",
+      "entities": [
+        "Apple"
+      ],
+      "sectors": [
+        "Consumer Electronics"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "iPhone supply"
+      },
+      "source_info": {
+        "title": "Apple warns of lower iPhone 14 Pro shipments due to China plant restrictions",
+        "url": "https://www.reuters.com/technology/apple-expects-lower-iphone-14-shipments-due-china-plant-impacted-by-covid-2022-11-06/",
+        "published_date": "2022-11-06",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "TSMC shares fell as investors priced weaker near-term orders from Apple, a major downstream customer. The read-through affected multiple Taiwan-listed suppliers.",
+      "date": "2022-11-07",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "TW,China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "TSMC"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Apple supplier stocks fall after shipment warning; Taiwan chip names under pressure",
+        "url": "https://www.reuters.com/technology/foxconn-revises-down-q4-outlook-zhengzhou-covid-woes-2022-11-06/",
+        "published_date": "2022-11-07",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Apple forecast a shortfall in iPhone 14 Pro shipments due to disruptions at a key assembly plant, reducing expected near-term device output."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors mapped lower handset output to upstream wafer demand for associated SoCs and components, trimming expectations for TSMC's near-term volumes."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2022-11-07, TSMC shares declined by 2.0% (down) as the supplier complex repriced order visibility after Apple's warning."
+    }
+  ],
+  "rationale": "Apple is a major downstream buyer; shipment cuts reduce short-term wafer demand expectations.",
+  "counterfactual_analysis": "If Apple had not issued the warning, supplier stocks including TSMC would likely have faced less immediate pressure.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader risk-off moves in Asian markets could also weigh on shares.",
+      "impact": "This could add noise, but the timing aligns with the Apple warning."
+    },
+    {
+      "text": "Unrelated news about other handset makers might have affected the sector.",
+      "impact": "Spillovers exist, but Apple is the dominant driver for related suppliers."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Apple's warning about lower iPhone 14 Pro shipments signaled that a key downstream customer would be drawing fewer chips in the near term, reducing short run demand visibility for TSMC. When large clients cut orders, it dampens utilization and earnings expectations and can trigger more conservative capacity planning, which in turn restrains how quickly demand rebounds."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

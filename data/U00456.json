@@ -1,0 +1,138 @@
+{
+  "pair_id": "U00456",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C-20220706-AG",
+      "causal_salience": "primary",
+      "text": "Amazon announced a partnership to add Grubhub benefits to Prime members, expanding Grubhub's reach and intensifying competition in U.S. food delivery. The tie-up increases customer acquisition incentives for a rival platform, threatening demand and order volumes at Uber's delivery unit.",
+      "date": "2022-07-06",
+      "entities": [
+        "Amazon",
+        "Grubhub",
+        "Just Eat Takeaway"
+      ],
+      "sectors": [
+        "E-commerce",
+        "Food Delivery"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Uber"
+      },
+      "source_info": {
+        "title": "DoorDash falls 7% as Amazon strikes deal with Grubhub",
+        "url": "https://www.cnbc.com/2022/07/06/amazon-takes-stake-in-grubhub-adds-food-delivery-perks-to-prime.html",
+        "published_date": "2022-07-06",
+        "publisher": "cnbc.com"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "C-20220706-FED",
+      "causal_salience": "primary",
+      "text": "Federal Reserve minutes signaled more interest-rate hikes and possible larger increases if inflation persists. Tighter financial conditions typically pressure growth stocks and consumer discretionary platforms that rely on demand elasticity and capital access.",
+      "date": "2022-07-06",
+      "entities": [
+        "Federal Reserve"
+      ],
+      "sectors": [
+        "Macro",
+        "Capital Markets"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Uber"
+      },
+      "source_info": {
+        "title": "Fed minutes show officials still inclined to hike interest rates",
+        "url": "https://www.usnews.com/news/economy/articles/2022-07-06/fed-minutes-show-officials-chose-to-hike-interest-rates-in-june-knowing-the-economy-could-be-at-risk",
+        "published_date": "2022-07-06",
+        "publisher": "usnews.com"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Uber's shares fell as investors priced in Amazon's Grubhub tie-up increasing competitive pressure on delivery and a risk-off backdrop from hawkish Federal Reserve minutes. The combined signals suggested weaker customer capture and lower take-rate resilience for Uber's platform.",
+      "date": "2022-07-06",
+      "entities": [
+        "Uber"
+      ],
+      "sectors": [
+        "Transportation & Logistics",
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Uber"
+      },
+      "stock_change_pct": 4.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Wall St closes lower as rate worries weigh; Uber, DoorDash fall after Amazon-Grubhub deal",
+        "url": "https://www.marketwatch.com/story/doordash-uber-stocks-fall-after-amazon-inks-partnership-with-grubhub-2022-07-06",
+        "published_date": "2022-07-06",
+        "publisher": "marketwatch.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Amazon extends Grubhub benefits to Prime members, strengthening a rival's acquisition funnel and incentive stack in U.S. food delivery. This increases substitution pressure on Uber's delivery unit."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "Federal Reserve minutes emphasize continued rate hikes, tightening financial conditions. Growth-platform equities face higher discount rates and weaker investor risk appetite."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2022-07-06, Uber's shares fell 4.0% down intraday, reflecting competitive and macro headwinds priced into the stock."
+    }
+  ],
+  "rationale": "The Amazon Grubhub partnership directly expands a rival's customer funnel while Fed guidance hardened risk sentiment. Reuters reported Uber shares declined about 4% on the day as investors reassessed delivery unit competitiveness under tighter financial conditions.",
+  "counterfactual_analysis": "Absent the Amazon Grubhub tie-up or without hawkish Fed minutes, competitive pressure and discounting expectations would be lower, and Uber's stock would likely have faced a smaller selloff.",
+  "adversarial_confounders": [
+    {
+      "text": "DoorDash experienced a larger price reaction that may have set a negative peer read-through for the entire delivery cohort.",
+      "impact": "Sector sympathy could have amplified Uber's decline beyond the pure effect of the Amazon Grubhub deal."
+    },
+    {
+      "text": "General macro headlines on inflation and growth fears the same week affected high-beta tech and platform stocks.",
+      "impact": "Risk-off flows unrelated to delivery competition may partially explain the magnitude of the drop."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Amazon's decision to bundle Grubhub benefits into Prime created a powerful new channel for a rival food delivery platform, intensifying competition for orders in the U.S. market. With a scaled ecommerce giant steering demand toward a competitor, investors expected Uber Eats to face tougher customer acquisition and pricing pressure, contributing to the decline in Uber's shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

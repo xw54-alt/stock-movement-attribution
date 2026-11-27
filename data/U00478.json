@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00478",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "META_CAPEX_2024_AI",
+      "causal_salience": "primary",
+      "text": "Meta raised its 2024 expense and capital expenditure outlook to fund larger AI training and inference clusters. The company highlighted heavier data center investments and advanced compute to support AI features across its apps.",
+      "date": "2024-04-25",
+      "entities": [
+        "Meta Platforms"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Hyperscaler AI capex"
+      },
+      "source_info": {
+        "title": "Meta raises expenses, capex range for 2024 as it bets big on AI",
+        "url": "https://www.reuters.com/technology/meta-raises-2024-expenses-forecast-support-ai-development-2024-04-24/",
+        "published_date": "2024-04-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Cisco shares advanced after the company guided to an improving demand backdrop and highlighted stabilization in product orders. Investors connected rising hyperscaler data center capex to stronger prospects for Ethernet switching and routing demand.",
+      "date": "2024-05-16",
+      "entities": [
+        "Cisco Systems"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "Cisco equity"
+      },
+      "stock_change_pct": 3.4,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Futures edge higher as soft inflation data spurs rate-cut bets",
+        "url": "https://www.reuters.com/markets/us/futures-edge-higher-softer-inflation-report-lifts-rate-cut-hopes-2024-05-16/",
+        "published_date": "2024-05-16",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A hyperscaler publicly increased AI capex plans, implying more data center builds and network upgrades."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Higher AI cluster deployments require dense Ethernet switching and optical backbones, benefiting vendors positioned in cloud networking."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2024-05-16, Cisco's shares rose 3.4% premarket as investors priced in improving orders linked to hyperscaler spending. This 3.4% up move matches the stock_change_pct and direction."
+    }
+  ],
+  "rationale": "Cisco's exposure to cloud networking ties earnings to hyperscaler capex cycles. Increased AI spending signals higher demand for Ethernet-based fabrics and routing layers.",
+  "counterfactual_analysis": "If hyperscalers had pulled back capex, investors would expect softer order trends and a weaker outlook for Cisco, reducing the likelihood of a positive stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "The same day included macro news on inflation and rates that supported equities broadly.",
+      "impact": "Broader risk-on tone contributed to gains, but the networking-specific narrative strengthened Cisco's move."
+    },
+    {
+      "text": "Other vendor results could have influenced sector sentiment.",
+      "impact": "Peer prints might lift or weigh on Cisco; however, hyperscaler capex is a direct demand driver for core networking."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Meta's higher 2024 expense and capital expenditure outlook for AI infrastructure signaled that hyperscalers will keep investing heavily in data center networking gear. Stronger spending from such powerful buyers raises the stakes among equipment vendors, and investors viewed Cisco as well positioned to win a share of that demand, helping to support the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

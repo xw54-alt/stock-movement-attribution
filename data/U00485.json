@@ -1,0 +1,119 @@
+{
+  "pair_id": "U00485",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "Rivian forecast flat production for 2024 and flagged demand headwinds, escalating concerns that EV growth would be slower and more costly to achieve for newer brands.",
+      "date": "2024-02-21",
+      "entities": [
+        "Rivian Automotive"
+      ],
+      "sectors": [
+        "Automotive",
+        "Technology"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "EV startups"
+      },
+      "source_info": {
+        "title": "Rivian forecasts annual production well below estimates",
+        "url": "https://www.reuters.com/business/autos-transportation/rivian-forecasts-annual-production-well-below-estimates-2024-02-21/",
+        "published_date": "2024-02-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "EV startups fell as investors generalized Rivian's outlook to peers and questioned the pace toward profitability. Lucid dropped as the market priced a longer path to scale and stronger competition for capital.",
+      "date": "2024-02-22",
+      "entities": [
+        "Lucid Group"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Lucid equity"
+      },
+      "stock_change_pct": 9.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Rivian, Lucid tumble as outlooks worsen on demand worries",
+        "url": "https://www.reuters.com/business/autos-transportation/rivian-lucid-tumble-slowing-ev-demand-upsets-ramp-up-plans-2024-02-22/",
+        "published_date": "2024-02-22",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Rivian projected flat output for 2024, signaling slower growth and reinforcing the view that EV adoption is more measured than previously expected."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors applied peer read-through to capital-intensive EV startups that share similar cost structures and demand uncertainty, including Lucid."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2024-02-22, Lucid's stock fell by 9.0% (down) as the sector de-risked growth paths following Rivian's outlook."
+    }
+  ],
+  "rationale": "Peer guidance is an important information signal in young industries. Flat production plans point to demand and funding constraints, reducing expected alpha for similar business models.",
+  "counterfactual_analysis": "If Rivian had guided to rising production and healthier demand, the sector read-through would likely have improved, and Lucid's decline would have been smaller or absent.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous macro news could have broadly pressured equities.",
+      "impact": "It may add noise, but the EV-specific narrative explains the cross-sectional concentration."
+    },
+    {
+      "text": "Company-specific Lucid news might have contributed to selling.",
+      "impact": "There was no major Lucid disclosure of comparable magnitude at that time."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Rivian's flat production outlook signaled that newer EV brands are finding it harder to convert orders into scalable volumes at attractive margins. Investors inferred that Lucid faces similar competitive and capital challenges, reducing their appetite to fund multiple loss making premium EV platforms."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Disappointing guidance from one high profile startup can chill sentiment toward the entire EV newcomer group, depressing valuations and raising financing costs. With more expensive capital and cautious investors, scaling becomes even slower, reinforcing concerns that limit Lucid's share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

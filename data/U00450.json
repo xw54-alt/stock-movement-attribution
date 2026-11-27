@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00450",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D-TTE-2022Q1",
+      "causal_salience": "primary",
+      "text": "TotalEnergies published its first-quarter 2022 results, highlighting a surge in adjusted net income and cash flow amid elevated LNG and oil prices. The company communicated strong trading performance and resilience across upstream and gas businesses.",
+      "date": "2022-04-28",
+      "entities": [
+        "TotalEnergies"
+      ],
+      "sectors": [
+        "Energy"
+      ],
+      "country": "FR",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "TotalEnergies"
+      },
+      "source_info": {
+        "title": "First Quarter 2022 Results",
+        "url": "https://totalenergies.com/news/press-releases/first-quarter-2022-results",
+        "published_date": "2022-04-28",
+        "publisher": "TotalEnergies (IR)"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "On the same trading day, TotalEnergies shares rose as investors reacted to the strong earnings and expanded buybacks. The intraday gain signaled improved expectations for cash returns and profits following the results release.",
+      "date": "2022-04-28",
+      "entities": [
+        "TotalEnergies"
+      ],
+      "sectors": [
+        "Energy & Utilities",
+        "Financial Services"
+      ],
+      "country": "FR",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "TotalEnergies"
+      },
+      "source_info": {
+        "title": "TotalEnergies ramps up buyback as high oil prices fuel earnings surge",
+        "url": "https://www.reuters.com/business/totalenergies-ramps-up-share-buybacks-after-first-quarter-earnings-surge-2022-04-28/",
+        "published_date": "2022-04-28",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 4.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "TotalEnergies announced better-than-expected Q1 2022 results supported by high commodity prices and strong LNG trading. Investors typically reward visible cash flow strength and clearer guidance on capital returns.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Management signaled confidence by expanding share buybacks, a credible commitment that directly increases per-share cash flows. Such policies reduce free float and convey information about sustainable earnings power.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As a result, on 2022-04-28 the stock moved up by 4.0% intraday according to Reuters, reflecting stronger expectations for distributions and profitability. This immediate reaction is consistent with a direct information and signaling channel to equity prices.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The company's own results disclosure and buyback decision provide a clear, company-specific information shock that investors can rapidly price. Because it came from the issuer and was widely disseminated by mainstream media, attribution to the results and capital-return signal is strong.",
+  "counterfactual_analysis": "Absent the strong Q1 results and buyback expansion, investors would have lacked a credible signal of excess cash generation and management's willingness to return it. In that counterfactual, the shares would likely have traded flat or underperformed energy peers on the day.",
+  "adversarial_confounders": [
+    {
+      "text": "A sector-wide rise in oil prices on the day could independently lift energy majors.",
+      "impact": "Might inflate the observed stock reaction unrelated to company specifics."
+    },
+    {
+      "text": "Broader risk-on flows in equities could move indexes and energy components together.",
+      "impact": "Could amplify or dampen the stock's response versus pure company news."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "financial_restructuring",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "TotalEnergies first quarter 2022 results showed a sharp jump in adjusted net income and cash generation thanks to strong commodity prices and disciplined spending. The combination of robust earnings and an accelerated buyback program boosted investor confidence, producing a share price jump that reinforced expectations for continued high cash returns."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

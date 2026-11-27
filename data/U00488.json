@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00488",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D30004",
+      "causal_salience": "primary",
+      "text": "Provisional EU tariffs on Chinese-made EVs take effect, embedding higher costs and administrative friction into EU-bound supply chains.",
+      "date": "2024-10-29",
+      "entities": [
+        "European Commission"
+      ],
+      "sectors": [
+        "Automotive"
+      ],
+      "country": "EU",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "China-origin EV imports"
+      },
+      "source_info": {
+        "title": "EU slaps tariffs on Chinese EVs, risking Beijing backlash",
+        "url": "https://www.reuters.com/business/autos-transportation/eu-slaps-tariffs-chinese-evs-risking-beijing-payback-2024-10-29/",
+        "published_date": "2024-10-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Volvo Cars warned that 2025 would be turbulent as trade frictions and weak EV demand complicate planning and margins. Investors reacted to the caution and the stock fell.",
+      "date": "2025-02-06",
+      "entities": [
+        "Volvo Cars"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "SE",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Volvo equity"
+      },
+      "stock_change_pct": 9.2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Volvo Cars warns 2025 will be turbulent; shares down 9.2%",
+        "url": "https://www.reuters.com/business/autos-transportation/volvo-cars-operating-profit-falls-q4-automaker-braces-turbulent-2025-2025-02-06/",
+        "published_date": "2025-02-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "EU tariffs move from proposal to implementation, hard-coding higher landed costs and process complexity for China-sourced EVs."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Automakers with exposure to China manufacture or content must adjust pricing, sourcing, or volume plans, elevating execution risk."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-02-06, Volvo Cars' shares fell 9.2% (direction: down) after the company flagged a turbulent year shaped by these constraints."
+    }
+  ],
+  "rationale": "Policy implementation tightens constraints and forces near-term plan changes, which raise uncertainty and depress equity valuations.",
+  "counterfactual_analysis": "Had EU tariffs not taken effect, the company might not have guided to a turbulent year, and the share reaction could have been less negative.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent macro news or a sector-wide decline could amplify the drop independent of Volvo-specific commentary.",
+      "impact": "Could over-attribute the move to policy effects."
+    },
+    {
+      "text": "Currency swings (SEK) can influence translated revenue and margins.",
+      "impact": "Could confound attribution between trade policy and FX."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Once provisional EU tariffs took effect, Chinese built models faced structurally higher costs, squeezing margins for manufacturers that depend on those imports. Volvo's warning about a turbulent 2025 confirmed that trade frictions and soft EV demand would keep competitive pressure elevated."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "The implementation of tariffs was a direct regulatory intervention that reshaped the economics of EU EV imports and supply chains. Management's cautious outlook showed how prolonged policy uncertainty and weaker demand now frame Volvo's planning horizon, prompting investors to reassess long term risks."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

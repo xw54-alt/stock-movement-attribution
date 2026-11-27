@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00465",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D50001",
+      "causal_salience": "primary",
+      "text": "Chinese financial regulators told banks and other institutions to extend more financing to property developers. The directive aimed to stabilize cash flows and restart stalled housing projects, improving developers' ability to order steel and related inputs.",
+      "date": "2022-11-13",
+      "entities": [
+        "Chinese regulators",
+        "property developers"
+      ],
+      "sectors": [
+        "Real Estate",
+        "Banking"
+      ],
+      "country": "CN",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "Property developers"
+      },
+      "source_info": {
+        "title": "China regulators order more financing support for property firms - sources",
+        "url": "https://www.reuters.com/markets/asia/china-regulators-urge-more-financing-support-property-firms-sources-2022-11-13/",
+        "published_date": "2022-11-13",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Vale's shares rose as investors priced in stronger future iron ore demand from a better-funded Chinese property sector. The rally followed broader gains across Latin American stocks on optimism around China-linked commodities.",
+      "date": "2022-11-29",
+      "entities": [
+        "Vale S.A."
+      ],
+      "sectors": [
+        "Materials & Chemicals"
+      ],
+      "country": "BR",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "Vale shares"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "The bulls are back in charge of iron ore prices",
+        "url": "https://www.reuters.com/markets/commodities/bulls-are-back-charge-iron-ore-prices-2022-11-21/",
+        "published_date": "2022-11-29",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Regulators' financing support reduces developers' liquidity constraints and restarts stalled construction. Developers with improved access to credit can resume ordering steel-intensive projects, increasing expected demand for steel inputs."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Higher expected steel production lifts futures and spot prices for iron ore, as mills anticipate restocking. Global miners leveraged to China, such as diversified Brazilian producers, benefit from the improved price outlook."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "Market participants bid up Vale due to the anticipated iron ore demand uplift; Vale shares were up 5.0% on the day, consistent with the broader China-driven rally."
+    }
+  ],
+  "rationale": "The Chinese property sector is the largest end-user of steel, and credit easing directly increases its ability to complete projects. This improves the forward curve for steel and iron ore, which raises expected cash flows for seaborne iron ore suppliers like Vale.",
+  "counterfactual_analysis": "Absent the financing directive, developers would likely have continued to deleverage, depressing steel orders and iron ore prices. Vale's equity would have lacked the same demand-driven catalyst, making a 5.0% daily gain improbable.",
+  "adversarial_confounders": [
+    {
+      "text": "A simultaneous rally in crude oil and broader commodities could have lifted Latin American equities regardless of China property support.",
+      "impact": "This would inflate Vale's share price response without isolating property-driven steel demand as the primary mechanism."
+    },
+    {
+      "text": "Short covering by global funds after prior underperformance could create a mechanical rebound.",
+      "impact": "This would overstate the causal role of property financing in explaining the exact magnitude of the move."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.86,
+        "commentary": "Chinese regulators urged banks and other financial institutions to extend more credit to struggling property developers, signaling state support for stabilizing the housing market. That policy shift improved expectations for steel demand and construction activity, so traders bid up iron ore prices and miners like Vale in anticipation of stronger volumes."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

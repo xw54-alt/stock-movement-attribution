@@ -1,0 +1,142 @@
+{
+  "pair_id": "U00446",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-REDSEA-20231218",
+      "causal_salience": "primary",
+      "text": "Houthi attacks in the Red Sea disrupted maritime trade and raised security and insurance risks along the Suez route. Major shippers began rerouting vessels around the Cape of Good Hope to avoid the Bab el-Mandeb strait.",
+      "date": "2023-12-18",
+      "entities": [
+        "Houthi militants",
+        "Global shippers"
+      ],
+      "sectors": [
+        "Shipping",
+        "Energy"
+      ],
+      "country": "YE",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Commercial shipping"
+      },
+      "source_info": {
+        "title": "Red Sea attacks force rerouting of vessels, disrupting supply chains",
+        "url": "https://www.reuters.com/world/middle-east/red-sea-attacks-force-rerouting-vessels-disrupting-supply-chains-2023-12-18/",
+        "published_date": "2023-12-18",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "D-BP-REDSEA-20231218",
+      "causal_salience": "secondary",
+      "text": "BP publicly paused all transits through the Red Sea due to security concerns. A major energy company's avoidance of the corridor added momentum to industry-wide rerouting decisions and insurer risk assessments.",
+      "date": "2023-12-18",
+      "entities": [
+        "BP"
+      ],
+      "sectors": [
+        "Energy",
+        "Shipping"
+      ],
+      "country": "UK",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.74,
+        "target": "Red Sea transits"
+      },
+      "source_info": {
+        "title": "Shipping stocks extend rally as Red Sea traffic paused; BP pauses Red Sea transits",
+        "url": "https://www.reuters.com/business/autos-transportation/shipping-stocks-rise-europe-after-houthi-attacks-2023-12-18/",
+        "published_date": "2023-12-18",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "TotalEnergies stated it was no longer sending ships through the southern Red Sea approach, extending voyage times to Europe. The company adapted routing to mitigate security and insurance risks while preserving supply.",
+      "date": "2024-02-07",
+      "entities": [
+        "TotalEnergies"
+      ],
+      "sectors": [
+        "Energy & Utilities",
+        "Transportation & Logistics"
+      ],
+      "country": "FR",
+      "effect_type": "supply_disruption",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.56,
+        "target": "TotalEnergies"
+      },
+      "source_info": {
+        "title": "TotalEnergies no longer sending ships through Red Sea",
+        "url": "https://www.reuters.com/business/energy/totalenergies-no-longer-sending-ships-through-red-sea-2024-02-07/",
+        "published_date": "2024-02-07",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "down"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Persistent attacks in the Red Sea increased expected transit risk and insurance premia on Suez-bound voyages. Shipping firms began to internalize the higher probability of disruption or loss in route planning.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "BP's explicit pause signaled that energy cargoes were at heightened risk, influencing both insurer calculations and peer behavior. When a large shipper defers transit, it reinforces the perceived baseline risk for similar cargoes.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "To minimize risk and preserve delivery schedules, energy cargo owners weighed longer routes against exposure to a contested waterway. Rerouting increases costs but reduces tail risk of attacks and associated liabilities.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "TotalEnergies confirmed it was no longer sending ships through the area, accepting longer voyages as a safety-first adjustment. This operational change is consistent with risk and insurance constraints rather than demand conditions.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Two independent signals, the attack campaign itself and BP's announced pause, jointly raised perceived risk and insurance costs. A rational operator shifts routing to reduce exposure even at the cost of longer voyages.",
+  "counterfactual_analysis": "Without the attacks and BP's pause, expected risk would have remained manageable and Suez transits would likely have continued. In that case TotalEnergies would not incur longer voyage times or higher routing costs.",
+  "adversarial_confounders": [
+    {
+      "text": "Seasonal freight bottlenecks or weather could also cause routing changes.",
+      "impact": "Might lead to similar rerouting decisions absent security concerns."
+    },
+    {
+      "text": "Individual charterparty terms may restrict passages regardless of attacks.",
+      "impact": "Could force route selection independent of company policy signals."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Attacks in the Red Sea raised security and insurance costs for tankers, forcing energy companies to weigh longer routes against exposure to a key chokepoint. By rerouting ships, TotalEnergies chose reliability and risk control over short term efficiency, a move that can affect its cost position and service reliability relative to other suppliers facing the same disruption."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

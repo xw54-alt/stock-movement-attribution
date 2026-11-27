@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00407",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "20240229WFR",
+      "causal_salience": "primary",
+      "text": "Snowflake Inc. announced fiscal 2025 product revenue guidance that undershot Wall Street expectations and simultaneously revealed the surprise retirement of long-time CEO Frank Slootman. The company projected about $3.25 billion in product revenue for fiscal 2025 and quarterly revenue of $745-$750 million, figures analysts considered conservative. The leadership transition, which replaced Slootman with senior executive Sridhar Ramaswamy, added to investor unease.",
+      "date": "2024-02-29",
+      "entities": [
+        "Snowflake"
+      ],
+      "sectors": [
+        "technology",
+        "cloud computing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.88,
+        "target": "Snowflake"
+      },
+      "source_info": {
+        "title": "Snowflake shares sink on weak forecast, surprise CEO retirement",
+        "url": "https://www.reuters.com/technology/snowflake-shares-sink-weak-forecast-surprise-ceo-retirement-2024-02-29/",
+        "published_date": "2024-02-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Feb. 29, 2024, Snowflake's stock tumbled about 21% after the company's revenue guidance missed analyst estimates and investors reacted to CEO Frank Slootman's unexpected retirement. The sell-off erased roughly $16 billion in market value.",
+      "date": "2024-02-29",
+      "entities": [
+        "Snowflake"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.95,
+        "target": "Snowflake"
+      },
+      "source_info": {
+        "title": "Snowflake shares sink on weak forecast, surprise CEO retirement",
+        "url": "https://www.reuters.com/technology/snowflake-shares-sink-weak-forecast-surprise-ceo-retirement-2024-02-29/",
+        "published_date": "2024-02-29",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 21.0,
+      "stock_change_direction": "down"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Snowflake issued fiscal 2025 guidance below Wall Street expectations and revealed that long-time CEO Frank Slootman would retire. These announcements signalled slower expected revenue growth and leadership uncertainty within the company, undermining investor confidence.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted the disappointing guidance and sudden executive change as a sign that Snowflake's high-growth narrative might be faltering. In a sector where momentum and management credibility are critical, such news typically prompts portfolio managers to de-risk by selling shares, particularly in expensive software stocks.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As trading opened on Feb. 29, Snowflake's stock price reacted swiftly; the shares plunged roughly 21%, wiping about $16 billion from the company's market capitalisation. The magnitude of the decline reflected the market's repricing of Snowflake's growth prospects in light of the guidance and leadership news.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The weak revenue forecast and CEO retirement constituted negative company-specific news that directly undermined Snowflake's growth outlook. Because the company trades at a premium valuation, even modestly slower growth expectations combined with leadership uncertainty can produce outsized share price declines.",
+  "counterfactual_analysis": "If Snowflake had reaffirmed or raised its revenue outlook and communicated a well-planned leadership transition, investors might not have been surprised. In that scenario, the stock would likely have avoided the 21% plunge and instead traded relatively flat or even risen on continued confidence in management's execution.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader tech stocks were under pressure due to rising interest rates during the period.",
+      "impact": "Macro conditions could have exacerbated the selling, making it difficult to isolate the effect of Snowflake's guidance and leadership change alone."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Snowflake's softer revenue outlook and unexpected CEO transition raised doubts about its ability to sustain premium growth in the face of aggressive competition from cloud platform rivals and other data tools. Investors worried that slower execution would make it easier for competitors to win deals and squeeze pricing, so the negative surprise translated quickly into a large drop in the stock."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Guidance cuts and leadership uncertainty undermined confidence in Snowflake's growth story, which led to a sharp fall in the share price and made it harder for the company to use stock as a currency for hiring and acquisitions. If that weaker market value persists, it can further constrain strategic options and reinforce investor skepticism, illustrating a negative feedback loop that was captured in the twenty one percent one day decline."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

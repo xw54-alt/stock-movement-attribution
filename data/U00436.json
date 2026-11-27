@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00436",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "On April 5, 2025, the U.S. Customs and Border Protection began collecting a baseline 10% tariff on all imports from most countries. The new trade regime marked a seismic shift in U.S. policy, raising import costs for businesses and signalling higher consumer prices across categories.",
+      "date": "2025-04-05",
+      "entities": [
+        "U.S. Customs and Border Protection",
+        "Imported goods",
+        "Tariff"
+      ],
+      "sectors": [
+        "Retail",
+        "Trade"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "The Home Depot"
+      },
+      "source_info": {
+        "title": "US starts collecting Trump's new 10% tariff, smashing global trade norms",
+        "url": "https://www.reuters.com/markets/us-starts-collecting-trumps-new-10-tariff-smashing-global-trade-norms-2025-04-05/",
+        "published_date": "2025-04-05",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 19, 2025, Home Depot kept its annual forecasts intact but said it would implement modest price increases on some items due to the new tariffs. The company reported that U.S. comparable sales rose 1.4% while strong contractor demand offset pressure from higher costs, and its shares rose about 3% on the news.",
+      "date": "2025-08-19",
+      "entities": [
+        "The Home Depot",
+        "Tariffs"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.8,
+        "target": "The Home Depot"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Home Depot retains annual forecasts, flags 'modest' price hikes due to tariffs",
+        "url": "https://www.reuters.com/business/retail-consumer/home-depot-retains-annual-forecasts-flags-modest-price-hikes-due-tariffs-2025-08-19/",
+        "published_date": "2025-08-19",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Apr 5, 2025: The U.S. begins collecting a baseline 10% import tariff, immediately raising landed costs on a broad set of categories. Retailers with higher import exposure see cost of goods rise as existing procurement contracts roll and new purchase orders price in the levy. Suppliers signal limited ability to absorb the increase, shifting more cost pressure toward downstream channels.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Aug 19, 2025: Home Depot cites the tariff regime and implements measured price increases to defend merchandise margins. Management emphasizes selective pass-through supported by mix, private-brand alternatives, and disciplined promotions to sustain customer value. Guidance is kept intact, framing the action as margin protection rather than a demand-choking move.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors read the update as evidence of pricing power and cost control, reducing perceived downside to gross margin. Positioning appears resilient versus peers with weaker mix flexibility, and near-term earnings risk looks contained; shares rise about 3.0%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The tariff increased Home Depot's input costs, forcing the company to implement modest price hikes. This chain of events directly links the policy change to Home Depot's pricing decision and ensuing investor reaction.",
+  "counterfactual_analysis": "If the 10% import tariff had not been implemented, Home Depot would have faced lower cost pressures. The retailer may have avoided passing on price increases, preserving consumer purchasing power and potentially driving higher sales volumes. In that scenario, share-price gains would have come from organic demand rather than relief that price hikes were limited.",
+  "adversarial_confounders": [
+    {
+      "text": "Other factors such as general inflation, supply-chain disruptions or seasonal demand patterns could also affect Home Depot's costs and pricing decisions. However, the timing and explicit attribution to tariffs in management's remarks strengthen the causal link.",
+      "impact": "May influence the measured effect"
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.8,
+        "commentary": "The new baseline tariff regime represented a major shift in US trade policy, effectively raising import costs and putting broad upward pressure on prices for many consumer goods. Home Depot's decision to pass some of those higher costs through to shoppers while maintaining its forecast showed how the changed regulatory and economic environment was reshaping retail pricing strategies."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "Higher import duties flow through to Home Depot's cost of goods, prompting selective price increases that help protect margins in the near term. If customers accept those increases and spending holds up, it reinforces management's willingness to continue passing on cost shocks, creating a feedback loop between policy changes, pricing actions and earnings resilience."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

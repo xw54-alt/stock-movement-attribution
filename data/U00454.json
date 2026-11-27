@@ -1,0 +1,133 @@
+{
+  "pair_id": "U00454",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-USCURBS-20240717",
+      "causal_salience": "primary",
+      "text": "Media reports signaled the United States was weighing tighter curbs on AI chip sales to China. The expectation increased perceived demand risk for export-exposed semiconductor supply chains.",
+      "date": "2024-07-17",
+      "entities": [
+        "U.S. export curbs reports"
+      ],
+      "sectors": [
+        "Semiconductors"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "China-related demand risk"
+      },
+      "source_info": {
+        "title": "Chip stocks tumble on fears of tighter U.S. curbs on China; sector selloff accelerates",
+        "url": "https://www.reuters.com/markets/us/chip-stocks-tumble-fears-tighter-us-curbs-sales-china-2024-07-17/",
+        "published_date": "2024-07-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "D-TRUMP-20240717",
+      "causal_salience": "secondary",
+      "text": "Former President Donald Trump said Taiwan should pay the United States for its defense, heightening geopolitical risk perceptions around Taiwan and its chip sector.",
+      "date": "2024-07-17",
+      "entities": [
+        "Donald Trump"
+      ],
+      "sectors": [
+        "Semiconductors"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Geopolitical risk"
+      },
+      "source_info": {
+        "title": "Investors dump chip stocks as geopolitical rhetoric intensifies; Taiwan-linked names under pressure",
+        "url": "https://www.cnbc.com/2024/07/17/trump-says-taiwan-should-pay-the-us-for-defense-shares-of-tsmc-fall.html",
+        "published_date": "2024-07-17",
+        "publisher": "cnbc.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "TSMC ADR fell sharply as investors priced both demand-side risk from potential U.S. curbs on China and heightened geopolitical uncertainty following high-profile comments about Taiwan.",
+      "date": "2024-07-17",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "TSMC"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Chip stocks shed over $500 billion in value on China trade fears; TSMC ADR down 8%",
+        "url": "https://www.reuters.com/markets/us/chip-stocks-tumble-fears-tighter-us-curbs-sales-china-2024-07-17/",
+        "published_date": "2024-07-17",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Reports of tighter U.S. export curbs increased expected friction on AI chip flows to China, creating downside risk to volumes across supply chains serving that market."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "High-profile political statements about Taiwan elevated perceived geopolitical risk, amplifying investor de-risking of Taiwan-exposed names."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2024-07-17, TSMC ADR fell 8.0% (down), consistent with combined regulatory-demand and geopolitical risk repricing."
+    }
+  ],
+  "rationale": "Two independent risk channels hit simultaneously: prospective export limits and geopolitical rhetoric. Together they raise discount rates and reduce expected volumes.",
+  "counterfactual_analysis": "If either curbs chatter or the political remarks had not occurred, the selloff magnitude would likely have been smaller; removing both would likely have avoided the 8.0% drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide profit taking after a prior run-up could have triggered algorithmic selling.",
+      "impact": "May magnify the move, but the timing with specific headlines indicates causality."
+    },
+    {
+      "text": "Company-specific downgrades at other chip names might spill over into TSMC.",
+      "impact": "Spillovers exist but do not fully explain the synchronized decline tied to the cited headlines."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.84,
+        "commentary": "Talk of tighter U.S. controls on AI chip exports to China and sharper geopolitical rhetoric around Taiwan both raise the perceived risk that future demand or operations for TSMC could be disrupted. As these headlines push investors to demand a higher risk premium and adjust capital spending plans, the weaker share price can itself reinforce caution about long term investment in the region."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

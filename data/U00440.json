@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00440",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C5",
+      "causal_salience": "primary",
+      "text": "On December 14, 2022, the Home Improvement Research Institute reported that home improvement product purchases continued to soar at the start of 2022. Retail sales figures showed strong growth across categories, yet supply-chain issues and high prices prompted many homeowners to complete projects themselves or postpone them; by November, 57% reported delaying projects compared with 42% in May.",
+      "date": "2022-12-14",
+      "entities": [
+        "Home Improvement Research Institute",
+        "Homeowners",
+        "Professional contractors"
+      ],
+      "sectors": [
+        "Home improvement",
+        "Retail"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.78,
+        "target": "The Home Depot"
+      },
+      "source_info": {
+        "title": "The Home Improvement Industry 2022 Year in Review",
+        "url": "https://www.hiri.org/blog/home-improvement-industry-2022-year-in-review",
+        "published_date": "2022-12-14",
+        "publisher": "HIRI"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On February 21, 2023, Home Depot reported that fiscal 2022 sales rose 4.1% to $157.4 billion and comparable U.S. sales increased 2.9%. CEO Ted Decker noted that, despite inflation, supply-chain disruptions and a tight labor market, the company delivered another record year by meeting strong customer demand and investing in its business.",
+      "date": "2023-02-21",
+      "entities": [
+        "The Home Depot",
+        "Ted Decker"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "The Home Depot"
+      },
+      "stock_change_pct": 1.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "The Home Depot Announces Fourth Quarter and Fiscal 2022 Results; Plans to Invest Approximately $1 Billion in Annualized Compensation for Frontline Hourly Associates; Increases Quarterly Dividend by 10 Percent; Provides Fiscal 2023 Guidance",
+        "url": "https://corporate.homedepot.com/news/earnings/home-depot-announces-fourth-quarter-2022-earnings",
+        "published_date": "2023-02-21",
+        "publisher": "homedepot.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Dec 14, 2022: Industry research indicates home-improvement demand remains elevated versus pre-pandemic baselines despite inflation. Households prioritize maintenance and targeted upgrades, while pros remain active on backlog-driven jobs. The channel shows resilience as retailers lean on in-stock execution and private-brand value.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Feb 21, 2023: Home Depot reports FY2022 sales up 4.1% with U.S. comps +2.9%, pointing to strong operations and category breadth. Management underscores consistent service levels and inventory flow as key to navigating cost volatility. The update frames a high base of demand entering 2023, even as normalization continues.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "A record year and steady execution temper concerns about a hard landing in big-ticket projects. Near-term sentiment improves and volatility eases at the margin; shares edge up about 1.0%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The surge in home improvement spending documented by HIRI created favourable market conditions for retailers. Home Depot's strong fiscal 2022 results reflect this consumer behaviour, making the causal link plausible.",
+  "counterfactual_analysis": "If home improvement demand had not surged and if more consumers had cancelled projects, Home Depot's sales growth would likely have been weaker. Without robust demand, the company might not have achieved record sales, and the stock could have responded less favourably.",
+  "adversarial_confounders": [
+    {
+      "text": "Price inflation, new store openings or changes in competitor strategies could also influence sales. However, the timing and alignment between industry demand trends and Home Depot's results support the causal connection.",
+      "impact": "May influence the measured effect"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Research showing sustained but moderating demand for home improvement projects suggested that the market remained large, even as some households delayed work or did it themselves. Home Depot's ability to deliver record sales in that environment highlighted its strength relative to competitors in capturing professional and do it yourself customers, reinforcing its position in a still competitive industry."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

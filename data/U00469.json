@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00469",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-VZ-0005",
+      "causal_salience": "primary",
+      "text": "Apple warned that shipments of iPhone 14 Pro and Pro Max would be lower than expected because of COVID-related disruptions at a key Foxconn assembly facility in Zhengzhou. Tight supply into the holidays constrained premium upgrades.",
+      "date": "2022-11-06",
+      "entities": [
+        "Apple",
+        "Foxconn"
+      ],
+      "sectors": [
+        "Consumer Electronics",
+        "Manufacturing"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Premium iPhone availability"
+      },
+      "source_info": {
+        "title": "Apple warns of lower iPhone shipments as COVID curbs hit Foxconn plant in China",
+        "url": "https://www.reuters.com/technology/apple-expects-lower-iphone-14-shipments-due-china-plant-impacted-by-covid-2022-11-06/",
+        "published_date": "2022-11-06",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Verizon issued a forecast that underscored near-term pressure after a constrained holiday upgrade season, and its shares slipped. Limited availability of high-end iPhones likely dampened premium plan uptake and device volumes.",
+      "date": "2023-01-24",
+      "entities": [
+        "Verizon Communications"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Verizon equity"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Verizon forecasts profit below estimates as promotions weigh; shares fall 2%",
+        "url": "https://www.reuters.com/business/media-telecom/verizon-quarterly-wireless-subscriber-additions-top-estimates-2023-01-24/",
+        "published_date": "2023-01-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Production disruptions at Foxconn constrained supply of the premium iPhone 14 Pro models into peak holiday demand. Carriers depend on these devices to drive high-value upgrades and plan upsells."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "With fewer premium phones available, upgrade volumes skewed lower and promotional efficiency deteriorated. That pressured near-term profitability expectations for carriers."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2023-01-24, Verizon's shares fell 2.0% (intraday) after its outlook reflected the weaker upgrade environment."
+    }
+  ],
+  "rationale": "Premium iPhone availability is a key driver of carrier ARPU mix and switching. Supply shortages plausibly reduced Q4 upgrade activity and weighed on Verizon's forward commentary.",
+  "counterfactual_analysis": "Had iPhone 14 Pro supply been ample, Verizon would likely have seen stronger upgrades and a healthier outlook, softening or averting the 2.0% decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader concerns about telecom pricing and competition may have contributed to the stock move.",
+      "impact": "This could over-attribute the reaction to iPhone supply constraints."
+    },
+    {
+      "text": "Currency and interest-rate moves can shift valuations for high-dividend stocks.",
+      "impact": "Such forces could bias the observed effect independent of device supply."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Apple's warning that Covid restrictions at a key Foxconn plant would reduce iPhone 14 Pro shipments meant fewer high end devices available for carrier promotions. With a smaller pool of premium phones to bundle, Verizon faced a tougher battle to attract and retain lucrative customers compared with normal upgrade cycles."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "The sudden disruption in Chinese manufacturing due to Covid controls illustrated how public health policies and local lockdowns can ripple through global supply chains. Reduced iPhone output constrained the hardware pipeline for US carriers just as they were relying on 5G upgrades, darkening the macro and operational backdrop."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Production cuts at Foxconn led to fewer flagship iPhones on shelves, which in turn lowered upgrade volumes and pushed Verizon to lean more on promotions to keep subscribers. Heavier promotional spending and softer equipment sales pressured margins, and as guidance came in below expectations, investors marked the shares down."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00473",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D50002",
+      "causal_salience": "primary",
+      "text": "The U.S. announced steep new tariffs covering goods from Mexico and Canada and an additional duty on China, with automobiles highlighted as particularly exposed. The policy raised the prospect of higher costs and supply-chain friction for non-U.S. carmakers with North American production footprints.",
+      "date": "2025-02-01",
+      "entities": [
+        "U.S. Government"
+      ],
+      "sectors": [
+        "Automobiles"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "European automakers with NA production"
+      },
+      "source_info": {
+        "title": "Trump set to impose 20% tariffs on Mexico and Canada, China next - trade adviser",
+        "url": "https://www.reuters.com/business/trump-stretches-trade-law-boundaries-with-canada-mexico-china-tariffs-2025-02-02/",
+        "published_date": "2025-02-02",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Volkswagen shares dropped as investors priced in higher U.S. tariff headwinds for vehicles and parts assembled across the North American supply chain. The potential margin compression and logistical complexity weighed on earnings expectations for U.S.-bound output.",
+      "date": "2025-02-03",
+      "entities": [
+        "Volkswagen"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Volkswagen equity"
+      },
+      "stock_change_pct": 5.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "European carmakers slump as Trump imposes 20% tariffs; VW, BMW fall",
+        "url": "https://www.reuters.com/business/autos-transportation/european-carmaker-shares-fall-after-trump-imposes-tariffs-2025-02-03/",
+        "published_date": "2025-02-03",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Tariffs on North American trade routes increase the landed cost of vehicles and components assembled in Mexico and Canada. European OEMs with cross-border supply networks face new frictions."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Higher expected costs and potential volume dislocations into the U.S. reduce margins and earnings visibility for exporters and NA-based production lines."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-02-03, Volkswagen shares fell intraday by 5.6% (down) as markets repriced tariff exposure and policy risk."
+    }
+  ],
+  "rationale": "This move follows a standard cost-shock channel: policy raises per-unit costs and uncertainty, which compresses expected margins and triggers portfolio de-risking in autos.",
+  "counterfactual_analysis": "Absent the tariff announcement, Volkswagen's North American exposure would not have drawn the same immediate discount, and the stock drop would likely have been smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "Contemporaneous sector-wide declines unrelated to tariffs could drag Volkswagen shares lower.",
+      "impact": "This would bias attribution upward, but the timing alignment with the tariff shock supports the mechanism."
+    },
+    {
+      "text": "FX swings in EUR/USD can affect exporters' valuations.",
+      "impact": "Currency effects may amplify or cushion the move independent of tariffs."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Steep new U.S. tariffs on goods from Mexico, Canada and China raise the effective production cost of imported vehicles relative to models built inside the United States. As higher duties squeeze margins on Volkswagen's North American output, local competitors with more U.S. manufacturing can compete more aggressively on price, weakening Volkswagen's relative position."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.8,
+        "commentary": "The tariff package was a deliberate policy move that directly changed the trade regime for cross border auto flows. By increasing regulatory and logistical friction on North American supply chains, the decision heightened long term political and economic risk around Volkswagen's U.S. oriented production, which investors reflected in the lower share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

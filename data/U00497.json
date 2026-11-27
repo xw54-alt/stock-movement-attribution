@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00497",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C4",
+      "causal_salience": "primary",
+      "text": "Apple's smartphone shipments in China fell in the first quarter as domestic brands gained traction. The shift in premium Android demand dynamics created space for rivals to capture share in mid-to-high tiers.",
+      "date": "2025-04-18",
+      "entities": [
+        "Apple Inc."
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "country": "CN",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Apple China smartphone sales"
+      },
+      "source_info": {
+        "title": "Apple loses China smartphone crown in Q1 2025 as Huawei surges",
+        "url": "https://www.reuters.com/technology/chinas-q1-smartphone-shipments-rise-33-year-earlier-idc-says-2025-04-18/",
+        "published_date": "2025-04-18",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "After reporting record first-quarter revenue and profit, Xiaomi's shares were set to open higher as investors credited execution in higher-end products and ecosystem leverage. The better mix was consistent with share shifts seen in China toward leading domestic brands.",
+      "date": "2025-05-28",
+      "entities": [
+        "Xiaomi Corp"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Consumer Discretionary"
+      ],
+      "country": "HK",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.74,
+        "target": "Xiaomi equity"
+      },
+      "stock_change_pct": 2.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Shares of China's Xiaomi set to rise 2.3% after reporting record profit",
+        "url": "https://www.reuters.com/business/autos-transportation/shares-chinas-xiaomi-set-rise-23-after-reporting-record-profit-2025-05-28/",
+        "published_date": "2025-05-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A top global competitor lost share in China, signaling relative strength for domestic brands. This opened space in premium Android price bands."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Xiaomi delivered record quarterly results with a higher-end mix, reinforcing investor conviction that it could capture displaced demand. Earnings served as the catalyst translating share shifts into equity value."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-05-28, Xiaomi's shares were indicated to rise by 2.3% (up) intraday following the results."
+    }
+  ],
+  "rationale": "Demand rotation toward leading Chinese brands increases pricing power and scale, which improves margins and supports valuation. Quarterly results validated this thesis, producing a positive stock reaction.",
+  "counterfactual_analysis": "If the competitor had regained share with heavy promotions, Xiaomi's mix upgrade would have been less credible and the stock might not have risen. If results had missed, the indicated uptick would likely have reversed.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide rallies after U.S. rate commentary could lift all boats irrespective of firm-specific news.",
+      "impact": "This would over-attribute gains to Xiaomi's execution."
+    },
+    {
+      "text": "Currency moves affecting ADRs and Hong Kong stocks could mechanically influence opening indications.",
+      "impact": "This may distort the perceived fundamental impact."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Huawei's resurgence and Apple's loss of the top smartphone spot in China underscored how fiercely contested the market has become between global and domestic brands. In that environment, Xiaomi's record profit signaled it was successfully defending and expanding its position in key price tiers, prompting investors to reward the stock."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.78,
+        "commentary": "Shifts in Chinese consumer preferences and the local technology ecosystem have increasingly favored homegrown smartphone makers over foreign brands. Against that backdrop, Xiaomi's strong earnings showed it was benefiting from structural support for domestic players, contributing to the positive reaction in its share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

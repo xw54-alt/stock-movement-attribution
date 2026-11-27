@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00475",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D50006",
+      "causal_salience": "primary",
+      "text": "The U.S. and European Union reached a framework trade agreement that reduced previously threatened tariff rates to around 15% on most EU goods. The deal signaled lower tail-risk for EU auto exports compared to earlier tariff scenarios.",
+      "date": "2025-07-28",
+      "entities": [
+        "U.S. Government",
+        "European Union"
+      ],
+      "sectors": [
+        "Automobiles"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.78,
+        "target": "EU auto exporters"
+      },
+      "source_info": {
+        "title": "US and EU avert trade war with 15% tariff deal",
+        "url": "https://www.reuters.com/business/us-eu-avert-trade-war-with-15-tariff-deal-2025-07-28/",
+        "published_date": "2025-07-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Volkswagen shares gained as investors reduced the probability of extreme tariff outcomes and supply-chain disruption. Lower expected duties improved export profitability relative to prior assumptions.",
+      "date": "2025-07-28",
+      "entities": [
+        "Volkswagen"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.84,
+        "target": "Volkswagen equity"
+      },
+      "stock_change_pct": 1.9,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "European shares close lower as US-EU trade deal draws mixed response",
+        "url": "https://www.reuters.com/markets/europe/european-shares-close-lower-us-eu-trade-deal-draws-mixed-response-2025-07-28/",
+        "published_date": "2025-07-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A concrete trade framework lowered the severity of expected import duties relative to prior scenarios. Exporters anticipated improved realized margins on U.S.-bound vehicles."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors reduced the policy risk premium embedded in EU auto valuations, producing a relief rally across the sector."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-07-28, Volkswagen shares rose intraday by 1.9% (up) on relief that tariff severity would be lower than feared."
+    }
+  ],
+  "rationale": "This relief rally operates through the policy-risk channel: smaller expected duties lift margins and valuation multiples versus worst-case outcomes.",
+  "counterfactual_analysis": "If the deal had collapsed, a larger tariff shock would likely have pushed Volkswagen shares lower rather than higher.",
+  "adversarial_confounders": [
+    {
+      "text": "Other same-day macro news could also support European equities.",
+      "impact": "This might overstate the portion of the move attributable to trade headlines."
+    },
+    {
+      "text": "Company-specific news at peers can spill over to sector beta.",
+      "impact": "Cross-reads could lift Volkswagen even absent the trade deal."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.8,
+        "commentary": "The framework trade agreement between the United States and the European Union reduced previously threatened tariffs and lowered the odds of a full scale auto trade conflict. By easing a major policy overhang on EU car exports, it improved the regulatory backdrop for Volkswagen's transatlantic business and supported a more benign long term environment for exports."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "Lower expected tariffs enhance the profitability of shipping vehicles from Europe, encouraging carmakers like Volkswagen to maintain or grow export volumes rather than redirect production. As investors gain confidence that future policy shocks are less likely to disrupt that flow, it can reinforce investment plans and support a virtuous circle of trade and earnings."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "pair_id": "U00441",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20001",
+      "causal_salience": "primary",
+      "text": "AT&T raised prices on several legacy Unlimited and Mobile Share plans, pushing customers toward newer, higher-fee offerings. The increases lifted monthly bills for legacy-plan households, particularly on multi-line accounts where per-line charges add up. Facing recurring bill pressure, many budget-sensitive customers began reassessing their carrier options.",
+      "date": "2022-05-03",
+      "entities": [
+        "AT&T"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "AT&T legacy-plan customers"
+      },
+      "source_info": {
+        "title": "AT&T tries pushing customers to new wireless plans with price increases",
+        "url": "https://www.theverge.com/2022/5/3/23055583/att-price-increase-unlimited-mobile-share-plans-newer-options",
+        "published_date": "2022-05-03",
+        "publisher": "The Verge"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "D20002",
+      "causal_salience": "secondary",
+      "text": "Verizon added new per-line administrative charges on certain consumer plans, effectively increasing monthly bills for many customers on older plans. The extra fees functioned as an across-the-board bump that clients could not easily avoid without changing plans. This reinforced expectations that legacy plans would keep getting more expensive over time, prompting some users to consider switching.",
+      "date": "2022-05-16",
+      "entities": [
+        "Verizon"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Verizon legacy-plan customers"
+      },
+      "source_info": {
+        "title": "Verizon now charging an extra $1.35 per month per line for some consumer plans",
+        "url": "https://www.theverge.com/2022/5/16/23075448/verizon-administrative-charge-price-increase-extra-1-35",
+        "published_date": "2022-05-16",
+        "publisher": "The Verge"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "T-Mobile raised its 2022 forecast for wireless subscriber additions, citing demand for its cheaper plans and 5G coverage advantage. Management pointed to the combination of value pricing and a broad mid-band 5G footprint as key drivers. The updated outlook reflected sustained port-in momentum from rivals during the second half of 2022.",
+      "date": "2022-10-27",
+      "entities": [
+        "T-Mobile"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "T-Mobile"
+      },
+      "source_info": {
+        "title": "T-Mobile's cheaper plans, 5G edge help lift 2022 forecast again",
+        "url": "https://www.reuters.com/business/media-telecom/t-mobile-raises-2022-forecast-wireless-subscriber-additions-again-2022-10-27/",
+        "published_date": "2022-10-27",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "logic_operator": "cause_event",
+      "description": "When AT&T raised prices on legacy plans, budget-sensitive households immediately felt recurring bill pressure. For multi-line accounts, even modest per-line hikes magnified switching incentives and increased openness to rival offers.",
+      "step_id": 1
+    },
+    {
+      "logic_operator": "THEN",
+      "description": "Verizon layered on administrative charges, reinforcing the expectation that legacy plans would become progressively more expensive. Facing two separate price actions, consumers updated beliefs about future pricing risk and began seeking alternatives.",
+      "step_id": 2
+    },
+    {
+      "logic_operator": "THEN",
+      "description": "T-Mobile marketed price stability and a broad mid-band 5G footprint, lowering perceived risk and search costs for would-be switchers. As port-in intent rose, T-Mobile became the landing spot for a larger share of defections from rivals.",
+      "step_id": 3
+    },
+    {
+      "logic_operator": "RESULT",
+      "description": "The cumulative demand tailwind supported T-Mobile's guidance increase on 2022-10-27. Management credited cheaper plans and 5G leadership, consistent with migration dynamics triggered by competitors' price actions.",
+      "step_id": 4
+    }
+  ],
+  "rationale": "Two major rivals raised effective prices within weeks, intensifying buyer power and churn intent. T-Mobile's value positioning and 5G coverage translated that intent into measurable subscriber momentum and a guidance boost.",
+  "counterfactual_analysis": "Absent AT&T and Verizon's price and fee increases, fewer customers would re-shop plans in 2022, and T-Mobile's confidence to raise its full-year forecast in October would likely have been lower.",
+  "adversarial_confounders": [
+    {
+      "text": "Seasonal iPhone upgrade cycle",
+      "impact": "Could lift switching and activations industry-wide, boosting T-Mobile's adds irrespective of rivals' price hikes."
+    },
+    {
+      "text": "Handset promotions by multiple carriers",
+      "impact": "Aggressive trade-ins or discounts could drive port-ins unrelated to competitors' fee increases."
+    },
+    {
+      "text": "Macro household budget shifts",
+      "impact": "Inflation or relief dynamics may change plan choices and churn independent of pricing actions."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Price increases at AT&T and Verizon made T-Mobile's cheaper 5G plans relatively more attractive for value-conscious wireless customers. As some users switched away from the higher priced rivals, T-Mobile gained share in a mature market, supporting stronger guidance and a more favorable position in industry rivalry."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "Each billing cycle, competitor price hikes pushed a trickle of subscribers toward T-Mobile's lower cost plans, gradually compounding its customer gains. That growing base reinforced management confidence and investor expectations, feeding a reinforcing loop between perceived 5G leadership, migration flows, and improved forecasts."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

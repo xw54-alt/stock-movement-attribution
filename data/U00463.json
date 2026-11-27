@@ -1,0 +1,147 @@
+{
+  "pair_id": "U00463",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20004",
+      "causal_salience": "primary",
+      "text": "The International Brotherhood of Teamsters said it would not begin national negotiations until all regional supplements were completed, signaling a tougher stance and raising bargaining uncertainty.",
+      "date": "2023-04-12",
+      "entities": [
+        "International Brotherhood of Teamsters"
+      ],
+      "sectors": [
+        "Labor"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "contract negotiation climate"
+      },
+      "source_info": {
+        "title": "Teamsters to UPS: No national talks until regional contracts are finished",
+        "url": "https://www.reuters.com/business/teamsters-ups-no-national-talks-until-regional-contracts-are-finished-2023-04-12/",
+        "published_date": "2023-04-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D20005",
+      "causal_salience": "secondary",
+      "text": "The union demanded a final contract offer within days and threatened a strike if no acceptable agreement emerged before the July 31 expiration.",
+      "date": "2023-06-28",
+      "entities": [
+        "International Brotherhood of Teamsters"
+      ],
+      "sectors": [
+        "Labor"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "labor negotiations"
+      },
+      "source_info": {
+        "title": "US Teamsters demand final contract offer from UPS",
+        "url": "https://www.reuters.com/sustainability/us-teamsters-demand-final-contract-offer-ups-2023-06-28/",
+        "published_date": "2023-06-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Negotiations broke down on July 5, triggering heightened strike risk and prompting investors to discount potential service disruptions and higher wage costs. The market reaction pushed the focal carrier's shares lower.",
+      "date": "2023-07-05",
+      "entities": [
+        "United Parcel Service"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "UPS equity"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "UPS, Teamsters accuse each other of walking away from contract talks; shares fall",
+        "url": "https://www.reuters.com/business/teamsters-says-ups-has-walked-away-negotiations-2023-07-05/",
+        "published_date": "2023-07-05",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Union bargaining posture hardened as national talks were delayed until supplemental agreements finished, increasing the risk of a protracted dispute."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "A subsequent ultimatum compressed the timeline and elevated strike threat perception among shippers and investors."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "THEN",
+      "description": "When talks collapsed, participants priced in disruption risk and higher labor cost trajectories, pressuring valuation multiples."
+    },
+    {
+      "step_id": 4,
+      "logic_operator": "RESULT",
+      "description": "UPS stock fell 2.0% down on 2023-07-05 (close-to-close) as the market reassessed operational continuity and cost outcomes."
+    }
+  ],
+  "rationale": "Escalating labor tactics tighten the feasible bargaining set and heighten the probability of costly service interruptions, which equity markets discount rapidly.",
+  "counterfactual_analysis": "If national talks had proceeded smoothly without ultimatums, UPS shares would likely have avoided a 2.0% down reaction on the breakdown day.",
+  "adversarial_confounders": [
+    {
+      "text": "General market weakness could have contributed to the decline independently of labor news.",
+      "impact": "This would overstate the causal effect attributed to negotiation dynamics."
+    },
+    {
+      "text": "Shipper contingency shifts to competitors could be rumored regardless of talks status.",
+      "impact": "Such shifts may depress the stock beyond what labor headlines alone justify."
+    }
+  ],
+  "confidence_score": 0.72,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "By refusing to move to national negotiations and demanding a final offer, the Teamsters signaled they were willing to risk a strike at a critical logistics company. That stance increased labor's bargaining power and raised the threat of costly disruption at UPS, weakening its negotiating position and prompting investors to mark the shares lower."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.8,
+        "commentary": "Escalating labor tensions at UPS reflected broader social and political pressures around wages and working conditions in the US delivery sector. As talks broke down and the risk of a nationwide strike grew, regulators, customers and the public paid more attention to the dispute, increasing uncertainty around UPS's operations and profitability."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

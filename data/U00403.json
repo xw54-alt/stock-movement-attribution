@@ -1,0 +1,152 @@
+{
+  "pair_id": "U00403",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C2A",
+      "causal_salience": "primary",
+      "text": "Swiss engineering giant ABB reported its highest ever quarterly order intake, with U.S. orders jumping 37% and total orders up 14%. Management attributed the surge to booming demand for data centres and AI infrastructure, and ABB said its electrification and automation segments grew strongly, sending its shares up more than 7%.",
+      "date": "2025-07-17",
+      "entities": [
+        "ABB"
+      ],
+      "sectors": [
+        "Industrial automation"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "ABB"
+      },
+      "source_info": {
+        "title": "ABB posts record orders on booming US and data centre demand",
+        "url": "https://www.reuters.com/technology/abb-beats-forecasts-with-q2-earnings-2025-07-17/",
+        "published_date": "2025-07-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": "C2B",
+      "causal_salience": "secondary",
+      "text": "Taiwan Semiconductor Manufacturing Co (TSMC) reported a second-quarter profit increase of more than 60% year-on-year, beating market expectations. Executives said the surge was driven by surging demand for chips used in artificial intelligence applications, and the company forecast continued strong momentum as AI adoption accelerates.",
+      "date": "2025-07-17",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Semiconductor"
+      ],
+      "country": "Taiwan",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.78,
+        "target": "TSMC"
+      },
+      "source_info": {
+        "title": "TSMC Q2 profit surges 60%, reaches historic high",
+        "url": "https://www.reuters.com/world/asia-pacific/tsmc-q2-profit-surges-60-reaches-historic-high-2025-07-17/",
+        "published_date": "2025-07-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "European stock indexes rebounded after a series of upbeat corporate results. ABB's record order book and TSMC's stellar profit growth boosted investor confidence in the industrial and technology sectors. Shares of rivals Siemens and Schneider Electric rose 3.6% and 5.8% respectively as the strong demand signals from ABB and TSMC suggested continued investment in automation and AI infrastructure.",
+      "date": "2025-07-17",
+      "entities": [
+        "Siemens"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "Euro Area",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Siemens"
+      },
+      "stock_change_pct": 3.6,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "European shares rise after four-day drop as ABB shines",
+        "url": "https://wkzo.com/2025/07/17/european-shares-rise-after-four-day-drop-as-abb-shines/",
+        "published_date": "2025-07-17",
+        "publisher": "WKZO / Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "ABB announced record quarterly orders driven by a 37% surge in U.S. demand for data centre equipment, signalling robust investment in electrification and automation. The company's shares rallied more than 7% as investors reacted positively to the strong backlog and upbeat outlook."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "cause_event",
+      "description": "On the same day, TSMC reported that its profit jumped over 60% year-on-year thanks to surging demand for AI chips. The semiconductor giant forecast continued momentum, reinforcing expectations that AI-driven capital expenditure would remain strong across the technology supply chain."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "THEN",
+      "description": "Investors extrapolated these signals to the broader industrial automation sector. They reasoned that if ABB and TSMC were seeing record orders and profits from AI-related demand, suppliers of electrification and automation equipment like Siemens would benefit from the same tailwinds."
+    },
+    {
+      "step_id": 4,
+      "logic_operator": "RESULT",
+      "description": "As a result, Siemens' stock jumped roughly 3.6% on the day, outperforming the broader European market. Market participants viewed the concurrent success of ABB and TSMC as clear evidence that demand for automation and semiconductor equipment would stay elevated, justifying a re-rating of Siemens' growth prospects."
+    }
+  ],
+  "rationale": "The combination of ABB's record orders and TSMC's booming profits sent a strong signal about sustained demand for automation and semiconductor equipment. Investors inferred that Siemens, as a major supplier of industrial automation and digital solutions, would benefit from the same AI-driven capital spending, leading to a rally in its shares.",
+  "counterfactual_analysis": "If ABB's orders had not surged and TSMC's profits had not beaten expectations, investors would have lacked evidence that AI demand was translating into real orders. In that counterfactual scenario, Siemens' share price would likely have remained flat rather than jumping over three percent.",
+  "adversarial_confounders": [
+    {
+      "text": "Other macroeconomic news or monetary policy statements released on the same day could also have influenced European industrial stocks.",
+      "impact": "low"
+    }
+  ],
+  "confidence_score": 0.74,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "China's subsidy cuts and Tesla's move to localize production intensified price competition in electric vehicles and batteries, especially from Chinese cell makers that were willing to undercut foreign suppliers. That shift forced LG Chem to accept lower margins or risk losing contracts, which is why investors focused on how the new rivalry dynamics in China could damage its profitability."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Regulatory and technology driven shifts",
+        "pestel_impact_score": 0.87,
+        "conditions_score": 0.8,
+        "commentary": "The planned phase out of national subsidies and changes in local content rules were policy choices that reshaped the economics of electric vehicle adoption in China. Those regulatory moves made state supported domestic suppliers more aggressive on price and left foreign battery makers exposed to a policy driven squeeze, contributing to LG Chem's profit warning and share price drop."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "As subsidies were reduced and car makers pushed for cheaper batteries, Chinese competitors ramped capacity and cut prices, eroding the returns on LG Chem's earlier investments. Weaker profits then limited its ability to invest in new technologies and capacity, which in turn made it harder to defend share, creating a negative feedback loop reflected in the stock's decline."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

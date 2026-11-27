@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00487",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D30001",
+      "causal_salience": "primary",
+      "text": "The European Commission confirms provisional anti-subsidy duties on Chinese-made electric vehicles after its investigation. The measure targets imports that Brussels argues benefit from state support and will disrupt EU market dynamics.",
+      "date": "2024-06-12",
+      "entities": [
+        "European Commission"
+      ],
+      "sectors": [
+        "Automotive"
+      ],
+      "country": "EU",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Chinese EV imports to EU"
+      },
+      "source_info": {
+        "title": "EU sets duties on Chinese electric vehicles of up to 38%",
+        "url": "https://www.reuters.com/business/autos-transportation/eu-sets-duties-chinese-electric-vehicles-up-38-2024-06-12/",
+        "published_date": "2024-06-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Volvo Cars' shares fell sharply as investors priced in tariff-driven cost and demand headwinds for models sourced from China. The stock declined during the session amid a broader autos selloff triggered by the EU move.",
+      "date": "2024-06-13",
+      "entities": [
+        "Volvo Cars"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "SE",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Volvo equity"
+      },
+      "stock_change_pct": 6.2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "European auto stocks fall on uncertainty over China's tariff response; Volvo Car down 6.2%",
+        "url": "https://www.reuters.com/business/autos-transportation/european-auto-stocks-fall-further-concerns-over-chinas-tariff-response-2024-06-13/",
+        "published_date": "2024-06-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "The European Commission imposes provisional duties on Chinese-made EVs, raising expected import costs and regulatory friction for EU-bound vehicles. Market participants update assumptions on supply chains and pricing for brands with China-based production."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors reassess margin risk and potential volume disruption for automakers exposed to China-to-EU flows. Models expected to face cost pass-through or rerouting risks see near-term demand uncertainty rise."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2024-06-13, Volvo Cars' shares moved intraday in response to the tariff shock and finished down 6.2% (direction: down), consistent with a risk-off read-through for exposed OEMs."
+    }
+  ],
+  "rationale": "Tariff announcements mechanically alter landed-cost assumptions and channel inventory flows, creating near-term uncertainty for models imported from China. Given Volvo's exposure to China-based manufacturing for certain EVs, investors priced in lower margin visibility and possible volume adjustments.",
+  "counterfactual_analysis": "If the EU had delayed or softened the provisional duties, near-term risk premia on exposed OEMs would likely have been lower and the stock drop milder. Conversely, if duties had been higher or immediate, the selloff could have been steeper as supply-chain rerouting costs rise.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide macro risk off in European equities on the same day could independently depress auto stocks.",
+      "impact": "Could overstate the specific effect of tariff news by conflating market beta with policy impact."
+    },
+    {
+      "text": "Company-specific headlines unrelated to tariffs might influence Volvo's perceived competitive position.",
+      "impact": "Could bias attribution away from the primary policy shock."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "EU anti subsidy duties on Chinese made EVs threatened to raise input costs and complicate sourcing for brands that rely heavily on Chinese production. For Volvo, higher landed costs and uncertain demand for tariff exposed models weakened its competitive position, leading investors to discount the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

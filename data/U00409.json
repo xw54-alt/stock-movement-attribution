@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00409",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D10009",
+      "causal_salience": "primary",
+      "text": "SoftBank invested heavily in artificial intelligence, approving a $22.5 billion instalment to complete a $30 billion investment in OpenAI and outlining plans to finance a massive 'Stargate' data centre. It also reported first-quarter profits that beat analyst expectations, reinforcing confidence in its AI strategy.",
+      "date": "2025-08-09",
+      "entities": [
+        "SoftBank Group Corp",
+        "OpenAI"
+      ],
+      "sectors": [
+        "Technology",
+        "Artificial Intelligence"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "SoftBank Group Corp"
+      },
+      "source_info": {
+        "title": "SoftBank shares hit record high on AI prospects",
+        "url": "https://www.reuters.com/business/media-telecom/softbank-shares-hit-record-high-ai-prospects-2025-08-08/",
+        "published_date": "2025-08-08",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "SoftBank shares jumped more than 13%, reaching a record intraday high of 14,205 yen and closing up 10.39% at 13,865 yen as investors welcomed the company's strong profit and AI investment push.",
+      "date": "2025-08-09",
+      "entities": [
+        "SoftBank Group Corp"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Japan",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.92,
+        "target": "SoftBank Group Corp"
+      },
+      "stock_change_pct": 13.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "SoftBank shares hit record high on AI prospects",
+        "url": "https://www.reuters.com/business/media-telecom/softbank-shares-hit-record-high-ai-prospects-2025-08-08/",
+        "published_date": "2025-08-08",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "SoftBank reported first-quarter profits that exceeded analyst expectations and unveiled major artificial intelligence initiatives, including a $22.5 billion instalment toward a $30 billion investment in OpenAI and financing for a massive 'Stargate' data centre. These announcements underscored the group's commitment to AI as a long-term growth driver.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The profit beat signalled that the company's aggressive investment strategy could deliver returns, while its outsized bet on AI positioned it at the forefront of a transformative technology.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors interpreted the announcements as strong evidence of future growth potential and responded by bidding up the stock.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "SoftBank shares surged more than 13% intraday and closed up about 10.4% at 13,865 yen, a record high.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "By beating earnings estimates and doubling down on AI investments, SoftBank convinced investors that its strategy could generate significant future value. The market rewarded these signals by pushing the share price to record highs.",
+  "counterfactual_analysis": "Had SoftBank merely met expectations and not committed additional capital to AI, investor enthusiasm would likely have been muted and the share price would not have achieved record levels.",
+  "adversarial_confounders": [
+    {
+      "text": "A widespread rally in AI-related stocks or an easing of monetary policy",
+      "impact": "Broader market trends could have amplified the rally in SoftBank shares, making the impact of its own announcements appear larger."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.84,
+        "commentary": "By committing tens of billions of dollars to OpenAI and a giant data center, SoftBank set up a loop in which early AI investments could generate valuation gains that justify even larger future bets. Strong quarterly profits and a surging share price then provide additional financial capacity and confidence to keep funding ambitious AI projects, reinforcing the cycle that investors were reacting to in the double digit rally."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

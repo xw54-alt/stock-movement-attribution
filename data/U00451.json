@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00451",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-INTEL-20210323",
+      "causal_salience": "primary",
+      "text": "Intel announced a $20 billion plan to build two new fabs in Arizona and re-enter the foundry business serving external customers. The move signaled renewed head-to-head competition with leading foundry providers on advanced nodes.",
+      "date": "2021-03-23",
+      "entities": [
+        "Intel"
+      ],
+      "sectors": [
+        "Semiconductors"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "competitive",
+        "intensity": 0.8,
+        "target": "Intel vs. foundry incumbents"
+      },
+      "source_info": {
+        "title": "Intel is spending $20 billion to build two new chip plants in Arizona",
+        "url": "https://www.cnbc.com/2021/03/23/intel-is-spending-20-billion-to-build-two-new-chip-plants-in-arizona.html",
+        "published_date": "2021-03-23",
+        "publisher": "cnbc.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "TSMC shares fell as investors reassessed competitive dynamics in foundry services. The market read Intel's move as a potential long-run challenge to TSMC's pricing power and capacity allocation.",
+      "date": "2021-03-24",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "TW,China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "TSMC"
+      },
+      "stock_change_pct": 3.9,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "TSMC shares fall as Intel unveils $20 billion foundry plan",
+        "url": "https://www.reuters.com/article/business/tsmc-shares-slide-as-taiwan-plays-down-intels-20-billion-expansion-challenge-idUSKBN2BG043/",
+        "published_date": "2021-03-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Intel committed $20 billion to two new Arizona fabs and relaunched an external foundry strategy, expanding U.S. manufacturing capacity and signaling a return to leading-edge competition."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors inferred that a resurgent Intel could bid for overlapping customers and tools, compressing industry margins and reducing incumbent pricing power for advanced nodes."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2021-03-24, TSMC stock fell intraday by 3.9% (down), consistent with repricing of competitive risk and future margin pressure."
+    }
+  ],
+  "rationale": "The cause changes competitive constraints by adding a well-capitalized rival into foundry markets. Anticipated capacity additions and a renewed external foundry offering threaten TSMC's future bargaining power and utilization mix.",
+  "counterfactual_analysis": "If Intel had not announced the $20 billion expansion and foundry push, investors would have had less reason to price in future margin pressure for incumbent foundries, making a material same-week decline in TSMC less likely.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro risk sentiment on the day could independently move Taiwan equities and semiconductor names regardless of Intel news.",
+      "impact": "This could partially explain the magnitude of the drop, but would not specifically connect to foundry competition risk."
+    },
+    {
+      "text": "Supplier tool delivery bottlenecks or COVID-related logistics issues could have dampened sector sentiment.",
+      "impact": "Such factors may contribute noise but do not directly explain TSMC's sharper move on the Intel announcement date."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Intel's decision to spend $20 billion on new Arizona fabs and re-enter the contract foundry market signaled that a deep pocketed rival plans to challenge incumbents on advanced nodes. That prospective increase in competitive capacity threatened TSMC's long term pricing power and utilization, so investors marked down the stock as they reassessed industry rivalry."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

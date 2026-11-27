@@ -1,0 +1,150 @@
+{
+  "pair_id": "U00496",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C6A",
+      "causal_salience": "secondary",
+      "text": "Tesla began offering free trials of its Full Self-Driving package in China, raising the ADAS performance bar and intensifying software competition. The move sharpened consumer comparisons on assisted driving features across brands.",
+      "date": "2025-06-21",
+      "entities": [
+        "Tesla Inc."
+      ],
+      "sectors": [
+        "Automobiles",
+        "Technology"
+      ],
+      "country": "CN",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Competing ADAS value proposition for rivals"
+      },
+      "source_info": {
+        "title": "Tesla offers Free Trial of Full Self-Driving in China, potentially challenging local rivals",
+        "url": "https://www.reuters.com/business/autos-transportation/tesla-launches-free-trial-assisted-driving-service-china-2025-03-17/",
+        "published_date": "2025-06-21",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    },
+    {
+      "source_doc_id": "C6B",
+      "causal_salience": "primary",
+      "text": "China moved to crack down on automakers overstating 'smart driving' claims in their advertising and materials. This policy raised compliance costs and chilled aggressive marketing of ADAS features.",
+      "date": "2025-04-17",
+      "entities": [
+        "Ministry of Industry and Information Technology of China"
+      ],
+      "sectors": [
+        "Automobiles",
+        "Technology"
+      ],
+      "country": "CN",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Automaker marketing and ADAS claims"
+      },
+      "source_info": {
+        "title": "China cracks down on 'smart driving' claims by automakers",
+        "url": "https://www.reuters.com/business/autos-transportation/china-bans-smart-autonomous-driving-terms-vehicle-ads-2025-04-17/",
+        "published_date": "2025-04-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "Xiaomi shares extended losses in a difficult week as safety and ADAS narratives weighed on the stock alongside sector weakness. Investors anticipated tougher feature comparisons and stricter marketing constraints, pressuring valuation multiples.",
+      "date": "2025-10-17",
+      "entities": [
+        "Xiaomi Corp"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "HK",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Xiaomi equity"
+      },
+      "stock_change_pct": 3.7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Xiaomi shares post worst week since listing amid EV safety and tech sector pressures",
+        "url": "https://www.reuters.com/business/autos-transportation/xiaomi-shares-post-worst-week-3-12-years-accidents-stoke-ev-safety-concerns-2025-10-17/",
+        "published_date": "2025-10-17",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A leading rival offered free trials of advanced driver-assistance software, shifting consumer reference points for ADAS performance and value."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "Regulators curtailed overstated 'smart driving' claims, raising compliance costs and limiting promotional flexibility."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "THEN",
+      "description": "Together, these developments increased scrutiny of ADAS capability comparisons and monetization prospects for new entrants."
+    },
+    {
+      "step_id": 4,
+      "logic_operator": "RESULT",
+      "description": "On 2025-10-17, Xiaomi's shares fell by 3.7% (down), capping its worst week since listing as sentiment toward EV safety and ADAS tightened."
+    }
+  ],
+  "rationale": "Competition and regulation jointly compress optionality around premium ADAS positioning. A rival's free trials raise the benchmark while crackdowns constrain messaging, both pressuring perceived value.",
+  "counterfactual_analysis": "If the rival had not introduced free trials, consumer comparisons would have been less acute. Absent the crackdown, marketing flexibility could have supported brand perception despite technical gaps.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader technology index declines that week could push Xiaomi lower independent of ADAS narratives.",
+      "impact": "This would overstate the incremental effect of the two causes."
+    },
+    {
+      "text": "Short-term news about other EV accidents may have generalized safety fears beyond the cited causes.",
+      "impact": "This would bias attribution toward ADAS-related factors."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Tesla's aggressive Full Self Driving trials in China raised the bar for advanced driver assistance features that local EV brands were expected to match. At the same time, stricter oversight of smart driving marketing claims increased pressure on Xiaomi and other newer entrants to prove their technology and safety, intensifying competitive strain in the EV space."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "Chinese regulators' crackdown on how automakers present autonomous and smart driving capabilities reflected broader public concern about road safety and tech hype. As scrutiny rose, sentiment toward EV and ADAS related stocks turned more cautious, and Xiaomi's shares suffered a sharp weekly drop on worries its new EV ambitions could face heavier regulatory headwinds."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

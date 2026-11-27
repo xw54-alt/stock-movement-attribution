@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00453",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-QUAKE-20240403",
+      "causal_salience": "primary",
+      "text": "A 7.2-magnitude earthquake struck Taiwan, disrupting transport and some factory operations across the island. Initial assessments suggested near-term supply chain risks across advanced manufacturing.",
+      "date": "2024-04-03",
+      "entities": [
+        "Taiwan earthquake"
+      ],
+      "sectors": [
+        "Semiconductors"
+      ],
+      "country": "TW",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Taiwan supply chain risk"
+      },
+      "source_info": {
+        "title": "Taiwan earthquake sparks supply chain concerns; manufacturers assess impact",
+        "url": "https://www.cnn.com/2024/04/03/tech/taiwan-earthquake-risks-semiconductor-chip-industry-tsmc",
+        "published_date": "2024-04-03",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "TSMC said production largely recovered but investors priced near-term disruption and risk premia. Shares in Taipei ended lower as risk was repriced across suppliers and fabs.",
+      "date": "2024-04-03",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "TW,China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "TSMC"
+      },
+      "stock_change_pct": 1.3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Taiwan's strongest quake in 25 years leaves buildings leaning; TSMC shares end down 1.3%",
+        "url": "https://www.reuters.com/world/asia-pacific/strong-72-magnitude-earthquake-hits-taipei-2024-04-03/",
+        "published_date": "2024-04-03",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A powerful earthquake disrupted logistics and briefly affected industrial operations across Taiwan, including advanced manufacturing corridors."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Even with rapid recovery, investors repriced operational risk and potential shipment delays, applying a higher risk premium to exposed firms."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2024-04-03, TSMC shares in Taipei ended down 1.3% (down), reflecting the immediate-risk repricing after the quake."
+    }
+  ],
+  "rationale": "The event increases perceived fragility of operations and shipment timing, affecting near-term sentiment.",
+  "counterfactual_analysis": "Without the quake, investors would likely have maintained prior risk assessments, avoiding the same-session drawdown.",
+  "adversarial_confounders": [
+    {
+      "text": "Unrelated macro weakness in the broader Taipei market could have contributed to the decline.",
+      "impact": "This would make attribution less precise, but the timing aligns with the quake."
+    },
+    {
+      "text": "Company-specific headlines at other suppliers might have spilled over to TSMC.",
+      "impact": "Cross-reads exist, but the island-wide event is the most proximate driver."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Concentrated advanced manufacturing capacity in Taiwan means that a major earthquake highlights the operational risk of relying heavily on a single dominant foundry supplier. The shock reminded customers and investors that supply interruptions can quickly disrupt production and margins, prompting a repricing of TSMC and its peers within an industry structure where alternatives are limited."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

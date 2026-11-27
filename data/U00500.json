@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00500",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "The U.S. administration signaled new tariffs on goods from Canada and Mexico, raising the prospect of higher input and equipment costs for U.S. restaurant operators. Franchisees faced uncertainty on sourcing and capital budgets.",
+      "date": "2025-01-31",
+      "entities": [
+        "U.S. Government"
+      ],
+      "sectors": [
+        "Restaurants"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Franchise cost outlook"
+      },
+      "source_info": {
+        "title": "Trump: Nothing Canada, Mexico or China can do to delay Feb 1 tariffs",
+        "url": "https://www.reuters.com/world/americas/north-america-braces-new-trump-tariffs-saturday-deadline-nears-2025-01-31/",
+        "published_date": "2025-01-31",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "Yum! Brands' quarterly update landed in a backdrop of rising input and capex uncertainty tied to tariff risks. The stock weakened as much as investors reassessed cost trajectories and competitive pricing power.",
+      "date": "2025-08-05",
+      "entities": [
+        "Yum! Brands"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Yum equity"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Taco Bell parent Yum Brands misses estimates as spending slows, costs rise",
+        "url": "https://www.reuters.com/business/taco-bell-parent-yum-brands-misses-estimates-spending-slows-costs-rise-2025-08-05/",
+        "published_date": "2025-08-05",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Tariff plans created uncertainty about the landed cost of food inputs, packaging, and equipment for franchisees across North America.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Higher expected costs constrained price elasticity and limited headroom to run aggressive discounting, increasing the risk to near-term comps and margins.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-08-05, Yum! Brands' shares fell as much as 5.0% intraday following results, matching the effect fields.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Tariffs operate like a tax on imports, lifting costs and complicating supply planning. For large franchise systems, expectations for margin pressure can translate quickly into equity repricing.",
+  "counterfactual_analysis": "Without tariff risk, franchisees could have locked in lower-cost inputs and sustained sharper promotions, moderating investor concerns and likely reducing the selloff's magnitude.",
+  "adversarial_confounders": [
+    {
+      "text": "Company-specific issues such as brand mix or limited-time offers could have driven the decline independently.",
+      "impact": "This would dilute the tariff channel's explanatory power."
+    },
+    {
+      "text": "A contemporaneous market selloff could have magnified the intraday drawdown.",
+      "impact": "This would overstate company-specific causality."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "The prospect of new tariffs on trade with Canada, Mexico and China threatened to raise input and equipment costs across the restaurant industry. For Yum and its franchisees, higher food and capex costs would narrow the room for promotional pricing and value meals, intensifying the trade off between protecting margins and defending traffic against rivals."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.84,
+        "commentary": "Washington's tariff rhetoric signaled a more protectionist trade stance that could disrupt cross border supply chains and increase inflationary pressure. That policy uncertainty added to an already difficult spending environment, so when Yum missed estimates and flagged cost pressures, investors interpreted the results through a lens of rising macro and regulatory risk."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

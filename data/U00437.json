@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00437",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C2",
+      "causal_salience": "primary",
+      "text": "On October 25, 2023, Reuters reported that the average rate on a 30-year fixed mortgage in the United States jumped to 7.9%, the highest level since 2000. The Federal Reserve's rapid rate increases more than doubled borrowing costs over the year, driving mortgage applications down and pricing many prospective homebuyers out of the market.",
+      "date": "2023-10-25",
+      "entities": [
+        "Federal Reserve",
+        "Mortgage rates",
+        "U.S. borrowers"
+      ],
+      "sectors": [
+        "Housing",
+        "Finance"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "The Home Depot"
+      },
+      "source_info": {
+        "title": "U.S. mortgage rates soar to highest in more than 23 years",
+        "url": "https://www.reuters.com/markets/us/us-mortgage-rates-soar-highest-more-than-23-years-2023-10-25/",
+        "published_date": "2023-10-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 13, 2024, Home Depot warned that Americans were delaying major home-improvement projects. The company lowered its sales expectations as CEO Ted Decker said high mortgage rates and broader economic uncertainty were acting as a brake on home moves and causing customers to defer large renovation projects.",
+      "date": "2024-08-13",
+      "entities": [
+        "The Home Depot",
+        "Ted Decker",
+        "Homeowners"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.88,
+        "target": "The Home Depot"
+      },
+      "stock_change_pct": 2.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Home Depot warns of pullback in consumer spending as Americans delay big projects",
+        "url": "https://www.cnn.com/2024/08/13/investing/home-depot-earnings-housing",
+        "published_date": "2024-08-13",
+        "publisher": "cnn.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Oct 25, 2023: U.S. 30-year mortgage rates approach ~7.9%, a ~23-year high that strains affordability for move-up and first-time buyers. Lower transaction volumes follow, which typically reduces big-ticket discretionary projects tied to home turnover. DIY demand skews toward maintenance while remodels are delayed, tightening the near-term spending outlook.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Aug 13, 2024: Home Depot flags ongoing pressure from high financing costs, noting customers are deferring larger projects. Management frames demand as healthy but more selective, with strength in repair categories offset by softness in complex installations. Expectations are nudged lower to reflect a more prolonged normalization phase.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "The outlook reset prompts a valuation check as investors re-cut earnings trajectories for rate-sensitive baskets. Momentum shifts cautious near term; the stock trades down roughly 2.5% on the update.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The spike in mortgage rates materially increased the cost of financing home purchases and renovations, leading consumers to postpone projects. Home Depot's decision to lower its sales outlook directly reflects this macroeconomic pressure.",
+  "counterfactual_analysis": "If mortgage rates had remained near prior levels, financing costs would have been lower and homeowners might have continued investing in renovations. Home Depot could have maintained its earlier sales guidance, and the stock might not have sold off.",
+  "adversarial_confounders": [
+    {
+      "text": "Other factors such as rising materials prices, competitive promotions or general economic malaise could also depress demand. However, management's explicit linkage to interest rates and the timing of the rate spike strengthen the causal inference.",
+      "impact": "May influence the measured effect"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.84,
+        "commentary": "A surge in US mortgage rates to their highest level in decades reflected a deliberate tightening of monetary policy that made home purchases much more expensive. That economic shift slowed housing turnover and discouraged big renovation projects, directly weighing on demand in the home improvement sector and forcing Home Depot to cut its sales outlook."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Higher borrowing costs reduce home sales and refinancing, which in turn means fewer customers undertaking major remodeling projects at chains like Home Depot. As big ticket demand weakens, management trims guidance and invests more cautiously, reinforcing a feedback loop in which elevated rates keep the home improvement cycle subdued."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

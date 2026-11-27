@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00447",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-FR-STRIKE-20230307",
+      "causal_salience": "primary",
+      "text": "French unions escalated nationwide strikes over pension reform, targeting transport and energy infrastructure. The planned industrial action was expected to constrain refinery operations and fuel logistics.",
+      "date": "2023-03-07",
+      "entities": [
+        "French unions"
+      ],
+      "sectors": [
+        "Labor",
+        "Energy"
+      ],
+      "country": "FR",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Fuel logistics"
+      },
+      "source_info": {
+        "title": "France faces nationwide strike as government pushes pension reform",
+        "url": "https://www.reuters.com/world/europe/unions-seek-bring-france-halt-block-pension-reform-2023-03-07/",
+        "published_date": "2023-03-07",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Shipments from TotalEnergies sites were halted during the day of action, tightening supply from key refineries and depots. The stoppage reflected both pickets and on-site participation by employees.",
+      "date": "2023-03-20",
+      "entities": [
+        "TotalEnergies"
+      ],
+      "sectors": [
+        "Energy & Utilities",
+        "Transportation & Logistics"
+      ],
+      "country": "FR",
+      "effect_type": "supply_disruption",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.76,
+        "target": "TotalEnergies"
+      },
+      "source_info": {
+        "title": "Shipments stopped from TotalEnergies sites due to strike action",
+        "url": "https://www.reuters.com/business/energy/shipments-stopped-totalenergies-refineries-strike-continues-2023-03-20/",
+        "published_date": "2023-03-20",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 2.01,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Coordinated strikes at energy facilities reduce available manpower and impede access for outbound deliveries. Blockades and pickets can shut gates or slow loading, directly restricting shipments.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "With refineries and depots constrained, logistics providers cannot dispatch normal volumes, causing immediate supply tightening. Management often prioritizes safety and avoids confrontation, reinforcing disruption.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2023-03-20, Reuters reported shipments from TotalEnergies sites were stopped, consistent with the expected impact pathway from industrial action to output and logistics constraints.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Industrial action at the sites creates a physical constraint that immediately curtails shipments. The mechanism is direct and observable via stoppages and depot closures rather than through market sentiment.",
+  "counterfactual_analysis": "Without the strike activity and blockades, regular staffing and site access would have enabled routine shipments. Downstream customers would not experience strike-driven supply tightness.",
+  "adversarial_confounders": [
+    {
+      "text": "Unplanned maintenance or safety incidents can also halt shipments.",
+      "impact": "Could produce shipment stoppages independent of strikes."
+    },
+    {
+      "text": "Government fuel release or requisitions may offset shortages.",
+      "impact": "May mask the disruption's magnitude in consumption data."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Nationwide strikes over French pension reform deliberately targeted energy sites, making it more costly for TotalEnergies to keep refineries and depots running normally. As shipments were halted and pressure on fuel supply rose, union leverage and public attention increased, encouraging further rounds of industrial action and management concessions in a reinforcing cycle."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

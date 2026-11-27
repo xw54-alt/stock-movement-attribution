@@ -1,0 +1,147 @@
+{
+  "pair_id": "U00495",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "SVB_2023_03_10",
+      "causal_salience": "primary",
+      "text": "Silicon Valley Bank collapsed after a run on deposits, leading regulators to close the lender. The sudden failure shocked markets and heightened fears about contagion across the U.S. banking system.",
+      "date": "2023-03-10",
+      "entities": [
+        "Silicon Valley Bank"
+      ],
+      "sectors": [
+        "Financials"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "US banking sector risk"
+      },
+      "source_info": {
+        "title": "U.S. regulators sound alarm as Silicon Valley Bank collapses",
+        "url": "https://www.reuters.com/business/finance/california-regulator-shuts-silicon-valley-bank-2023-03-10/",
+        "published_date": "2023-03-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "Signature_2023_03_12",
+      "causal_salience": "secondary",
+      "text": "Two days later, Signature Bank was closed by regulators amid deposit flight and mounting stresses at regional lenders. A second bank failure amplified fears about deposit safety and funding stability.",
+      "date": "2023-03-12",
+      "entities": [
+        "Signature Bank"
+      ],
+      "sectors": [
+        "Financials"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.76,
+        "target": "Regional banks"
+      },
+      "source_info": {
+        "title": "Signature Bank closed by New York regulators, JPMorgan to buy SVB deposits",
+        "url": "https://www.reuters.com/business/finance/new-york-state-regulators-close-signature-bank-2023-03-12/",
+        "published_date": "2023-03-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Large banks attracted inflows as customers sought perceived safety at the biggest institutions. Wells Fargo shares rebounded as investors rotated to systemically important lenders following the regional bank turmoil.",
+      "date": "2023-03-14",
+      "entities": [
+        "Wells Fargo & Company"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Wells Fargo equity"
+      },
+      "stock_change_pct": 4.15,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Shares of U.S. regional banks up in bounce after SVB-fuelled rout",
+        "url": "https://www.reuters.com/business/finance/shares-us-regional-banks-lick-wounds-after-svb-fueled-rout-2023-03-14/",
+        "published_date": "2023-03-14",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Silicon Valley Bank failed after a rapid run on deposits, forcing regulators to close the bank and intensifying concerns about regional lenders."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "Signature Bank was also closed, reinforcing fears about funding stability and pushing depositors and investors to reassess counterparty risk."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "THEN",
+      "description": "Investors rotated toward large, systemically important banks that are viewed as safer during stress, improving relative demand for their shares."
+    },
+    {
+      "step_id": 4,
+      "logic_operator": "RESULT",
+      "description": "On 2023-03-14, Wells Fargo shares rose 4.15% intraday as investors sought perceived safety among big banks following the failures, exactly matching stock_change_pct and stock_change_direction (up)."
+    }
+  ],
+  "rationale": "Two bank failures within days created systemic anxiety that pushed customers and investors toward larger banks. Wells Fargo, as a major U.S. lender, benefited from this flight to safety, lifting its share price.",
+  "counterfactual_analysis": "If Silicon Valley Bank and Signature had not failed, investors would have had less reason to rotate to large banks, and Wells Fargo's shares would likely not have rebounded by the same magnitude on that date.",
+  "adversarial_confounders": [
+    {
+      "text": "A simultaneous change in Treasury yields could independently move bank valuations and explain some of the price action.",
+      "impact": "Higher yields can compress bank valuations and reduce the observed uplift."
+    },
+    {
+      "text": "Company-specific news at another large bank could draw flows away from Wells Fargo.",
+      "impact": "Peer guidance or headlines might reallocate sector inflows and reduce Wells Fargo's relative gain."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "The sudden failures of Silicon Valley Bank and Signature Bank exposed how fragile some regional lenders were to concentrated deposit bases and rising rates. As customers and markets reassessed which banks were safest, Wells Fargo's scale and diversified franchise looked more attractive relative to smaller peers, shifting competitive dynamics in its favor."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.86,
+        "commentary": "Regulators' move to close troubled regional banks and backstop deposits highlighted the role of supervision and emergency policy in stabilizing the financial system. That intervention calmed systemic fears but also encouraged a flight of deposits and capital toward large, tightly regulated institutions like Wells Fargo, supporting a rebound in their shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

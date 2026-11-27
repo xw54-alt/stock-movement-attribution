@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00428",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10053",
+      "causal_salience": "primary",
+      "text": "COVID-19 lockdowns worldwide kept people at home and drove unprecedented surges in online gaming traffic, with network operators reporting peak-period usage spikes of roughly three-quarters above baseline.",
+      "date": "2020-03-23",
+      "entities": [
+        "Gaming Industry"
+      ],
+      "sectors": [
+        "Gaming",
+        "Entertainment"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Gaming Industry"
+      },
+      "source_info": {
+        "title": "Verizon: Online gaming traffic up 75% amid COVID-19 stay-at-home usage",
+        "url": "https://www.verizon.com/about/news/verizon-alert-parental-controls",
+        "published_date": "2020-03-26",
+        "publisher": "Verizon"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Tencent's shares rallied as investors extrapolated higher engagement and in-game spending during extended stay-at-home periods.",
+      "date": "2020-05-13",
+      "entities": [
+        "Tencent"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.84,
+        "target": "Tencent"
+      },
+      "stock_change_pct": 10.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Tencent Q1 revenue jumps as lockdowns spur game spending",
+        "url": "https://www.reuters.com/article/technology/tencent-q1-revenue-jumps-26-as-lockdowns-spur-game-spending-idUSL4N2CU26Q/",
+        "published_date": "2020-05-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Lockdowns increase time at home, shifting leisure toward digital entertainment and games. This catalyst altered the operating environment and set in motion adjustments to behavior, cash-flow expectations, or constraints across the ecosystem.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Tencent's platforms capture elevated playtime and spending on live-ops content. Market participants updated probability-weighted forecasts for revenue, margins, or competitive dynamics in response to the new information.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Upgraded revenue expectations translate into a stronger equity bid. On 2020-04-30, the equity finished higher by about 10% as the repricing crystallized in trading.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Sustained stay-at-home behavior boosted gaming engagement metrics and monetization rates. As Tencent is a leading publisher and platform operator, the demand shock supported a positive price response.",
+  "counterfactual_analysis": "Without the lockdowns, user-time allocation would have remained closer to pre-pandemic norms, diminishing the uplift in engagement and valuation.",
+  "adversarial_confounders": [
+    {
+      "text": "Extraordinary global monetary and fiscal stimulus",
+      "impact": "Supportive macro liquidity may have lifted tech equities broadly, contributing to the rally beyond gaming usage effects."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "COVID lockdowns kept millions of people at home and increased the time they spent on online entertainment, including Tencent's games and social platforms. Higher engagement and in game spending strengthened Tencent's position relative to offline entertainment rivals, supporting a rerating of the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

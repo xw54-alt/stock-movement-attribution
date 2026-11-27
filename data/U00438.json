@@ -1,0 +1,141 @@
+{
+  "pair_id": "U00438",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C3A",
+      "causal_salience": "primary",
+      "text": "On July 29, 2022, Reuters reported that the tight U.S. labor market kept upward pressure on wages. Wages and salaries rose 5.3% year-over-year in the second quarter as businesses competed for scarce workers, which contributed to overall inflation and increased labor costs for employers.",
+      "date": "2022-07-29",
+      "entities": [
+        "U.S. labor market",
+        "Wages",
+        "Employees"
+      ],
+      "sectors": [
+        "Labor",
+        "Economy"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.8,
+        "target": "The Home Depot"
+      },
+      "source_info": {
+        "title": "Tight U.S. labor market keeps upward pressure on wages",
+        "url": "https://www.reuters.com/markets/us/us-labor-costs-increase-strongly-second-quarter-2022-07-29/",
+        "published_date": "2022-07-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": "C3B",
+      "causal_salience": "primary",
+      "text": "On January 27, 2023, Reuters reported that U.S. consumer spending declined at the end of 2022 as households cut back. Spending fell 0.2% in December and 0.1% in November, while durable goods purchases dropped 3% and 1.9%, respectively, as rising prices and borrowing costs eroded purchasing power.",
+      "date": "2023-01-27",
+      "entities": [
+        "U.S. households",
+        "Consumer spending"
+      ],
+      "sectors": [
+        "Economy",
+        "Retail"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "The Home Depot"
+      },
+      "source_info": {
+        "title": "U.S. consumer spending ends 2022 on weaker footing; inflation slowing",
+        "url": "https://www.reuters.com/markets/us/us-consumer-spending-falls-inflation-cooling-2023-01-27/",
+        "published_date": "2023-01-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On February 21, 2023, Home Depot forecast annual profit below Wall Street expectations and warned of a higher wage bill. The company planned to spend an extra $1 billion to raise hourly wages amid a tight labor market and noted that pandemic-driven home improvement demand was cooling, leading to slower sales growth. Investors reacted by sending the stock down roughly 6%.",
+      "date": "2023-02-21",
+      "entities": [
+        "The Home Depot",
+        "Employees"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "The Home Depot"
+      },
+      "stock_change_pct": 6.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Home Depot flags profit hit from slowing demand, rising wages",
+        "url": "https://www.reuters.com/business/retail-consumer/home-depot-shares-slide-weak-sales-annual-profit-forecast-2023-02-21/",
+        "published_date": "2023-02-21",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Jul 29, 2022: A tight U.S. labor market drives wage inflation, lifting hourly rates across retail and distribution. Operating expense lines step higher as stores compete to retain associates in a scarce labor pool. Management teams weigh compensation investments against productivity and price actions to stabilize service levels.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Jan 27, 2023: Macro data show consumer spending softening into late 2022, with durable goods cooling from prior peaks. Sensitivity to inflation and borrowing costs shifts purchases toward essentials and smaller projects. This backdrop limits the ability to fully offset labor inflation with unit volume.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Feb 21, 2023: Home Depot guides profit lower and commits roughly $1B to wage increases to protect service quality and retention. The company highlights productivity and mix actions but acknowledges near-term margin pressure while demand normalizes. Signals focus on long-term health of the pro/DIY ecosystem rather than chasing short-term margin at the expense of service.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors recalibrate earnings and free-cash-flow trajectories to reflect higher opex and moderated growth. Risk premia widen near term as the market prices a slower margin recovery; shares decline about −6.0%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Higher wages and a drop in consumer spending jointly strained Home Depot's profitability. These macroeconomic pressures explain why the company had to boost pay and why it anticipated weaker sales growth.",
+  "counterfactual_analysis": "Had the labor market loosened and wage pressures eased, Home Depot might not have needed a $1 billion pay increase. Likewise, if consumer spending had remained strong, the company could have maintained more optimistic profit guidance, and the stock might not have fallen so sharply.",
+  "adversarial_confounders": [
+    {
+      "text": "Supply-chain disruptions, competitor pricing strategies or unusually severe weather could also impact sales and costs. Nonetheless, the timing of the wage increase and consumer spending slowdown aligns closely with Home Depot's profit warning.",
+      "impact": "May influence the measured effect"
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "A tight labor market pushed wages sharply higher at the same time that rising prices and borrowing costs were eroding US consumers' ability to spend. Those pressures forced Home Depot to raise hourly pay while facing cooler demand, squeezing margins and reinforcing a negative loop between labor costs, consumer spending and profit expectations."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

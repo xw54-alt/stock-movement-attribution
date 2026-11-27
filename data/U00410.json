@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00410",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10001",
+      "causal_salience": "primary",
+      "text": "DoorDash Inc's blockbuster initial public offering in December 2020 saw its shares surge about 87.5%, quadrupling the company's valuation and vastly increasing the paper value of major stakeholders' holdings.",
+      "date": "2020-12-10",
+      "entities": [
+        "DoorDash"
+      ],
+      "sectors": [
+        "Food Delivery",
+        "Technology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.88,
+        "target": "DoorDash"
+      },
+      "source_info": {
+        "title": "SoftBank shares surge on $11 bln DoorDash investment gain",
+        "url": "https://www.reuters.com/business/softbank-shares-surge-11-bln-doordash-investment-gain-2020-12-10/",
+        "published_date": "2020-12-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "SoftBank shares climbed as much as 19% in Tokyo and closed at 8,306 yen, their highest level in two decades, after the windfall from DoorDash's IPO increased its Vision Fund returns.",
+      "date": "2020-12-10",
+      "entities": [
+        "SoftBank Group Corp"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Financial Services"
+      ],
+      "country": "Japan",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "SoftBank Group Corp"
+      },
+      "stock_change_pct": 19.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "SoftBank shares surge on $11 bln DoorDash investment gain",
+        "url": "https://www.reuters.com/business/softbank-shares-surge-11-bln-doordash-investment-gain-2020-12-10/",
+        "published_date": "2020-12-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "DoorDash's highly anticipated initial public offering debuts spectacularly, with its shares soaring 87.5% and valuing the company at more than four times its prior fundraising round. This meteoric IPO dramatically elevates the paper value of large investors' stakes.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "SoftBank's Vision Fund holds a 25% stake in DoorDash, so the surge translates into an $11.2 billion paper gain. Market participants recognise that the fund's performance could improve materially.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Analysts interpret the gain as validation of the conglomerate's investment strategy and anticipate further windfalls. Investor sentiment turns optimistic about the group's ability to monetise its portfolio.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Buoyed by the strong gain and improved sentiment, SoftBank shares jump up to about 19% and close at 8,306 yen, marking their highest level in two decades.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The dazzling performance of DoorDash's IPO delivered an immediate valuation gain for SoftBank's sizeable stake, signalling that its Vision Fund investments could still produce outsized returns. Investors responded by bidding up SoftBank shares to a two-decade high.",
+  "counterfactual_analysis": "Had DoorDash's IPO been lacklustre or delayed, the value of the conglomerate's stake would not have jumped, and SoftBank shares would have lacked the catalyst for a sharp rally.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent optimism about chip designer Arm's sale to Nvidia and a general rally in technology stocks",
+      "impact": "These factors might have independently lifted SoftBank's stock price, making it harder to isolate the effect of DoorDash's IPO."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "DoorDash's hugely successful initial public offering confirmed that leading food delivery platforms could achieve dominant scale and command high valuations in a winner takes most market. As SoftBank's Vision Fund saw the value of its DoorDash stake swell, investors inferred that the fund had backed one of the strongest competitors in that industry, and they rewarded SoftBank with a sharp rise in its own share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

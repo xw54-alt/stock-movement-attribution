@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00444",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20007",
+      "causal_salience": "primary",
+      "text": "Apple unveiled the iPhone 14 lineup in the U.S. with eSIM-only models, removing the physical SIM tray and lowering friction to switch carriers. Activations, trials, and number ports could be completed digitally without handling a physical card. For consumers, that reduction in hassle makes it easier to test alternatives and respond to promotions.",
+      "date": "2022-09-07",
+      "entities": [
+        "Apple"
+      ],
+      "sectors": [
+        "Consumer Electronics",
+        "Telecom"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.76,
+        "target": "Carrier switching technology"
+      },
+      "source_info": {
+        "title": "Apple introduces iPhone 14 and iPhone 14 Plus",
+        "url": "https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-and-iphone-14-plus/",
+        "published_date": "2022-09-07",
+        "publisher": "Apple Newsroom"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "T-Mobile raised its 2022 forecast for wireless subscriber additions on strong demand for its plans and network, aided by lower switching frictions. eSIM-driven fluidity amplified the payoff from T-Mobile's price-to-performance positioning. The guidance lift reflected faster conversion of shoppers into switchers during the fall upgrade cycle.",
+      "date": "2022-10-27",
+      "entities": [
+        "T-Mobile"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "T-Mobile"
+      },
+      "source_info": {
+        "title": "T-Mobile's cheaper plans, 5G edge help lift 2022 forecast again",
+        "url": "https://www.reuters.com/business/media-telecom/t-mobile-raises-2022-forecast-wireless-subscriber-additions-again-2022-10-27/",
+        "published_date": "2022-10-27",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "logic_operator": "cause_event",
+      "description": "By removing the SIM tray, Apple turned carrier switching into a software action for millions of users. This reduces hassle and enables instant trials and rapid port-ins.",
+      "step_id": 1
+    },
+    {
+      "logic_operator": "THEN",
+      "description": "Lower friction amplifies the payoff of a strong price-to-performance proposition. Challenger networks with broad mid-band 5G can convert more shoppers into switchers.",
+      "step_id": 2
+    },
+    {
+      "logic_operator": "RESULT",
+      "description": "Weeks later, on 2022-10-27, T-Mobile raised its full-year forecast, consistent with improved switching fluidity and its value messaging. The timing aligns with peak upgrade season.",
+      "step_id": 3
+    }
+  ],
+  "rationale": "Technology change reduced switching costs, strengthening the channel through which T-Mobile's value and coverage led to higher net adds.",
+  "counterfactual_analysis": "If Apple had retained physical SIMs, friction would remain higher, and trialing alternatives would be less common-muting incremental port-ins.",
+  "adversarial_confounders": [
+    {
+      "text": "Competitors' price moves",
+      "impact": "Rival pricing changes could shift share and guidance independent of eSIM adoption."
+    },
+    {
+      "text": "Trade-in promotions across carriers",
+      "impact": "Discounts could drive upgrades/switches unrelated to eSIM friction changes."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "The launch of the iPhone 14 cycle concentrated upgrade demand into a period when T-Mobile could pair new devices with aggressive 5G offers and trade in deals. As more switchers took those offers, the resulting subscriber momentum supported higher forecasts and encouraged further marketing around high end smartphones, reinforcing the effect."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

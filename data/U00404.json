@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00404",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C4",
+      "causal_salience": "primary",
+      "text": "Michelin issued a profit warning, citing sharply weaker demand for tyres in North America. The announcement caused the French tiremaker's shares to tumble by nearly 9%, dragging down market sentiment across the industrial sector.",
+      "date": "2025-10-14",
+      "entities": [
+        "Michelin"
+      ],
+      "sectors": [
+        "Automotive components"
+      ],
+      "country": "France",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Michelin"
+      },
+      "source_info": {
+        "title": "Michelin shares fall as much as 11% after profit warning",
+        "url": "https://www.reuters.com/business/michelin-shares-fall-much-11-after-profit-warning-2025-10-14/",
+        "published_date": "2025-10-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On the day Michelin warned of weaker demand, Siemens' shares fell about 2.8%. Investors interpreted the tyre maker's profit warning as a sign that industrial end-markets, particularly automotive production, were slowing. This raised concerns that demand for automation equipment could soften, leading to a broad sell-off in industrial names.",
+      "date": "2025-10-14",
+      "entities": [
+        "Siemens"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Siemens"
+      },
+      "stock_change_pct": 2.8,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "European stocks near two-week low as trade worries resurface, Michelin slumps",
+        "url": "https://www.reuters.com/world/china/european-stocks-near-two-week-low-trade-worries-michelin-slump-2025-10-14/",
+        "published_date": "2025-10-14",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Michelin revealed that demand for its tyres in North America had deteriorated significantly and issued a profit warning. The company's shares tumbled nearly 9%, signalling to investors that industrial demand in a key end-market was weakening."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The warning prompted investors to reassess the health of the broader industrial economy. A slowdown in automotive production can ripple through the supply chain, reducing orders for automation components, control systems and electrification equipment manufactured by firms like Siemens."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "Consequently, Siemens' share price declined approximately 2.8% on the same day. The decline reflected growing concern that softer demand in automotive and related sectors could dampen Siemens' revenue growth in the near term."
+    }
+  ],
+  "rationale": "Michelin's profit warning acted as a negative demand signal for the wider industrial sector. Because Siemens supplies automation and electrification equipment to automotive manufacturers and their suppliers, a slowdown in this end-market directly weighs on its near-term outlook, triggering a sell-off in its shares.",
+  "counterfactual_analysis": "If Michelin had not warned of weak demand, investors might not have drawn conclusions about slowing industrial activity. In that case, Siemens' share price would likely have remained stable rather than falling sharply.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent geopolitical news or macroeconomic data could also have contributed to the market's decline.",
+      "impact": "low"
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Michelin's profit warning signaled that demand in automotive and industrial end markets was weakening, raising questions about how much business there would be for equipment suppliers such as Siemens. As investors recalibrated expectations for future orders and pricing in a more challenging competitive landscape, Siemens' shares fell even though the bad news came from a peer in a different part of the value chain."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

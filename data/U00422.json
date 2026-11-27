@@ -1,0 +1,139 @@
+{
+  "pair_id": "U00422",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "causal_salience": "primary",
+      "text": "In early 2022, a surge in inflation caused by pandemic-related supply chain dislocations and the Russian invasion of Ukraine drove up prices for oil, natural gas, fertilizer and food worldwide.",
+      "date": "2022-02-24",
+      "entities": [
+        "Global economy"
+      ],
+      "sectors": [
+        "Economy",
+        "Energy"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Global economy"
+      },
+      "source_info": {
+        "title": "2021-2023 inflation surge",
+        "url": "https://en.wikipedia.org/wiki/2021%E2%80%932023_inflation_surge",
+        "published_date": "2022-02-24",
+        "publisher": "Wikipedia"
+      },
+      "causal_strength_score": 7,
+      "source_doc_id": null
+    },
+    {
+      "causal_salience": "secondary",
+      "text": "On May 17, 2022, Walmart reported that surging inflation and supply chain bottlenecks had eroded margins. The retailer cut its full-year profit forecast and its shares fell more than 8%, signaling investor concerns across the retail sector.",
+      "date": "2022-05-17",
+      "entities": [
+        "Walmart"
+      ],
+      "sectors": [
+        "Retail"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Walmart"
+      },
+      "source_info": {
+        "title": "Walmart profit falls short, cuts outlook, hit by higher fuel and labor costs",
+        "url": "https://www.reuters.com/business/retail-consumer/walmart-cuts-full-year-profit-forecast-fuel-labor-costs-spike-2022-05-17/",
+        "published_date": "2022-05-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6,
+      "source_doc_id": null
+    }
+  ],
+  "effects": [
+    {
+      "text": "On May 18, 2022, Target announced that its net income fell 52% due to high freight, labor and inventory costs. Investor fears of inflation and a weakened retail sector triggered a sharp sell-off, causing Target's stock to plunge about 24% in a single day.",
+      "date": "2022-05-18",
+      "entities": [
+        "Target"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 10,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.92,
+        "target": "Target"
+      },
+      "stock_change_pct": 24.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Target posts a stunning drop in profit. Stock plunges",
+        "url": "https://www.cnn.com/2022/05/18/investing/target-earnings-inflation",
+        "published_date": "2022-05-18",
+        "publisher": "cnn.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The pandemic and Russia's invasion of Ukraine disrupted supply chains and drove up commodity costs, causing a global inflation surge that raised retailers' operating expenses.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Major retailers such as Walmart reported shrinking margins and cut profit forecasts in mid-May 2022. This signaled to investors that high costs were squeezing the entire sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Target faced similar cost pressures. When it announced a 52% drop in quarterly net income, investors connected the broader inflation narrative to the company's results and feared a sector-wide slowdown.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "The combination of macroeconomic pressures and competitor warnings triggered a sell-off. Target's stock fell about 24% on May 18, 2022, reflecting heightened risk perceptions and lower earnings expectations.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The global inflation surge and Walmart's profit warning collectively heightened investor fears about retail profitability. When Target reported earnings, the negative backdrop amplified the market reaction, leading to a steep share price decline.",
+  "counterfactual_analysis": "Had inflation remained moderate and Walmart not signaled margin pressures, Target's earnings miss might have been interpreted as a company-specific issue, potentially limiting the stock decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Federal Reserve interest rate hikes",
+      "impact": "Rising rates can depress equity valuations independent of retail fundamentals"
+    },
+    {
+      "text": "General market volatility in May 2022",
+      "impact": "Could have contributed to the magnitude of Target's share drop"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.86,
+        "commentary": "Runaway inflation, supply chain snarls and the fallout from the war in Ukraine pushed freight, fuel and wage costs sharply higher for big U.S. retailers. Target's earnings collapse and 24 percent share price drop showed how quickly those macroeconomic and regulatory cost pressures could erode profitability across the sector."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

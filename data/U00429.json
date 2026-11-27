@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00429",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10054",
+      "causal_salience": "primary",
+      "text": "A pronounced slowdown in China's economy led major brands to cut digital ad budgets, signaling weaker demand for performance and brand advertising across large platforms.",
+      "date": "2022-07-15",
+      "entities": [
+        "Major Advertisers"
+      ],
+      "sectors": [
+        "Advertising"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Major Advertisers"
+      },
+      "source_info": {
+        "title": "China's economy brakes sharply in Q2, global risks darken outlook",
+        "url": "https://www.reuters.com/world/china/chinas-q2-gdp-growth-slows-sharply-04-yy-missing-fcast-2022-07-15/",
+        "published_date": "2022-07-15",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Tencent's shares fell as the market priced in softer advertising revenue and weaker near-term conversion rates on its ad inventory.",
+      "date": "2022-08-16",
+      "entities": [
+        "Tencent"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.74,
+        "target": "Tencent"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "China's Tencent reports first revenue drop as gaming regulations and COVID-19 bite",
+        "url": "https://www.reuters.com/markets/financials/tencent-reports-its-first-ever-revenue-drop-regulations-covid-19-bite-2022-08-17/",
+        "published_date": "2022-08-16",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Macroeconomic softness leads brands to reduce discretionary ad outlays. This catalyst altered the operating environment and set in motion adjustments to behavior, cash-flow expectations, or constraints across the ecosystem.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Lower budgets depress auction CPMs and expected ad load monetization on Tencent's properties. Market participants updated probability-weighted forecasts for revenue, margins, or competitive dynamics in response to the new information.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Forward revenue expectations are trimmed, causing the stock to decline. On 2022-08-16, the equity finished lower by about 5% as the repricing crystallized in trading.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Advertising is cyclically sensitive; budget compression pressures price and fill rates. Tencent's exposure to brand/performance ads made its revenue outlook vulnerable to a China-specific macro slowdown.",
+  "counterfactual_analysis": "With steady or rising ad budgets, monetization expectations would have been firmer, likely preventing the marked share-price drop on the date cited.",
+  "adversarial_confounders": [
+    {
+      "text": "Persistent concerns about China's platform regulation",
+      "impact": "Policy overhang may have independently depressed multiples for large internet firms."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "As China's economy slowed, major brands trimmed marketing budgets, leaving fewer ad dollars to compete for across online platforms. That demand squeeze increased pressure on Tencent's advertising business and highlighted more intense rivalry for limited performance marketing spend."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

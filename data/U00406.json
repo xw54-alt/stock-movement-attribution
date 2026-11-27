@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00406",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20250725MSFTCapex",
+      "causal_salience": "primary",
+      "text": "In July 2025, Microsoft revealed it would invest a record $30 billion in capital spending for its fiscal first quarter to expand data centers and meet growing demand for artificial-intelligence services. The announcement, following rapid Azure growth, signaled that hyperscale cloud providers were accelerating their infrastructure investments to capture AI workloads.",
+      "date": "2025-07-25",
+      "entities": [
+        "Microsoft"
+      ],
+      "sectors": [
+        "technology",
+        "cloud computing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.78,
+        "target": "AI infrastructure"
+      },
+      "source_info": {
+        "title": "Cloud analytics firm Snowflake lifts annual product revenue forecast; shares jump 13%",
+        "url": "https://www.reuters.com/business/cloud-analytics-firm-snowflake-lifts-annual-product-revenue-forecast-shares-jump-2025-08-27/",
+        "published_date": "2025-08-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Aug. 27, 2025, Snowflake raised its fiscal 2026 product-revenue forecast to $4.40 billion and its shares climbed about 13% in extended trading. Analysts said the company was benefiting from the acceleration in AI software adoption and from hyperscalers' aggressive capital spending, which underscored the durability of enterprise AI demand.",
+      "date": "2025-08-27",
+      "entities": [
+        "Snowflake"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Snowflake"
+      },
+      "source_info": {
+        "title": "Cloud analytics firm Snowflake lifts annual product revenue forecast; shares jump 13%",
+        "url": "https://www.reuters.com/business/cloud-analytics-firm-snowflake-lifts-annual-product-revenue-forecast-shares-jump-2025-08-27/",
+        "published_date": "2025-08-27",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 13.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Microsoft's pledge to spend $30 billion on cloud and AI infrastructure signaled that hyperscalers were significantly scaling up capacity. Such massive investment indicates confidence that enterprise demand for AI workloads will continue growing.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted the record capex as evidence that AI-focused cloud services would remain a priority for large enterprises. This bolstered sentiment for companies supplying AI-ready data platforms, as hyperscaler investment often translates into greater workloads for downstream software providers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On Aug. 27, Snowflake announced a higher fiscal 2026 product-revenue forecast, citing strong demand for its AI-enabled analytics platform. In the context of Microsoft's spending plans and broad AI enthusiasm, investors bid Snowflake's shares up 13%, reflecting expectations that the company will capture a significant share of the growing AI data-infrastructure market.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Hyperscale cloud providers' capital-spending plans act as leading indicators for downstream data and analytics providers. Microsoft's record capex signaled a strong runway for AI workloads, which, when combined with Snowflake's own forecast raise, drove a 13% stock rally.",
+  "counterfactual_analysis": "Had Microsoft announced flat or reduced capex, investors may have viewed Snowflake's guidance raise more cautiously. Without the external confirmation of robust AI infrastructure investment, the stock might have risen less or not at all.",
+  "adversarial_confounders": [
+    {
+      "text": "Snowflake's partnership announcements or internal product innovations around the same time.",
+      "impact": "Company-specific news could have boosted investor sentiment independently of Microsoft's capex signal."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Microsoft's decision to boost capital spending on cloud infrastructure signaled that hyperscalers expected a sustained wave of AI workloads, which would in turn generate more data for partners like Snowflake to manage. As those investments drive higher consumption on Snowflake's platform and support stronger revenue guidance, the resulting confidence encourages further infrastructure build outs, reinforcing a virtuous cycle between cloud spending and data platform growth."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

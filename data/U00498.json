@@ -1,0 +1,142 @@
+{
+  "pair_id": "U00498",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "California finalized a $20-per-hour fast-food minimum wage, materially raising labor costs for franchised quick-service units. Franchisees faced pressure to re-price menus, adjust staffing, or absorb lower margins.",
+      "date": "2024-04-02",
+      "entities": [
+        "State of California"
+      ],
+      "sectors": [
+        "Restaurants"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Fast-food franchise margins"
+      },
+      "source_info": {
+        "title": "California fast food workers hail wage hike, franchise owners worried",
+        "url": "https://www.reuters.com/business/retail-consumer/california-fast-food-workers-hail-wage-hike-franchise-owners-worried-2024-04-02/",
+        "published_date": "2024-04-02",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": "C2",
+      "causal_salience": "secondary",
+      "text": "Darden Restaurants cut its annual sales forecast, citing softer traffic and price sensitivity across casual dining. Signals of weaker demand spilled over to quick service via competitive discounting and value intensity.",
+      "date": "2024-03-21",
+      "entities": [
+        "Darden Restaurants"
+      ],
+      "sectors": [
+        "Restaurants"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Sector demand outlook"
+      },
+      "source_info": {
+        "title": "Darden Restaurants cuts annual sales forecast on slowing demand",
+        "url": "https://www.reuters.com/business/retail-consumer/darden-restaurants-cuts-annual-sales-forecast-slowing-demand-2024-03-21/",
+        "published_date": "2024-03-21",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "Yum! Brands reported first-quarter results with weak U.S. sales at key brands amid a tougher value environment and rising cost headwinds. Investors marked down the shares on concern that pricing power and traffic would lag peers under a higher-cost regime.",
+      "date": "2024-05-01",
+      "entities": [
+        "Yum! Brands"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Yum equity"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "KFC parent Yum reports surprise drop in global same-store sales on weak demand",
+        "url": "https://www.reuters.com/business/retail-consumer/kfc-parent-yum-reports-surprise-drop-global-same-store-sales-weak-demand-2024-05-01/",
+        "published_date": "2024-05-01",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "California's $20 fast-food wage materially lifted labor costs for franchisees, compressing margins unless offset by pricing or mix. Concurrently, Darden's guidance flagged weaker consumer traffic, pointing to a tougher demand backdrop.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The combination of rising unit costs and softer demand constrained Yum franchisees' ability to fully pass through price. Promotional intensity rose, but at the expense of margins and comps quality.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2024-05-01, Yum! Brands' shares fell 3.0% after reporting soft U.S. sales and a value-heavy environment, matching the effect fields.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Sector cost shocks and macro demand signals often propagate to franchised systems with a lag. Elevated labor costs meet value-seeking consumers, compressing margins and lowering investor expectations for near-term comp growth.",
+  "counterfactual_analysis": "If California had not raised fast-food wages, franchise-level margins would have faced less pressure and Yum might have relied on less discounting, improving U.S. sales optics. If consumer traffic had held up, promotional depth could have been reduced, softening the negative stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market moves on 2024-05-01 may have amplified the decline independent of fundamentals.",
+      "impact": "This would bias attribution toward company-specific factors."
+    },
+    {
+      "text": "Company-specific execution issues unrelated to wages or demand (e.g., limited-time-offer cadence) could have influenced results.",
+      "impact": "This would reduce the causal share of sector wage and demand pressures."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Higher mandated wages for fast food workers and slowing casual dining demand squeezed restaurant margins and made value positioning more critical in the US market. Yum had to balance pricing, promotions and franchise economics across KFC, Taco Bell and Pizza Hut in this tougher competitive landscape, and weaker same store sales signaled pressure from both peers and shifting customer choices."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "California's minimum wage hike and softer consumer spending trends reflected a challenging economic and policy backdrop for the restaurant industry. Those external forces raised labor and food costs while constraining demand, so when Yum reported weaker sales, investors saw it as evidence that macro and regulatory headwinds were weighing on the business."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00483",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "Tesla said it would not launch new models in 2022 and highlighted supply chain constraints. The signal indicated a tougher EV demand-supply balance and heightened execution risks across the sector.",
+      "date": "2022-01-26",
+      "entities": [
+        "Tesla"
+      ],
+      "sectors": [
+        "Automotive",
+        "Technology"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "EV sector equities"
+      },
+      "source_info": {
+        "title": "Tesla's Musk sees Cybertruck production delayed to 2023",
+        "url": "https://www.reuters.com/business/autos-transportation/tesla-sees-cybertruck-production-delayed-2023-2022-01-26/",
+        "published_date": "2022-01-26",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "EV stocks sold off as investors extrapolated slower model cadence and supply constraints to peers. Lucid shares dropped in sympathy as investors priced lower near-term growth momentum for premium EVs.",
+      "date": "2022-01-27",
+      "entities": [
+        "Lucid Group"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Lucid equity"
+      },
+      "stock_change_pct": 11.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Tesla sinks after supply chain warning, hitting other EV makers",
+        "url": "https://www.reuters.com/markets/stocks/tesla-drops-after-supply-chain-warning-drags-down-other-ev-makers-2022-01-27/",
+        "published_date": "2022-01-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Tesla communicated delays to new models and ongoing supply chain constraints. This reduced sector growth expectations and signaled margin pressures across EV peers."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors applied read-through to premium EV names with similar supplier exposure and scaling challenges, increasing perceived risk for Lucid."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2022-01-27, Lucid's stock fell by 11.0% (down) as the sector repriced growth and execution risk following Tesla's update."
+    }
+  ],
+  "rationale": "Highly visible competitor guidance serves as an information shock for peer valuations in an emerging industry. Slower model launches and bottlenecks at a leader imply broader capacity and demand risks.",
+  "counterfactual_analysis": "If Tesla had affirmed new model launches and stable supply, the peer read-through would have been less negative and Lucid's decline likely smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro risk-off sentiment could have simultaneously pressured growth stocks.",
+      "impact": "It could amplify the move but does not explain the timing aligned with Tesla's update."
+    },
+    {
+      "text": "Company-specific news at Lucid might have influenced trading.",
+      "impact": "There was no concurrent Lucid disclosure of similar magnitude on that date."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Tesla's decision to defer new model launches while grappling with supply chain issues suggested that the pace of innovation and volume growth across premium EV makers could be slower than hoped. Investors extrapolated that slower cadence to rivals like Lucid, reducing expectations for their ability to differentiate and gain share in a crowded segment."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.76,
+        "commentary": "Underlying supply chain bottlenecks and component shortages reflected broad economic constraints that limited the industry's ability to ramp EV production. Those external pressures increased the cost and complexity of scaling new models, which fed into a more cautious view of Lucid's growth opportunity."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "When a key sector leader signals production and launch delays, suppliers and customers adjust their plans, dampening the momentum of the entire EV adoption cycle. Slower rollouts then lead to softer investor enthusiasm and tighter funding conditions, which further constrain Lucid's expansion."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

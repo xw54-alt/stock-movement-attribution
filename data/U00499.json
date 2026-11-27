@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00499",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "Domino's reported its first drop in U.S. same-store sales in over a decade, citing delivery driver shortages. The shortfall signaled industry-wide labor friction and delivery capacity constraints.",
+      "date": "2021-10-14",
+      "entities": [
+        "Domino's Pizza"
+      ],
+      "sectors": [
+        "Restaurants"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.74,
+        "target": "Quick-service delivery capacity"
+      },
+      "source_info": {
+        "title": "Domino's U.S. sales dip as driver shortages bite for first time in a decade",
+        "url": "https://www.reuters.com/business/retail-consumer/dominos-pizza-reports-surprise-fall-us-same-store-sales-demand-slows-2021-10-14/",
+        "published_date": "2021-10-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Yum! Brands missed comparable sales estimates amid supply and labor frictions. Investors reacted to category-wide delivery constraints and near-term cost pressure, nudging the shares lower.",
+      "date": "2021-10-28",
+      "entities": [
+        "Yum! Brands"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "Yum equity"
+      },
+      "stock_change_pct": 1.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Taco Bell, KFC sales power Yum's results beat as Pizza Hut lags",
+        "url": "https://www.reuters.com/business/retail-consumer/kfc-parent-yum-brands-misses-comparable-sales-estimates-2021-10-28/",
+        "published_date": "2021-10-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A key peer reported driver scarcity and the first U.S. sales decline in years, highlighting delivery bottlenecks across the sector.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Those constraints increased the risk that Yum's banners would see weaker comps and higher costs to serve, which later materialized in the print.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2021-10-28, Yum! Brands' shares fell 1.0%, consistent with the effect fields.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "When capacity constraints bind in a delivery-centric category, service times stretch and promo efficiency declines, weighing on comps and margins. Investors discount these risks across peers.",
+  "counterfactual_analysis": "If labor supply had normalized sooner, delivery constraints would have eased and comps could have been stronger, reducing the probability of a negative stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Other supply chain shocks (e.g., packaging costs) may have simultaneously pressured results.",
+      "impact": "Attribution to labor alone could be overstated."
+    },
+    {
+      "text": "Macro market weakness on the day could have contributed to the decline.",
+      "impact": "This would partially explain the move without peer causation."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Driver shortages at Domino's highlighted how labor constraints were reshaping the competitive balance between traditional delivery focused pizza chains and aggregators. For Yum's Pizza Hut, competing for drivers and delivery capacity in that environment made it harder to keep pace with the stronger momentum at Taco Bell and KFC, contributing to a mixed performance."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.76,
+        "commentary": "US labor market tightness and changing attitudes toward gig work made it more difficult and costly for restaurant chains to secure enough delivery drivers. Those structural workforce issues formed part of the backdrop for Yum's results, as its pizza business struggled with capacity and cost challenges even while other brands in the portfolio outperformed."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

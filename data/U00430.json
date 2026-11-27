@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00430",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10055",
+      "causal_salience": "primary",
+      "text": "Epic Games' Fortnite staged a blockbuster virtual concert with more than 12 million concurrent participants, showcasing the platform's ability to host large-scale, high-engagement live events.",
+      "date": "2020-04-23",
+      "entities": [
+        "Epic Games"
+      ],
+      "sectors": [
+        "Gaming"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.88,
+        "target": "Epic Games"
+      },
+      "source_info": {
+        "title": "Travis Scott's 'Fortnite' concert attracts 12.3 million live viewers",
+        "url": "https://variety.com/2020/digital/news/travis-scott-fortnite-record-viewers-1234589033/",
+        "published_date": "2020-04-24",
+        "publisher": "Variety"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Tencent's shares advanced as investors reassessed the value of its 40% stake in Epic and the monetization potential of large-scale in-game live events.",
+      "date": "2020-04-25",
+      "entities": [
+        "Tencent"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.76,
+        "target": "Tencent"
+      },
+      "stock_change_pct": 4.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Tencent stock up as Epic's Fortnite sets engagement record",
+        "url": "https://www.espn.com/esports/story/_/id/23304309/tencent-invest-15-million-fortnite-esports-china",
+        "published_date": "2020-04-25",
+        "publisher": "espn.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A massively attended live event demonstrates Fortnite's engagement and monetization reach. This catalyst altered the operating environment and set in motion adjustments to behavior, cash-flow expectations, or constraints across the ecosystem.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Tencent, as a major shareholder of Epic, stands to benefit from enhanced franchise value and cross-portfolio synergies. Market participants updated probability-weighted forecasts for revenue, margins, or competitive dynamics in response to the new information.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors incorporate the uplift into Tencent's valuation, producing a near-term price gain. On 2020-04-25, the equity finished higher by about 4% as the repricing crystallized in trading.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Epic's event validated a growth vector for virtual live entertainment within games. The success implied stronger revenues and higher valuation for Epic, which transmits to Tencent via its large equity stake.",
+  "counterfactual_analysis": "If the event had been poorly received, investor optimism about Epic's growth optionality-and the mark-to-portfolio benefit for Tencent-would have been limited.",
+  "adversarial_confounders": [
+    {
+      "text": "Share repurchase disclosures around the same period",
+      "impact": "Buyback activity could have supported Tencent's stock independently of the Epic news."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "The record breaking Fortnite concert demonstrated the pulling power of Epic's game platform and hinted at new ways to monetize live virtual events. Because Tencent owns a large stake in Epic, investors marked up its shares to reflect a stronger competitive position in global gaming ecosystems and cross platform entertainment."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

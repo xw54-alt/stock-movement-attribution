@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00480",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "META_CAPEX_2025_RANGE",
+      "causal_salience": "primary",
+      "text": "Meta guided to 2025 capital expenditures of as much as $65 billion earlier in the year, reaffirming aggressive investment in AI data centers and custom silicon. The plan implied sustained demand for high-speed networking used to interconnect training clusters.",
+      "date": "2025-01-24",
+      "entities": [
+        "Meta Platforms"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Hyperscaler AI capex"
+      },
+      "source_info": {
+        "title": "Meta targets 2025 capex of $35 billion to $45 billion for AI buildout",
+        "url": "https://www.reuters.com/technology/meta-invest-up-65-bln-capital-expenditure-this-year-2025-01-24/",
+        "published_date": "2025-01-24",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Cisco shares ticked higher in extended trading after the company raised its annual revenue outlook, citing activity in cloud networking and AI-related projects. Investors connected persistent hyperscaler capex plans to healthier order trends and backlog conversion.",
+      "date": "2025-05-14",
+      "entities": [
+        "Cisco Systems"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Cisco equity"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Cisco raises annual revenue forecast on demand for cloud networking gear",
+        "url": "https://www.reuters.com/business/cisco-raises-full-year-results-forecast-shares-rise-2025-05-14/",
+        "published_date": "2025-05-14",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A hyperscaler reaffirmed very large AI data center capex for 2025, indicating continued buildouts requiring high-speed Ethernet fabrics and routing."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Vendors with cloud exposure translate sustained capex into orders and guidance improvements with a lag as projects move from design to procurement."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2025-05-14, Cisco's shares rose 2.0% after-hours as updated guidance highlighted cloud networking demand. This 2.0% up move matches the stock_change_pct and direction."
+    }
+  ],
+  "rationale": "Persistent AI investment by large platforms is a leading indicator for networking vendors' revenue. Guidance revisions often follow customer capex signals with several months of delay.",
+  "counterfactual_analysis": "If hyperscalers had trimmed 2025 capex, Cisco's outlook would likely be less constructive, and the stock reaction would have been muted or negative.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader index moves around earnings can lift or weigh on after-hours trading.",
+      "impact": "Market beta may add noise, but the immediate reaction followed Cisco's guidance tied to cloud demand."
+    },
+    {
+      "text": "Other vendor supply constraints could have shifted orders across suppliers.",
+      "impact": "Such shifts may alter mix, yet the overall AI capex trend supports the networking category."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Meta's plan to spend up to sixty five billion dollars on 2025 capital expenditures reinforced the view that large platforms will keep scaling AI data centers over several years. That sustained investment stream improves visibility for networking suppliers such as Cisco and strengthens their bargaining power in negotiating long term projects, which the modest share price gain reflected."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

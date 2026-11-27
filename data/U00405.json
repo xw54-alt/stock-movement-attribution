@@ -1,0 +1,140 @@
+{
+  "pair_id": "U00405",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20250828NVDA",
+      "causal_salience": "primary",
+      "text": "On Aug. 28, 2025, Nvidia reported quarterly results showing a 56% surge in revenue and offered an upbeat forecast that affirmed booming demand for artificial-intelligence chips. The company's strong numbers reinforced confidence that corporate spending on AI infrastructure would remain elevated, encouraging investors to rotate into companies poised to benefit from the AI boom.",
+      "date": "2025-08-28",
+      "entities": [
+        "Nvidia"
+      ],
+      "sectors": [
+        "semiconductors",
+        "artificial intelligence"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "AI sector"
+      },
+      "source_info": {
+        "title": "Snowflake shares surge as AI boom fuels demand for data platforms",
+        "url": "https://www.reuters.com/business/snowflake-shares-surge-ai-boom-fuels-demand-data-platforms-2025-08-28/",
+        "published_date": "2025-08-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "20250819DBRX",
+      "causal_salience": "secondary",
+      "text": "On Aug. 19, 2025, Databricks revealed that a planned Series K funding round would boost its valuation by about 61% to more than $100 billion. The announcement highlighted investors' willingness to commit billions to AI-native data platforms and implied that the addressable market for AI data infrastructure was large enough to support multiple high-value companies.",
+      "date": "2025-08-19",
+      "entities": [
+        "Databricks"
+      ],
+      "sectors": [
+        "artificial intelligence",
+        "cloud computing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "AI startups"
+      },
+      "source_info": {
+        "title": "Databricks eyes over $100 billion valuation as investors back AI growth plans",
+        "url": "https://www.reuters.com/business/databricks-eyes-over-100-billion-valuation-investors-back-ai-growth-plans-2025-08-19/",
+        "published_date": "2025-08-19",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Aug. 28, 2025, Snowflake's stock price jumped about 19%, adding more than $12.5 billion to its market value. Analysts said the surge reflected investor optimism that AI-driven demand would accelerate data-platform adoption and that high valuations for private AI companies signaled strong prospects for publicly traded peers.",
+      "date": "2025-08-28",
+      "entities": [
+        "Snowflake"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Snowflake"
+      },
+      "source_info": {
+        "title": "Snowflake shares surge as AI boom fuels demand for data platforms",
+        "url": "https://www.reuters.com/business/snowflake-shares-surge-ai-boom-fuels-demand-data-platforms-2025-08-28/",
+        "published_date": "2025-08-28",
+        "publisher": "Reuters"
+      },
+      "stock_change_pct": 19.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Nvidia's blockbuster earnings report revealed a 56% jump in revenue and a bullish outlook for AI chips, reinforcing expectations that spending on artificial-intelligence infrastructure would remain strong. This prompted investors to reassess the earnings potential of companies that provide the software and data infrastructure underpinning AI applications.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Shortly beforehand, Databricks announced plans to raise capital at a valuation exceeding $100 billion, underscoring that venture investors were willing to assign sky-high valuations to AI-native data-platform providers. The financing signaled that the AI data-infrastructure market could support multiple large players and fueled expectations of robust growth across the sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By Aug. 28, investors connected the dots: strong chip demand and a lofty private-company valuation suggested that the AI data-infrastructure boom had momentum. Capital flowed into Snowflake, propelling its shares about 19% higher in a single day. The rally added more than $12.5 billion to its market capitalisation.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Two external signals—Nvidia's strong results and Databricks' high valuation—supported investor optimism about AI-driven data infrastructure. Together, they increased risk appetite for Snowflake as a potential beneficiary of the sector's growth.",
+  "counterfactual_analysis": "If Nvidia's earnings had disappointed or Databricks' valuation had been muted, investor optimism about AI infrastructure might have been restrained. In that case, Snowflake's shares likely would not have surged 19%, even if the company's own fundamentals were strong.",
+  "adversarial_confounders": [
+    {
+      "text": "Snowflake itself raised its product revenue forecast around the same time.",
+      "impact": "The company's own guidance upgrade may have amplified the stock's reaction, making it harder to isolate the effect of external AI-related news."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Nvidia's strong results and Databricks' high valuation signaled investor demand across the AI infrastructure and data-platform ecosystem. Those signals suggested that Snowflake would face competition in an expanding market while retaining an opportunity for growth."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "0–9 days (by event date)",
+        "conditions_score": 0.82,
+        "commentary": "Positive news about AI chips and the valuation of a private data-platform company encouraged capital to flow into the sector. Investors' increased expectations for AI data infrastructure contributed to Snowflake's nearly twenty percent stock-price rise, reinforcing enthusiasm for potential beneficiaries of AI adoption."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

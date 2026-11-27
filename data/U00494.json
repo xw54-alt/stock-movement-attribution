@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00494",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D-WMT-007",
+      "causal_salience": "primary",
+      "text": "U.S. retail sales fell 0.9% in January 2025, the steepest drop since March 2023, reflecting cautious household spending. The decline suggested softer demand momentum heading into the first quarter.",
+      "date": "2025-02-14",
+      "entities": [
+        "U.S. consumers"
+      ],
+      "sectors": [
+        "Macroeconomy"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Retail demand"
+      },
+      "source_info": {
+        "title": "US retail sales post biggest drop in nearly two years amid cold snap",
+        "url": "https://www.reuters.com/markets/us/us-retail-sales-fall-sharply-january-2025-02-14/",
+        "published_date": "2025-02-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Walmart issued a cautious profit outlook for fiscal 2026, citing wary consumers after a strong 2024. Shares fell about 6% on February 20, 2025 during trading as investors reset expectations.",
+      "date": "2025-02-20",
+      "entities": [
+        "Walmart Inc."
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Walmart equity"
+      },
+      "stock_change_pct": 6.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Walmart forecast disappoints, shares fall on consumer spending worries",
+        "url": "https://www.reuters.com/business/retail-consumer/walmart-forecasts-sales-fiscal-2026-revenue-below-estimates-cautious-spending-2025-02-20/",
+        "published_date": "2025-02-20",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "A notable drop in U.S. retail sales signaled a cooling consumer backdrop, challenging volume growth for large retailers. The data raised concerns about first-half demand."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "When Walmart issued a conservative outlook, investors connected the guidance to the softer macro spending environment and trimmed earnings expectations."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "Walmart shares fell 6.0% on February 20, 2025 (intraday), aligning with the reported intraday decline after the forecast."
+    }
+  ],
+  "rationale": "Macro demand indicators directly affect traffic and basket size for mass merchants. A sales slump ahead of guidance primes investors for weaker outlooks and sharp price reactions.",
+  "counterfactual_analysis": "Had retail sales accelerated in January, Walmart's cautious guide might have been discounted as overly conservative, limiting the share price drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Other February macro prints (e.g., CPI or jobless claims) may have influenced risk sentiment regardless of Walmart's guide.",
+      "impact": "A negative macro surprise could independently push shares lower."
+    },
+    {
+      "text": "Short-term technicals and profit-taking after a strong 2024 rally could exaggerate the decline.",
+      "impact": "Positioning effects might amplify the move beyond fundamentals."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "The sharp drop in US retail sales signaled that consumers were pulling back on discretionary purchases amid a colder economic patch. That weaker spending environment raised concern that even large retailers would struggle to grow, so Walmart's cautious forecast landed in a more fragile macro context."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Softer retail sales feed into lower traffic and basket sizes, which in turn pressure Walmart's revenue growth and margin leverage. As investors connected the macro data to the company's guarded outlook, selling pressure pushed the share price down and reinforced more defensive positioning toward consumer stocks."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00411",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10002",
+      "causal_salience": "primary",
+      "text": "Alibaba Group registered an additional one billion American Depositary Shares with the U.S. securities regulator to support future conversions of its Hong Kong-listed stock. The move fuelled speculation that a major shareholder might reduce its stake.",
+      "date": "2022-02-09",
+      "entities": [
+        "Alibaba Group Holding Ltd"
+      ],
+      "sectors": [
+        "E-commerce",
+        "Technology"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.7,
+        "target": "Alibaba Group Holding Ltd"
+      },
+      "source_info": {
+        "title": "SoftBank says no stake sale plans linked to Alibaba U.S. ADS registration",
+        "url": "https://www.reuters.com/business/softbank-says-alibaba-additional-ads-registration-not-tied-any-specific-future-2022-02-09/",
+        "published_date": "2022-02-09",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "SoftBank Group's shares rose almost 6% in Tokyo trading after analysts clarified that Alibaba's ADS registration was a routine administrative step unrelated to a stake sale. Alibaba's Hong Kong shares were up nearly 7% as well.",
+      "date": "2022-02-09",
+      "entities": [
+        "SoftBank Group Corp"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Financial Services"
+      ],
+      "country": "Japan",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "SoftBank Group Corp"
+      },
+      "stock_change_pct": 6.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "SoftBank says no stake sale plans linked to Alibaba U.S. ADS registration",
+        "url": "https://www.reuters.com/business/softbank-says-alibaba-additional-ads-registration-not-tied-any-specific-future-2022-02-09/",
+        "published_date": "2022-02-09",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Alibaba registered an extra one billion ADS with the U.S. securities regulator. Such registrations enable Hong Kong shareholders to convert shares into U.S.-listed stock.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Traders initially speculated that the registration signalled an impending share sale by a major holder, stirring rumours of a large stake disposal.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Market analysts clarified that the filing was largely procedural and not tied to any near-term stake sale. The reassurance alleviated investor concern and improved sentiment toward the conglomerate.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "With worries dispelled, SoftBank shares rose nearly 6% in Tokyo trading and Alibaba's Hong Kong-listed shares gained around 7%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Speculation that Alibaba's ADS registration could herald a large stake sale briefly unsettled markets. When it became clear that the filing was routine, investors rewarded SoftBank shares with a modest rally.",
+  "counterfactual_analysis": "Had the market believed the registration portended an imminent share sale, or had no clarification been provided, SoftBank shares might have fallen or remained flat instead of rising.",
+  "adversarial_confounders": [
+    {
+      "text": "A broad rebound in Chinese technology stocks following signals of regulatory easing",
+      "impact": "Easing regulatory fears could have contributed to SoftBank's share gains, independent of the ADS registration."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Clarifying that Alibaba's ADS registration was not tied to a SoftBank stake sale removed fears of a large stock overhang for both companies. Once that overhang risk faded, SoftBank's relationship to its holdings looked less pressured, improving its standing with investors and supporting a strong rebound in the shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

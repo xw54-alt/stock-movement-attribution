@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00425",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D10050",
+      "causal_salience": "primary",
+      "text": "The U.S. administration issued an executive order to prohibit transactions with WeChat in the United States, citing national security and data-security risks that would sever the app from its American user base.",
+      "date": "2020-08-06",
+      "entities": [
+        "WeChat"
+      ],
+      "sectors": [
+        "Social Media"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "WeChat"
+      },
+      "source_info": {
+        "title": "Trump bans dealings with Chinese owners of TikTok, WeChat",
+        "url": "https://apnews.com/article/global-trade-politics-asia-719d8c83f689929c9c9d8c9aa5593fc8",
+        "published_date": "2020-08-06",
+        "publisher": "AP News"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Tencent's U.S.-listed shares (TCEHY) fell sharply in the immediate aftermath of the WeChat order as investors marked down the value of Tencent's overseas social platform exposure.",
+      "date": "2020-08-07",
+      "entities": [
+        "Tencent"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Tencent"
+      },
+      "stock_change_pct": 6.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Tencent Shares Slide After U.S. WeChat Ban Order",
+        "url": "https://www.reuters.com/article/markets-asia-wechat-tencent-idUSL4N2F91TZ",
+        "published_date": "2020-08-07",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The U.S. order blocks WeChat from serving American users and payment channels, shrinking potential international revenue and usage. This catalyst altered the operating environment and set in motion adjustments to behavior, cash-flow expectations, or constraints across the ecosystem.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors infer a material hit to Tencent's WeChat ecosystem via lost market access and reputational risk to Chinese consumer apps. Market participants updated probability-weighted forecasts for revenue, margins, or competitive dynamics in response to the new information.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Risk repricing erodes market confidence and triggers a swift decline in Tencent's shares. On 2020-08-07, the equity finished lower by about 6% as the repricing crystallized in trading.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Cutting off WeChat from U.S. users signaled an abrupt contraction of addressable markets and advertising/payment flows tied to the app. The policy shock raised perceived regulatory risk premia for Tencent's international operations, prompting investors to sell the stock following the announcement.",
+  "counterfactual_analysis": "Absent the U.S. executive order, the expected user and monetization base for WeChat would have remained intact, reducing the likelihood of a sudden repricing in Tencent's shares at that time.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous U.S. scrutiny of other Chinese apps (e.g., TikTok)",
+      "impact": "Broader anti-China tech sentiment may have amplified the selloff beyond the WeChat-specific effect."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.84,
+        "commentary": "The U.S. executive order targeting WeChat introduced a sudden new layer of geopolitical and regulatory risk for Tencent's flagship messaging platform. Investors feared knock on effects on international user access and partnerships, so political and legal uncertainty translated directly into a sharp valuation hit."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

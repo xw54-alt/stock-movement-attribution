@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00457",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C-20220504-LYFT",
+      "causal_salience": "primary",
+      "text": "Lyft issued a weaker-than-expected outlook and signaled increased incentives to attract drivers after underwhelming guidance. Heavier spend and softer profitability at a close peer implied a tougher pricing and driver-supply environment for the category.",
+      "date": "2022-05-04",
+      "entities": [
+        "Lyft"
+      ],
+      "sectors": [
+        "Mobility"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Uber"
+      },
+      "source_info": {
+        "title": "Lyft plunges on outlook that triggers selloff in ride-hailing shares",
+        "url": "https://www.bloomberg.com/news/articles/2022-05-04/uber-lyft-plunge-as-driver-supply-casts-doubt-on-profits",
+        "published_date": "2022-05-04",
+        "publisher": "bloomberg.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Uber's stock dropped as investors extrapolated Lyft's guidance to broader ride-hailing unit economics, anticipating higher incentives and pressure on take rates. The read-through suggested category-wide margin compression and competitive intensity.",
+      "date": "2022-05-04",
+      "entities": [
+        "Uber"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Uber"
+      },
+      "stock_change_pct": 9.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Uber shares slide 9% as investors digest Lyft's warning",
+        "url": "https://www.bloomberg.com/news/articles/2022-05-04/uber-lyft-plunge-as-driver-supply-casts-doubt-on-profits",
+        "published_date": "2022-05-04",
+        "publisher": "bloomberg.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Lyft's outlook points to heavier incentives and softer profitability, signaling tougher ride-hailing unit economics."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors extrapolate peer conditions to Uber, anticipating higher acquisition costs and take-rate pressure."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2022-05-04, Uber's shares fell 9.0% down intraday as the peer read-through reset expectations."
+    }
+  ],
+  "rationale": "A negative peer signal sharpened concerns about driver supply costs and pricing power across ride-hailing. Reuters reported Uber fell 9% intraday as investors priced in category margin pressure following Lyft's outlook.",
+  "counterfactual_analysis": "If Lyft had projected stable driver incentives and margins, investors would have faced fewer reasons to cut Uber's valuation multiples that day.",
+  "adversarial_confounders": [
+    {
+      "text": "Intraday volatility in the Nasdaq contributed to swings in growth stocks.",
+      "impact": "Market beta may account for part of the decline independent of Lyft's guidance."
+    },
+    {
+      "text": "Oil price fluctuations can alter driver supply and rider demand elasticity.",
+      "impact": "Fuel cost headlines could confound attribution if they shifted during the session."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Lyft's weak outlook and heavier spending on driver incentives signaled that ride hailing players are having to pay more to keep drivers on their platforms. Those conditions point to a tougher competitive environment in which both Lyft and Uber may have to sacrifice margins to defend share, so investors marked down Uber's stock on fears of prolonged industry rivalry."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Rising incentive costs at one large competitor can prompt others to raise bonuses as well, compressing unit economics across the category. As profitability falls and investors react by devaluing the sector, management teams face more pressure to chase volume with promotions, reinforcing a negative feedback loop that the market priced into Uber's shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

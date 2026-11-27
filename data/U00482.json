@@ -1,0 +1,120 @@
+{
+  "pair_id": "U00482",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "C1",
+      "causal_salience": "primary",
+      "text": "Lucid Group disclosed that it received a subpoena from the U.S. Securities and Exchange Commission regarding the de-SPAC process and related statements. The disclosure increased perceived regulatory risk and raised concerns about potential constraints on future financing and sales efforts.",
+      "date": "2021-12-06",
+      "entities": [
+        "Lucid Group",
+        "U.S. Securities and Exchange Commission"
+      ],
+      "sectors": [
+        "Automotive",
+        "Technology"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Lucid equity"
+      },
+      "source_info": {
+        "title": "EV maker Lucid gets SEC subpoena linked to SPAC deal; shares slump",
+        "url": "https://www.reuters.com/technology/electric-car-maker-lucid-receives-subpoena-us-sec-2021-12-06/",
+        "published_date": "2021-12-06",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Lucid shares dropped sharply after the subpoena disclosure as investors repriced legal and execution risks. The selloff reflected expectations of higher costs and potential distraction of management time, pressuring the company's near-term capital access and sales pipeline.",
+      "date": "2021-12-06",
+      "entities": [
+        "Lucid Group"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Lucid equity"
+      },
+      "stock_change_pct": 18.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Shares of EV maker Lucid slide after disclosing SEC subpoena",
+        "url": "https://apnews.com/article/technology-business-subpoenas-initial-public-offerings-churchill-capital-corp-8a44b17cde59c633bc11ffa10abc320a",
+        "published_date": "2021-12-06",
+        "publisher": "apnews.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Lucid revealed receipt of an SEC subpoena concerning its SPAC merger disclosures. This raised the probability of increased legal scrutiny and potential remedial actions."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors updated expectations for compliance costs, management bandwidth, and fundraising flexibility. Heightened uncertainty typically reduces risk appetite for pre-profit EV startups."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2021-12-06, Lucid's stock fell intraday by 18.0% (down), consistent with a sharp negative repricing triggered by regulatory risk."
+    }
+  ],
+  "rationale": "A formal subpoena signals hard information risk and can constrain financing and operations. For a capital-intensive EV startup, investors price the probability of fines, delays, and governance overhead, which lowers equity value immediately.",
+  "counterfactual_analysis": "Absent the subpoena disclosure, Lucid's equity would likely not have experienced such a sharp intraday decline on that date. Routine market moves or sector noise typically do not generate an 18% drop for a single name without a discrete catalyst.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader EV-sector volatility might have independently pressured Lucid shares.",
+      "impact": "This could explain part of the decline, but the magnitude and timing align closely with the subpoena disclosure."
+    },
+    {
+      "text": "Short-term profit taking after prior rallies could have contributed.",
+      "impact": "While possible, it does not account for the size of the move concentrated around the disclosure time."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.84,
+        "commentary": "The SEC subpoena introduced a clear regulatory overhang, raising the prospect of fines, remediation costs and tighter scrutiny of Lucid's past disclosures. That change in the legal environment made future capital raising and marketing efforts riskier, which investors quickly priced into the shares."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "As legal inquiries deepen, management time and cash are diverted toward compliance and litigation, slowing execution on vehicle launches and sales. Weaker operational progress can then reinforce investor skepticism, making it harder and more expensive for Lucid to fund its growth plans."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00458",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C-20221011-DOL",
+      "causal_salience": "primary",
+      "text": "The U.S. Labor Department proposed a rule that would make it harder for companies to treat workers as independent contractors. The proposal heightened the risk that ride-hailing platforms could face higher labor costs or reclassification pressures.",
+      "date": "2022-10-11",
+      "entities": [
+        "U.S. Department of Labor"
+      ],
+      "sectors": [
+        "Regulation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.88,
+        "target": "Uber"
+      },
+      "source_info": {
+        "title": "Gig economy stocks tumble after U.S. proposes contractor rule",
+        "url": "https://www.pbs.org/newshour/economy/labor-department-proposal-could-upend-rules-for-gig-workers",
+        "published_date": "2022-10-11",
+        "publisher": "pbs.org"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Uber's shares dropped sharply as investors priced in the prospect of higher driver-related costs and structural changes to the contractor model. The rule proposal directly affected expectations for margins and flexibility in the business model.",
+      "date": "2022-10-11",
+      "entities": [
+        "Uber"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.92,
+        "target": "Uber"
+      },
+      "stock_change_pct": 10.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Uber, Lyft Stock Tumble as U.S. Proposes New Rules for Gig Workers",
+        "url": "https://www.barrons.com/articles/lyft-uber-stock-price-labor-rules-gig-employee-51665499743",
+        "published_date": "2022-10-11",
+        "publisher": "barrons.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "U.S. Labor Department proposes a stricter contractor test, raising expected labor and compliance costs for gig platforms."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "Investors downgrade margin assumptions and valuation multiples for affected firms, including Uber."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "On 2022-10-11, Uber's shares fell 10.0% down intraday as regulatory risk repriced."
+    }
+  ],
+  "rationale": "A proposed federal rule threatened the independent-contractor framework central to ride-hailing economics. Reuters reported Uber fell about 10% intraday as investors priced in higher labor costs and legal risk.",
+  "counterfactual_analysis": "If the rule had maintained the status quo, Uber's margin expectations and flexibility assumptions would likely have remained intact, avoiding a sharp selloff.",
+  "adversarial_confounders": [
+    {
+      "text": "Other gig-exposed names sold off simultaneously.",
+      "impact": "Peer contagion may have magnified Uber's move beyond firm-specific risk."
+    },
+    {
+      "text": "Intraday rumor flow about state-level litigation occasionally flares in headlines.",
+      "impact": "Separate legal chatter could have influenced traders independent of the federal proposal."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.86,
+        "commentary": "Stricter rules around classifying workers as independent contractors would push up labor costs for platforms like Uber and could force changes to their operating model. Higher structural costs reduce margins and may require fare increases that threaten demand, creating an ongoing feedback loop between regulation, pricing and growth expectations that investors reacted to with a sharp selloff."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

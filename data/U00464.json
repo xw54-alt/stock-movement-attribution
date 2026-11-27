@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00464",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20007",
+      "causal_salience": "primary",
+      "text": "The incumbent provider disclosed that its long-running air cargo contract with the U.S. Postal Service would expire at the end of September 2024, indicating a handover to another carrier.",
+      "date": "2024-03-29",
+      "entities": [
+        "FedEx",
+        "USPS"
+      ],
+      "sectors": [
+        "Logistics"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "incumbent contract status"
+      },
+      "source_info": {
+        "title": "FedEx Statement Regarding Expiration of USPS Contract",
+        "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-statement-regarding-expiration-of-usps-contract",
+        "published_date": "2024-04-01",
+        "publisher": "FedEx Newsroom"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "After the contract award became public, investors reassessed competitive positioning and profitability implications. Despite winning the business, concerns about contract economics and integration led to a small decline in the stock.",
+      "date": "2024-04-01",
+      "entities": [
+        "United Parcel Service"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "UPS equity"
+      },
+      "stock_change_pct": 1.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "UPS to replace FedEx as U.S. Postal Service's primary air cargo provider",
+        "url": "https://www.reuters.com/world/us/ups-become-united-states-postal-services-primary-air-cargo-provider-2024-04-01/",
+        "published_date": "2024-04-01",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "An incumbent carrier revealed the looming expiration of its USPS air contract, implying a competitive opening for another provider."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "When the award became official, investors weighed revenue upside against potential margin and execution risks."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "Netting these factors, UPS stock finished 1.0% down on 2024-04-01 (close-to-close) as the market priced cautious contract economics."
+    }
+  ],
+  "rationale": "Government mail contracts can be sizable but margin-sensitive; investors discount uncertain profitability even on business wins.",
+  "counterfactual_analysis": "If disclosures had indicated premium margins or guaranteed volumes, shares likely would not have closed 1.0% down.",
+  "adversarial_confounders": [
+    {
+      "text": "Same-day market moves driven by macro headlines could overshadow contract news.",
+      "impact": "This would blur attribution of the modest decline."
+    },
+    {
+      "text": "Speculation about the implementation timeline may have created short-term uncertainty.",
+      "impact": "This could depress the stock until details are clarified."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic / Regulatory factor",
+        "pestel_impact_score": 0.78,
+        "conditions_score": 0.72,
+        "commentary": "FedEx's disclosure that its long running air cargo contract with the US Postal Service would expire highlighted how public procurement and postal policy can reshape logistics partnerships. When UPS was named as the new primary air cargo provider, investors weighed the regulatory terms and contract economics, leading to only a modest share price reaction as the news was digested."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

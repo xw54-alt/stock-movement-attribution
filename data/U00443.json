@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00443",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20004",
+      "causal_salience": "primary",
+      "text": "AT&T and Verizon agreed to delay activating certain C-band 5G around U.S. airports due to aviation safety concerns, slowing their mid-band rollout. The deferral limited capacity upgrades and performance gains in some of the most trafficked urban corridors. As a result, the relative pace of mid-band deployment shifted in favor of competitors not constrained in those zones.",
+      "date": "2022-01-18",
+      "entities": [
+        "AT&T",
+        "Verizon"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "US",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.72,
+        "target": "U.S. wireless deployment"
+      },
+      "source_info": {
+        "title": "AT&T, Verizon agree to delay 5G around some U.S. airports",
+        "url": "https://www.reuters.com/business/aerospace-defense/biden-administration-talks-head-off-5g-aviation-standoff-2022-01-18/",
+        "published_date": "2022-01-18",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "T-Mobile raised parts of its 2022 outlook after Q1, emphasizing 5G leadership and network advantages as rivals' C-band deployment slowed near airports. Management highlighted that customers were noticing speed and coverage differentials in everyday usage. The improved network perception supported stronger switching intent and confidence to lift guidance.",
+      "date": "2022-04-27",
+      "entities": [
+        "T-Mobile"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "US",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.78,
+        "target": "T-Mobile growth outlook"
+      },
+      "source_info": {
+        "title": "T-Mobile Delivers Record Q1 2022 Results and Raises Financial Guidance",
+        "url": "https://www.t-mobile.com/news/business/t-mobile-q1-2022-earnings",
+        "published_date": "2022-04-27",
+        "publisher": "T-Mobile"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up"
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "logic_operator": "cause_event",
+      "description": "Delaying C-band near airports constrained the pace of mid-band 5G rollouts for two incumbents. That limited capacity and performance improvements in high-traffic metro areas where demand is concentrated.",
+      "step_id": 1
+    },
+    {
+      "logic_operator": "THEN",
+      "description": "With rivals' upgrades slowed in key zones, T-Mobile's earlier deployment of mid-band spectrum translated into a clearer network advantage. As relative performance and marketing messages improved, switching intent and conversions rose.",
+      "step_id": 2
+    },
+    {
+      "logic_operator": "RESULT",
+      "description": "On 2022-04-27, T-Mobile raised elements of its 2022 guidance, citing 5G leadership and execution. The update is consistent with incremental gains from the relative timing advantage in mid-band deployment.",
+      "step_id": 3
+    }
+  ],
+  "rationale": "C-band delays created a temporary window where T-Mobile's mid-band 5G lead was more salient to consumers, supporting better acquisition and confidence to lift guidance.",
+  "counterfactual_analysis": "Had AT&T and Verizon activated C-band near airports as planned, T-Mobile's relative network edge would have been narrower, muting the demand and guidance impact.",
+  "adversarial_confounders": [
+    {
+      "text": "Seasonal device cycle effects",
+      "impact": "New device launches can raise net adds and confidence, confounding the effect of rivals' C-band delays."
+    },
+    {
+      "text": "Concurrent promotions and switcher incentives",
+      "impact": "Carrier promotions may have accelerated switching independently of airport-zone constraints."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "By delaying parts of their C band 5G rollouts near airports, AT&T and Verizon gave T-Mobile more room to market earlier mid band coverage as a clear network advantage. That relative edge strengthened T-Mobile's competitive position and helped justify raising guidance as it pulled customers from rivals in a crowded industry."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}
