@@ -91,7 +91,7 @@
   "adversarial_confounders": [
     {
       "text": "Broader tech market volatility in Q3 2024",
-      "impact": "Other macro factors may have influenced sentiment, but Reuters highlights AI competition as primary concern :contentReference[oaicite:1]{index=1}."
+      "impact": "Other macro factors may have influenced sentiment, but Reuters highlights AI competition as primary concern."
     }
   ],
   "confidence_score": 0.55,
