@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00328",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D01001",
+      "causal_salience": "primary",
+      "text": "Netflix launched a crackdown on password sharing in May 2023, sending emails to millions of UK subscribers telling them that each account must be confined to one household and offering a paid sharing option to convert freeloaders into paying customers.",
+      "date": "2023-05-23",
+      "entities": [
+        "Netflix"
+      ],
+      "sectors": [
+        "Streaming",
+        "Media"
+      ],
+      "country": "United Kingdom",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.6,
+        "target": "Netflix"
+      },
+      "source_info": {
+        "title": "Netflix crackdown on password sharing reaches the UK",
+        "url": "https://www.theguardian.com/media/2023/may/23/netflix-crackdown-on-password-sharing-reaches-the-uk",
+        "published_date": "2023-05-23",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "After the crackdown, Netflix reported a surge in daily sign-ups and its shares rose around 2.3% in early trading.",
+      "date": "2023-06-09",
+      "entities": [
+        "Netflix"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Netflix"
+      },
+      "stock_change_pct": 2.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Netflix sign-ups jump as password-sharing crackdown kicks off",
+        "url": "https://www.reuters.com/business/media-telecom/netflix-sign-ups-jump-us-password-sharing-crackdown-kicks-off-data-2023-06-09/",
+        "published_date": "2023-06-09",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Netflix implemented a password-sharing crackdown by informing subscribers that accounts could only be used in one household and by charging for extra users. This policy was widely publicized and removed a long-standing loophole that allowed multiple households to share one subscription.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "By limiting sharing and offering a paid option, Netflix signaled a commitment to profitability while creating an incentive for freeloaders to convert to paying members. The outreach increased awareness among existing sharers and encouraged them to sign up rather than lose access.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As the crackdown rolled out in other regions, daily U.S. sign-ups spiked because many former non-paying viewers decided to subscribe. The influx of new members demonstrated to investors that the enforcement strategy was working and that the company could monetize a previously untapped user base.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 4,
+      "description": "Investor confidence translated into an immediate rise in Netflix's share price; Reuters reported that the stock climbed about 2.3% in early trading following the sign-up surge, rewarding the company for its self-initiated crackdown.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Netflix's own policy change directly converted password sharers into paid subscribers, signalling stronger monetization and boosting its share price.",
+  "counterfactual_analysis": "Had Netflix not cracked down on password sharing, freeloaders might have continued using accounts for free, daily sign-ups would have remained flat, and the share price would not have enjoyed the same bump.",
+  "adversarial_confounders": [
+    {
+      "text": "A popular new season of a flagship Netflix series premiered around the same time.",
+      "impact": "The release could independently attract new subscribers, making it harder to isolate the effect of the crackdown."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "medium",
+        "commentary": "By enforcing paid sharing, Netflix converted free riders into paying accounts and made it harder for smaller rivals to match its scale. This move strengthened its bargaining position against both competitors and content suppliers, showing it could grow revenue without relying only on price hikes."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Consumer and digital markets",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.66,
+        "commentary": "Streaming has become a staple of household entertainment budgets even as living costs rise in many markets. In that social and economic context, Netflix's crackdown tapped into a willingness to regularize sharing rather than abandon the service entirely, supporting steady demand."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "60 days",
+        "conditions_score": 0.78,
+        "commentary": "The crackdown initially annoyed some users but quickly translated into a spike in new sign ups and extra member accounts. As strong data and a rising share price confirmed the strategy was working, Netflix gained confidence to roll the policy out more broadly and lean further into monetizing its user base."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

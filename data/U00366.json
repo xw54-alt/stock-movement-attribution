@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00366",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Kimberly-Clark announced it would raise prices in the United States and Canada by mid- to high-single-digit percentages on products such as Scott toilet paper, Kleenex tissues and Huggies diapers. The move aimed to offset higher pulp, fiber and resin costs, signalling that input inflation was squeezing household-product makers.",
+      "date": "2021-03-31",
+      "entities": [
+        "Kimberly-Clark"
+      ],
+      "sectors": [
+        "household products",
+        "paper products"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "Kimberly-Clark"
+      },
+      "source_info": {
+        "title": "Kimberly-Clark raises prices on Scott toilet paper, diapers in U.S. and Canada",
+        "url": "https://www.reuters.com/business/retail-consumer/kimberly-clark-raises-prices-scott-toilet-paper-diapers-us-canada-2021-03-31/",
+        "published_date": "2021-03-31",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Facing similar cost pressures and reassured by a rival's actions, Procter & Gamble said it would raise prices by mid-single-digits on products like Pampers diapers and Always sanitary pads. It also increased its share-buyback program, and investors saw the pricing move as protecting margins.",
+      "date": "2021-04-21",
+      "entities": [
+        "Procter & Gamble"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 4,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.62,
+        "target": "Procter & Gamble"
+      },
+      "stock_change_pct": 0.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Price hikes on the horizon for P&G as material costs rise",
+        "url": "https://www.reuters.com/business/retail-consumer/virus-led-hygiene-needs-drive-procter-gambles-quarterly-sales-beat-2021-04-20/",
+        "published_date": "2021-04-21",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2021-03-31, Kimberly-Clark announced that it would raise prices across numerous paper and diaper products in the United States and Canada by mid- to high-single-digit percentages. The company cited surging costs for pulp and other raw materials and signalled that passing through inflation to consumers was unavoidable.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Procter & Gamble monitored the price hike from its competitor and recognised that consumers might accept higher prices if multiple producers acted together. Observing Kimberly-Clark's willingness to pass along costs reduced the risk that P&G would lose market share by raising its own prices.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2021-04-21, P&G announced mid-single-digit price increases on Pampers and Always to offset freight and commodity inflation. The market interpreted the move as protecting margins; P&G shares edged up about 0.3% as the company also expanded its share-buyback program.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cause article shows a major peer raising prices due to rising costs, effectively testing consumer willingness to accept price increases. The effect article demonstrates that P&G subsequently followed with similar price hikes and was rewarded by investors, indicating that Kimberly-Clark's move helped pave the way for P&G's decision.",
+  "counterfactual_analysis": "If Kimberly-Clark had not raised prices first, P&G might have been reluctant to hike prices for fear of losing customers to cheaper rivals, potentially compressing margins and reducing investor confidence.",
+  "adversarial_confounders": [
+    {
+      "text": "Commodity cost inflation across the industry",
+      "impact": "Rising pulp, freight and resin costs independently pressured P&G's margins, which could have driven price hikes even without Kimberly-Clark's action."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "When Kimberly Clark raised prices on staples like toilet paper and diapers, it signaled that leading brands believed consumers would tolerate higher shelf prices. That move gave P&G cover to follow with its own increases, reducing the risk of losing share and helping preserve margins in a concentrated category."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.74,
+        "conditions_score": 0.7,
+        "commentary": "Rising input costs and broader inflation were already putting pressure on producers of everyday consumer goods. Kimberly Clark's decision to push through price hikes reflected that macro cost environment and cleared the way for P&G to adjust its pricing to keep up with inflation."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

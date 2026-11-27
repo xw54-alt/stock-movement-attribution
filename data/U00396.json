@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00396",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20240502_SKH_SoldOut",
+      "causal_salience": "primary",
+      "text": "On May 2, 2024, SK Hynix announced that its entire 2024 production of high-bandwidth memory (HBM) chips was sold out and that most of its 2025 output was already committed due to soaring AI demand. The South Korean chipmaker told investors it planned to send samples of its 12-layer HBM3E chips later in the year and expected AI memory demand to grow by roughly 60% annually. This tight supply left rival suppliers under pressure to catch up.",
+      "date": "2024-05-02",
+      "entities": [
+        "SK Hynix"
+      ],
+      "sectors": [
+        "semiconductors",
+        "technology"
+      ],
+      "country": "South Korea",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "SK Hynix"
+      },
+      "source_info": {
+        "title": "SK Hynix says HBM chips sold out through 2025 as AI demand booms",
+        "url": "https://www.reuters.com/technology/nvidia-supplier-sk-hynix-says-hbm-chips-almost-sold-out-2025-2024-05-02/",
+        "published_date": "2024-05-02",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "By late October 2024, Samsung told investors that it was making progress in qualifying its high-end HBM3E chips with a major customer and would focus on producing higher-value memory. Analysts interpreted the update as evidence that Samsung was catching up with market leader SK Hynix, and the announcement pushed Samsung's share price up by more than 3%.",
+      "date": "2024-10-31",
+      "entities": [
+        "Samsung Electronics"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "South Korea",
+      "effect_type": "product_launch",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Samsung Electronics"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Samsung says it is making headway in qualifying HBM3E chips, shares rise",
+        "url": "https://www.reuters.com/technology/samsung-posts-weaker-profit-recovery-it-misses-out-ai-boom-2024-10-30/",
+        "published_date": "2024-10-31",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Demand for AI applications caused SK Hynix's high-bandwidth memory chips to sell out through 2025, demonstrating a severe supply shortage. The scarcity signalled to the market that capacity was constrained and that customers were turning to alternative suppliers to secure enough high-end memory.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Facing the prospect of losing business to SK Hynix, Samsung accelerated development and qualification of its own HBM3E chips. By October 2024, the company announced progress in qualifying these chips with a major customer, suggesting it was closing the competitive gap.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "The market interpreted Samsung's update as an important milestone in regaining competitiveness. Investor optimism about Samsung catching up with its rival helped lift the company's share price by over 3%, reflecting confidence that it could secure AI-chip orders.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "SK Hynix's announcement of sold-out HBM capacity highlighted a scarcity that pressured competitors to respond. Samsung's subsequent progress update shows it reacted to this market pressure and investors rewarded the catch-up effort, establishing a causal link between SK Hynix's capacity constraints and Samsung's accelerated development.",
+  "counterfactual_analysis": "If SK Hynix's HBM capacity had not been fully booked, Samsung might have felt less urgency to speed up qualification of its own HBM3E chips. Without such competitive pressure, it is unlikely that Samsung's progress update would have been interpreted as a significant achievement, and the stock might not have risen as much.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader improvements in memory chip prices during 2024 could have independently driven Samsung's stock higher.",
+      "impact": "Such price trends might overstate the effect of Samsung's progress on investor sentiment."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "capacity_signal",
+        "industry_barriers": "high",
+        "commentary": "SK Hynix's disclosure that its high bandwidth memory is sold out sends a clear signal that incumbents are racing to secure AI customers before rivals can. In a market with high technical and capital barriers, Samsung's progress on H B M three E is essential to stay credible in bids for major accelerators and avoid being squeezed out of the premium segment."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Demand for high bandwidth memory in AI",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.82,
+        "commentary": "Explosive growth in generative AI has turned advanced memory from a commodity into a strategic enabler of data center performance. The fact that SK Hynix sold out its near term output underlines how strong that technology trend is, and it creates a favorable setting for Samsung to be rewarded when it shows progress with its own high end parts."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "180 days",
+        "conditions_score": 0.78,
+        "commentary": "Signals of sold out capacity and robust pricing encourage Samsung to accelerate investment in high value memory, which in turn increases its ability to win large AI design wins. As more systems adopt its H B M solutions, Samsung gains learning effects and customer loyalty that feed back into further demand and capacity expansion."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

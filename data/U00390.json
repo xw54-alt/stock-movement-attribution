@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00390",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "874267000357833",
+      "causal_salience": "primary",
+      "text": "On July 23, 2024, GE Aerospace raised its full-year profit outlook for the second time in four months despite trimming its revenue forecast. The company disclosed that persistent supply constraints had slashed LEAP engine deliveries by 29% year-on-year and that a lack of new planes was driving a surge in demand for aftermarket services. GE's shares rose more than 6% on the news.",
+      "date": "2024-07-23",
+      "entities": [
+        "GE Aerospace",
+        "CFM International"
+      ],
+      "sectors": [
+        "Aerospace & Defense"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.76,
+        "target": "GE Aerospace"
+      },
+      "source_info": {
+        "title": "GE Aerospace lifts 2024 outlook; cuts estimates for LEAP jet engine deliveries",
+        "url": "https://www.reuters.com/business/aerospace-defense/ge-aerospace-lifts-2024-profit-view-strong-demand-engine-parts-services-2024-07-23/",
+        "published_date": "2024-07-23",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Just two days later, on July 25, 2024, RTX announced that it was raising its full-year earnings forecast after second-quarter profit topped Wall Street expectations. Management attributed the improvement to a booming aftermarket business as airlines flew older aircraft amid a shortage of new jets. Investors drove RTX stock up roughly 8% to a record high on the news.",
+      "date": "2024-07-25",
+      "entities": [
+        "RTX"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "RTX"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "RTX lifts 2024 profit forecast on strength in aviation sector",
+        "url": "https://www.reuters.com/business/aerospace-defense/rtx-lifts-2024-profit-forecast-2024-07-25/",
+        "published_date": "2024-07-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "GE Aerospace signalled robust aftermarket demand by raising its profit outlook even while trimming revenue expectations. The company said deliveries of its LEAP engines were down almost a third because of supply constraints, forcing airlines to keep older planes flying and spend heavily on repairs and services.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "GE's update sent an industry-wide signal that scarce aircraft and strong repair demand were boosting profitability. Analysts and investors extrapolated that other engine makers and maintenance providers, including RTX's Pratt & Whitney and Collins Aerospace units, would also benefit from the aftermarket boom.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When RTX reported results on July 25, 2024, it echoed GE's narrative, citing airlines' use of older aircraft and surging aftermarket services as reasons to raise its full-year earnings forecast. Investors, already primed by GE's outlook, reacted enthusiastically - RTX shares surged about 8%, reaching a record high.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cause comes from a competitor's earnings update that highlighted a broad industry trend: supply-chain bottlenecks were diverting revenue from new sales to maintenance services. This trend set expectations for RTX and provided a plausible lead-in to its own guidance raise two days later.",
+  "counterfactual_analysis": "If GE had not raised its profit outlook and spotlighted the aftermarket boom, investors might have been less optimistic about RTX's prospects. RTX's July 25 guidance update would still have reflected strong demand, but the share price reaction could have been more muted without the prior competitor benchmark.",
+  "adversarial_confounders": [
+    {
+      "text": "The general recovery in commercial aviation and unrelated announcements from other aerospace suppliers could also have influenced RTX's stock rally.",
+      "impact": "Such factors may contribute to the positive sentiment, but GE's high-profile outlook provided a specific catalyst linking industry conditions to RTX's results."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Regulatory and market oversight pressures",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.8,
+        "commentary": "GE Aerospace's upbeat outlook highlighted how a sustained recovery in air travel and defense spending is lifting demand for engines and services across the sector. The same macro tailwinds of fleet growth, travel normalization and geopolitical tension also support RTX, encouraging investors to expect stronger results there too."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Positive guidance from GE helped reset expectations for aerospace earnings, so RTX's own forecast increase confirmed a narrative of broad based industry strength. As each major player reports better results and raises targets, investor sentiment improves and capital flows into the sector, reinforcing the cycle of confidence and investment."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

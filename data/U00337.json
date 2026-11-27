@@ -1,0 +1,129 @@
+{
+  "pair_id": "U00337",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D00006_C1",
+      "causal_salience": "primary",
+      "text": "On Aug. 7, 2020, the U.S. Space Force and National Reconnaissance Office selected United Launch Alliance (ULA) and SpaceX for Phase 2 of the National Security Space Launch program, awarding about 60% of future missions to ULA and the remainder to SpaceX. The decision excluded other bidders and signaled a long-term commitment to these two companies, dramatically shrinking the addressable market for competitors.",
+      "date": "2020-08-07",
+      "entities": [
+        "United Launch Alliance",
+        "SpaceX",
+        "U.S. Space Force"
+      ],
+      "sectors": [
+        "Space launch",
+        "Defense"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "ULA and SpaceX"
+      },
+      "source_info": {
+        "title": "ULA and SpaceX win national security launch contracts",
+        "url": "https://www.geekwire.com/2020/ula-spacex-win-shares-future-national-security-launches-blue-origin-loses/",
+        "published_date": "2020-08-07",
+        "publisher": "geekwire.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Northrop Grumman announced on Sept. 14, 2020 that it would terminate development of its OmegA heavy-lift rocket. The company said the loss of the National Security Space Launch competition left it without a guaranteed customer base and made it uneconomical to continue the program.",
+      "date": "2020-09-14",
+      "entities": [
+        "Northrop Grumman"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Northrop Grumman"
+      },
+      "stock_change_pct": 4.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Northrop Grumman ends OmegA rocket program",
+        "url": "https://spaceflightnow.com/2020/09/14/northrop-grumman-ends-omega-rocket-program/",
+        "published_date": "2020-09-14",
+        "publisher": "Spaceflight Now"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The U.S. Space Force and National Reconnaissance Office's August 2020 Phase-2 award to ULA and SpaceX (roughly 60/40) effectively shut out other launch providers, reducing the accessible market for challengers.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Without access to the national security launch market, OmegA lacked an anchor customer and faced high development costs with uncertain commercial demand.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Northrop cancelled OmegA on Sept. 14, 2020 and the stock fell as investors reduced near-term revenue expectations.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The Phase-2 award concentrated U.S. national security launches in two incumbents, removing OmegA's core revenue pathway; continuing the program became uneconomic, and investors marked down the shares.",
+  "counterfactual_analysis": "If Northrop had won a share of Phase-2 missions-or if a comparable institutional buyer had emerged-the program would likely have continued.",
+  "adversarial_confounders": [
+    {
+      "text": "Pandemic-driven weakness in commercial satellite launch demand in 2020",
+      "impact": "Could depress program economics irrespective of the Phase-2 award outcome"
+    },
+    {
+      "text": "Emerging competition from Blue Origin's New Glenn",
+      "impact": "Prospect of a new entrant may have further eroded OmegA's business case"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "By awarding all of the Phase 2 national security launches to ULA and SpaceX, the U.S. government effectively concentrated a critical customer base in the hands of two incumbents. That decision shrank the contestable market for heavy lift rockets and left Northrop at a severe competitive disadvantage, making it rational for the company to exit the OmegA program."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Demand environment and consumer behavior",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Defense procurement is shaped by political and strategic choices, and the Space Force's selection signaled a long term policy commitment to just two launch providers. This political and regulatory outcome dramatically reduced the economic case for alternative rockets, pushing Northrop to abandon OmegA once it became clear that national security missions would not be available."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.75,
+        "commentary": "Once most high value missions are locked in with a pair of providers, those companies gain scale and learning advantages that widen the gap for any would be rival. This dynamic makes it increasingly uneconomic for a third player to keep investing without anchor contracts, creating a self reinforcing path toward program cancellation like OmegA's."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

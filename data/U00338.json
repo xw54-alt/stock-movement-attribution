@@ -1,0 +1,127 @@
+{
+  "pair_id": "U00338",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D00007_C1",
+      "causal_salience": "primary",
+      "text": "In April 2025 Northrop Grumman reported first-quarter earnings showing net income down nearly 49% year-over-year due to a $477 million pre-tax charge on the B-21 Raider stealth bomber program. The charge reflected higher manufacturing costs and the need to build an extra aircraft, raising doubts about the company's ability to manage costs.",
+      "date": "2025-04-22",
+      "entities": [
+        "Northrop Grumman"
+      ],
+      "sectors": [
+        "Defense",
+        "Aerospace"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Northrop Grumman"
+      },
+      "source_info": {
+        "title": "Northrop profit plunges on B-21 cost overrun",
+        "url": "https://breakingdefense.com/2025/04/northrop-logs-new-477m-loss-on-b-21-bomber-due-to-higher-manufacturing-costs/",
+        "published_date": "2025-04-22",
+        "publisher": "breakingdefense.com"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "On the next trading day (Apr 23, 2025), Northrop Grumman's shares closed down about 13% as investors digested the steep profit decline and escalating B-21 program costs.",
+      "date": "2025-04-23",
+      "entities": [
+        "Northrop Grumman"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Northrop Grumman"
+      },
+      "stock_change_pct": 13.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Northrop shares tumble after profit slump",
+        "url": "https://www.barrons.com/articles/northrop-grumman-earnings-stock-price-a3d787ab",
+        "published_date": "2025-04-23",
+        "publisher": "barrons.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Northrop disclosed that first-quarter profit plunged nearly 49% due to a $477 million B-21 charge tied to higher manufacturing costs and the need to build an extra aircraft.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The surprise charge signaled cost-control issues on a flagship program and raised the risk of further margin pressure, prompting analyst downgrades.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors repriced the stock; by the next trading day, shares had fallen roughly 13% as the market internalized the earnings shock.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A self-inflicted cost overrun on the B-21 directly reduced quarterly profit and undermined confidence in program execution, leading to a sharp share-price decline.",
+  "counterfactual_analysis": "If the B-21 program had stayed on budget, quarterly profit would have been higher and the stock reaction likely milder; earlier guidance about rising costs might also have tempered the sell-off.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide moves in defense stocks on macro headlines",
+      "impact": "Could have amplified or muted Northrop's price reaction independently of the earnings miss."
+    },
+    {
+      "text": "General market volatility around rates/geopolitics",
+      "impact": "Might have affected risk appetite irrespective of company-specific news."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Cost overruns and penalties on a flagship program like the B 21 weaken Northrop's ability to negotiate favorable terms on future bids and can undermine confidence with its key government customer. The large charge and profit hit suggested that executing complex defense contracts profitably was getting harder, which investors saw as eroding its competitive standing and earnings power."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Demand environment and consumer behavior",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.8,
+        "commentary": "In a world of tight defense budgets and heightened scrutiny of procurement, big cost increases on a marquee stealth bomber program raise political and fiscal concerns. Those economic and policy pressures heightened the market's sensitivity to any sign of mismanaged spending, so the B 21 charge prompted a strong negative reaction in Northrop's share price."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.8,
+        "commentary": "When a complex weapons program runs over budget, it can trigger redesigns, schedule slips and further inefficiencies that push costs even higher. This kind of reinforcing overrun loop threatens margins and cash flow, and the large one quarter charge signaled to investors that the B 21 program could continue to generate financial drag."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

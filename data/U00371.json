@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00371",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20240829_Huawei_Renaissance",
+      "causal_salience": "primary",
+      "text": "On Aug. 29, 2024 Huawei reported that its first-half revenue surged by 34% and that smartphone shipments in China jumped roughly 55% year-on-year. The company's resurgence, driven by its own Kirin chips and high-end Mate series smartphones, signaled that Huawei was regaining market share despite U.S. sanctions.",
+      "date": "2024-08-29",
+      "entities": [
+        "Huawei"
+      ],
+      "sectors": [
+        "Telecommunications",
+        "Consumer Electronics"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "Huawei"
+      },
+      "source_info": {
+        "title": "Huawei smartphone renaissance: revenue surges and shipments soar",
+        "url": "https://www.reuters.com/technology/huawei-sees-first-half-earnings-surge-smartphone-renaissance-2024-08-29/",
+        "published_date": "2024-08-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Feb. 6, 2025 Qualcomm shares fell about 5% after the company delivered a weak outlook for its patent-licensing business. Executives acknowledged that the expiry of a licensing agreement with Huawei would hamper revenue growth and that the licensing segment, which accounts for about 15% of sales, was under pressure.",
+      "date": "2025-02-06",
+      "entities": [
+        "Qualcomm"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Qualcomm"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Qualcomm shares slip as weak licensing forecast weighs on investors",
+        "url": "https://www.reuters.com/technology/qualcomm-shares-fall-licensing-business-forecasts-disappoints-2025-02-06/",
+        "published_date": "2025-02-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Huawei's strong resurgence in 2024 showed that the Chinese vendor had successfully replaced U.S. components with its own chips, driving a 34% revenue jump and a 55% surge in domestic smartphone shipments. This comeback signalled to the market that Huawei would no longer need to license Qualcomm's technology for its flagship devices.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "As Huawei accelerated deployment of its Kirin-powered phones, industry observers expected licensing payments to Qualcomm to decline sharply. Analysts warned that Huawei's shift toward self-sufficiency would diminish Qualcomm's recurring royalty income from one of its largest customers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When Qualcomm released its earnings guidance in February 2025, the company confirmed that its licensing agreement with Huawei had expired and that related royalties would not contribute to revenue going forward. Investors reacted to the revenue headwind and sold shares.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On Feb. 6, 2025, Qualcomm's stock fell roughly 5%. The decline reflected investor concern that Huawei's renaissance-and resulting reduction in licensing revenue-would weigh on Qualcomm's profit margins and growth prospects in the coming quarters.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Huawei's rapid resurgence reduced its need for Qualcomm's modem and licensing agreements. The termination of their licensing deal directly removed a revenue stream for Qualcomm, causing investors to reassess the company's earnings outlook and push the stock lower.",
+  "counterfactual_analysis": "If Huawei had continued relying on Qualcomm's technology, licensing revenue would have remained stable and the company might not have issued such a weak forecast, preventing the share price decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Slowing demand for high-end smartphones globally",
+      "impact": "Weak macro demand could have contributed to the licensing business downturn irrespective of Huawei's actions."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "By rebuilding its smartphone franchise around in house Kirin chips and premium Mate devices, Huawei regained share in segments where Qualcomm used to be a key intellectual property supplier. That shift intensifies rivalry in high end Android phones and squeezes Qualcomm's licensing base, which helps explain why investors focused on the loss of Huawei revenue when they sold the stock."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and regulatory forces",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "US sanctions and Chinese industrial policy pushed Huawei to invest heavily in domestic chip design, accelerating a broader decoupling in the smartphone supply chain. Those political and regulatory forces created an environment in which Huawei's resurgence directly translated into weaker long term licensing prospects for foreign IP vendors like Qualcomm."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "As more Mate phones ship with Kirin processors, Huawei pays less in royalties to Qualcomm, reducing the stream of high margin licensing income that funds Qualcomm's research and development. Over time that feedback loop can narrow Qualcomm's resources while strengthening Huawei's ecosystem, reinforcing the negative earnings impact highlighted in the weak outlook and share price drop."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00361",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20220608",
+      "causal_salience": "primary",
+      "text": "On 2022-06-08 members of the European Parliament backed a measure requiring a 100% reduction in CO2 emissions from new cars and vans by 2035, effectively banning petrol and diesel vehicles. The vote signalled that internal combustion models would become unsellable in the EU and forced automakers to accelerate investment in battery-electric platforms.",
+      "date": "2022-06-08",
+      "entities": [
+        "European Parliament",
+        "EU lawmakers"
+      ],
+      "sectors": [
+        "Policy",
+        "Automotive"
+      ],
+      "country": "European Union",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Internal combustion engine manufacturers"
+      },
+      "source_info": {
+        "title": "EU lawmakers back effective ban on new fossil-fuel cars by 2035",
+        "url": "https://www.reuters.com/business/autos-transportation/eu-lawmakers-support-effective-ban-new-fossil-fuel-cars-2035-2022-06-08/",
+        "published_date": "2022-06-08",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2022-09-05 Volkswagen said it planned to float Porsche in an IPO and use the proceeds to fund software and electric-vehicle development. The plan called for listing 25% plus one share of Porsche and targeted a valuation in the 60 ~ 385 billion range, effectively unlocking capital for the EV transition.",
+      "date": "2022-09-05",
+      "entities": [
+        "Volkswagen",
+        "Porsche"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.84,
+        "target": "Volkswagen"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Volkswagen seeks to list Porsche in landmark IPO",
+        "url": "https://www.reuters.com/business/autos-transportation/porsche-ipo-plans-progressing-no-decision-yet-vw-cfo-2022-09-05/",
+        "published_date": "2022-09-05",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The EU's 2035 zero-emission mandate created a regulatory deadline that will effectively phase out combustion engines in Europe, forcing legacy automakers to fund rapid electrification.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Volkswagen determined it needed large, ring-fenced capital to scale batteries, software, and EV platforms fast enough to meet that mandate.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-09-05 Volkswagen confirmed plans to IPO Porsche to raise that capital, and investor reaction included roughly a 3.0% move up in related Porsche/Volkswagen equity around the announcement, signalling confidence that the spin-out would finance the EV shift.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Volkswagen explicitly linked the Porsche IPO plan to funding EV and software investment after the EU voted to ban new combustion-engine sales by 2035. Investors treated the planned listing as a credible financing mechanism.",
+  "counterfactual_analysis": "Without the EU's aggressive 2035 mandate, Volkswagen would have faced less urgent pressure to raise billions quickly for EV development and might not have pursued a high-profile Porsche spin-out at that time.",
+  "adversarial_confounders": [
+    {
+      "text": "Equity-market appetite for luxury sports-car assets in late 2022.",
+      "impact": "Strong demand for Porsche as a standalone premium brand may have encouraged an IPO regardless of regulation and could partly explain investor enthusiasm."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.84,
+        "commentary": "The EU's 2035 zero emission mandate is a powerful regulatory and technological shock that forces European carmakers to accelerate the phase out of combustion engines. Facing this long term policy shift, Volkswagen used a Porsche IPO to unlock capital for software, batteries and EV platforms, aligning its structure with the new climate and innovation agenda."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "pair_id": "U00311",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D001",
+      "causal_salience": "primary",
+      "text": "On July 10, 2025, Hokkaido Electric Power Co. awarded Mitsubishi Heavy Industries (MHI) a major contract to design what would become Japan's largest carbon-capture plant at its Tomato-Atsuma power station. The contract called for MHI to design a facility capable of capturing about 5,200 tonnes of carbon dioxide per day using MHI's proprietary KM CDR Process. The project was aimed at demonstrating large-scale, non-government deployment of carbon-capture technology and included plans to inject captured CO2 into nearby saline formations.",
+      "date": "2025-07-10",
+      "entities": [
+        "Mitsubishi Heavy Industries",
+        "Hokkaido Electric Power Co."
+      ],
+      "sectors": [
+        "Energy",
+        "Engineering"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "Mitsubishi Heavy Industries"
+      },
+      "source_info": {
+        "title": "MHI awarded contract for basic design of Japan's largest CO₂ capture plant",
+        "url": "https://www.process-worldwide.com/mitsubishi-heavy-industries-secures-contract-for-japans-largest-co2-capture-plant-a-3e0f876d94df2d77e97dd47eedcbd326/",
+        "published_date": "2025-07-10",
+        "publisher": "process-worldwide.com"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "On October 6, 2025, financial analysts reported that Mitsubishi Heavy Industries' share price reached a new 52-week high. Shares traded as high as $29.00 and closed at $27.69 after the company's quarterly earnings and the recently announced carbon-capture contract boosted investor optimism. The strong order pipeline, including the Tomato-Atsuma project, was cited as a key reason for renewed confidence among shareholders.",
+      "date": "2025-10-06",
+      "entities": [
+        "Mitsubishi Heavy Industries"
+      ],
+      "sectors": [
+        "Energy & Utilities",
+        "Industrials & Manufacturing"
+      ],
+      "country": "Japan",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "Mitsubishi Heavy Industries"
+      },
+      "stock_change_pct": 6.2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Mitsubishi Heavy Industries stock reaches 52-week high on strong earnings",
+        "url": "https://www.marketbeat.com/instant-alerts/mitsubishi-heavy-industries-otcmktsmhvyf-reaches-new-1-year-high-whats-next-2025-10-06/",
+        "published_date": "2025-10-06",
+        "publisher": "marketbeat.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "MHI's securing of the Tomato-Atsuma contract signaled that its carbon-capture technology was competitive in a commercial setting. The order underscored confidence from a major utility customer and highlighted a clear revenue stream for the company's carbon solutions.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted the deal as evidence that MHI could monetise its environmental technologies beyond government-funded projects. Analysts noted that this contract, combined with a pipeline of similar opportunities, would strengthen earnings and improve cash flow.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As quarterly results approached, market participants anticipated both higher revenue from engineering contracts and continuing momentum in the carbon-capture business. This heightened expectation translated into increased buying activity and ultimately pushed MHI's share price up by about 6.2%, achieving a new 52-week high; on 2025-10-06 shares were up about 6.20% versus the prior trading day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The announcement of the Tomato-Atsuma carbon-capture contract demonstrated that MHI was winning large, non-government projects in the carbon-capture space. Such contracts improve revenue visibility and validate MHI's technology, which tends to increase investor confidence. When combined with strong quarterly earnings, the contract was a significant contributor to the share price rally observed in October 2025.",
+  "counterfactual_analysis": "Had MHI not secured the design order for Japan's largest carbon-capture plant, the company's decarbonisation narrative would have been less compelling. Without tangible evidence of commercial traction, investors might have discounted MHI's ability to convert technology into revenue, and the stock might not have achieved the 6.2 % appreciation reported in October 2025.",
+  "adversarial_confounders": [
+    {
+      "text": "MHI also reported better-than-expected aerospace and defence earnings during the same quarter.",
+      "impact": "Strong performance in other business segments may have amplified the stock rally, making it difficult to isolate the effect of the carbon-capture contract."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "differentiation_shift",
+        "industry_barriers": "high",
+        "commentary": "Winning the largest CO2 capture project in Japan strengthens MHI's differentiation among heavy engineering and energy technology contractors. In a capital intensive market with high technical barriers, this flagship reference makes it harder for rivals to match MHI's credibility and pricing power in carbon capture."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - Decarbonisation policy and emissions targets",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.82,
+        "commentary": "Tighter decarbonization targets in Japan and worldwide are pushing utilities and industry to adopt large scale carbon capture. The Tomato-Atsuma contract shows how this policy and regulatory backdrop is directly generating projects that feed into MHI's earnings and valuation."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "88 days",
+        "conditions_score": 0.8,
+        "commentary": "A successful first wave of carbon capture projects creates engineering know how and references that attract the next round of tenders. As MHI books more CO2 capture orders and demonstrates performance, expectations of future profit reinforce investor enthusiasm and support further investment."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

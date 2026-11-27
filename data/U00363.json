@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00363",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20220308",
+      "causal_salience": "primary",
+      "text": "On 2022-03-08 prices of key metals such as nickel and palladium spiked to record levels as markets reacted to sanctions on Russia, raising fears of shortages for EV batteries and catalytic systems.",
+      "date": "2022-03-08",
+      "entities": [
+        "Commodity markets",
+        "Nickel",
+        "Palladium"
+      ],
+      "sectors": [
+        "Commodities",
+        "EV"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "EV manufacturers"
+      },
+      "source_info": {
+        "title": "Nickel price tops $100,000 as sanctions roil commodities",
+        "url": "https://www.reuters.com/markets/stocks/commodities-commodities-soar-nickel-breaks-above-100000t-2022-03-08/",
+        "published_date": "2022-03-08",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2022-03-09 Porsche said it would suspend production of its electric Taycan at its Stuttgart-Zuffenhausen plant for at least a week, citing component shortages and soaring input costs after Russia's invasion. Roughly 200 Taycans per day were not built.",
+      "date": "2022-03-09",
+      "entities": [
+        "Porsche"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Industrials & Manufacturing"
+      ],
+      "country": "Germany",
+      "effect_type": "supply_disruption",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.76,
+        "target": "Porsche"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Porsche halts Taycan production amid parts shortage",
+        "url": "https://www.autonews.com/automakers/porsche-halts-taycan-output-supply-shortages/",
+        "published_date": "2022-03-09",
+        "publisher": "autonews.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "War-driven sanctions pushed nickel and palladium prices to extreme highs and strained availability for EV components.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Suppliers struggled to source certified inputs for Porsche's Taycan line, creating immediate bottlenecks in high-voltage systems and related subassemblies.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-03-09 Porsche halted Taycan production for at least a week, and investors marked Porsche-related equity down about −3.0% as they priced in lost high-margin EV volume.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Porsche explicitly cited component shortages and cost spikes tied to the war and metals market shock; output losses were quantified (~200 Taycans per day).",
+  "counterfactual_analysis": "Absent the metals shock and wartime supply disruption, Porsche would likely have maintained Taycan production in March 2022.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader EV demand volatility in early 2022.",
+      "impact": "Investor expectations about premium-EV demand could also influence Porsche's stock movement independent of the temporary shutdown."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "Sanctions and market stress drove nickel prices to extreme levels, highlighting how quickly commodity markets can be destabilized by geopolitical risk. For Porsche, the spike in battery metal costs and related supply disruptions forced a temporary halt to Taycan production, turning a macro commodities shock into lost high margin EV sales."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00367",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Brazilian pulp producer Suzano announced that it would raise pulp prices for customers in China by $50 per ton and for clients in Europe and the United States by $80 per ton starting in November 2023. The price hikes reflected tight supply and were expected to lift costs for tissue and paper-product manufacturers like Procter & Gamble.",
+      "date": "2023-10-17",
+      "entities": [
+        "Suzano"
+      ],
+      "sectors": [
+        "materials",
+        "pulp"
+      ],
+      "country": "Brazil",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Procter & Gamble"
+      },
+      "source_info": {
+        "title": "Brazil's Suzano to raise pulp prices to clients in China, Europe and U.S",
+        "url": "https://www.reuters.com/article/markets/currencies/brazils-suzano-to-raise-pulp-prices-to-clients-in-china-europe-and-us-idUSKBN31H241/",
+        "published_date": "2023-10-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Procter & Gamble reported that consumers were accepting its own 7% price increases and that it expected to achieve the top end of its annual forecasts despite higher input costs. The company said it would focus on premium products to offset rising pulp prices and investors cheered the outlook.",
+      "date": "2023-10-18",
+      "entities": [
+        "Procter & Gamble"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.76,
+        "target": "Procter & Gamble"
+      },
+      "stock_change_pct": 2.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "P&G aims for top end of annual targets as consumers absorb price hikes",
+        "url": "https://www.reuters.com/business/retail-consumer/pg-tops-quarterly-sales-estimates-higher-prices-2023-10-18/",
+        "published_date": "2023-10-18",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2023-10-17, Suzano said it would increase pulp prices by $50 per ton for Chinese buyers and $80 per ton for clients in Europe and the United States, citing tight supply. The announcement indicated that costs for makers of toilet paper, tissues and diapers would rise in the months ahead.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Procter & Gamble, a large purchaser of pulp for brands such as Bounty and Charmin, anticipated that higher raw-material costs would pressure margins. Managers planned price increases and product mix changes to preserve profitability in anticipation of the cost shock.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2023-10-18, P&G announced that consumers were absorbing its 7% price hikes and that it expected to hit the top end of its fiscal 2024 sales and profit targets. The upbeat forecast showed that P&G successfully navigated the pulp-price shock, and its stock rose more than 2% on the news.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The cause article highlights a key supplier increasing pulp prices, which raised input costs for P&G's paper-based products. The effect article shows P&G mitigating the cost pressure through price increases and product mix, delivering strong guidance and a stock rally, suggesting a causal link.",
+  "counterfactual_analysis": "If Suzano had not raised pulp prices, P&G might not have needed to raise prices as aggressively and may have guided to more modest growth, altering investor expectations.",
+  "adversarial_confounders": [
+    {
+      "text": "Easing energy and labour costs",
+      "impact": "Declining costs in other areas could have buoyed P&G's margins and outlook even without pulp-price increases."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.78,
+        "commentary": "Suzano's pulp price increases reflected a mix of global demand, capacity and currency factors that pushed raw material costs higher for tissue and paper products. Despite that cost shock, resilient consumer demand and healthy labor markets allowed P&G to pass on higher prices and still aim for the top end of its annual targets."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "As P&G successfully passes pulp cost increases through to shoppers, strong margins reinforce management's confidence in further selective price hikes. If consumers continue to accept those increases, higher profits support more brand investment, helping P&G defend its premium positioning even as input prices fluctuate."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

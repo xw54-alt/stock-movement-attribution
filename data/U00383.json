@@ -1,0 +1,106 @@
+{
+  "pair_id": "U00383",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20230726_fed_rates",
+      "causal_salience": "primary",
+      "text": "On July 26 2023, the US Federal Reserve raised its benchmark interest rate by a quarter point to a range of 5.25 % to 5.5 %, the highest level in 22 years. The Guardian noted that the Fed was fighting persistent inflation and signaled that rates could rise again.",
+      "date": "2023-07-26",
+      "entities": [
+        "Federal Reserve"
+      ],
+      "sectors": [
+        "monetary policy",
+        "public sector"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.72,
+        "target": "interest rates"
+      },
+      "source_info": {
+        "title": "Fed raises interest rates to 22-year high as it continues to fight inflation",
+        "url": "https://www.theguardian.com/business/2023/jul/26/fed-raises-interest-rates",
+        "published_date": "2023-07-26",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Reuters reported that Robinhood delivered a surprise fourth-quarter profit thanks to higher interest income on customer balances and a rebound in trading activity. Investors cheered the results and the stock jumped roughly 10 % after the announcement.",
+      "date": "2024-02-13",
+      "entities": [
+        "Robinhood Markets Inc"
+      ],
+      "sectors": [
+        "Financial Services",
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.84,
+        "target": "Robinhood"
+      },
+      "stock_change_pct": 10.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Robinhood posts surprise profit as interest income rises and trading rebounds",
+        "url": "https://www.reuters.com/business/finance/robinhoods-q4-revenue-rises-interest-income-boost-2024-02-13/",
+        "published_date": "2024-02-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2023-07-26, the Federal Reserve raised the federal funds rate to a 22-year high of 5.25%-5.5% and signaled that more hikes were possible.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Elevated interest rates increased the yield on customer cash balances held by brokers, boosting net interest income. The higher rates also encouraged cautious savers to leave idle funds in brokerage accounts, increasing spreads for firms like Robinhood.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By the fourth quarter of 2023, Robinhood benefited from the high-rate environment, posting a surprise profit driven by interest income and a modest trading rebound. The announcement on 2024-02-13 pushed the stock up about 10 % after hours.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The timing of the Fed's rate hike and its persistence at elevated levels allowed Robinhood to earn substantially more interest on customer cash, contributing directly to its profit. The effect article credits interest income for the surprise earnings and notes the share-price reaction.",
+  "counterfactual_analysis": "If the Federal Reserve had not raised and maintained interest rates at a 22-year high, Robinhood would have earned less interest on idle customer funds, likely resulting in a weaker or negative profit and a smaller share-price reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "A rebound in customer trading activity also contributed to the profit and may have independently driven some of the share gain.",
+      "impact": "Improved trading volumes could confound the causal relationship by providing another source of earnings growth beyond interest income."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Regulatory and market oversight pressures",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "Rapid rate hikes by the Federal Reserve raised short term yields across the economy, making idle client cash far more valuable for brokers. For Robinhood, that macro interest rate environment turned its growing cash balances into a meaningful profit driver even as trading remained below peak frenzy levels."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

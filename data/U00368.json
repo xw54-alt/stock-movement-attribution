@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00368",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Procter & Gamble announced it would raise prices on some products to offset higher costs from U.S. tariffs, which it estimated would add $1-$1.5 billion in expenses. The company also cut its annual revenue forecast, warning that consumers were cutting back on non-essential purchases.",
+      "date": "2025-04-24",
+      "entities": [
+        "Procter & Gamble"
+      ],
+      "sectors": [
+        "household products",
+        "consumer goods"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Procter & Gamble"
+      },
+      "source_info": {
+        "title": "P&G looks to raise prices as tariffs hit costs and force forecast cuts",
+        "url": "https://www.reuters.com/business/procter-gamble-lowers-annual-forecasts-trade-war-hits-consumer-demand-2025-04-24/",
+        "published_date": "2025-04-24",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Investors reacted negatively to P&G's plan to pass along tariff costs and its lower revenue forecast. The company's shares dropped nearly 4.8% in early trading as analysts worried that higher prices might erode demand and that the tariff hit signalled weaker profitability ahead.",
+      "date": "2025-04-24",
+      "entities": [
+        "Procter & Gamble"
+      ],
+      "sectors": [
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Procter & Gamble"
+      },
+      "stock_change_pct": 4.8,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "P&G looks to raise prices as tariffs hit costs and force forecast cuts",
+        "url": "https://www.reuters.com/business/procter-gamble-lowers-annual-forecasts-trade-war-hits-consumer-demand-2025-04-24/",
+        "published_date": "2025-04-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2025-04-24, P&G announced that U.S. tariffs would increase its costs by $1-$1.5 billion and that it would raise prices on a range of products to offset the impact. Management also cut the company's revenue forecast, signalling that the economic environment was pressuring consumer spending.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Analysts warned that higher prices could dampen demand and that tariffs would compress margins. Investors grew concerned that P&G's price increases might not fully offset rising costs, leading to questions about future earnings and market share.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Following the announcement, P&G's stock fell nearly 4.8% as investors sold shares in response to the tariff-driven cost surge and lower forecast. The market reaction reflected expectations of weaker profitability despite the company's attempt to pass on costs to consumers.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "This self-causal pair captures P&G announcing price hikes to cover tariff costs and cutting its revenue forecast. The negative investor reaction led directly to a sharp share-price decline, illustrating how the company's own strategic decisions can adversely affect market perception.",
+  "counterfactual_analysis": "If P&G had absorbed the tariff costs without cutting its forecast or raising prices, it might have avoided a steep share sell-off, but margins would have been squeezed and long-term profitability compromised.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader stock market volatility",
+      "impact": "A general market downturn could have contributed to the share price drop independently of P&G's announcement."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Tariffs and higher costs forced P&G to lean on its brand strength to raise prices, testing how much pricing power it really has against competitors and private labels. If shoppers trade down or switch to rival products, P&G's negotiating leverage with retailers weakens, increasing the competitive threat from lower cost brands."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.8,
+        "commentary": "New trade barriers and import tariffs are policy decisions that directly reshape cost structures for global consumer companies like P&G. When P&G responded by cutting its forecast and outlining price increases, investors worried that political and economic headwinds could weigh on its growth and margins for several years."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Higher tariffs raise costs, prompting P&G to lift prices and lower guidance, which in turn triggers a negative reaction in the share price. A weaker valuation can then make management more cautious on investment, slowing innovation and potentially leaving the company more exposed if tariffs and inflation persist."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

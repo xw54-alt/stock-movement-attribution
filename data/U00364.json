@@ -1,0 +1,142 @@
+{
+  "pair_id": "U00364",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20250502",
+      "causal_salience": "primary",
+      "text": "On 2025-05-02 reporting showed Chinese automakers such as BYD and Chery ramping plug in hybrid shipments to Europe to dodge looming EU tariffs of up to about 45% on fully battery-electric cars.",
+      "date": "2025-05-02",
+      "entities": [
+        "BYD",
+        "Chery"
+      ],
+      "sectors": [
+        "Automotive",
+        "Trade"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.76,
+        "target": "Battery-electric vehicle makers"
+      },
+      "source_info": {
+        "title": "Chinese automakers boost plug in hybrid sales to avoid EU tariffs",
+        "url": "https://www.reuters.com/business/autos-transportation/chinese-ev-makers-sell-more-plugin-hybrids-eu-avoid-tariffs-research-firm-says-2025-05-01/",
+        "published_date": "2025-05-02",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    },
+    {
+      "source_doc_id": "D20250703",
+      "causal_salience": "secondary",
+      "text": "On 2025-07-03 Chinese regulators warned that the domestic auto sector faced overcapacity and a prolonged price war. Payment periods to suppliers were stretching and inventories were high, showing margin erosion across EV makers.",
+      "date": "2025-07-03",
+      "entities": [
+        "China automotive regulators",
+        "Chinese automakers"
+      ],
+      "sectors": [
+        "Automotive",
+        "Economics"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "EV industry"
+      },
+      "source_info": {
+        "title": "China auto sector price war undermines profitability",
+        "url": "https://www.reuters.com/business/autos-transportation/china-automakers-price-war-overcapacity-hurt-finances-2025-07-10/",
+        "published_date": "2025-07-03",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2025-09-22 Porsche delayed several electric models and cut its 2025 profit-margin outlook to a maximum of roughly 2%, citing weak China demand, higher U.S. tariffs and brutal EV price competition. Porsche shares fell more than 7% on the guidance reset.",
+      "date": "2025-09-22",
+      "entities": [
+        "Porsche"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Porsche"
+      },
+      "stock_change_pct": 7.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Porsche delays EV rollout and slashes 2025 profit outlook",
+        "url": "https://ev.com/news/porsche-guidance-2025-volkswagen-stock",
+        "published_date": "2025-09-22",
+        "publisher": "ev.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "By May 2025 Chinese brands pivoted to plug in hybrids to skirt EU tariffs, signalling that high-end battery EVs would face slower uptake and fiercer price comparisons in Europe.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Chinese regulators in July 2025 warned of industry overcapacity and a grinding price war, implying structural margin compression in EVs, especially in China where Porsche relies on growth.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-09-22 Porsche delayed EV launches and cut its 2025 margin guide to about 2%, and the stock dropped roughly 7.5% as investors repriced profit expectations.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Porsche tied its guidance cut and model delays directly to weak China demand, tariff pressure, and an EV price war. Those drivers were flagged by prior reports on tariff workarounds and margin erosion in China's auto sector.",
+  "counterfactual_analysis": "Without aggressive Chinese hybrid competition into Europe and the prolonged EV price war in China, Porsche might not have guided margins down to ~2% or postponed EV launches.",
+  "adversarial_confounders": [
+    {
+      "text": "Macroeconomic slowdown in Europe and the U.S. in late 2025.",
+      "impact": "Broader consumer caution or higher financing costs could also suppress demand for Porsche's premium EVs and contribute to the profit warning."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Aggressive pricing and plug in hybrid exports from Chinese automakers intensified rivalry in the global EV market and squeezed profitability for premium Western brands. As Chinese competitors undercut prices and capture volume, Porsche had to delay some EV launches and cut its margin guidance, signaling that its competitive position was weaker than previously assumed."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.84,
+        "commentary": "A sustained price war erodes EV margins, which makes Porsche more cautious about investing in new models and slows its transition plans. That slower rollout can further weaken its scale and cost position versus Chinese rivals, creating a reinforcing loop where each setback in China feeds back into more conservative guidance and investor pressure."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

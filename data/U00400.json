@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00400",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "null",
+      "causal_salience": "primary",
+      "text": "A federal pipeline safety report concluded that the June 8 2022 explosion at the Freeport LNG terminal was caused by inadequate operating and testing procedures, shutting the plant and causing global LNG prices to spike.",
+      "date": "2022-06-08",
+      "entities": [
+        "Freeport LNG"
+      ],
+      "sectors": [
+        "energy",
+        "LNG"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Freeport LNG"
+      },
+      "source_info": {
+        "title": "U.S. regulator blames Freeport LNG explosion on inadequate procedures",
+        "url": "https://www.ferc.gov/industries-data/resources/project-directory/freeport-lng-incident-june-2022",
+        "published_date": "2022-06-08",
+        "publisher": "ferc.gov"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Shell cautioned that its third-quarter profit would be pressured by halved refining margins and weaker natural gas trading following supply disruptions. Investors sold the stock, pushing it down roughly 4.3%.",
+      "date": "2022-10-06",
+      "entities": [
+        "Shell"
+      ],
+      "sectors": [
+        "Energy & Utilities"
+      ],
+      "country": "United Kingdom",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Shell"
+      },
+      "stock_change_pct": 4.3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Shell warns Q3 profits hit by weaker gas trading",
+        "url": "https://www.reuters.com/business/energy/weakening-refining-gas-trading-hit-shells-q3-results-2022-10-06/",
+        "published_date": "2022-10-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In June 2022, the Freeport LNG export facility in Texas suffered a major explosion and shut down indefinitely, triggering a spike in global LNG prices.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The prolonged outage disrupted U.S. LNG exports and reduced liquidity in the spot market. Shell, a leading LNG trader, found it harder to monetise its long-term supply contracts amid heightened volatility, resulting in weaker trading results.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "In October 2022, Shell warned that its third-quarter profit would be hit by weaker gas trading and refining margins. The market interpreted this as a direct consequence of the LNG supply disruption, and Shell's shares fell about 4.3%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The Freeport explosion eliminated a key source of U.S. LNG supply, destabilising the market. Shell's trading arm was unable to capitalise on arbitrage opportunities, contributing to a profit warning that triggered a share price decline.",
+  "counterfactual_analysis": "Had the Freeport LNG terminal remained operational, global LNG markets would have been more balanced. Shell might not have issued a profit warning, and the stock could have avoided a significant drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Weak refining margins and broader economic concerns were also weighing on energy stocks.",
+      "impact": "These factors may have contributed to Shell's profit warning and stock decline alongside the LNG outage."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "contractual_penalties",
+        "industry_barriers": "high",
+        "commentary": "The Freeport LNG explosion reminded buyers that they can insist on stricter terms and protections when contracting with energy suppliers whose failures disrupt supply. In a market where there are only a few major players and outages can trigger penalties and reputational damage, customers and regulators gain bargaining power over firms like Shell and their trading units."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - Safety regulation and energy infrastructure risk",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.78,
+        "commentary": "The incident underscored how safety regulation and environmental risks can quickly change the economics of gas infrastructure. As scrutiny and oversight increased, Shell warned that weaker trading performance and lower refining margins would hit profits, showing how sensitive earnings are to policy and operational shocks in the energy system."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "90 days",
+        "conditions_score": 0.78,
+        "commentary": "A high profile accident leads to tighter controls and more cautious trading strategies, which tend to reduce short term profitability for the companies involved. Lower profits then limit the appetite for aggressive positions and risky projects, reinforcing a balancing loop in which shocks dampen future risk taking rather than fuel an unchecked expansion."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

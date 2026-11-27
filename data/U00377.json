@@ -1,0 +1,133 @@
+{
+  "pair_id": "U00377",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D00002a",
+      "causal_salience": "primary",
+      "text": "China's robust appetite for steel in early 2021 drove iron-ore futures on the Dalian Commodity Exchange to record highs around 1,145 yuan per tonne.  Analysts noted that surging steel demand from infrastructure and property construction pushed iron-ore prices up 4.3% in one session, highlighting that consumption was outstripping supply.",
+      "date": "2021-04-26",
+      "entities": [
+        "China steel industry",
+        "Iron-ore futures"
+      ],
+      "sectors": [
+        "Steel",
+        "Iron ore"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Iron-ore prices"
+      },
+      "source_info": {
+        "title": "Iron ore price jumps to record high on robust Chinese demand",
+        "url": "https://www.reuters.com/world/asia-pacific/china-steel-iron-ore-futures-hit-record-highs-strong-demand-supply-fears-2021-04-26/",
+        "published_date": "2021-04-26",
+        "publisher": "reuters.com"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D00002b",
+      "causal_salience": "secondary",
+      "text": "Heavy rains and operational problems at Brazil's Vale iron-ore operations, including at the Ponta da Madeira port, hampered shipments in March 2021.  A fire at a ship loader in January and ongoing high rainfall curtailed output, leading analysts to warn that shipments could remain below guidance.  The supply disruptions tightened the global iron-ore market and supported high prices.",
+      "date": "2021-03-31",
+      "entities": [
+        "Vale",
+        "Ponta da Madeira port"
+      ],
+      "sectors": [
+        "Mining",
+        "Iron ore"
+      ],
+      "country": "Brazil",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Iron-ore supply"
+      },
+      "source_info": {
+        "title": "Heavy rains in Brazil hit Vale's shipments, supporting iron-ore prices",
+        "url": "https://www.mining.com/heavy-rains-put-pressure-on-brazilian-iron-ore-shipments/",
+        "published_date": "2021-03-31",
+        "publisher": "Mining.com"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 28 July 2021, Rio Tinto reported record half-year earnings of US$12.17 billion, more than doubling underlying earnings from the previous year as iron-ore prices averaged nearly US$168 per tonne.  Management credited China's strong steel demand and supply problems in Brazil for sending prices to all-time highs.",
+      "date": "2021-07-28",
+      "entities": [
+        "Rio Tinto"
+      ],
+      "sectors": [
+        "Materials & Chemicals"
+      ],
+      "country": "Australia",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Rio Tinto"
+      },
+      "stock_change_pct": 3.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Rio Tinto posts record first-half earnings as iron-ore price surges",
+        "url": "https://www.reuters.com/business/energy/rio-tinto-first-half-earnings-more-than-doubles-2021-07-28/",
+        "published_date": "2021-07-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "China's booming steel demand in early 2021 pushed iron-ore prices to record highs.  Futures on the Dalian exchange jumped more than 4% in one day as construction and infrastructure projects consumed vast quantities of ore, signalling tight demand.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Simultaneously, heavy rains and operational problems in Brazil curtailed shipments from Vale's Northern System.  Fires and high rainfall reduced export capacity, further tightening global supply.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "The combination of surging demand and constrained supply drove benchmark iron-ore prices to around US$200 per tonne.  Rio Tinto, as a leading supplier, benefited from the price spike and posted record underlying earnings of US$12.17 billion for the first half of 2021.  Investors responded positively and the company's share price rose roughly 3% after the results announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Two external factors-China's vigorous steel demand and Brazil's supply disruptions-jointly pushed iron-ore prices to unprecedented levels.  Rio Tinto, which sells iron ore to Chinese mills, directly benefited from this price surge.  The effect event is therefore a multi-cause outcome where both demand and supply factors were necessary to achieve record profits.",
+  "counterfactual_analysis": "If either cause had been absent, Rio Tinto's profits would have been lower.  Without China's demand, prices would not have risen despite Brazilian supply issues.  Conversely, if Brazilian supply had flowed normally, increased availability could have capped price gains even with robust demand.",
+  "adversarial_confounders": [
+    {
+      "text": "Other influences such as currency fluctuations or internal cost controls could have affected Rio Tinto's earnings.  However, contemporaneous reporting consistently attributed the earnings surge to high iron-ore prices driven by demand and supply factors, reducing the likelihood of major confounders.",
+      "impact": null
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Surging steel demand in China and supply disruptions at Vale tightened the iron ore market at a time when Rio Tinto was well positioned as a low cost producer. With rivals constrained and prices near record highs, Rio's bargaining power over customers and its ability to convert volume into profit improved, driving the record half year earnings."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

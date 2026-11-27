@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00362",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20220225",
+      "causal_salience": "primary",
+      "text": "On 2022-02-25 Russia's invasion of Ukraine disrupted wire-harness and other component suppliers in Ukraine. Automakers including Volkswagen and Renault warned of further cuts to production, on top of an ongoing semiconductor shortage.",
+      "date": "2022-02-25",
+      "entities": [
+        "Russia",
+        "Automakers"
+      ],
+      "sectors": [
+        "Geopolitics",
+        "Automotive"
+      ],
+      "country": "Ukraine",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Automotive supply chain"
+      },
+      "source_info": {
+        "title": "Automakers idle production following Russia's invasion, other firms also scramble",
+        "url": "https://www.reuters.com/business/automakers-idle-production-following-russias-invasion-other-firms-also-scramble-2022-02-25/",
+        "published_date": "2022-02-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2022-03-02 Porsche said it would suspend production at its Leipzig plant until at least the end of the following week because Ukrainian suppliers could not ship parts. Volkswagen warned other plants might face similar shutdowns.",
+      "date": "2022-03-02",
+      "entities": [
+        "Porsche"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Industrials & Manufacturing"
+      ],
+      "country": "Germany",
+      "effect_type": "supply_disruption",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Porsche"
+      },
+      "stock_change_pct": 4.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Ukraine invasion hampers wire harness supplies for carmakers",
+        "url": "https://www.reuters.com/business/autos-transportation/ukraine-invasion-hurts-flow-wire-harnesses-carmakers-2022-03-02/",
+        "published_date": "2022-03-02",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The invasion of Ukraine cut off wiring-harness suppliers and other just-in-time components for European plants, creating an immediate shortage.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Those harnesses are vehicle-specific safety-critical parts; Porsche could not easily substitute them, so certain assembly lines could not legally or safely run.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-03-02 Porsche halted Leipzig production, signalling at least a week of lost output and prompting a roughly 4.0% stock reaction as investors priced in revenue and margin pressure.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The production halt is directly attributed to war-driven component shortages from Ukrainian suppliers, not to internal mis-execution by Porsche.",
+  "counterfactual_analysis": "If Russia had not invaded Ukraine and suppliers in Ukraine had remained operational, Porsche would likely not have halted Leipzig production in early March 2022.",
+  "adversarial_confounders": [
+    {
+      "text": "Global semiconductor shortages affecting all automakers in early 2022.",
+      "impact": "Independent chip constraints could also depress Porsche output and stock performance, partially confounding how much of the decline is due specifically to Ukraine."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Russia's invasion of Ukraine exposed how dependent European carmakers like Porsche were on a small group of wire harness suppliers in the region. When those plants idled, the lack of alternative sources gave suppliers and logistics bottlenecks disproportionate power, forcing Porsche to halt production and absorb lost revenue."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and innovation forces",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.86,
+        "commentary": "The war in Ukraine and the resulting sanctions are macro political shocks that reshaped trade routes, energy costs and industrial supply chains. These geopolitical disruptions quickly spilled into the auto sector by choking off critical components, showing how security and foreign policy events can ripple into corporate output and margins."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

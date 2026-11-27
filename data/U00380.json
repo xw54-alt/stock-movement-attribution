@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00380",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D00005",
+      "causal_salience": "primary",
+      "text": "In March 2022, Russia's invasion of Ukraine triggered sanctions that threatened global aluminium supplies.  Benchmark aluminium prices on the London Metal Exchange surged 3.5% to around US$3,487 per tonne and neared record highs as traders worried that sanctions on producer Rusal would constrict supply.",
+      "date": "2022-03-01",
+      "entities": [
+        "Russia",
+        "Rusal"
+      ],
+      "sectors": [
+        "Metals",
+        "Aluminium"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Aluminium supply"
+      },
+      "source_info": {
+        "title": "Aluminium prices near record highs as sanctions threaten supply",
+        "url": "https://www.reuters.com/markets/europe/lme-aluminium-holds-firm-russian-supply-risks-2022-03-01/",
+        "published_date": "2022-03-01",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 10 March 2022, Rio Tinto announced that it would sever all commercial relationships with Russian businesses, becoming one of the first major miners to exit the country after the invasion.  The decision followed international sanctions and pressure to withdraw from Russia.  After the announcement, Rio Tinto's shares fell about 8% as investors factored in the loss of supply partnerships.",
+      "date": "2022-03-10",
+      "entities": [
+        "Rio Tinto"
+      ],
+      "sectors": [
+        "Materials & Chemicals",
+        "Financial Services"
+      ],
+      "country": "Global",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Rio Tinto"
+      },
+      "stock_change_pct": 8.3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Rio Tinto cuts ties with Russian businesses over Ukraine war",
+        "url": "https://www.reuters.com/business/rio-tinto-end-commercial-relationships-with-russian-businesses-2022-03-10/",
+        "published_date": "2022-03-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Russia's invasion of Ukraine and resulting sanctions unsettled commodity markets.  Fears that sanctions would disrupt supplies from producer Rusal pushed aluminium prices toward record levels.  Mining companies faced rising reputational and legal risk if they continued Russian business dealings.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Western governments and investors demanded that corporations withdraw from Russia.  With aluminium prices already spiking, maintaining Russian partnerships risked supply and reputational damage.  Global miners evaluated the trade-offs between profits and compliance.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Rio Tinto decided to terminate all commercial relationships with Russian businesses, distancing itself from the geopolitical conflict.  The announcement signalled adherence to sanctions but also reduced access to Russian aluminium.  Market reaction was negative, and Rio Tinto's share price dropped roughly 8.3% after investors priced in the policy change.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Sanctions and supply worries created both ethical and economic pressure on mining companies to exit Russia.  The cause event captures this geopolitical shock, while the effect is Rio Tinto's decision to cut ties.  The share price reaction reflects investor concern about lost business and heightened uncertainty.",
+  "counterfactual_analysis": "If Russia had not invaded Ukraine or sanctions had been milder, aluminium prices would have remained stable and Rio Tinto might have maintained its Russian partnerships.  Without sanctions pressure, the company could have continued joint ventures with Rusal without triggering a negative share price reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Other factors such as general market volatility or prior performance could influence Rio Tinto's share price.  However, the timing of the drop following the announcement and broader corporate withdrawals suggest the causal link is strong.",
+      "impact": null
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Russia's invasion of Ukraine and the prospect of sanctions on Rusal threatened long standing supply relationships in the aluminium market. By cutting ties with Russian businesses, Rio Tinto chose to sacrifice some sourcing flexibility and near term volume in order to protect its position with customers and regulators in other jurisdictions."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and regulatory forces",
+        "pestel_impact_score": 0.87,
+        "conditions_score": 0.8,
+        "commentary": "Geopolitical conflict and coordinated sanctions rapidly changed the operating environment for companies with Russian exposure. Mounting political pressure and reputational risk made continued commercial links untenable for Rio Tinto, so exiting the country was seen as a necessary but costly response that investors quickly priced into the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

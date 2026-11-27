@@ -1,0 +1,154 @@
+{
+  "pair_id": "U00391",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "259238745687027",
+      "causal_salience": "secondary",
+      "text": "The FAA's decision on January 25, 2024 to freeze increases in Boeing's 737 MAX production created a shortage of new narrow-body jets. Airlines warned that delayed deliveries would force them to operate older aircraft longer, increasing maintenance and repair needs.",
+      "date": "2024-01-25",
+      "entities": [
+        "Boeing",
+        "FAA"
+      ],
+      "sectors": [
+        "Aerospace & Defense",
+        "Transportation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Boeing"
+      },
+      "source_info": {
+        "title": "Boeing's MAX production issues ripple across aerospace industry",
+        "url": "https://www.reuters.com/business/aerospace-defense/faa-halt-boeing-max-production-expansion-hit-airlines-suppliers-2024-01-25/",
+        "published_date": "2024-01-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    },
+    {
+      "source_doc_id": "874267000357833",
+      "causal_salience": "primary",
+      "text": "On July 23, 2024, GE Aerospace raised its profit outlook despite lowering revenue expectations because deliveries of LEAP engines were down 29%. The company said a shortage of new planes was driving a surge in aftermarket services, and GE's shares jumped over 6% on the news.",
+      "date": "2024-07-23",
+      "entities": [
+        "GE Aerospace"
+      ],
+      "sectors": [
+        "Aerospace & Defense"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "GE Aerospace"
+      },
+      "source_info": {
+        "title": "GE Aerospace lifts 2024 outlook; cuts estimates for LEAP jet engine deliveries",
+        "url": "https://www.reuters.com/business/aerospace-defense/ge-aerospace-lifts-2024-profit-view-strong-demand-engine-parts-services-2024-07-23/",
+        "published_date": "2024-07-23",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On July 25, 2024, RTX issued a guidance update that lifted its full-year earnings forecast after second-quarter results beat expectations. Executives noted that airlines were keeping older jets flying due to a shortage of new aircraft and that aftermarket services were booming. RTX shares rose roughly 8% to $113 following the announcement, reflecting investor optimism.",
+      "date": "2024-07-25",
+      "entities": [
+        "RTX"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "RTX"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "RTX lifts 2024 profit forecast on strength in aviation sector",
+        "url": "https://www.reuters.com/business/aerospace-defense/rtx-lifts-2024-profit-forecast-2024-07-25/",
+        "published_date": "2024-07-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "First, the FAA halted Boeing's ability to raise 737 MAX production in January 2024, constraining new aircraft supply and forcing airlines to extend the life of existing jets.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Second, GE Aerospace's July 23 earnings update highlighted strong aftermarket demand and noted that engine deliveries were down nearly 30%, signalling that services revenue was compensating for weak output.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "The combination of a regulatory supply shock and a competitor's bullish aftermarket commentary convinced investors that the entire sector was pivoting toward repair and servicing revenue. Analysts expected RTX, with its large maintenance footprint, to benefit from both forces.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Consequently, when RTX raised its profit outlook on July 25, 2024, the market reaction was swift: shares rallied roughly 8% to $113. The dual catalysts of supply shortages and competitor signalling amplified confidence that RTX's aftermarket boom would persist.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "This multi-cause pair captures how two distinct events - a regulatory freeze at Boeing and a bullish competitor outlook at GE - collectively shaped expectations. Together they created a stronger impetus for RTX's guidance update than either would have alone.",
+  "counterfactual_analysis": "Had either Boeing's production freeze or GE's aftermarket-driven profit raise not occurred, the context for RTX's July 25 guidance update would have been weaker. Without the freeze, airlines might have received more new planes and invested less in maintenance; without GE's signal, investors might not have anticipated industry-wide aftermarket gains. In either scenario, RTX's share price reaction to its guidance update might have been smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "Overall economic growth and travel demand recovery could also drive RTX's profitability independent of the specific Boeing and GE events.",
+      "impact": "While these factors provide a supportive backdrop, the temporal alignment of the freeze and GE's earnings update with RTX's guidance change strengthens the causal inference."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "capacity_constraint",
+        "industry_barriers": "high",
+        "commentary": "With Boeing unable to ramp production of new single aisle jets, the profit pool in commercial aviation shifted toward keeping older fleets flying and servicing their engines and systems. In that environment, aftermarket specialists like RTX and GE compete intensely to lock in long term maintenance contracts with airlines, and high certification and safety requirements keep new entrants at the edge of the market."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Supply shortages and aftermarket demand",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.8,
+        "commentary": "Supply chain disruptions and regulatory limits on new aircraft created an economic backdrop in which airlines had no choice but to sweat existing assets harder. That shortage driven demand made high margin repair and overhaul work unusually resilient, giving RTX confidence to lift its guidance when other industrial sectors were still dealing with mixed order books."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "182 days",
+        "conditions_score": 0.8,
+        "commentary": "As deliveries of new planes stay constrained, airlines fly older jets longer, which pushes more work into RTX's service network and boosts earnings. Those stronger profits then justify further investment in parts, tooling and service capacity, reinforcing a loop where tight capacity today leads to even greater aftermarket dependence in the future."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

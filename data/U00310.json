@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00310",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20007",
+      "causal_salience": "primary",
+      "text": "Alphabet reported first-quarter results on 24 April 2025 showing that its deep investments in artificial intelligence were powering its core advertising business. The company announced a $70 billion stock buyback, and its shares rose 4 percent, boosting confidence that big AI spending could translate into higher profits and inspiring optimism for peers.",
+      "date": "2025-04-24",
+      "entities": [
+        "Alphabet"
+      ],
+      "sectors": [
+        "Technology",
+        "Advertising"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "Alphabet"
+      },
+      "source_info": {
+        "title": "Google says deep AI investments powering ad sales, soothing anxious investors",
+        "url": "https://www.reuters.com/business/google-parent-alphabet-beats-quarterly-revenue-estimates-2025-04-24/",
+        "published_date": "2025-04-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 30 July 2025 shares of Meta jumped 12.2 percent in European trading after the company posted blowout quarterly results and forecast revenue well ahead of Wall Street expectations. The rally reflected investor confidence that Meta's own AI investments were paying off.",
+      "date": "2025-07-30",
+      "entities": [
+        "Meta"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.93,
+        "target": "Meta"
+      },
+      "stock_change_pct": 12.2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Microsoft, Meta surge after blowout results",
+        "url": "https://www.reuters.com/business/microsoft-meta-surge-after-blowout-results-2025-07-31/",
+        "published_date": "2025-07-30",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Alphabet's quarterly earnings demonstrated that heavy investment in AI infrastructure could boost advertising revenue. The company's announcement of a $70 billion buyback and a 4 percent rise in its shares reassured investors that the AI spending boom remained profitable, easing concerns that the industry might be over-investing.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The positive sentiment spilled over to peers. Investors extrapolated that Meta's aggressive AI initiatives-including advances in ad-targeting algorithms and virtual-reality products-might yield similar financial rewards. Expectations for Meta's forthcoming earnings thus increased.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When Meta reported quarterly results at the end of July 2025, it delivered blowout earnings and revenue guidance that confirmed the optimism. The strong performance showed that AI investments were indeed driving returns in Meta's advertising business.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "As a result, Meta's share price surged roughly 12.2 percent in European trading on 30 July 2025, contributing to a broader rally in technology stocks and reinforcing confidence in the AI investment thesis; on 2025-07-30 shares were up about 12.20% versus the prior trading day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Alphabet's success with AI-driven ad sales provided a market signal that heavy AI spending could translate into profitable growth. That signal raised investor expectations for Meta's results and helped amplify the stock's rally when the company delivered strong numbers.",
+  "counterfactual_analysis": "If Alphabet's AI investments had disappointed or its buyback announcement had failed to impress investors, the positive spillover to Meta might not have occurred, and Meta's subsequent rally could have been smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "Microsoft's own strong quarterly results, released the same week, also boosted tech stocks and may have contributed to Meta's surge.",
+      "impact": "Multiple positive earnings reports can make it harder to isolate the influence of Alphabet's earlier results on Meta's stock move."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Alphabet's strong quarter showed that heavy AI spending could strengthen the competitive position of a large digital advertising platform by improving targeting and monetization. That success raised expectations that rivals like Meta would need to match its pace of AI investment to defend share, so Meta's blowout results were seen as confirmation that it was keeping up in the race."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - supply, platforms and policy shifts",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.86,
+        "commentary": "Rapid advances in generative AI and related infrastructure are reshaping how advertisers reach consumers and how platforms allocate capital. Alphabet's results signaled that this technological shift was already translating into profitable growth, creating macro level enthusiasm for the AI theme that helped amplify investors' reaction when Meta reported its own AI driven beat."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "97 days",
+        "conditions_score": 0.86,
+        "commentary": "Alphabet's AI fueled earnings beat and stock gain triggered a reinforcing loop in which investors raised their expectations for other AI heavy platforms over the following months. When Meta later delivered strong results that fit this narrative, the 12.2 percent jump in its share price further validated the AI investment thesis and encouraged managements and investors to continue feeding the cycle."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

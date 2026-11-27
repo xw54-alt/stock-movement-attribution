@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00376",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1_Gov_Windfall_Tax_Impose_2022-07-01",
+      "causal_salience": "primary",
+      "text": "India imposed windfall profit taxes on fuel exports and levies on domestic crude production, aiming to capture extraordinary refining margins. The measures raise effective tax rates on refiners.",
+      "date": "2022-07-01",
+      "entities": [
+        "Government of India"
+      ],
+      "sectors": [
+        "Energy"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Refining and fuel export profitability"
+      },
+      "source_info": {
+        "title": "India acts to deter fuel exports, puts windfall tax on oil producers",
+        "url": "https://financialpost.com/pmn/business-pmn/india-acts-to-deter-fuel-exports-puts-windfall-tax-on-oil-producers",
+        "published_date": "2022-07-01",
+        "publisher": "financialpost.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Higher export and crude levies reduce after-tax margins for complex refiners and integrated players. Investors repriced earnings expectations for refining and O2C businesses under the new tax regime.",
+      "date": "2022-07-01",
+      "entities": [
+        "Reliance Industries"
+      ],
+      "sectors": [
+        "Energy & Utilities"
+      ],
+      "country": "India",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Reliance Industries"
+      },
+      "stock_change_pct": 8.9,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "India imposes windfall taxes; Reliance falls as much as 8.9% intraday",
+        "url": "https://www.bloomberg.com/news/articles/2022-07-01/india-imposes-windfall-tax-on-local-oil-output-export-of-fuels",
+        "published_date": "2022-07-01",
+        "publisher": "bloomberg.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "The government levied unexpected windfall taxes on exports and domestic crude. This directly raises the cash cost of production and reduces retained earnings from refining."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The market updated profit forecasts for complex refiners, compressing valuation multiples tied to O2C cash flows. Export-heavy models become less attractive when incremental margins are taxed away."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "Reliance Industries' shares dropped as investors priced the tax hit. On 2022-07-01, the stock fell as much as 8.9% intraday."
+    }
+  ],
+  "rationale": "A sudden tax change directly reduced the value captured from high refining spreads, prompting a sharp de-rating. The effect is mechanical through cash flow and multiples.",
+  "counterfactual_analysis": "If no windfall levy had been introduced, margins would have flowed through to earnings for longer, likely supporting the share price.",
+  "adversarial_confounders": [
+    {
+      "text": "A large move in crude crack spreads unrelated to policy occurred on the same day.",
+      "impact": "Spread compression could independently justify a selloff, confounding attribution to taxes."
+    },
+    {
+      "text": "Quarter-end fund rebalancing created outsized selling pressure in heavyweights.",
+      "impact": "Flows could have amplified the decline beyond what fundamentals warrant."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and regulatory forces",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.8,
+        "commentary": "India's windfall taxes on fuel exports and crude production were a clear example of the state using fiscal tools to capture extraordinary commodity profits. By abruptly changing the tax regime, policymakers altered the economic calculus for refiners and integrated energy companies, reducing the value of prior investments in complex refining capacity."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.78,
+        "commentary": "Higher export and crude levies immediately compress margins, which can prompt refiners to cut discretionary spending and reconsider expansion plans. If investment slows and capacity growth lags demand, future price spikes can invite yet more regulatory intervention, reinforcing a policy loop that keeps earnings expectations under pressure."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

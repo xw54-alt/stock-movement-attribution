@@ -1,0 +1,127 @@
+{
+  "pair_id": "U00308",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D20003",
+      "causal_salience": "primary",
+      "text": "TikTok disclosed on 20 March 2023 that it had 150 million monthly active users in the United States, up from 100 million in 2020. This surge underscored the platform's growing hold on the U.S. market and heightened competitive pressure on rival social media platforms.",
+      "date": "2023-03-20",
+      "entities": [
+        "TikTok"
+      ],
+      "sectors": [
+        "Social Media"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Meta"
+      },
+      "source_info": {
+        "title": "TikTok says it has 150 million U.S. monthly users ahead of CEO's testimony",
+        "url": "https://www.reuters.com/technology/tiktok-tell-congress-it-has-150-million-monthly-active-us-users-2023-03-20/",
+        "published_date": "2023-03-20",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 3
+    }
+  ],
+  "effects": [
+    {
+      "text": "Meta's shares rose nearly 8 percent on 30 July 2023 after the company forecast upbeat revenue and credited artificial-intelligence tools for improving ad performance. Executives said AI-powered recommendations were boosting engagement with Reels, suggesting that investments to counter TikTok's popularity were paying off.",
+      "date": "2023-07-30",
+      "entities": [
+        "Meta"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Meta"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Meta shares jump as AI fuels ad sales, outweighing big capital costs",
+        "url": "https://www.reuters.com/business/media-telecom/meta-shares-jump-ai-fuels-ad-sales-outweighing-big-capital-costs-2025-07-30/",
+        "published_date": "2023-07-31",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "TikTok's U.S. user base swelled to 150 million, signalling that the Chinese-owned app had become a dominant player in the American social-media landscape. The rapid growth heightened competition for user attention and advertising dollars, raising alarm at Meta.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "In response to the competitive threat, Meta accelerated its investments in artificial-intelligence systems and short-video features such as Reels. These AI tools curated more engaging content and helped advertisers reach better-matched audiences, helping Meta retain users and advertisers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By mid-2023 the AI enhancements began to bear fruit. Meta reported stronger-than-expected revenue and highlighted that AI-powered ad tools were driving improved engagement and monetisation, reassuring investors that the company could compete successfully with TikTok.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors rewarded the company for its progress. On 30 July 2023 Meta's share price jumped about 8 percent as the market reacted to the upbeat forecast and evidence that AI investments were delivering results; on 2023-07-30 shares were up about 8.00% versus the prior trading day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "TikTok's surge in U.S. users forced Meta to innovate. The company's investment in AI and Reels helped it counter the threat and produce stronger financial results, which in turn lifted its stock price.",
+  "counterfactual_analysis": "If TikTok had not amassed such a large U.S. audience, Meta might have invested less aggressively in AI and short-form video, and its revenue and share price might not have improved as noticeably.",
+  "adversarial_confounders": [
+    {
+      "text": "A broader rally in technology stocks following positive earnings from other big tech companies could have contributed to Meta's share price increase.",
+      "impact": "General market momentum may inflate the effect attributed to TikTok's competitive pressure."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "TikTok's rapid user growth in the United States raised the competitive intensity in short form video and threatened Meta's share of both attention and ad spend. Meta's investment in AI powered Reels recommendations was a direct response to this rival, helping it claw back engagement and deliver the earnings beat that drove the stock higher."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Social - Shifts in media consumption toward short-form video",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Short form video has become a core part of online culture, with younger audiences spending large amounts of time on TikTok. This social shift forced Meta to retool its products and ad formats around bite sized video, so the success of AI tools that improved Reels engagement showed it was adapting to the new media environment."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "132 days",
+        "conditions_score": 0.75,
+        "commentary": "As more users watch and share engaging Reels, advertisers see better performance and allocate more budget to the format, which funds further improvements in recommendation models. This reinforcing loop helps explain why the competitive shock from TikTok eventually translated into a positive surprise for Meta when its own AI driven products started to gain traction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "pair_id": "U00345",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20250320_CIODive_datacenter_investment",
+      "causal_salience": "primary",
+      "text": "Global investments in data centers surged 51% to $455 billion in 2024 as hyperscalers like Amazon, Microsoft and Google expanded capacity to meet exploding demand for AI and digital services.",
+      "date": "2025-03-20",
+      "entities": [
+        "Amazon",
+        "Microsoft",
+        "Google"
+      ],
+      "sectors": [
+        "technology",
+        "cloud computing",
+        "infrastructure"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "hyperscalers"
+      },
+      "source_info": {
+        "title": "Data Center Capex Surged 51% to $455B in 2024, According to Dell'Oro Group",
+        "url": "https://www.abfjournal.com/data-center-capex-surged-51-to-455b-in-2024-according-to-delloro-group/",
+        "published_date": "2025-03-20",
+        "publisher": "abfjournal.com"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "Oracle reported strong fiscal Q4 2025 results, with cloud infrastructure revenue up 52% year over year, and co-founder Larry Ellison announced plans to build more data centers than all competitors combined. Oracle shares rose sharply on the news.",
+      "date": "2025-06-12",
+      "entities": [
+        "Oracle"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Oracle"
+      },
+      "stock_change_pct": 24.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Oracle will build more cloud infrastructure data centers than all its competitors combined, says Larry Ellison",
+        "url": "https://www.datacenterdynamics.com/en/news/oracle-will-build-more-cloud-data-centers-than-all-our-competitors-combined-says-larry-ellison/",
+        "published_date": "2025-06-12",
+        "publisher": "datacenterdynamics.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "In March 2025, reporting showed global data center investments surged 51% in 2024 as Amazon, Microsoft, and Google rushed to add capacity for AI and digital services. This created sustained demand pressure for high-performance infrastructure."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "To keep pace, Oracle signaled accelerated expansion, positioning OCI to capture overflow demand and close capability gaps with hyperscalers."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "By June 12, 2025, Oracle reported 52% YoY growth in cloud infrastructure revenue and pledged aggressive data center build-outs; investors viewed this as evidence of momentum and pushed the stock up about 24% versus the prior close."
+    }
+  ],
+  "rationale": "Hyperscaler-led capex lifted the entire cloud infrastructure tide. Oracle's results and expansion plans indicated it was benefiting from this macro demand, prompting a strong stock reaction.",
+  "counterfactual_analysis": "If hyperscalers had not dramatically increased their data center investments, demand pressure for capacity would have been weaker. Oracle's expansion pace and Q4 performance might have been more modest, likely resulting in a smaller or no stock surge.",
+  "adversarial_confounders": [
+    {
+      "text": "Large Oracle customer deals signed contemporaneously but unrelated to hyperscaler demand.",
+      "impact": "Could independently boost revenue and share price."
+    },
+    {
+      "text": "Broad market rally or macroeconomic news on the same day.",
+      "impact": "Might lift many tech stocks regardless of Oracle-specific fundamentals."
+    },
+    {
+      "text": "Investor focus on forward guidance instead of the industry capex trend.",
+      "impact": "Could be the true driver of the stock jump."
+    }
+  ],
+  "confidence_score": 0.4,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "demand_pulled_expansion",
+        "industry_barriers": "high",
+        "commentary": "Surging global data center capex raised the stakes in cloud infrastructure, but it also expanded the overall pool of enterprise workloads available to leading providers. Oracle's ability to turn that environment into strong double digit cloud infrastructure growth signaled that it had carved out a competitive niche rather than being squeezed out by larger rivals."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Data center investment cycle and AI demand",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.82,
+        "commentary": "A strong investment cycle driven by AI, streaming and digital services provided unusually supportive macro conditions for infrastructure vendors. Against that backdrop, Oracle's results showed it was capturing its share of spending, reassuring investors that secular trends in data and AI could offset cyclical economic worries."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.8,
+        "commentary": "As Oracle builds more data centers and proves it can fill them with paying workloads, confidence among customers and partners increases, which leads to additional migrations onto its cloud. The resulting revenue growth and margin leverage justify yet more capacity expansion, creating a reinforcing loop that underpins the bullish guidance and stock reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

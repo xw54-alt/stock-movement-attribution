@@ -1,0 +1,131 @@
+{
+  "pair_id": "U00347",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20250821_Axios_MIT_study",
+      "causal_salience": "primary",
+      "text": "On Aug 21 2025, an MIT study found that 95% of organizations studied gained no return on their generative AI investments despite spending $30-40 billion, raising fears that the AI boom might be overhyped.",
+      "date": "2025-08-21",
+      "entities": [
+        "MIT Media Lab"
+      ],
+      "sectors": [
+        "academia",
+        "technology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "AI market"
+      },
+      "source_info": {
+        "title": "MIT study on AI profits rattles tech investors",
+        "url": "https://www.axios.com/2025/08/21/ai-wall-street-big-tech",
+        "published_date": "2025-08-21",
+        "publisher": "Axios"
+      },
+      "causal_strength_score": 3
+    }
+  ],
+  "effects": [
+    {
+      "text": "Oracle shares fell about 6.93% on Oct 17 2025 after an investor presentation. Analysts said the decline was driven by worries about heavy capital expenditures and reliance on revenue from OpenAI, amid growing doubts about the profitability of AI investments. The stock closed at $291.31 versus $313.00 the previous day.",
+      "date": "2025-10-17",
+      "entities": [
+        "Oracle"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Oracle"
+      },
+      "stock_change_pct": 6.93,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Oracle's Stock Was a Big September Winner. Why Has It Turned South?",
+        "url": "https://www.investopedia.com/oracle-stock-was-a-big-september-winner-why-has-it-turned-south-11831997",
+        "published_date": "2025-10-17",
+        "publisher": "Investopedia"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "MIT researchers reported on Aug 21 2025 that 95% of generative AI projects produced zero return on investment despite tens of billions of dollars in spending. This finding shook investor confidence in the AI sector."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "The study fueled skepticism about whether AI-driven growth could continue. Analysts and investors began to question the sustainability of heavy capital expenditures by companies pursuing AI ambitions."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "When Oracle executives presented long-term revenue and earnings targets on Oct 16 2025, the negative mood around AI projects amplified concerns about the company's large capex plans and dependence on big customers. Oracle's shares fell about 6.93% on Oct 17 compared with the previous close, becoming one of the biggest S&P 500 decliners."
+    }
+  ],
+  "rationale": "The MIT study introduced serious doubts about the profitability of AI projects, which poisoned sentiment toward companies heavily invested in AI. This skepticism influenced how investors interpreted Oracle's investor presentation, turning what might otherwise have been neutral guidance into a negative event for the stock.",
+  "counterfactual_analysis": "If the MIT study had instead shown that most AI projects were delivering strong returns, the mood surrounding AI investments would have been more optimistic. In that environment, Oracle's presentation might have been greeted with enthusiasm rather than skepticism, and the stock might not have fallen sharply.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market sell-offs unrelated to AI could have contributed to the decline.",
+      "impact": "May independently influence Oracle's stock regardless of the AI study or presentation."
+    },
+    {
+      "text": "Profit-taking after a significant September rally might explain part of the drop.",
+      "impact": "May independently influence Oracle's stock regardless of the AI study or presentation."
+    },
+    {
+      "text": "Other news about Oracle or the tech sector could have influenced investor sentiment.",
+      "impact": "May independently influence Oracle's stock regardless of the AI study or presentation."
+    }
+  ],
+  "confidence_score": 0.4,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "sentiment_amplifier",
+        "industry_barriers": "high",
+        "commentary": "In a capital intensive cloud and AI market, evidence that most projects are not generating returns raises the bar for every vendor pitching expensive infrastructure. The MIT study made it harder for Oracle to stand out as a must have AI platform, intensifying rivalry for a smaller pool of truly profitable deployments."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Uncertain monetization of generative AI projects",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.7,
+        "commentary": "The finding that most organizations saw no return on their generative AI spend fed a broader narrative that the technology might be overhyped. That shift in sentiment makes boards and finance teams more cautious about signing large cloud and GPU contracts, creating a more challenging demand environment for Oracle."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.68,
+        "commentary": "As doubts about AI payoffs spread, investors pressure companies to slow capital spending and prove profitability, which leads to fewer experimental projects and smaller near term revenue opportunities. The resulting weaker growth numbers then appear to validate the initial skepticism, reinforcing the negative feedback loop seen in Oracle's share price decline."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

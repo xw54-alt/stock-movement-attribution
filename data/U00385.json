@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00385",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D0003",
+      "causal_salience": "primary",
+      "text": "On August 23 2023, Roche inadvertently posted interim results from its Phase III Skyscraper-01 study of tiragolumab plus Tecentriq. The data showed a hazard ratio of 0.81, meaning patients receiving the anti-TIGIT combination had a 19% lower mortality rate than those given Tecentriq alone. Although the analysis was not statistically significant, the unexpected disclosure signalled potential survival benefits and attracted investor interest.",
+      "date": "2023-08-23",
+      "entities": [
+        "Roche",
+        "tiragolumab",
+        "Tecentriq"
+      ],
+      "sectors": [
+        "Pharmaceuticals",
+        "Oncology"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Roche"
+      },
+      "source_info": {
+        "title": "Roche inadvertently publishes positive interim trial data on lung cancer drug",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/roche-reports-inadvertent-disclosure-lung-cancer-immunotherapy-study-2023-08-23/",
+        "published_date": "2023-08-23",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "The day after the inadvertent disclosure, August 24 2023, several media outlets reported that Roche's US-listed shares jumped 4.7% to $37.42. The leaked data fuelled optimism that the anti-TIGIT combination could provide a survival benefit, lifting not only Roche's stock but also shares of other companies developing anti-TIGIT therapies.",
+      "date": "2023-08-24",
+      "entities": [
+        "Roche",
+        "Investors"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.84,
+        "target": "Roche"
+      },
+      "stock_change_pct": 4.7,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Cancer drug stocks soar after Roche accidentally releases positive interim trial data",
+        "url": "https://www.proactiveinvestors.com.au/companies/news/1024399/cancer-drug-stocks-soar-after-roche-accidentally-releases-positive-interim-trial-data-1024399.html",
+        "published_date": "2023-08-24",
+        "publisher": "proactiveinvestors.com.au"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Roche inadvertently released interim results from its Phase III Skyscraper-01 trial for the anti-TIGIT antibody tiragolumab in combination with Tecentriq. The data, although immature, suggested that patients receiving the combination experienced a 19% lower mortality rate compared with the control arm.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The accidental publication created a market stir because anti-TIGIT drugs had previously suffered setbacks and investors were eager for positive signals. Analysts noted that the hazard ratio hinted at a potential survival advantage even if statistical significance had not yet been reached, renewing interest in this therapeutic class.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As news of the leak spread, investors quickly recalibrated their expectations for the trial and the broader anti-TIGIT landscape. They anticipated that confirmation of a survival benefit could resurrect a once-doubted drug class, pushing valuations higher across the sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On August 24 2023, financial media reported that Roche's shares rose approximately 4.7% and that peers iTeos Therapeutics and Arcus Biosciences also surged. The stock rally reflected investor optimism that the interim data signalled a potential turnaround, illustrating a direct causal link between the inadvertent data release and the share-price increase.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The unplanned release of encouraging interim trial data acted as a catalyst for investor optimism. Because anti-TIGIT therapies had faced skepticism following earlier failures, the data leak alleviated doubts and led directly to a jump in Roche's share price.",
+  "counterfactual_analysis": "Had the interim results not been mistakenly published, investors would have remained cautious pending the formal data readout. In that case, Roche's share price and those of other anti-TIGIT developers would likely have remained flat, and positive momentum in this therapeutic class would have been delayed.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader stock-market movements or unrelated news about competing oncology programs could have influenced share prices; however, the synchronous surge across anti-TIGIT developers suggests the leaked data was the primary driver.",
+      "impact": "Could also contribute to the observed effect, but available evidence and timing indicate the listed cause(s) were primary."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "Accidentally publishing promising interim lung cancer data triggered a sudden repricing of Roche and peer oncology stocks as investors updated their views of future cash flows. If subsequent trial readouts confirm the early signal, rising confidence can reinforce sector wide optimism and support continued capital rotation into cancer drug developers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

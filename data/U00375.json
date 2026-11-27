@@ -1,0 +1,151 @@
+{
+  "pair_id": "U00375",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C1_Airtel_Tariff_2024-06-28",
+      "causal_salience": "primary",
+      "text": "Bharti Airtel announced across-the-board mobile tariff hikes effective July 3, 2024. The move signals improved revenue per user and sector pricing power after years of flat rates.",
+      "date": "2024-06-28",
+      "entities": [
+        "Bharti Airtel Ltd"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Bharti Airtel pricing and sector ARPU outlook"
+      },
+      "source_info": {
+        "title": "India's Bharti Airtel to hike mobile tariffs from July 3",
+        "url": "https://www.reuters.com/business/media-telecom/indias-bharti-airtel-hike-mobile-tariffs-july-3-2024-06-28/",
+        "published_date": "2024-06-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "C2_VodafoneIdea_Tariff_2024-06-28",
+      "causal_salience": "secondary",
+      "text": "Vodafone Idea said it would raise mobile tariffs by 11% to 24% from July 4, 2024. The coordinated pricing actions across rivals point to a sector-wide shift toward monetization.",
+      "date": "2024-06-28",
+      "entities": [
+        "Vodafone Idea Ltd"
+      ],
+      "sectors": [
+        "Telecom"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Indian telecom pricing environment"
+      },
+      "source_info": {
+        "title": "Vodafone Idea to raise mobile tariff by 11-24% from July 4",
+        "url": "https://www.deccanherald.com/business/companies/vodafone-idea-to-raise-mobile-tariff-by-11-24-from-july-4-3085424",
+        "published_date": "2024-06-28",
+        "publisher": "Deccan Herald"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Investors interpreted rival tariff hikes as improving sector earnings power, lifting sentiment toward large integrated players. Reliance Industries, parent of market leader Jio, benefited from expectations of higher mobile ARPU and steadier cash generation.",
+      "date": "2024-06-28",
+      "entities": [
+        "Reliance Industries"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "India",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Reliance Industries"
+      },
+      "stock_change_pct": 2.3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "India's Jio, Airtel and Vodafone Idea to hike tariffs; Reliance shares close 2.3% higher",
+        "url": "https://www.reuters.com/business/media-telecom/indias-bharti-airtel-hike-mobile-tariffs-july-3-2024-06-28/",
+        "published_date": "2024-06-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Bharti Airtel and Vodafone Idea announced tariff hikes, signaling coordinated sector pricing. Higher headline prices tend to lift mobile ARPU and stabilize cash flows for all carriers."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "AND",
+      "description": "Investors extrapolated that pricing power would extend to the market leader's subscriber base as well, improving profitability expectations. The presence of multiple rivals moving together reduces the risk of immediate competitive undercutting."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "As expectations for telecom earnings improved, Reliance Industries' stock moved higher. On 2024-06-28, the shares closed up 2.3%, aligning with the sector repricing toward stronger ARPU."
+    }
+  ],
+  "rationale": "Coordinated price increases by two rivals signaled industry-wide monetization and improving cash yields. Investors anticipated better unit economics for the market leader and bid up diversified exposure via Reliance.",
+  "counterfactual_analysis": "If only one rival had raised prices, competitive retaliation might have limited ARPU gains. Without broad-based increases, investors could have doubted the durability of sector pricing power.",
+  "adversarial_confounders": [
+    {
+      "text": "A fall in crude prices independently lifted market sentiment toward energy-linked conglomerates.",
+      "impact": "Such a move could have pushed Reliance shares up regardless of telecom pricing news, diluting attribution."
+    },
+    {
+      "text": "Index-level inflows into Indian equities created generalized buying pressure.",
+      "impact": "Passive inflows could have raised Reliance shares even without telecom-specific catalysts."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Coordinated tariff increases by Bharti Airtel and Vodafone Idea showed that major operators felt confident enough to prioritize profitability over pure subscriber growth. That shift in competitive behavior signaled that Jio and its rivals could enjoy stronger pricing power instead of another round of destructive price wars, lifting expectations for Reliance's telecom arm."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Market and regulatory forces",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Years of low tariffs and intense competition had left India's mobile sector struggling to earn an adequate return on heavy spectrum and network investments. The latest hikes marked a policy and market turning point in which regulators tolerated higher prices and customers accepted them, creating a more supportive backdrop for cash generation at integrated players like Reliance."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Once leading carriers successfully raise tariffs without losing many customers, higher average revenue per user improves cash flow and balance sheets, which enables more investment in networks and services. Better service quality then makes future price increases easier to sustain, setting up a reinforcing loop that can steadily enhance Reliance's telecom earnings profile."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

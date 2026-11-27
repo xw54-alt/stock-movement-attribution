@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00389",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "259238745687027",
+      "causal_salience": "primary",
+      "text": "On January 25, 2024, the U.S. Federal Aviation Administration froze increases in production of Boeing's 737 MAX jets following a mid-air incident. The unprecedented intervention meant Boeing could not raise output and created uncertainty about how long the production cap would last. Airlines and suppliers warned the freeze would delay deliveries of new aircraft and exacerbate an existing shortage of planes.",
+      "date": "2024-01-25",
+      "entities": [
+        "Boeing",
+        "FAA"
+      ],
+      "sectors": [
+        "Aerospace & Defense",
+        "Transportation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Boeing"
+      },
+      "source_info": {
+        "title": "Boeing's MAX production issues ripple across aerospace industry",
+        "url": "https://www.reuters.com/business/aerospace-defense/faa-halt-boeing-max-production-expansion-hit-airlines-suppliers-2024-01-25/",
+        "published_date": "2024-01-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On July 25, 2024, RTX raised its full-year earnings forecast and beat second-quarter profit estimates. Company leaders said airlines were flying older aircraft to meet booming air-travel demand because a shortage of new jets limited deliveries; the resulting repair boom drove a 'bustling aftermarket business'. RTX's stock hit an all-time high, rising about 8% to $113 as investors welcomed the upgraded guidance.",
+      "date": "2024-07-25",
+      "entities": [
+        "RTX",
+        "Pratt & Whitney"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "RTX"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "RTX lifts 2024 profit forecast on strength in aviation sector",
+        "url": "https://www.reuters.com/business/aerospace-defense/rtx-lifts-2024-profit-forecast-2024-07-25/",
+        "published_date": "2024-07-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The FAA's freeze on increasing Boeing 737 MAX production in January 2024 signalled that airlines would have to wait longer for new narrow-body aircraft. This regulatory cap reduced the supply of new planes and heightened uncertainty over when deliveries might resume.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Because airlines could not readily replace ageing jets, they extended the service life of existing fleets. That in turn increased demand for maintenance, repairs and spare parts, benefiting aftermarket service providers across the aerospace sector, including RTX's Pratt & Whitney and Collins Aerospace divisions.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By July 25, 2024, RTX leveraged the aftermarket boom to raise its full-year earnings forecast and beat second-quarter profit estimates. Investors rewarded the guidance update, sending RTX shares up around 8%, reflecting confidence that continued supply constraints would drive repair revenue.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "This pair demonstrates how a regulatory production freeze at Boeing - a major aircraft maker - cascaded through the supply chain, causing airlines to keep older aircraft in service and boosting RTX's aftermarket business. The timing and logic support a clear causal link between the freeze and RTX's subsequent profit upgrade.",
+  "counterfactual_analysis": "Had the FAA not frozen Boeing's production ramp, more 737 MAX jets would have entered airline fleets in 2024. Airlines would have retired older aircraft sooner, decreasing demand for maintenance and repairs. Without this shortage-induced aftermarket surge, RTX's ability to raise its 2024 forecast might have been muted, and its stock likely would not have jumped 8%.",
+  "adversarial_confounders": [
+    {
+      "text": "A broader rebound in global air travel and improving economic conditions could also explain RTX's strong results.",
+      "impact": "These factors reinforce the positive effect, but the unusual severity of the Boeing production halt suggests the aftermarket surge would have been smaller without the freeze."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Production problems at Boeing's 737 MAX limited the supply of new planes, pushing airlines to keep older jets flying and rely more on maintenance and spare parts. That shift increased the value of RTX's aftermarket and engine service capabilities, strengthening its competitive position versus rivals that are more dependent on new aircraft deliveries."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.82,
+        "commentary": "As airlines spend more on keeping existing fleets in the air, RTX's aftermarket profits grow and investors gain confidence in the durability of its earnings. That confidence supports a higher valuation, which in turn gives the company more flexibility to reinvest in its aerospace franchise and deepen relationships with customers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}
