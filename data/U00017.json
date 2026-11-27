@@ -71,7 +71,7 @@
     {
       "step_id": 2,
       "description": "Investors interpret Didi's delisting as a signal that Chinese authorities will continue tightening oversight on technology firms and that more U.S.-listed Chinese companies could face similar pressures.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

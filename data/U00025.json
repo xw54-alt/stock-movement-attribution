@@ -100,7 +100,7 @@
     {
       "step_id": 3,
       "description": "These positive developments across the supply chain suggested that capacity and innovation for AI hardware were expanding, prompting investors to reassess the prospects of chipmakers.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 4,

@@ -74,7 +74,7 @@
     {
       "step_id": 2,
       "description": "This assurance enabled Apple to meet strong product demand and focus on growth in its services business, supporting margin expansion.",
-      "logic_operator": "therefore"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

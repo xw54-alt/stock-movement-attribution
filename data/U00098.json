@@ -79,7 +79,7 @@
     {
       "step_id": 3,
       "description": "But BP subsequently announced a smaller share-buyback programme than anticipated.",
-      "logic_operator": "BUT"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 4,

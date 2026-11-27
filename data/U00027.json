@@ -69,7 +69,7 @@
     {
       "step_id": 2,
       "description": "These announcements increased uncertainty about Intel's competitive strategy and financial health, raising concerns that it would lose market share to rivals.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

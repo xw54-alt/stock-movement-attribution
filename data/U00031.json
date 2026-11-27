@@ -65,12 +65,12 @@
     {
       "step_id": 1,
       "description": "On 2020-11-08, During the height of the COVID-19 pandemic, the global travel industry suffered from travel bans and health fears, depressing airline stocks.",
-      "logic_operator": "context"
+      "logic_operator": "cause_event"
     },
     {
       "step_id": 2,
       "description": "Pfizer and BioNTech announced that their vaccine candidate demonstrated over 90% efficacy, providing hope that the pandemic could be brought under control.",
-      "logic_operator": "cause_event"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

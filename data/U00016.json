@@ -71,7 +71,7 @@
     {
       "step_id": 2,
       "description": "The guidelines signal regulators' intention to curb monopolistic practices in the platform economy and strengthen enforcement against dominant players.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

@@ -98,7 +98,7 @@
     {
       "step_id": 3,
       "description": "Investors synthesized the dual negatives (demand softness + maintenance risks), expecting sector-wide earnings pressure.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 4,

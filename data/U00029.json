@@ -69,7 +69,7 @@
     {
       "step_id": 2,
       "description": "The unexpected strength of Delta's results prompted investors to reassess the outlook for airline demand and profitability, leading to a positive re-rating of the sector.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

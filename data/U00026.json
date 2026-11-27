@@ -71,7 +71,7 @@
     {
       "step_id": 2,
       "description": "The move indicated that demand for AI chips would be met through existing semiconductor players rather than a new vertically integrated entrant, reducing competitive pressure on established chipmakers.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,

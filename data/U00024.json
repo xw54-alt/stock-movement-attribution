@@ -69,7 +69,7 @@
     {
       "step_id": 2,
       "description": "The forecast signaled that AI chip demand across data centers and consumer products was accelerating, lifting investor expectations for the entire semiconductor sector.",
-      "logic_operator": "BECAUSE"
+      "logic_operator": "THEN"
     },
     {
       "step_id": 3,
