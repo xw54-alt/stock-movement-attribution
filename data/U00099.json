@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00099",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The European Medicines Agency authorised Pomalidomide Zentiva, a generic version of the multiple-myeloma drug pomalidomide, providing a lower-cost alternative in the European Union.",
+      "date": "2024-07-24",
+      "entities": [
+        "Zentiva"
+      ],
+      "sectors": [
+        "Pharmaceuticals"
+      ],
+      "country": "European Union",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Zentiva"
+      },
+      "source_info": {
+        "title": "Pomalidomide Zentiva",
+        "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/pomalidomide-zentiva",
+        "published_date": "2024-07-24",
+        "publisher": "European Medicines Agency"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bristol Myers Squibb forecast that its 2025 revenue would fall more sharply than analysts expected because generic competition was eroding sales of its cancer drugs, and its shares dropped nearly 3%.",
+      "date": "2025-02-06",
+      "entities": [
+        "Bristol Myers Squibb"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Bristol Myers Squibb"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Bristol Myers forecasts steeper drop in 2025 revenue, shares fall",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/bristol-sees-sharper-2025-revenue-drop-after-better-than-forecast-q4-2025-02-06/",
+        "published_date": "2025-02-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Regulators approved a generic form of pomalidomide for use in the EU, introducing a cheaper substitute for the branded drug.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The availability of generics reduced international sales of the branded cancer medicine.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Bristol Myers Squibb anticipated steeper revenue declines and its shares fell nearly 3% as investors reacted.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reports that Bristol Myers Squibb expects a sharper revenue drop in 2025 due to generic competition for its cancer drugs. The EU authorization of Pomalidomide Zentiva is an example of such competition reducing sales and contributing to investor concerns reflected in the share decline.",
+  "counterfactual_analysis": "If Pomalidomide Zentiva had not been authorised, the branded product might have faced less competition in Europe, potentially easing the revenue decline and share drop projected in 2025.",
+  "adversarial_confounders": [
+    {
+      "text": "A stronger US dollar reduced overseas revenue and could independently depress sales.",
+      "impact": "Could have contributed to revenue declines regardless of generic competition"
+    },
+    {
+      "text": "Increased patient assistance programs allowed more patients to receive the drug at no cost.",
+      "impact": "Lowered revenue apart from competitive pressures"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "low",
+        "commentary": "EMA authorisation of a pomalidomide generic gave doctors and payers a cheaper alternative to Bristol Myers Squibb's branded cancer therapy. As low-cost substitutes gain share, BMS loses pricing power on the original drug, pressuring revenue and margins in its multiple-myeloma franchise."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Generic authorization and post-patent competition",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Once regulators approve generics, patent expiry quickly shifts a market from monopoly-like pricing to multi-player competition. That legal transition accelerated the erosion of BMS's cancer-drug sales and underpinned management's warning of a steeper revenue decline, prompting a negative share-price reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

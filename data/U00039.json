@@ -1,0 +1,118 @@
+{
+  "pair_id": "U00039",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Taiwan Semiconductor Manufacturing Company (TSMC) announced plans to invest $100 billion in U.S. semiconductor manufacturing. The package includes building three new fabrication plants, packaging facilities, and a research centre in Arizona.",
+      "date": "2025-03-20",
+      "entities": [
+        "TSMC",
+        "U.S. government"
+      ],
+      "sectors": [
+        "Semiconductor Manufacturing",
+        "Research & Development"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "TSMC"
+      },
+      "source_info": {
+        "title": "Trump and TSMC announce $100 billion plan to build five new US factories",
+        "url": "https://www.reuters.com/technology/tsmc-ceo-meet-with-trump-tout-investment-plans-2025-03-03/",
+        "published_date": "2025-03-03",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "source_doc_id": null,
+      "text": "Apple posted fiscal third-quarter revenue of $94.04 billion, up 10% year-over-year, with net income of $23.43 billion and services revenue rising 13% to a record $27.42 billion. Apple's shares gained more than 2% in premarket trading following the strong results.",
+      "date": "2025-07-31",
+      "entities": [
+        "Apple",
+        "Tim Cook"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Industrials & Manufacturing",
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Apple"
+      },
+      "stock_change_pct": 2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Apple's tariff-fueled iPhone sales surge raises doubts about sustainability",
+        "url": "https://www.reuters.com/business/apple-shares-rise-after-strong-quarterly-results-amid-tariff-woes-competition-2025-08-01/",
+        "published_date": "2025-08-01",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2025-03-20, TSMC's $100 billion investment plan signaled significant expansion of U.S. chipmaking capacity and reassured large customers like Apple about future supply resilience.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "This assurance enabled Apple to meet strong product demand and focus on growth in its services business, supporting margin expansion.",
+      "logic_operator": "therefore"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-07-31, When Apple reported its Q3 2025 earnings with double-digit revenue and record services growth, investors responded positively, lifting shares over 2%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "TSMC's large U.S. investment alleviated supply concerns for Apple, reinforcing operational confidence. Strong earnings numbers-boosted by hardware and services growth-then delivered investor momentum, driving stock gains.",
+  "counterfactual_analysis": "Absent TSMC's U.S. expansion, investors might have feared tighter chip supply and questioned Apple's delivery ability, potentially muting earnings-linked stock gains.",
+  "adversarial_confounders": [
+    {
+      "text": "Apple's own product innovation and service expansion",
+      "impact": "Revenue growth may have been supported independently"
+    },
+    {
+      "text": "Macroeconomic tailwinds",
+      "impact": "Could influence consumer demand beyond chip supply"
+    },
+    {
+      "text": "Changes in spending patterns",
+      "impact": "Shifts in consumer behavior might affect performance regardless of supply news"
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "133 days",
+        "conditions_score": 0.7,
+        "commentary": "TSMC's commitment to build multiple advanced fabs in Arizona improved the perceived security and capacity of Apple's chip supply over the medium term. As Apple delivered strong results, this investment narrative reinforced investor confidence that future product cycles would be supported by a more resilient, geographically diversified supply chain."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

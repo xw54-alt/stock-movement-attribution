@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00028",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The Guardian reported that the rapid spread of the coronavirus triggered the biggest plunge in global stock markets since the financial crisis. More than $5 trillion was wiped off the value of shares worldwide as countries and companies imposed tough measures to curb Covid-19. Wall Street suffered its worst one-day fall ever, and over a week the FTSE 100 lost £206 billion in value.",
+      "date": "2020-02-28",
+      "entities": [
+        "Coronavirus pandemic",
+        "Global stock markets"
+      ],
+      "sectors": [
+        "Public health",
+        "Financial markets"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Global markets"
+      },
+      "source_info": {
+        "title": "Coronavirus leads to worst week for markets since financial crisis",
+        "url": "https://www.theguardian.com/business/2020/feb/28/coronavirus-leads-to-worst-week-for-markets-since-financial-crisis",
+        "published_date": "2020-02-28",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Reuters reported that the U.S. Department of Justice opened an investigation into losses at Allianz's fund-management division, which was facing lawsuits over its Structured Alpha funds. Fears of costly fines and potential restrictions spooked investors, sending Allianz shares down more than 7% and as low as €189.90.",
+      "date": "2021-08-02",
+      "entities": [
+        "Allianz SE"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Allianz shares"
+      },
+      "stock_change_pct": 7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Allianz shares drop 7% as insurer faces U.S. probe into funds",
+        "url": "https://www.reuters.com/business/allianz-shares-drop-7-insurer-faces-us-probe-into-funds-2021-08-02/",
+        "published_date": "2021-08-02",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The Covid-19 pandemic caused a historic global market crash, wiping trillions of dollars from equity markets and creating extreme volatility in 2020.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Allianz's Structured Alpha funds were highly exposed to sudden market swings. The pandemic-induced market turmoil eroded the funds' value and triggered multi-billion-dollar losses for institutional clients.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors sued Allianz over the losses, prompting the U.S. Department of Justice to investigate its fund-management practices.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "News of the investigation raised fears of heavy penalties and reputational damage. Investors sold off Allianz stock, causing its share price to fall more than 7%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The global market turmoil sparked by the Covid-19 pandemic eroded the value of Allianz's Structured Alpha funds. Massive losses prompted investor lawsuits and, eventually, a U.S. Department of Justice investigation. The probe signaled potential financial penalties and management failings, leading investors to sell Allianz stock and pushing its share price down over 7%.",
+  "counterfactual_analysis": "Had the pandemic not triggered an unprecedented market crash, Allianz's Structured Alpha funds might not have suffered such catastrophic losses. Without heavy losses and investor litigation, U.S. authorities may have had little cause to open a probe, and Allianz's share price would likely have been more stable instead of tumbling 7%.",
+  "adversarial_confounders": [
+    {
+      "text": "Other macroeconomic factors in 2021, such as inflation concerns and interest-rate expectations, could have affected investor sentiment toward insurance stocks independently of the DOJ probe.",
+      "impact": "Moderate"
+    },
+    {
+      "text": "Allianz's own financial performance or earnings guidance might have influenced the share price regardless of regulatory news.",
+      "impact": "Moderate"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Sustained increases in jet fuel prices raised airlines' operating costs and compressed margins, especially on competitive routes. As carriers responded with fare increases and capacity adjustments, demand risk and cost pressure reinforced each other, deepening investor pessimism about sector earnings."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Geopolitical tensions and production decisions driving oil price volatility",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.8,
+        "commentary": "OPEC+ policy moves and regional conflicts helped push crude prices higher, directly affecting fuel costs for global airlines. These political and geopolitical factors sat outside management's control yet materially influenced profitability, justifying a strong repricing of airline stocks."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

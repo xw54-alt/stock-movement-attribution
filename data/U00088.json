@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00088",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "China's property market faced a severe slump, with an oversupply of homes causing prices to tumble and households slipping into negative equity; officials vowed to arrest the housing downturn and boost growth, acknowledging that the real estate crisis was dragging down consumer spending and economic activity.",
+      "date": "2024-09-26",
+      "entities": [
+        "China's real estate market"
+      ],
+      "sectors": [
+        "real estate",
+        "economy"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Chinese property sector"
+      },
+      "source_info": {
+        "title": "China announces measures to halt housing slump amid negative equity crisis",
+        "url": "https://www.theguardian.com/world/2024/sep/26/china-new-measures-housing-slump-growth",
+        "published_date": "2024-09-26",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "BMW reported a 61% drop in third-quarter profit in 2024 as weak China sales and brake issues weighed on results; shares fell nearly 5% amid concerns about slowing demand and potential U.S. tariffs.",
+      "date": "2024-11-06",
+      "entities": [
+        "BMW"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "BMW"
+      },
+      "stock_change_pct": 4.8,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "BMW profit plunges as weak China sales and brake issues hit third quarter",
+        "url": "https://www.reuters.com/business/autos-transportation/bmw-reports-drop-earnings-related-china-brake-issues-2024-11-06/",
+        "published_date": "2024-11-06",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "China's real estate sector slumped, with an oversupply of homes causing prices to fall and households sliding into negative equity; policymakers acknowledged the crisis and sought to stabilise the market.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The property slump depressed consumer confidence and spending, reducing demand for luxury goods such as premium automobiles in China.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "BMW's third-quarter 2024 profit fell 61% due partly to slumping China sales; its share price dropped about 4.8% on the day of the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "China's housing crisis eroded household wealth and confidence, curbing discretionary spending on luxury items like cars. Consequently, BMW sold fewer vehicles in China, leading to a significant profit decline in the third quarter of 2024.",
+  "counterfactual_analysis": "If China's real estate market had remained stable and consumer confidence high, demand for premium vehicles would have been stronger, mitigating the impact on BMW's quarterly profits.",
+  "adversarial_confounders": [
+    {
+      "text": "Brake system issues reported by a supplier",
+      "impact": "Mechanical problems unrelated to consumer demand also weighed on BMW's results and could independently explain part of the profit decline"
+    }
+  ],
+  "confidence_score": 0.4,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Higher rates and costs slowing global auto demand after a post-pandemic boom",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "After a period of pent-up demand, rising financing costs and broader economic uncertainty cooled consumers' appetite for big-ticket purchases like new cars. Toyota's more cautious outlook captured this economic shift, as the company prepared for slower volume growth and a less favorable pricing environment."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00092",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Spirit AeroSystems, a key fuselage supplier, disclosed that on certain single-aisle fuselages the fittings joining the aft fuselage to the vertical tail were installed using a non-standard process, implying inspections and targeted rework.",
+      "date": "2023-04-13",
+      "entities": [
+        "Spirit AeroSystems"
+      ],
+      "sectors": [
+        "aerospace",
+        "manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Spirit AeroSystems"
+      },
+      "source_info": {
+        "title": "Boeing halts deliveries of some 737 MAXs amid new supplier problem",
+        "url": "https://www.reuters.com/business/aerospace-defense/boeing-pauses-deliveries-some-737-maxs-amid-new-supplier-problem-2023-04-13/",
+        "published_date": "2023-04-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "The airframer paused a subset of single-aisle deliveries to identify and rework affected units; shares closed down about 5.6% on 2023-04-14 as investors priced in schedule disruption and remediation costs.",
+      "date": "2023-04-14",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 5.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Boeing shares tumble as some MAX deliveries halted over parts issue",
+        "url": "https://www.reuters.com/business/aerospace-defense/boeing-shares-tumble-parts-issue-halts-deliveries-some-737-maxs-2023-04-14/",
+        "published_date": "2023-04-14",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Supplier non-conformance on load-bearing aft-fuselage fittings raises immediate quality risk.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Final assembler pauses a portion of deliveries to scope, inspect, and rework affected airframes.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Equity market discounts added cost and timing risk; BA ends the day down 5.6%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A supplier quality lapse triggered a targeted delivery pause and a same-day stock selloff documented by major outlets.",
+  "counterfactual_analysis": "If the fittings had been installed per specification, no pause would have been required and the 5.6% decline was unlikely.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market moves",
+      "impact": "Could have influenced the magnitude of the decline."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "high",
+        "commentary": "Boeing's reliance on a small number of complex, safety-critical fuselage suppliers gives those partners outsized influence over its production rhythm. When Spirit AeroSystems discloses a process deviation that requires inspections and rework, this concentrated supplier structure magnifies the disruption to Boeing's deliveries and costs."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

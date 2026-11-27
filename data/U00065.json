@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00065",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Taiwan Semiconductor Manufacturing Co (TSMC) said it would cut its 2022 capital spending by at least 10% amid expectations of a chip industry slowdown and delays in tool deliveries.",
+      "date": "2022-10-13",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Semiconductor"
+      ],
+      "country": "Taiwan China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "Chip manufacturing sector"
+      },
+      "source_info": {
+        "title": "TSMC cuts capex on tool delays, demand woes; cautious on outlook",
+        "url": "https://www.reuters.com/technology/tsmc-q3-profit-jumps-80-beats-market-expectations-2022-10-13/",
+        "published_date": "2022-10-13",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "ASML Holding NV's shares fell nearly 9% as investors anticipated reduced demand for chipmaking equipment following TSMC's decision to cut capital expenditures.",
+      "date": "2022-10-13",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "ASML"
+      },
+      "stock_change_pct": 9,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "ASML shares fall 9% after Taiwan customer says it's cutting capital spending",
+        "url": "https://www.reuters.com/technology/asml-shares-fall-7-after-tsmc-says-its-cutting-capital-spending-2022-10-13/",
+        "published_date": "2022-10-13",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "TSMC announced it would reduce 2022 capital expenditures by over 10% amid anticipated weaker chip demand and logistical delays in equipment deliveries.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The announcement signaled a potential decline in orders for semiconductor manufacturing tools, especially lithography systems.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors reacted by selling ASML shares, anticipating reduced future revenue. The stock fell nearly 9% on the same day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "TSMC is a key customer for ASML's lithography machines. The chipmaker's decision to lower capital spending raised concerns about a decline in equipment orders, prompting a sell-off in ASML's stock. The reaction reflected investor expectations for softer demand across the chip supply chain.",
+  "counterfactual_analysis": "Had TSMC maintained or increased its investment budget, sentiment around equipment suppliers such as ASML may have remained stable or even improved, possibly avoiding the stock decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Broad market volatility and macroeconomic uncertainty on the day could have influenced semiconductor stock performance.",
+      "impact": "Although external factors existed, the timing and scale of ASML's stock drop aligned closely with TSMC's capex announcement."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "high",
+        "commentary": "With a handful of hyperscalers and chipmakers driving most demand for high-end tools, customers have significant influence over order timing and specifications. ASML's strong pricing and backlog showed that, despite this buyer concentration, its unique technology still allowed it to retain substantial pricing power and support a solid stock reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00056",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Saudi Aramco slashed official selling prices and announced plans to ramp up oil production after Russia refused to join further output cuts, effectively launching an oil price war.",
+      "date": "2020-03-08",
+      "entities": [
+        "Saudi Aramco"
+      ],
+      "sectors": [
+        "energy"
+      ],
+      "country": "Saudi Arabia",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "oil market"
+      },
+      "source_info": {
+        "title": "Oil crashes by most since 1991 as Saudi Arabia launches price war",
+        "url": "https://www.cnn.com/2020/03/08/investing/oil-prices-crash-opec-russia-saudi-arabia",
+        "published_date": "2020-03-09",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bank of America's share price plunged about 15.5% as a combination of an oil price war and escalating coronavirus fears triggered a dramatic selloff in U.S. bank stocks.",
+      "date": "2020-03-09",
+      "entities": [
+        "Bank of America"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Bank of America"
+      },
+      "stock_change_pct": 15.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "U.S. bank shares slammed as virus, plunging oil amp up economic fears",
+        "url": "https://www.reuters.com/article/business/u-s-bank-shares-slammed-as-virus-plunging-oil-amp-up-economic-fears-idUSKBN20W2P0/",
+        "published_date": "2020-03-09",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "After OPEC+ talks collapsed, Saudi Aramco slashed prices and pledged to increase production, triggering an international oil price war.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The ensuing oil price crash intensified fears of a global recession, which were already being stoked by the spread of COVID-19.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors fled risky assets; Bank of America's stock plummeted about −15.5% amid a broad sell-off in energy-exposed financials.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The oil price war represented a severe commodity shock, compounding pandemic-driven economic anxieties. As investors anticipated slower growth and credit risks, they dumped bank stocks, leading to sharp declines for institutions like Bank of America.",
+  "counterfactual_analysis": "If Saudi Aramco had maintained cooperative production cuts, oil prices likely would have remained more stable, which could have mitigated the bank stock rout and lessened Bank of America's losses.",
+  "adversarial_confounders": [
+    {
+      "text": "The rapid global spread of COVID-19 simultaneously undermined confidence in the economy and contributed to market turbulence.",
+      "impact": "While this confounder greatly influenced the sell-off, the abrupt oil price war served as a distinct and triggering catalyst."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Rising rate expectations and inflation worries roiled growth stocks",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.8,
+        "commentary": "Shifts in inflation and interest-rate expectations prompt investors to reassess the value of long-duration cash flows, hitting tech and other growth names hardest. Nvidia's dramatic rally left it especially sensitive to macro repricing, so even a modest change in rate expectations translated into outsized share price swings."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "1 days",
+        "conditions_score": 0.8,
+        "commentary": "Once selling started in crowded AI trades, each downtick in Nvidia intensified risk management pressures and momentum-driven flows. That feedback loop between price action, positioning and sentiment magnified the impact of macro signals, producing the sharp drawdowns seen in the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

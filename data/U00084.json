@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00084",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "China ended its zero-COVID policy by allowing people with mild or no symptoms to quarantine at home, stopping temporary lockdowns and dropping health-code requirements for cross-regional travel, signalling a return to more normal economic activity and freer movement across the country.",
+      "date": "2022-12-07",
+      "entities": [
+        "China's zero-COVID policy"
+      ],
+      "sectors": [
+        "public health",
+        "economy"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Chinese economy"
+      },
+      "source_info": {
+        "title": "China scraps zero-COVID restrictions, allowing home quarantine and ending travel codes",
+        "url": "https://edition.cnn.com/2022/12/07/china/china-covid-restrictions-explainer-intl-hnk",
+        "published_date": "2022-12-07",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "BMW's fourth-quarter 2022 sales rose 10.6% as supply chain bottlenecks eased; after lockdowns were lifted in China and supply chains were reconfigured, deliveries in Europe and China rebounded and electric vehicle sales more than doubled to 215,755 units over the year.",
+      "date": "2023-01-10",
+      "entities": [
+        "BMW"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Germany",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "BMW"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "BMW sales recover in fourth quarter as supply chain issues ease",
+        "url": "https://www.reuters.com/business/autos-transportation/bmw-brand-delivers-21-million-vehicles-2022-2023-01-10/",
+        "published_date": "2023-01-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "China dismantled its zero-COVID policy, ending mass lockdowns and allowing home quarantine and unrestricted travel.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The removal of restrictions revived manufacturing and logistics, smoothing global supply chains and boosting consumer demand both within China and abroad.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "BMW's deliveries surged in the fourth quarter of 2022; improved supply chains and lifted Chinese lockdowns enabled sales to rebound, and BMW shares rose about 3% in the days following the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Ending zero-COVID measures unshackled the Chinese economy, allowing factories and dealerships to reopen. Supply chains and consumer traffic recovered, directly benefiting automakers like BMW, whose sales jumped in late 2022.",
+  "counterfactual_analysis": "Had China maintained strict lockdowns, supply chains would have remained tangled and BMW's sales would likely have continued to decline into 2023.",
+  "adversarial_confounders": [
+    {
+      "text": "Easing supply bottlenecks in Europe",
+      "impact": "Supply chain improvements outside China also contributed to higher deliveries and could explain part of the rebound"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "365 days",
+        "conditions_score": 0.8,
+        "commentary": "As automakers invested more in electric vehicles and software-defined platforms, their reliance on advanced chips increased, deepening ties to suppliers like STMicroelectronics. Each wave of EV launches and content gains fed back into higher semi content per car and stronger long-term orders, supporting STM's upbeat guidance and the positive share reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

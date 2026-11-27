@@ -1,0 +1,107 @@
+{
+  "pair_id": "U00093",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "A Pratt & Whitney-powered widebody operated by a U.S. carrier suffered an engine failure shortly after takeoff, prompting the engine maker to call for more frequent thermal-acoustic imaging inspections of fan blades and triggering immediate fleet checks and temporary schedule adjustments by operators.",
+      "date": "2021-02-22",
+      "entities": [
+        "Pratt & Whitney",
+        "United Airlines"
+      ],
+      "sectors": [
+        "aerospace",
+        "airlines",
+        "safety"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Pratt & Whitney"
+      },
+      "source_info": {
+        "title": "Federal investigators focus on fan blades in Pratt & Whitney mid-air engine failure",
+        "url": "https://www.courant.com/2021/02/22/federal-investigators-focus-on-fan-blades-in-pratt-whitney-mid-air-engine-failure/",
+        "published_date": "2021-02-22",
+        "publisher": "courant.com"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Boeing shares fell about 2.1% on 2021-02-22 as investors priced in inspection-driven downtime for PW-powered widebodies, potential compensation exposure, and near-term scheduling friction at airline customers.",
+      "date": "2021-02-22",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 2.1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Boeing Tells Airlines to Ground Some 777 Jets After Engine Failure",
+        "url": "https://www.wsj.com/business/airlines/faa-orders-immediate-inspections-after-united-engine-failure-11613952428",
+        "published_date": "2021-02-22",
+        "publisher": "the wall street journal"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "An in-service engine failure leads the manufacturer to recommend more frequent fan blade inspections across the affected fleet.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Airlines insert checks into maintenance plans and adjust flying, implying near-term utilization and cost headwinds.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Equity market discounts inspection-related disruption and liability risk; Boeing slips 2.1% on the day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Press reports tied the engine incident to an immediate inspection campaign and schedule friction for carriers, which investors extrapolated to the airframer's widebody program and priced into the stock with a 2.1% decline.",
+  "counterfactual_analysis": "Absent the engine failure, no accelerated inspection campaign would have been required; expectations for operational disruption and cost exposure would have been lower, reducing the likelihood of a selloff.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market movement",
+      "impact": "Concurrent sector or index swings may have affected the magnitude of the decline independent of the incident."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Reliability shock in a critical propulsion system",
+        "pestel_impact_score": 0.75,
+        "conditions_score": 0.7,
+        "commentary": "An in-flight engine failure on a Pratt & Whitney-powered widebody highlighted vulnerabilities in a key propulsion technology and prompted urgent inspection campaigns. That reliability shock fed into investors' expectations for inspection-driven downtime, potential compensation and schedule friction at Boeing, weighing moderately on its share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

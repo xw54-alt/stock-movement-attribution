@@ -1,0 +1,147 @@
+{
+  "pair_id": "U00030",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Alaska Air Group issued a downbeat forecast, telling investors that higher costs and softening demand would hurt its earnings, unsettling sentiment toward the airline sector.",
+      "date": "2023-07-25",
+      "entities": [
+        "Alaska Air Group"
+      ],
+      "sectors": [
+        "Airlines"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Alaska Air Group"
+      },
+      "source_info": {
+        "title": "Airlines shares hit turbulence on Alaska's dour forecast, RTX engine problem",
+        "url": "https://www.reuters.com/business/aerospace-defense/airlines-shares-hit-turbulence-alaskas-dour-forecast-rtx-engine-problem-2023-07-25/",
+        "published_date": "2023-07-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "RTX (Pratt & Whitney) warned of an issue with its jet engines that could force premature removals and inspections, raising concerns about reliability and spare-engine availability for airlines.",
+      "date": "2023-07-25",
+      "entities": [
+        "RTX Corporation"
+      ],
+      "sectors": [
+        "Aerospace and Defense"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "RTX Corporation"
+      },
+      "source_info": {
+        "title": "Airlines shares hit turbulence on Alaska's dour forecast, RTX engine problem",
+        "url": "https://www.reuters.com/business/aerospace-defense/airlines-shares-hit-turbulence-alaskas-dour-forecast-rtx-engine-problem-2023-07-25/",
+        "published_date": "2023-07-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "The combination of Alaska's gloomy outlook and RTX's engine warning spooked investors. Alaska's shares plunged 9.3%, dragging United, American, Southwest and Delta down between 2.5% and 5%; American Airlines shares slid roughly 3% amid the sector sell-off.",
+      "date": "2023-07-25",
+      "entities": [
+        "American Airlines Group Inc."
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "American Airlines Group Inc."
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Airlines shares hit turbulence on Alaska's dour forecast, RTX engine problem",
+        "url": "https://www.reuters.com/business/aerospace-defense/airlines-shares-hit-turbulence-alaskas-dour-forecast-rtx-engine-problem-2023-07-25/",
+        "published_date": "2023-07-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Alaska Air warned of higher costs and weakening demand, prompting investors to reassess airline profitability.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "RTX disclosed Pratt & Whitney engine issues, raising concerns about reliability, maintenance cost and capacity constraints.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors synthesized the dual negatives (demand softness + maintenance risks), expecting sector-wide earnings pressure.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 4,
+      "description": "American Airlines fell 3% as part of a broad sell-off alongside United, Southwest and Delta.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The simultaneous announcements from Alaska Air and RTX introduced concerns about demand and maintenance capacity in the airline industry, contributing to a sector-wide sell-off that included American Airlines.",
+  "counterfactual_analysis": "Absent Alaska's gloomy forecast or RTX's engine issues, investors might not have priced in sector-wide headwinds that day; American's share price would likely have been steadier.",
+  "adversarial_confounders": [
+    {
+      "text": "Macroeconomic factors (rates, growth data, geopolitics).",
+      "impact": "Could independently move airline equities regardless of industry-specific news."
+    },
+    {
+      "text": "Company-specific developments at American Airlines.",
+      "impact": "Firm-level news could drive the stock in ways unrelated to Alaska/RTX announcements."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "7 days",
+        "conditions_score": 0.7,
+        "commentary": "Guidance cuts tied to capacity constraints and higher maintenance costs signaled weaker profitability for airlines exposed to affected fleets. Those warnings fed into a short reinforcing loop where sector-wide selling and lower valuations made investors even more sensitive to subsequent negative updates."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Engine reliability problems and inspection requirements",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.7,
+        "commentary": "Engine durability issues and mandatory inspections created operational uncertainty around aircraft availability and scheduling. This technological and engineering risk increased the likelihood of future disruptions and cost overruns, putting additional pressure on airline stocks."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

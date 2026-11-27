@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00057",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "U00057",
+      "causal_salience": "primary",
+      "text": "Chinese property developer Evergrande teetered on the brink of default, missing bond payments and sparking fears of contagion across global markets.",
+      "date": "2021-09-20",
+      "entities": [
+        "Evergrande"
+      ],
+      "sectors": [
+        "real estate"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Evergrande"
+      },
+      "source_info": {
+        "title": "World shares tumble as China Evergrande contagion fears rise",
+        "url": "https://www.reuters.com/business/global-markets-wrapup-7-2021-09-20/",
+        "published_date": "2021-09-20",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bank of America's shares fell about 3% as Evergrande's potential default triggered global risk-off sentiment and raised concerns about banks' exposure to Chinese real estate.",
+      "date": "2021-09-20",
+      "entities": [
+        "Bank of America"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Bank of America"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "World shares tumble as China Evergrande contagion fears rise",
+        "url": "https://www.reuters.com/business/global-markets-wrapup-7-2021-09-20/",
+        "published_date": "2021-09-20",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Evergrande missed bond payments and edged toward default, raising alarm about China's property sector solvency.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors feared that Evergrande's liquidity crisis could spill over into global financial markets, triggering broader risk aversion.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Bank of America's stock declined by roughly −3% amid a global sell-off of financial shares driven by contagion fears.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Evergrande's near-default highlighted systemic fragility in China's real estate sector, and the resulting risk-off sentiment weighed heavily on global bank stocks, including Bank of America-even absent direct exposure.",
+  "counterfactual_analysis": "If Evergrande had met its debt obligations or disclosed a credible rescue plan, global sentiment may have remained calmer and Bank of America's shares might not have dropped.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous concerns over U.S. debt ceiling negotiations or Fed taper signals may also have influenced sentiment.",
+      "impact": "These factors contributed to risk aversion, but the Evergrande incident was the most immediate catalyst in global markets."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - U.S. export controls on advanced chips to China",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Tighter U.S. rules on shipping high-end GPUs to China reduced Nvidia's access to a key growth market for AI hardware. The risk of further restrictions or customer workarounds made investors question how sustainable Nvidia's prior growth trajectory would be."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.75,
+        "commentary": "Export controls initially sparked fears of a sharp revenue hit, prompting a sell-off in Nvidia and related names. As the company developed adjusted products and demand proved resilient elsewhere, better-than-feared results partially offset those worries, creating a balancing loop."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

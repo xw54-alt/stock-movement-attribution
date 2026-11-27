@@ -1,0 +1,125 @@
+{
+  "pair_id": "U00034",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Intel said it would invest $20 billion to build two semiconductor fabrication plants in Ohio, a project aimed at producing advanced chips and reducing reliance on Asian manufacturing.",
+      "date": "2022-01-21",
+      "entities": [
+        "Intel",
+        "Ohio"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Intel"
+      },
+      "source_info": {
+        "title": "Intel announces plans for an investment of more than $28 billion for two new chip factories in Licking County, Ohio.",
+        "url": "https://newsroom.intel.com/press-kit/intel-invests-ohio",
+        "published_date": "2022-01-21",
+        "publisher": "Intel"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "Apple reported earnings that exceeded analysts expectations but cautioned that ongoing supply chain constraints could cost the company $48 billion, leading its shares to decline and leaving them roughly 100% lower year to date.",
+      "date": "2022-04-29",
+      "entities": [
+        "Apple",
+        "Supply chain vendors"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Apple"
+      },
+      "stock_change_pct": 3.66,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Apple Expects Supply Shortages to Slash Sales by Up to $8 Billion",
+        "url": "https://www.bloomberg.com/news/articles/2022-04-28/apple-sales-top-estimates-on-strong-iphone-and-services-demand",
+        "published_date": "2022-04-29",
+        "publisher": "Bloomberg"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2022-01-21, Intel's $20 billion investment in U.S. chip plants underscored structural semiconductor shortages, with new capacity expected only in the long term.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Apple was already experiencing severe component delays and warned of financial risks from ongoing supply constraints.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-04-29, Despite strong quarterly earnings, the forecasted $48 billion supply hit caused Apple shares to fall significantly. The move was 3.66%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Intel's investment confirmed the persistence of chip supply bottlenecks. Apple, deeply integrated into the global supply chain, anticipated major revenue losses, which spooked investors and led to a notable share price decline.",
+  "counterfactual_analysis": "If Intel factories had already been operational and chip supply normalized, Apple supply constraints may have been mitigated, possibly avoiding the stock drop following earnings.",
+  "adversarial_confounders": [
+    {
+      "text": "General market volatility in early 2022",
+      "impact": "May have amplified stock declines across tech firms"
+    },
+    {
+      "text": "Interest rate hikes by the Federal Reserve",
+      "impact": "Created macro pressure on growth stocks"
+    },
+    {
+      "text": "Investors taking profits after a long rally",
+      "impact": "Could explain part of the drop regardless of supply news"
+    }
+  ],
+  "confidence_score": 0.68,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.7,
+        "commentary": "Ongoing U.S.-China trade tensions and export controls encouraged Apple to diversify its production footprint beyond mainland China. As the company gradually shifted more assembly to India, investor expectations for supply-chain resilience and political risk mitigation fed back into stronger confidence after successful launches."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Trade tensions and industrial policy shaped Apple's manufacturing choices",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "U.S. export restrictions and geopolitical friction made heavy reliance on Chinese manufacturing increasingly risky for Apple. Supportive policies in India and a desire to reduce exposure to sanctions created a politically driven incentive to move more production, which investors rewarded once execution became visible."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

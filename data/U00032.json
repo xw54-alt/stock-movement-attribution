@@ -1,0 +1,122 @@
+{
+  "pair_id": "U00032",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Intel announced that its 7 nanometer chip manufacturing technology was six months behind schedule, forcing it to consider outsourcing more production and signalling that rivals like TSMC were pulling ahead.",
+      "date": "2020-07-23",
+      "entities": [
+        "Intel",
+        "TSMC",
+        "AMD",
+        "Nvidia"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Technology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Intel"
+      },
+      "source_info": {
+        "title": "Intel chip delay forces shift to using more outside factories, shares drop",
+        "url": "https://www.reuters.com/article/business/intel-chip-delay-forces-shift-to-using-more-outside-factories-shares-drop-idUSKCN24O2WJ/",
+        "published_date": "2020-07-23",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "Apple became the first publicly listed U.S. company valued at more than $2 trillion as its shares briefly climbed to $468.65 and finished the day up around 1.2%, reflecting investor confidence in its shift toward services and device sales.",
+      "date": "2020-08-19",
+      "entities": [
+        "Apple",
+        "Investors"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Apple"
+      },
+      "stock_change_pct": 1.2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Apple becomes first U.S. company to reach a $2 trillion market cap",
+        "url": "https://www.cnbc.com/2020/08/19/apple-reaches-2-trillion-market-cap.html",
+        "published_date": "2020-08-19",
+        "publisher": "CNBC"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2020-07-23, Intel 7nm delay signaled technological lag, shifting investor confidence to firms with stronger manufacturing execution like TSMC.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Since Apple depends on TSMC for its chip production, Apple was perceived as relatively shielded and competitively advantaged.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors interpreted Apple supplier resilience as a signal of reliable performance, increasing stock buying interest.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On 2020-08-19, Apple stock rose by 1.2% on August 19, 2020, lifting its valuation above $2 trillion.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Intel delay reaffirmed TSMC's edge. As Apple relies on TSMC, the market saw Apple as a safer, forward-looking tech investment, driving up its share price.",
+  "counterfactual_analysis": "If Intel had delivered 7nm chips on time, TSMC would not have gained such a clear edge, and Apple shares might not have surged to record highs so soon.",
+  "adversarial_confounders": [
+    {
+      "text": "Overall stock market rally in 2020",
+      "impact": "Contributed to rising tech valuations"
+    },
+    {
+      "text": "Apple's own services revenue growth",
+      "impact": "Also boosted confidence in its long-term prospects"
+    },
+    {
+      "text": "COVID-19-driven tech consumption surge",
+      "impact": "Created a favorable macro backdrop for Apple"
+    }
+  ],
+  "confidence_score": 0.55,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Intel's delay on 7nm chips widened the technology gap with TSMC, strengthening TSMC's position as the leading advanced foundry. For Apple, being tied to a stronger manufacturing partner reduced competitive risk in high-end devices and reinforced investor confidence in its long-term product roadmap."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

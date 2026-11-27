@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00091",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Spirit AeroSystems workers walked out after voting to reject a tentative contract, triggering a strike at the Wichita factory.",
+      "date": "2023-06-22",
+      "entities": [
+        "Spirit AeroSystems"
+      ],
+      "sectors": [
+        "aerospace",
+        "labor"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Spirit AeroSystems"
+      },
+      "source_info": {
+        "title": "Spirit AeroSystems to halt work at Wichita plant as union votes to strike",
+        "url": "https://www.reuters.com/business/aerospace-defense/spirit-aerosystems-workers-kansas-plant-strike-after-rejecting-deal-2023-06-22/",
+        "published_date": "2023-06-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Boeing shares fell as the strike at a key fuselage supplier threatened 737 output and deliveries.",
+      "date": "2023-06-22",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Spirit AeroSystems Shuts Down Production Ahead of Strike; Boeing, Airbus also decline",
+        "url": "https://www.investopedia.com/spirit-aerosystems-shuts-down-production-ahead-of-strike-7551708",
+        "published_date": "2023-06-22",
+        "publisher": "Investopedia"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Labor action halts output at a critical upstream supplier of Boeing.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Markets anticipate disrupted fuselage flow to final assembly.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "BA stock declines 3% on the expected delivery impact.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Supplier strike directly jeopardized near-term production schedules, prompting a negative reaction in Boeing's shares.",
+  "counterfactual_analysis": "If the supplier had not gone on strike, investors would not have priced in a sudden delivery disruption risk.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader industrial labor headlines",
+      "impact": "Could add noise to the immediate stock reaction."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "A strike at Spirit AeroSystems immediately constrains fuselage deliveries, forcing Boeing to slow near-term 737 output and disrupting delivery schedules. Once a new contract is reached and production normalizes, that same system gradually releases the pressure, allowing deliveries and investor sentiment to recover."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

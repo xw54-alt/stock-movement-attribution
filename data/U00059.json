@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00059",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Regulators closed Silicon Valley Bank in March 2023 after a bank run, marking the largest U.S. bank failure since the 2008 crisis. The sudden collapse left billions of dollars in deposits stranded and shook confidence in midsized lenders.",
+      "date": "2023-03-10",
+      "entities": [
+        "Silicon Valley Bank"
+      ],
+      "sectors": [
+        "financial services"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Silicon Valley Bank"
+      },
+      "source_info": {
+        "title": "Global bank stock rout deepens as SVB collapse fans crisis fears",
+        "url": "https://www.reuters.com/business/finance/california-regulator-shuts-silicon-valley-bank-2023-03-10/",
+        "published_date": "2023-03-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Shares of Bank of America fell roughly 3.3% as part of a broad sell-off in U.S. banking stocks following the collapse of Silicon Valley Bank.",
+      "date": "2023-03-10",
+      "entities": [
+        "Bank of America"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Bank of America"
+      },
+      "stock_change_pct": 3.3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "First Republic shares dive on contagion fear, dragging U.S. regional banks",
+        "url": "https://www.reuters.com/business/finance/us-bank-stocks-add-losses-regulators-shutter-svb-financial-2023-03-10/",
+        "published_date": "2023-03-10",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Silicon Valley Bank collapsed after a bank run and was taken over by regulators.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The failure - the biggest since 2008 - triggered fears of contagion and instability across the U.S. banking sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors sold shares in banks perceived as vulnerable; Bank of America's stock price dropped around -3.3% amid the sell-off.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The sudden failure of Silicon Valley Bank highlighted systemic risk and caused market participants to question the resilience of other banks. Contagion fears prompted investors to sell shares of Bank of America despite no direct exposure to SVB.",
+  "counterfactual_analysis": "Had Silicon Valley Bank not failed, or had regulators preemptively stabilized it, the market would likely have avoided the panic that drove Bank of America's stock down by more than 3%.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader macroeconomic uncertainty and concerns over rising interest rates may have also contributed to selling pressure on bank stocks during the same period.",
+      "impact": "Such factors could partially explain the magnitude of the decline but do not fully account for the timing immediately following the SVB collapse."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Restrictions on exporting advanced chipmaking tools to China",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.8,
+        "commentary": "New Dutch and U.S. rules limiting shipments of cutting-edge lithography tools to China constrained ASML's access to an important growth market. These geopolitical constraints injected long-term uncertainty into its order book and reinforced concerns about overreliance on a few large regions."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "120 days",
+        "conditions_score": 0.75,
+        "commentary": "As Chinese orders face caps, ASML and its customers may redirect investment to other regions and nodes, partially offsetting the lost demand. Over several quarters, this reallocation can soften the initial shock, but the adjustment period keeps investor sentiment more guarded."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

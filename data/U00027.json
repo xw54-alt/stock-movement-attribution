@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00027",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Intel signaled it might exit its chip manufacturing operations if it failed to secure major customers, reported a larger-than-expected quarterly loss, and paused work at its Hillsboro plant due to high costs, prompting its shares to sink more than 8%.",
+      "date": "2025-07-25",
+      "entities": [
+        "Intel Corporation"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Intel Corporation"
+      },
+      "source_info": {
+        "title": "Intel slumps as potential foundry exit deepens investor gloom",
+        "url": "https://www.reuters.com/business/intel-slumps-potential-foundry-exit-deepens-investor-gloom-2025-07-25/",
+        "published_date": "2025-07-25",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "As Intel's shares tumbled on the news, AMD shares climbed over 2.6% as investors anticipated that Intel's strategic uncertainty and market-share losses would benefit AMD.",
+      "date": "2025-07-25",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 2.6,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Intel shares slide on quarterly loss, foundry business exit risk",
+        "url": "https://www.reuters.com/business/intel-slumps-potential-foundry-exit-deepens-investor-gloom-2025-07-25/",
+        "published_date": "2025-07-28",
+        "publisher": "reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On July 25, 2025, Intel announced a bigger-than-expected loss, suggested it could exit its manufacturing operations if it failed to secure a major customer, and temporarily halted work at a factory due to excessive costs.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "These announcements increased uncertainty about Intel's competitive strategy and financial health, raising concerns that it would lose market share to rivals.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors anticipated that AMD, as Intel's primary competitor in CPUs and data-center chips, would capture some of Intel's market share.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "As a result, AMD's stock price increased by roughly 2.6% while Intel's shares slumped more than 8%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported that AMD's shares rose as Intel signaled weakness in its foundry strategy and posted a sharp quarterly loss, prompting capital reallocation toward AMD.",
+  "counterfactual_analysis": "If Intel had not raised the possibility of exiting manufacturing and reported a loss, investors may not have shifted capital into AMD, and AMD's stock would likely have remained level.",
+  "adversarial_confounders": [
+    {
+      "text": "Speculation about AMD's upcoming earnings and AI momentum.",
+      "impact": "Positive expectations for AMD's own performance could have boosted the stock independently of Intel's news."
+    },
+    {
+      "text": "Overall market movements such as the NASDAQ rising on macroeconomic news.",
+      "impact": "Broader market trends might have influenced AMD's share price."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_new_entrants",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "EU digital rules and enforcement lowered some structural advantages that had helped large platforms like Amazon deter smaller rivals. By forcing changes to self-preferencing and data use, regulators effectively made it easier for local marketplaces and merchants to compete for European shoppers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

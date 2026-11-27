@@ -1,0 +1,120 @@
+{
+  "pair_id": "U00020",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The U.S. government announced a steep tariff hike on Chinese imports, with rates reaching up to 125%, prompting widespread concern among cross-border e-commerce sellers.",
+      "date": "2025-04-10",
+      "entities": [
+        "U.S. government",
+        "Chinese sellers"
+      ],
+      "sectors": [
+        "Trade policy",
+        "E-commerce"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Chinese sellers"
+      },
+      "source_info": {
+        "title": "Chinese sellers on Amazon to hike prices or exit US as tariffs soar",
+        "url": "https://www.reuters.com/technology/chinese-sellers-amazon-hike-prices-or-exit-us-tariffs-soar-association-says-2025-04-10/",
+        "published_date": "2025-04-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Amazon's stock fell approximately 1% on May 2, 2025, as investors anticipated declining margins due to rising import costs and reduced seller participation.",
+      "date": "2025-05-02",
+      "entities": [
+        "Amazon"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Amazon"
+      },
+      "stock_change_pct": 1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Amazon shares dip amid tariffs squeeze and seller cost pressure",
+        "url": "https://www.reuters.com/business/retail-consumer/amazon-sellers-are-stocking-up-face-tariffs-its-short-term-fix-2025-05-02/",
+        "published_date": "2025-05-02",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2025-04-10, The U.S. government announced a sharp tariff increase on Chinese imports, increasing operational costs for Amazon third-party sellers.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Many Chinese sellers raised prices or withdrew from Amazon, reducing platform competitiveness and selection.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors anticipated margin compression and possible revenue decline for Amazon.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On 2025-05-02, Amazon stock price fell 1% as a reaction to anticipated cost pressure and seller disruption.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported that many Chinese sellers on Amazon were reacting to new tariffs by raising prices or leaving the platform, triggering investor concerns that led to a measurable decline in Amazon's share price.",
+  "counterfactual_analysis": "Had the U.S. not implemented steep tariffs, Amazon might have retained more sellers, and its stock price likely would not have declined.",
+  "adversarial_confounders": [
+    {
+      "text": "Earnings guidance revisions from other retailers",
+      "impact": "Could have influenced Amazon stock price during the same period independently of the tariff impact."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Steep U.S. tariffs on Chinese imports affecting Amazon's marketplace",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.7,
+        "commentary": "Tariff hikes on Chinese goods directly increased costs for many sellers that rely on Amazon's marketplace to reach U.S. consumers. These political measures threatened to raise prices or squeeze margins, prompting concerns about slower growth and profitability for Amazon's third-party ecosystem."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "medium",
+        "commentary": "As tariffs bit into manufacturers' economics, some suppliers gained leverage by shifting volumes to less affected channels or markets. This pressure on the supply side weakened Amazon's ability to dictate terms and highlighted the fragility of key cross-border sourcing relationships."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

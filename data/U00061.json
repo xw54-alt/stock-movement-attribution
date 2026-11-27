@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00061",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "TSMC announced plans to invest $100 billion over three years to expand chip capacity and meet surging global demand.",
+      "date": "2021-04-01",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Semiconductor"
+      ],
+      "country": "Taiwan China",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "TSMC"
+      },
+      "source_info": {
+        "title": "TSMC to invest $100 billion over 3 years to meet chip demand",
+        "url": "https://www.reuters.com/article/technology/tsmc-to-invest-100-billion-over-3-years-to-meet-chip-demand-idUSKBN2BO3ZJ/",
+        "published_date": "2021-04-01",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "ASML's shares rose about 5.6% after it reported record third-quarter bookings of €8.9 billion, as customers expanded fab capacity-underscoring robust long-term demand for lithography machines.",
+      "date": "2022-10-19",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "ASML"
+      },
+      "stock_change_pct": 5.6,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "ASML shrugs off slowdown, U.S. China sanctions, reports strong Q3",
+        "url": "https://www.reuters.com/technology/asml-reports-better-than-expected-q3-sales-strong-bookings-2022-10-19/",
+        "published_date": "2022-10-19",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In April 2021, TSMC committed $100 billion over three years to expand manufacturing capacity.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Such an investment implied strong future demand for advanced lithography tools supplied by ASML.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When ASML delivered record bookings in Q3 2022-driven by fab expansion-it validated expectations of sustained demand.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors reacted by driving ASML shares up about 5.6%, reflecting confidence in the multi-year growth outlook.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "TSMC's long-term expansion commitment served as leading evidence of growing fab construction and chipmaking capacity. ASML, as the exclusive supplier of EUV systems, stood to gain from this trend. The Q3 bookings spike confirmed investor expectations, prompting a stock rally.",
+  "counterfactual_analysis": "Without TSMC's expansion plans, the strong ASML bookings might have been interpreted as cyclical rather than structural, and the share price response may have been muted.",
+  "adversarial_confounders": [
+    {
+      "text": "Broad improvements in global chip equipment supply chains",
+      "impact": "Could have supported ASML bookings independently of TSMC's commitment."
+    },
+    {
+      "text": "General tech sector recovery post-pandemic",
+      "impact": "May have buoyed semiconductor stocks including ASML regardless of specific investment announcements."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "high",
+        "commentary": "TSMC's commitment to spend $100 billion on new fabs underscored how much influence a few mega-foundries have over tool makers like ASML. While that concentration gives buyers leverage during negotiations, the sheer scale of their expansion also locks in strong multi-year demand for ASML's most advanced lithography systems."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

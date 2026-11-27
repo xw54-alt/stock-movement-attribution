@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00007",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Adobe announced it would acquire Figma for approximately $20 billion in cash and stock, raising concerns over the deal size, valuation, and future integration challenges.",
+      "date": "2022-09-15",
+      "entities": [
+        "Adobe",
+        "Figma"
+      ],
+      "sectors": [
+        "technology",
+        "software"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Adobe"
+      },
+      "source_info": {
+        "title": "Adobe to Buy Figma for About $20 Billion",
+        "url": "https://news.adobe.com/news/news-details/2022/adobe-to-acquire-figma",
+        "published_date": "2022-09-15",
+        "publisher": "Adobe"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Adobe's stock dropped by 15% following the announcement of its $20 billion acquisition of Figma. Business Insider reported it on 2022-09-15.",
+      "date": "2022-09-15",
+      "entities": [
+        "Adobe",
+        "Microsoft"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Adobe"
+      },
+      "stock_change_pct": 15,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Adobe Stock Price Drops 15% After $20 Billion Deal to Buy Figma",
+        "url": "https://markets.businessinsider.com/news/stocks/adobe-stock-price-20-billion-buyout-deal-design-competitor-figma-2022-9",
+        "published_date": "2022-09-15",
+        "publisher": "Business Insider"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2022-09-15, Adobe announced acquisition of Figma for $20 billion",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors reacted negatively to deal value and dilution concerns",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-09-15, Adobe stock fell 15% immediately following the news (on 2022-09-15)",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The unusually high deal value and strategic uncertainty surrounding the Figma acquisition caused investors to question Adobe's capital allocation and competitive strategy, leading to a sharp sell-off.",
+  "counterfactual_analysis": "Had Adobe not announced the Figma acquisition or proposed a lower valuation, the stock might not have experienced such a significant drop.",
+  "adversarial_confounders": [
+    {
+      "text": "General tech sector volatility during Q3 2022",
+      "impact": "May have contributed slightly, but the magnitude of Adobe's drop clearly links to the acquisition news."
+    }
+  ],
+  "confidence_score": 0.92,
+  "reasoning_type": "mna_activity",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Figma had become a fast-growing rival in collaborative design, intensifying competitive pressure on Adobe's creative software franchise. By paying a steep premium to acquire Figma, Adobe acknowledged that rivalry and signaled concern about defending its market position."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - A high-priced tech acquisition tested investor tolerance for risk",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.75,
+        "commentary": "In a more cautious rate and valuation environment, a $20 billion deal for Figma raised doubts about capital discipline and future returns. Investors questioned whether the acquisition economics justified the price, triggering a sharp sell-off in Adobe's shares."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

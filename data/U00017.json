@@ -1,0 +1,125 @@
+{
+  "pair_id": "U00017",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Ride-hailing giant Didi announced that it would delist from the New York Stock Exchange and pursue a listing in Hong Kong after coming under pressure from Chinese regulators over data-security concerns. The move signalled continued regulatory scrutiny of Chinese technology firms and heightened investor anxiety about U.S.-listed Chinese companies.",
+      "date": "2021-12-03",
+      "entities": [
+        "Didi Global",
+        "Chinese regulators"
+      ],
+      "sectors": [
+        "Ride-hailing",
+        "Technology"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "U.S.-listed Chinese tech firms"
+      },
+      "source_info": {
+        "title": "Didi shares plunge more than 20% on plan to delist from NYSE",
+        "url": "https://www.reuters.com/technology/didi-global-start-work-delisting-new-york-pursue-ipo-hong-kong-2021-12-03/",
+        "published_date": "2021-12-03",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "U.S.-listed shares of Chinese technology companies plunged after Didi announced its delisting. Alibaba's stock fell around 8.2%, while other peers such as Baidu and JD.com also dropped.",
+      "date": "2021-12-03",
+      "entities": [
+        "Alibaba Group"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Alibaba Group"
+      },
+      "stock_change_pct": 8.2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "U.S.-listed Chinese shares take a hit as Didi to exit NYSE",
+        "url": "https://www.investing.com/news/stock-market-news/uslisted-chinese-shares-take-a-knock-as-didi-to-exit-nyse-2699043",
+        "published_date": "2021-12-03",
+        "publisher": "Reuters via Investing.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2021-12-03, Didi's board announces it will delist from the New York Stock Exchange and pursue a Hong Kong listing after pressure from Chinese regulators over data-security issues.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpret Didi's delisting as a signal that Chinese authorities will continue tightening oversight on technology firms and that more U.S.-listed Chinese companies could face similar pressures.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "Fears of heightened regulatory risk trigger a broad sell-off in U.S.-listed Chinese stocks.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On 2021-12-03, Alibaba's shares dropped about 8.2%, with Baidu and JD.com also falling in the mid-single digits, reflecting investor concern that delisting risk could extend across the sector.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Didi's delisting from the NYSE signalled to investors that regulatory pressures in China might extend to other listed Chinese tech companies. A contagion effect ensued: U.S.-listed Chinese stocks, including Alibaba, were sold off due to concerns about similar delisting or regulatory scrutiny.",
+  "counterfactual_analysis": "Had Didi chosen to remain listed in New York or if the delisting had been seen as company-specific, Alibaba's shares may have held steadier instead of falling sharply.",
+  "adversarial_confounders": [
+    {
+      "text": "Ongoing U.S.-China geopolitical tensions and proposed auditing regulations could have independently triggered a sell-off in Chinese ADRs.",
+      "impact": "High"
+    },
+    {
+      "text": "Broader market volatility due to global economic sentiment may have exacerbated losses across tech stocks.",
+      "impact": "Moderate"
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - Extreme weather highlighted climate risk in Amazon's supply chain",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.75,
+        "commentary": "Floods, heatwaves and other climate-linked events disrupted transportation networks and last-mile delivery in key regions. These environmental stresses raised concerns about future logistics reliability and cost, tempering investor enthusiasm despite Amazon's operational scale."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "30 days",
+        "conditions_score": 0.7,
+        "commentary": "Initial disruptions from weather events pushed up delivery times and costs, prompting Amazon to reroute shipments and adjust capacity. Those mitigation efforts gradually restored service levels, creating a balancing loop in which operational responses offset part of the original shock over the following weeks."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

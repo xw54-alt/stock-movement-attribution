@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00098",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On April 2 2023, members of the OPEC+ alliance including Saudi Arabia, Iraq, the UAE, Kuwait, Oman and Algeria announced voluntary production cuts totalling 1.15 million barrels per day to support market stability.",
+      "date": "2023-04-02",
+      "entities": [
+        "OPEC+",
+        "Saudi Arabia",
+        "Iraq",
+        "United Arab Emirates",
+        "Kuwait",
+        "Oman",
+        "Algeria"
+      ],
+      "sectors": [
+        "energy"
+      ],
+      "country": "International",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.6,
+        "target": "oil producers"
+      },
+      "source_info": {
+        "title": "OPEC+ announces surprise oil output cuts",
+        "url": "https://www.reuters.com/business/energy/sarabia-other-opec-producers-announce-voluntary-oil-output-cuts-2023-04-02/",
+        "published_date": "2023-04-02",
+        "publisher": "reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "In May 2023 BP reduced its share-buyback programme from $2.75 billion to $1.75 billion, prompting its largest daily share price drop in more than three years.",
+      "date": "2023-05-10",
+      "entities": [
+        "BP"
+      ],
+      "sectors": [
+        "Energy & Utilities"
+      ],
+      "country": "United Kingdom",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "BP"
+      },
+      "stock_change_pct": 8,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "BP's profit hits $5 billion but shares slip on slowing buybacks",
+        "url": "https://www.reuters.com/business/energy/bp-profit-rises-5-bln-share-buyback-is-reduced-2023-05-02/",
+        "published_date": "2023-05-02",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "OPEC+ members unexpectedly agreed to voluntarily cut more than a million barrels of oil per day, signalling tighter supply and potentially higher prices.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The production cuts lifted crude prices and heightened investor expectations that oil majors would return more cash to shareholders, BP's profit hits $5 billion ",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "But BP subsequently announced a smaller share-buyback programme than anticipated.",
+      "logic_operator": "BUT"
+    },
+    {
+      "step_id": 4,
+      "description": "The divergence from heightened expectations led investors to sell, causing BP's share price to drop 8% despite the supportive oil-price environment.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The surprise OPEC+ cuts raised oil prices and primed investors for generous shareholder returns. BP's decision to slow its buybacks disappointed those expectations, resulting in a notable share price decline.",
+  "counterfactual_analysis": "If OPEC+ had not tightened supply, crude prices would have remained subdued and investor expectations for buybacks lower, so BP's announcement might not have triggered such a steep drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Variations in refining margins and company-specific operational issues",
+      "impact": "Could influence both cause and effect by altering market perceptions."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

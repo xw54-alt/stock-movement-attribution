@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00100",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Teva Pharmaceuticals launched lenalidomide capsules, a generic version of the blood cancer drug Revlimid, in the United States with multiple dosage strengths.",
+      "date": "2022-03-08",
+      "entities": [
+        "Teva Pharmaceutical Industries"
+      ],
+      "sectors": [
+        "pharmaceuticals"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Teva Pharmaceutical Industries"
+      },
+      "source_info": {
+        "title": "Teva Announces US Launch of Lenalidomide, Generic of Revlimid",
+        "url": "https://centerforbiosimilars.com/view/teva-announces-us-launch-of-lenalidomide-generic-of-revlimid",
+        "published_date": "2022-03-08",
+        "publisher": "The Center for Biosimilars"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bristol Myers Squibb reported that its second-quarter 2023 sales fell and it cut its full-year forecast as its cancer drugs faced generic competition, sending its shares down about 3.2%.",
+      "date": "2023-07-27",
+      "entities": [
+        "Bristol Myers Squibb"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Bristol Myers Squibb"
+      },
+      "stock_change_pct": 3.2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Bristol Myers sales fall, cuts 2023 forecast as drugs face competition",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/bristol-myers-sales-fall-cuts-2023-forecast-drugs-face-competition-2023-07-27/",
+        "published_date": "2023-07-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A competitor introduced a generic version of lenalidomide, creating a lower-cost alternative.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Availability of cheaper generics eroded revenues from the branded drug over the following year.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Reduced revenue led Bristol Myers Squibb to cut its forecast, prompting investors to sell shares and causing a stock 3.2% decline.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The Reuters article attributes Bristol Myers Squibb's revenue decline and forecast cut to generic competition, suggesting that early generic launches like Teva's lenalidomide capsules contributed to the drop and the ensuing share fall.",
+  "counterfactual_analysis": "If Teva had not launched its generic lenalidomide capsules, Bristol Myers Squibb might have retained more Revlimid sales and avoided the revenue decline and stock drop reported in July 2023.",
+  "adversarial_confounders": [
+    {
+      "text": "A stronger US dollar reduced overseas revenue and could independently depress sales.",
+      "impact": "Could have contributed to revenue declines regardless of generic competition"
+    },
+    {
+      "text": "Increased patient assistance programs allowed more patients to receive the drug at no cost.",
+      "impact": "Lowered revenue apart from competitive pressures"
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "competitor",
+        "industry_barriers": "medium",
+        "commentary": "Teva's launch of a U.S. generic version of Revlimid introduced a direct, lower-cost competitor to one of Bristol Myers Squibb's key oncology blockbusters. As generics capture volume and force discounts, BMS faces a structural hit to Revlimid revenue, which showed up in its weaker sales and guidance cut and drove the stock lower."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00064",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Chinese startup DeepSeek rolled out a free AI assistant that uses lower-cost chips and less data, spurring worries about the returns on heavy AI infrastructure investments.",
+      "date": "2025-01-20",
+      "entities": [
+        "DeepSeek"
+      ],
+      "sectors": [
+        "Artificial intelligence",
+        "Technology"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.4,
+        "target": "High-end AI infrastructure"
+      },
+      "source_info": {
+        "title": "China's DeepSeek sparks AI market rout",
+        "url": "https://zh.wikipedia.org/wiki/DeepSeek-R1",
+        "published_date": "2025-01-20",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "The same day, European tech stocks slid 3.4% and ASML shares dropped 7% to a two-month low as investors reassessed the need for expensive chips and equipment.",
+      "date": "2025-01-27",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "ASML"
+      },
+      "stock_change_pct": 7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "DeepSeek AI impact hits Europe, sends ASML stock tumbling",
+        "url": "https://thenextweb.com/news/deepseek-ai-model-hits-asml-stock",
+        "published_date": "2025-01-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "DeepSeek unveiled an AI assistant that claimed to match established models while using cheaper chips and less data.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors feared that AI computing might require fewer high-end chips, prompting a sell-off in semiconductor stocks.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "European tech shares dropped sharply and ASML slid 7% to a two-month low as traders reassessed the growth trajectory for chip equipment makers.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The announcement from DeepSeek raised concerns that AI workloads could be met with cheaper hardware, undermining the case for expensive chips and lithography tools. This fear led investors to sell off semiconductor stocks, including ASML.",
+  "counterfactual_analysis": "If DeepSeek's model had not been introduced or its claims had been dismissed, investors would likely have maintained bullish expectations for high-end chip demand, and ASML's shares may not have fallen 7%.",
+  "adversarial_confounders": [
+    {
+      "text": "General market volatility",
+      "impact": "Market-wide movements might have amplified ASML's decline independently of DeepSeek's announcement."
+    },
+    {
+      "text": "Profit-taking after a strong rally",
+      "impact": "Traders may have used the news as a reason to lock in gains, further pressuring ASML's stock."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Export controls limiting shipments of advanced tools to China",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Tighter Dutch and U.S. rules on sending EUV and other advanced equipment to China constrained ASML's access to a key growth market. These political limits introduced structural uncertainty around future orders, which investors partially offset against strong demand from subsidized fabs in the U.S. and other regions."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

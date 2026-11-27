@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00015",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The rapid spread of the novel coronavirus triggered a worldwide market rout. As investors confronted the possibility of a global pandemic, more than $5 trillion was wiped off global stocks, and markets experienced their worst week since the 2008 financial crisis.",
+      "date": "2020-02-28",
+      "entities": [
+        "coronavirus"
+      ],
+      "sectors": [
+        "healthcare",
+        "macroeconomic"
+      ],
+      "country": "global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "global markets"
+      },
+      "source_info": {
+        "title": "Coronavirus panic sent world share markets skidding again, wiping about $5 trillion off global stocks",
+        "url": "https://www.reuters.com/article/global-markets/global-markets-coronavirus-crash-wipes-5-trillion-off-world-stocks-idUSL5N2AS3T4",
+        "published_date": "2020-02-28",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "As the coronavirus crisis deepened, Alphabet's shares fell about 13% over March 2020. Investors feared that a pandemic-induced recession would slash advertising budgets and reduce Google's revenue, causing Alphabet's stock to track the steep decline in the S&P 500 despite a lack of company-specific bad news.",
+      "date": "2020-03-20",
+      "entities": [
+        "Alphabet"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Alphabet"
+      },
+      "stock_change_pct": 13,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Why Alphabet stock fell 13% in March 2020",
+        "url": "https://www.nasdaq.com/articles/why-alphabet-stock-gave-up-13-in-march-2020-04-03",
+        "published_date": "2020-04-03",
+        "publisher": "Nasdaq"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2020-02-28, The emergence of COVID-19 disrupted economic activity worldwide, leading to steep losses across global stock markets.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Alphabet relies heavily on advertising revenue. Investors concluded that a pandemic-induced slowdown would cause advertisers to cut budgets, reducing Google's revenue.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2020-03-20, Consequently, Alphabet's share price fell in line with the broader market, declining about 13% even in the absence of negative company-specific news.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The pandemic shock created uncertainty about the durability of advertising revenue. Market participants punished advertising-dependent companies like Alphabet, anticipating a recession and weaker marketing budgets.",
+  "counterfactual_analysis": "If COVID-19 had not become a global pandemic, advertising spending would likely have continued at normal levels, and Alphabet's share price would not have experienced such a steep decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous oil-price shocks and central-bank actions during March 2020 could also have influenced market behaviour.",
+      "impact": "These factors make it difficult to attribute the entire decline solely to pandemic fears."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.7,
+        "commentary": "A series of positive host and guest reviews reinforced trust in Airbnb's platform, encouraging more listings and bookings. This created a reinforcing loop where stronger network effects gradually translated into higher revenue growth and a supportive share price over subsequent quarters."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

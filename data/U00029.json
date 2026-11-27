@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00029",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Delta Air Lines reported better-than-expected second-quarter 2025 results and reinstated its full-year profit outlook, signalling strong demand and profitability. The positive earnings surprise led Delta's stock to rally strongly and improved investor sentiment toward the airline industry.",
+      "date": "2025-07-10",
+      "entities": [
+        "Delta Air Lines Inc."
+      ],
+      "sectors": [
+        "Airlines"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Delta Air Lines Inc."
+      },
+      "source_info": {
+        "title": "Airline Stocks Soar After Delta Reports Strong Results, Reinstates Outlook",
+        "url": "https://www.investopedia.com/airline-stocks-soar-after-delta-reports-strong-results-reinstates-outlook-11768394",
+        "published_date": "2025-07-10",
+        "publisher": "Investopedia"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Investors bid up U.S. airline shares after Delta's strong earnings. United Airlines added more than 14% and American Airlines climbed nearly 13%, reflecting a broad rally in the sector.",
+      "date": "2025-07-10",
+      "entities": [
+        "American Airlines Group Inc."
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "American Airlines Group Inc."
+      },
+      "stock_change_pct": 13,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Airline Stocks Soar After Delta Reports Strong Results, Reinstates Outlook",
+        "url": "https://www.investopedia.com/airline-stocks-soar-after-delta-reports-strong-results-reinstates-outlook-11768394",
+        "published_date": "2025-07-10",
+        "publisher": "Investopedia"
+      },
+      "effect_strength_score": 8,
+      "impact_strength_score": 7,
+      "effect_type": "stock_movement",
+      "impact_direction": null,
+      "direct_or_indirect": null
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Delta Air Lines reported quarterly earnings and revenue that exceeded analyst expectations and reinstated its full-year guidance, signalling operational strength and pricing power in the airline industry.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The unexpected strength of Delta's results prompted investors to reassess the outlook for airline demand and profitability, leading to a positive re-rating of the sector.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "As confidence in the sector improved, investors rotated capital into airline stocks more broadly, including American Airlines, driving American's share price up nearly 13% on the day of Delta's announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The positive earnings surprise from Delta, a major competitor to American Airlines, signalled resilient demand and strong pricing across the industry. Under competitive benchmarking within Porter's Five Forces, favourable performance by one major carrier can lead investors to anticipate similar tailwinds for peers. Therefore Delta's upbeat results triggered a sympathetic rally in American Airlines stock.",
+  "counterfactual_analysis": "Had Delta's results disappointed or the carrier refrained from reinstating its outlook, investor sentiment toward the airline industry would likely have remained muted. Without the positive peer signal, American Airlines shares would not have enjoyed the nearly 13% rally and might have traded flat or even declined amid broader market uncertainty.",
+  "adversarial_confounders": [
+    {
+      "text": "Other factors such as macroeconomic data, fuel prices or unrelated news about American Airlines could also influence its share price. However, the timing of American's surge coincided precisely with Delta's earnings release and similar gains across multiple airlines, making the competitor's results the most salient driver. Still, an unexpected drop in oil prices or a large market rally could confound attribution.",
+      "impact": null
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Competitive pressures in the airline sector leave carriers with limited ability to fully pass higher fuel or labor costs on to travelers. When additional headwinds emerge, the need to defend market share forces airlines into price and capacity responses that quickly erode margins and investor confidence."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

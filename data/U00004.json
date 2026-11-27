@@ -1,0 +1,146 @@
+{
+  "pair_id": "U00004",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "The rise of GLP-1 drugs like Ozempic and Mounjaro raised concerns about reduced long-term demand for medtech devices used to treat obesity-related conditions.",
+      "date": "2024-07-02",
+      "entities": [
+        "Novo Nordisk",
+        "Eli Lilly"
+      ],
+      "sectors": [
+        "pharmaceuticals",
+        "medical devices"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.5,
+        "target": "Abbott Laboratories"
+      },
+      "source_info": {
+        "title": "What GLP-1 drugs mean for medtech",
+        "url": "https://clarivate.com/life-sciences-healthcare/blog/what-glp-1-drugs-mean-for-medtech/",
+        "published_date": "2024-07-02",
+        "publisher": "Clarivate"
+      },
+      "causal_strength_score": 3
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Abbott Laboratories narrowed its full-year sales guidance despite solid Q2 performance, citing weaker areas in diagnostics.",
+      "date": "2025-07-17",
+      "entities": [
+        "Abbott Laboratories"
+      ],
+      "sectors": [
+        "medical devices",
+        "diagnostics"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Abbott Laboratories"
+      },
+      "source_info": {
+        "title": "Abbott Laboratories Sheds 8% On A Rare Guidance Miss",
+        "url": "https://www.investors.com/news/technology/abbott-stock-abbott-laboratories-earnings-q2-2025/",
+        "published_date": "2025-07-17",
+        "publisher": "Investor's Business Daily"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Abbott's stock dropped about 8.5% following the guidance revision and concerns about GLP-1s' longer-term impact on medtech demand.",
+      "date": "2025-07-17",
+      "entities": [
+        "Abbott Laboratories"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Abbott Laboratories"
+      },
+      "stock_change_pct": 8.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Abbott Laboratories Sheds 8% On A Rare Guidance Miss",
+        "url": "https://www.investors.com/news/technology/abbott-stock-abbott-laboratories-earnings-q2-2025/",
+        "published_date": "2025-07-17",
+        "publisher": "investors.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2024-07-02, widespread GLP-1 adoption increased concerns that drug therapies could substitute for certain medtech procedures, weighing on device makers' outlooks.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors perceived Abbott's medtech exposure as vulnerable to long-term volume shifts and watched diagnostics softness closely.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-07-17, Abbott narrowed guidance following Q2 results, reinforcing worries about growth in non-device segments.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 4,
+      "description": "On 2025-07-17, Abbott's shares fell about 8.5% on the day of the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The guidance revision crystallized existing GLP-1 substitution fears and diagnostics softness into a tighter outlook, prompting a sharp re-rating.",
+  "counterfactual_analysis": "Absent GLP-1 substitution concerns or if guidance had remained intact, the stock decline would likely have been smaller.",
+  "adversarial_confounders": [
+    {
+      "text": "Post-COVID testing normalization",
+      "impact": "Diagnostics revenue headwinds could depress growth independent of GLP-1 dynamics"
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Breakthrough GLP-1 drugs offer a pharmacological substitute for some procedures that historically relied on medtech interventions. As investors priced in this shift, Abbott's device portfolio looked more exposed to substitution risk, increasing competitive pressure on its growth outlook."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - GLP-1 innovation is reshaping treatment pathways",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Rapid progress in GLP-1 therapies is changing how obesity-related conditions are managed over the long term. As these drugs gain acceptance, markets worry that Abbott's diagnostics and device lines may see slower volume growth than previously expected."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

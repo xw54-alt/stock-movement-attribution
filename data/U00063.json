@@ -1,0 +1,115 @@
+{
+  "pair_id": "U00063",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The United States added more than 140 Chinese companies to its export control list and imposed fresh restrictions on shipments of advanced chip-making tools to China.",
+      "date": "2024-12-02",
+      "entities": [
+        "U.S. Commerce Department"
+      ],
+      "sectors": [
+        "Semiconductor",
+        "Regulation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Chinese semiconductor industry"
+      },
+      "source_info": {
+        "title": "U.S. announces new export controls on China's chip industry",
+        "url": "https://www.nbcnews.com/news/world/us-announces-new-export-controls-china-chip-industry-rcna182579",
+        "published_date": "2024-12-02",
+        "publisher": "nbcnews"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "ASML warned it might not achieve revenue growth in 2026 and its shares fell as much as 10.5%, with analysts noting that potential U.S. tariffs could raise the cost of its high-end machines to around €325 million.",
+      "date": "2025-07-16",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Financial Services"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "ASML"
+      },
+      "stock_change_pct": 10.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "ASML Shares Slump as Tariff Uncertainty Prompts Growth Warning",
+        "url": "https://www.wsj.com/articles/asml-stock-earnings-q2-tariffs-ab27ad6d",
+        "published_date": "2025-07-16",
+        "publisher": "The wall street"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On Dec. 2 2024, the U.S. Commerce Department expanded export restrictions by adding over 140 Chinese firms to its entity list and blocking shipments of chip-making tools.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The crackdown raised uncertainty for equipment vendors like ASML and increased risk of retaliatory tariffs or reduced Chinese demand.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By July 2025, ASML warned that such U.S. measures could jeopardize its growth trajectory, highlighting TSMC as its only likely major customer.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors reacted negatively, driving ASML shares down as much as 10.5%, with concern that U.S. tariffs could lift machine prices to €325 million.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The widened U.S. export restrictions signaled significant geopolitical risk for ASML, which relies on Chinese customers for a portion of its revenue. The potential impact on market access and rising equipment costs led ASML to issue a growth warning, prompting a sharp drop in its share price.",
+  "counterfactual_analysis": "If the U.S. had not escalated chip-related export controls, ASML might have retained greater access to the Chinese market, and investors may have maintained confidence in its 2026 growth outlook.",
+  "adversarial_confounders": [
+    {
+      "text": "Delays in orders from Intel and Samsung",
+      "impact": "These could have reduced ASML's bookings regardless of U.S. export actions."
+    },
+    {
+      "text": "Slower global macroeconomic growth",
+      "impact": "May have dampened semiconductor demand independently of U.S. policy changes."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - U.S. industrial policy and subsidies supporting domestic chip manufacturing",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "The CHIPS Act and related incentives encouraged major chipmakers to commit billions to new U.S. fabs, often requiring cutting-edge lithography tools. These political and policy signals strengthened confidence in ASML's long-term demand outlook, even as the company faced near-term export restrictions in other regions."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

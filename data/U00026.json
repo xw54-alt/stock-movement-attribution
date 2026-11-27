@@ -1,0 +1,116 @@
+{
+  "pair_id": "U00026",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "OpenAI decided to abandon its plan to build its own chip-manufacturing facilities and instead partnered with Broadcom to design a custom AI accelerator and contracted TSMC to fabricate it, opting to rely on established semiconductor firms for its hardware needs.",
+      "date": "2024-10-29",
+      "entities": [
+        "OpenAI",
+        "Broadcom Inc.",
+        "Taiwan Semiconductor Manufacturing Company (TSMC)"
+      ],
+      "sectors": [
+        "Artificial Intelligence",
+        "Semiconductors"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Broadcom Inc."
+      },
+      "source_info": {
+        "title": "OpenAI builds first chip with Broadcom, TSMC; scales back foundry ambition",
+        "url": "https://www.reuters.com/technology/artificial-intelligence/openai-builds-first-chip-with-broadcom-tsmc-scales-back-foundry-ambition-2024-10-29/",
+        "published_date": "2024-10-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "The announcement lifted shares of chip suppliers; AMD shares extended earlier gains and ended up about 3.7% as investors expected the AI hardware market to broaden beyond a few dominant suppliers.",
+      "date": "2024-10-29",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 3.7,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "OpenAI's chip-partnership news lifts semiconductor stocks including AMD",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-reportedly-builds-custom-ai-chips-as-it-embraces-amd-company-also-abandons-plans-to-build-its-own-fabs",
+        "published_date": "2024-10-29",
+        "publisher": "Tom's Hardware"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "OpenAI announced a partnership with Broadcom to design a custom AI accelerator and with TSMC to manufacture it, scrapping plans to build its own foundry.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The move indicated that demand for AI chips would be met through existing semiconductor players rather than a new vertically integrated entrant, reducing competitive pressure on established chipmakers.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors concluded that companies with AI-capable processors, such as AMD, could capture part of the growth as AI workloads proliferate and buyers diversify across suppliers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "As a result, AMD's stock rose about 3.7% on the news.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters and Tom's Hardware noted that after OpenAI announced plans to work with Broadcom and TSMC on a custom AI chip, AMD shares extended their gains, ending up 3.7%.",
+  "counterfactual_analysis": "If OpenAI had not partnered with established chipmakers but instead pursued its own foundry, investors might have anticipated greater competition and AMD's stock would likely not have risen.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrently rising expectations for AMD's own AI chips or earnings.",
+      "impact": "AMD stock may have climbed due to its own product momentum rather than OpenAI's decision."
+    },
+    {
+      "text": "Broader market conditions boosting tech stocks.",
+      "impact": "A general rally could misattribute the increase to the OpenAI news."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Stronger engagement and ad monetization at Meta highlighted intensifying rivalry for digital advertising budgets. Investors feared that more targeted ad products and commerce tools at social platforms could divert incremental spend away from Amazon's own retail media business."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

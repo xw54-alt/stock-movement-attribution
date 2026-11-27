@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00070",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Since late 2020, Chinese authorities have launched a sweeping regulatory crackdown on large technology firms such as Alibaba and Tencent, introducing algorithmic oversight, anti-monopoly fines and worker protection rules that forced companies to scale back and refocus on core operations.",
+      "date": "2022-04-29",
+      "entities": [
+        "Alibaba",
+        "Tencent"
+      ],
+      "sectors": [
+        "technology"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Technology sector"
+      },
+      "source_info": {
+        "title": "How China's regulatory crackdown has reshaped its tech, property sectors",
+        "url": "https://www.reuters.com/world/china/education-bitcoin-chinas-season-regulatory-crackdown-2021-07-27/",
+        "published_date": "2022-04-29",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Baidu entered talks to sell its controlling stake in video-streaming unit iQIYI as part of a strategic refocus, lifting Baidu shares by around 4% in pre-market trading while iQIYI shares fell 4.7% amid concerns about divestiture.",
+      "date": "2022-06-15",
+      "entities": [
+        "Baidu",
+        "iQIYI"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Consumer Discretionary"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.65,
+        "target": "Baidu"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Exclusive - Baidu in talks to sell majority stake in iQIYI",
+        "url": "https://www.reuters.com/technology/exclusive-chinas-baidu-talks-sell-majority-stake-video-streaming-firm-iqiyi-2022-06-15/",
+        "published_date": "2022-06-15",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Chinese regulators levied fines and imposed strict rules on major technology platforms such as Alibaba and Tencent, signalling that sprawling conglomerates would face heightened scrutiny and must streamline operations.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The crackdown encouraged large tech firms to shed non-core businesses and focus on areas less likely to attract regulatory attention, leading to a wave of divestitures across the sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Baidu consequently sought to sell its majority stake in iQIYI, a video-streaming platform outside its core search and AI business. The planned sale boosted Baidu's stock price by about 4% in pre-market trading while iQIYI shares declined 4.7%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The regulatory environment pushed Chinese tech firms to refocus on core competencies. By divesting its stake in iQIYI, Baidu aligned itself with regulators' expectations and improved investor perceptions of strategic discipline.",
+  "counterfactual_analysis": "If the regulatory crackdown had not occurred, Baidu may have continued to hold its iQIYI stake, and there would have been no short-term uplift in its share price from the divestiture announcement.",
+  "adversarial_confounders": [
+    {
+      "text": "iQIYI's own financial performance",
+      "impact": "Weak or strong performance at iQIYI could influence Baidu's decision to sell independently of regulatory factors."
+    },
+    {
+      "text": "Capital needs for other investments",
+      "impact": "Baidu might have sold the stake to raise funds for AI or autonomous driving initiatives regardless of the crackdown."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Ongoing regulatory crackdown reshaping China's tech and media landscape",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Tighter rules on content, data and worker protection pushed Chinese internet platforms to unwind risky structures and exit some non-core businesses. Baidu's move to explore selling down iQIYI fit this pattern, as regulators' legal pressure encouraged a sharper focus on core search and AI operations and drove divergent stock reactions for parent and subsidiary."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

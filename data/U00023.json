@@ -1,0 +1,110 @@
+{
+  "pair_id": "U00023",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Intel announced a six-month delay to its 7-nm CPU manufacturing process due to yield problems, pushing the release of its next-generation chips to 2022 or later and causing its share price to drop from roughly $61 to around $50.",
+      "date": "2020-07-24",
+      "entities": [
+        "Intel Corporation"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Intel Corporation"
+      },
+      "source_info": {
+        "title": "Intel 7nm CPU delay sees shares slump as it falls further behind AMD Ryzen",
+        "url": "https://www.techradar.com/news/intel-7nm-cpu-delay-sees-shares-slump-as-it-falls-further-behind-amd-ryzen",
+        "published_date": "2020-07-24",
+        "publisher": "TechRadar"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "AMD's stock price rose approximately 6.5% and closed at $63.44 as investors shifted capital from Intel to AMD following Intel's announcement of delays and share price slump.",
+      "date": "2020-07-24",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 6.5,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Intel delay sees AMD shares surge as investors rotate to rivals",
+        "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-coronavirus-stock-market-rally-falls-on-apple-tesla-intel-amd/",
+        "published_date": "2020-07-25",
+        "publisher": "investors"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Intel announced that manufacturing defects would delay its 7-nm CPUs until at least 2022, leading to a sharp decline in its share price.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted Intel's delay as evidence that AMD would gain a competitive edge in advanced processors and capture market share, prompting them to reallocate capital.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As a result, AMD's share price increased by about 6.5% on July 24 2020, closing above Intel for the first time.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The effect article notes that after Intel's announcement of a 7-nm delay, AMD's stock price improved roughly 6.5% and finished at $63.44, reflecting investors' belief that AMD would benefit from Intel's setback.",
+  "counterfactual_analysis": "If Intel had not delayed its 7-nm chips, investors would not have rotated as aggressively into AMD, and AMD's stock likely would not have jumped 6.5%.",
+  "adversarial_confounders": [
+    {
+      "text": "Overall bullish sentiment in technology stocks unrelated to Intel's delay.",
+      "impact": "A general tech-market rally could have lifted AMD's share price regardless of Intel's problems, overstating the causal link."
+    },
+    {
+      "text": "AMD's own product announcements or earnings guidance around the same date.",
+      "impact": "Positive news specific to AMD may have independently driven the stock higher."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "high",
+        "commentary": "Rivian's execution setbacks and financial strain underscored how dependent Amazon's electrification plans were on a single young supplier. As doubts grew about Rivian's ability to deliver at scale, investors reassessed the reliability and cost of Amazon's future last-mile fleet transition."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

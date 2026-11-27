@@ -1,0 +1,140 @@
+{
+  "pair_id": "U00025",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Micron Technology announced it would invest 500 billion yen (around $3.6 billion) in a plant in Hiroshima, Japan, using extreme ultraviolet lithography to produce next-generation chips.",
+      "date": "2023-05-18",
+      "entities": [
+        "Micron Technology"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Memory"
+      ],
+      "country": "Japan",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Micron Technology"
+      },
+      "source_info": {
+        "title": "Micron Outlines $3.6 Billion Investment in Chip Plant With Japan's Backing",
+        "url": "https://www.wsj.com/world/asia/micron-outlines-3-6-billion-investment-in-chip-plant-with-japans-backing-b86111c2",
+        "published_date": "2023-05-18",
+        "publisher": "The Wall Street Journal"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": null,
+      "causal_salience": "secondary",
+      "text": "Synopsys Inc., a chip-design software provider, forecast quarterly revenue and profit above analysts' expectations due to strong demand for its tools, signaling robust chip-design activity.",
+      "date": "2023-05-18",
+      "entities": [
+        "Synopsys Inc."
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Software"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Synopsys Inc."
+      },
+      "source_info": {
+        "title": "Chip design software firm Synopsys beats forecast and raises full-year guidance",
+        "url": "https://siliconangle.com/2022/05/18/chip-design-software-firm-synopsys-beats-expectations-raises-full-year-guidance-stock-rises/",
+        "published_date": "2023-05-18",
+        "publisher": "SiliconANGLE"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Following Micron's investment announcement and Synopsys' upbeat forecasts, AMD shares rose around 4% on May 18 2023 as investors bet that strengthened supply and design ecosystems for AI chips would benefit AMD.",
+      "date": "2023-05-18",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Nvidia, AMD, Micron lead chip sector higher with AI, Japan in focus",
+        "url": "https://www.reuters.com/technology/nvidia-amd-micron-lead-chip-sector-higher-with-ai-japan-focus-2023-05-18/",
+        "published_date": "2023-05-18",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Micron Technology committed ¥500 billion to build an EUV-enabled chip plant in Hiroshima, signaling confidence in demand for next-generation memory chips and AI applications.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Synopsys reported revenue and profit forecasts above Wall Street expectations due to strong demand for chip-design tools, indicating healthy semiconductor design activity.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "These positive developments across the supply chain suggested that capacity and innovation for AI hardware were expanding, prompting investors to reassess the prospects of chipmakers.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 4,
+      "description": "This sentiment lifted AMD's share price by roughly 4% on May 18 2023, as the company was expected to benefit from stronger memory supply and design ecosystems supporting AI chips.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters noted that after Micron announced a massive investment in Japan and Synopsys posted strong forecasts, AMD shares were up 4% as part of a chip-sector rally.",
+  "counterfactual_analysis": "Without Micron's investment and Synopsys' positive outlook, the semiconductor sector might not have rallied, and AMD's share price would likely have remained flat.",
+  "adversarial_confounders": [
+    {
+      "text": "General enthusiasm about AI following Nvidia's results earlier that week.",
+      "impact": "Investors might have been buying AMD stock due to broader AI optimism rather than supply-chain news."
+    },
+    {
+      "text": "AMD's own announcements or earnings around the same time.",
+      "impact": "Company-specific news could have influenced the stock independently."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Intensified safety and regulatory scrutiny of aircraft manufacturers",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "High-profile safety incidents and investigations raised the risk of tougher certification standards and delivery delays for Boeing jets. Airlines dependent on these aircraft faced greater regulatory uncertainty and operational constraints, which weighed on their earnings outlook and share prices."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

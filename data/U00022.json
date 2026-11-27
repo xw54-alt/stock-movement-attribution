@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00022",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Intel appointed Pat Gelsinger as its new CEO, replacing Bob Swan, in a strategic leadership change aimed at improving competitiveness.",
+      "date": "2021-01-13",
+      "entities": [
+        "Intel"
+      ],
+      "sectors": [
+        "Semiconductor"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Intel"
+      },
+      "source_info": {
+        "title": "Intel Appoints Tech Industry Leader Pat Gelsinger as New CEO",
+        "url": "https://www.intc.com/news-events/press-releases/detail/1438/intel-appoints-tech-industry-leader-pat-gelsinger-as-new-ceo",
+        "published_date": "2021-01-13",
+        "publisher": "Intel Newsroom"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "BMO downgraded AMD stock, citing Intel CEO change as a threat to AMD market position, which contributed to a 1.06% decline in AMD stock price.",
+      "date": "2021-01-14",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 4,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 1.06,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "AMD gets a downgrade from BMO after Intel CEO change",
+        "url": "https://www.marketwatch.com/story/amd-gets-a-downgrade-from-bmo-after-intel-ceo-change-2021-01-14",
+        "published_date": "2021-01-14",
+        "publisher": "MarketWatch"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Intel appointed Pat Gelsinger as CEO, signaling a more aggressive strategy to regain market leadership.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "BMO viewed this change as a direct challenge to AMD current momentum in the processor market.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "BMO downgraded AMD stock, and investor sentiment worsened, resulting in a 1.06% decline in AMD stock price on the same day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The downgrade report from BMO explicitly cited Intel CEO appointment as the primary reason, and AMD stock dropped 1.06% on the same day.",
+  "counterfactual_analysis": "If Intel had not appointed a new CEO, BMO might not have downgraded AMD, and its stock would likely not have declined.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader sector rotation from tech to value stocks",
+      "impact": "May have contributed to downward pressure on AMD stock independent of the downgrade."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Intel's decision to appoint a new CEO was interpreted as a move to compete more aggressively in CPUs and regain share. For AMD, this leadership change increased perceived rivalry in the core market, prompting concerns that future competitive pressure could slow its gains."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00043",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Novo Nordisk announced it would invest about $6 billion to expand production of its GLP-1 weight-loss drug Wegovy in Denmark, highlighting persistent supply shortages and booming demand.",
+      "date": "2023-11-10",
+      "entities": [
+        "Novo Nordisk"
+      ],
+      "sectors": [
+        "pharmaceuticals",
+        "obesity"
+      ],
+      "country": "Denmark",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Novo Nordisk"
+      },
+      "source_info": {
+        "title": "Novo invests $6 billion in Wegovy production, still below demand",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/novo-nordisk-invest-6-bln-denmark-expansions-2023-11-10/",
+        "published_date": "2023-11-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "Amgen hinted at encouraging interim data for its experimental obesity drug MariTide and said it would start a late-stage study later in the year. Its shares surged about 14% to $317.85, their best session since 2009.",
+      "date": "2024-05-03",
+      "entities": [
+        "Amgen"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "Amgen"
+      },
+      "stock_change_pct": 14,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Amgen jumps after teasing weight-loss drug data, rival stocks fall",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/amgen-shares-jump-after-teasing-encouraging-weight-loss-data-2024-05-03/",
+        "published_date": "2024-05-03",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2023-11-10, Novo Nordisk committed $6 billion to expand production of Wegovy, signalling that the obesity-drug market is massive yet supply-constrained.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted the investment as evidence of strong demand and room for new entrants, increasing attention on companies developing alternative GLP-1 therapies.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2024-05-03, Months later, Amgen teased promising data for its obesity candidate MariTide, offering a differentiated dosing schedule. The market, primed by Novo's investment, reacted exuberantly, sending Amgen's stock up 14%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Novo's expansion underscored the scale of opportunity and persistent supply shortages in obesity drugs. Amgen's announcement of encouraging data was interpreted as filling unmet demand, leading to a sharp stock rally.",
+  "counterfactual_analysis": "If Novo had not signaled such strong demand through its massive investment, investors might have been less enthusiastic about Amgen's interim data, resulting in a smaller price jump.",
+  "adversarial_confounders": [
+    {
+      "text": "General investor enthusiasm for weight-loss drugs",
+      "impact": "Broader market hype around obesity treatments could amplify reactions to any related news."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "pricing_power",
+        "industry_barriers": "medium",
+        "commentary": "The pandemic temporarily weakened travelers' bargaining power as capacity was withdrawn and future cruise credits locked in customers. Carnival's ability to raise prices and fill cabins again as demand recovered showed that the worst-case fears about permanent discounting had been overdone, fueling a strong rebound in the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

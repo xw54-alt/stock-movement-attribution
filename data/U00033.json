@@ -1,0 +1,117 @@
+{
+  "pair_id": "U00033",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Global chipmaker stocks slumped in late 2022 amid high inflation, rising interest rates and recession fears, and the U.S. government announced strict export controls on advanced semiconductor equipment to China, depressing valuations across the semiconductor industry.",
+      "date": "2022-10-07",
+      "entities": [
+        "AMD",
+        "Nvidia",
+        "Qualcomm",
+        "U.S. Commerce Department"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Stock Market"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Semiconductor sector"
+      },
+      "source_info": {
+        "title": "Chinese chip stocks tumble after U.S. calls for new curbs on high-end tech",
+        "url": "https://www.cnbc.com/2022/10/10/chinese-chip-stocks-tumble-after-us-calls-for-new-curbs-on-high-end-tech.html",
+        "published_date": "2022-10-10",
+        "publisher": "CNBC"
+      },
+      "causal_strength_score": 3
+    }
+  ],
+  "effects": [
+    {
+      "text": "At its 2024 Worldwide Developers Conference, Apple unveiled Apple Intelligence AI features and new mixed-reality tools. Investors reacted enthusiastically, sending Apple shares almost 6% higher and boosting tech-focused ETFs.",
+      "date": "2024-06-12",
+      "entities": [
+        "Apple",
+        "Investors"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Apple"
+      },
+      "stock_change_pct": 6,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Apple stock surges to record high after AI announcements",
+        "url": "https://finance.yahoo.com/news/apple-stock-surges-to-record-high-after-ai-announcements-150325922.html",
+        "published_date": "2024-06-12",
+        "publisher": "Yahoo Finance"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2022-10-07, A steep sell-off in chipmaker stocks in late 2022 and tighter U.S. export controls highlighted supply-chain vulnerabilities and pushed investors to seek resilient tech companies.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Apple is seen as financially strong with diversified revenue streams, and its ability to control its hardware and software stack positioned it as a safe haven during industry turbulence.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2024-06-12, When Apple revealed new AI features and a mixed-reality platform at WWDC24, the narrative of resilience and innovation attracted investors and drove the share price up by nearly 6%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The slump in semiconductor stocks and export restrictions in late 2022 underscored the fragility of the chip supply chain. Investors gravitated toward companies perceived as resilient and innovative. Apple capitalised on this sentiment by unveiling powerful AI tools at WWDC24, reinforcing its leadership and prompting a sharp rise in its share price.",
+  "counterfactual_analysis": "Had chip stocks not experienced a broad downturn and export controls remained loose, investors might have been less motivated to flock to Apple for stability, and the stock reaction to the WWDC24 announcements could have been less pronounced.",
+  "adversarial_confounders": [
+    {
+      "text": "General enthusiasm for artificial intelligence in 2024",
+      "impact": "Helped drive investor excitement independently of chip sector trends"
+    },
+    {
+      "text": "Broader stock market momentum",
+      "impact": "May have contributed to Apple share price rise regardless of its product launches"
+    },
+    {
+      "text": "Short covering by traders",
+      "impact": "Could have amplified the magnitude of Apple rally"
+    }
+  ],
+  "confidence_score": 0.3,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Early reports of severe COVID-19 outbreaks and rolling lockdowns pushed consumers toward at-home work, learning and entertainment, accelerating device replacement. As Apple reported strong Mac and iPad demand, those behaviors created a reinforcing loop of higher usage, more hardware upgrades and stronger earnings surprises."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

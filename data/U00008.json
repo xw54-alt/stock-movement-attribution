@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00008",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Russia launched a full-scale invasion of Ukraine, triggering sanctions and widespread geopolitical instability. Reuters reported it on 2022-02-24.",
+      "date": "2022-02-24",
+      "entities": [
+        "Russia",
+        "Ukraine",
+        "Western countries"
+      ],
+      "sectors": [
+        "geopolitics",
+        "energy",
+        "trade"
+      ],
+      "country": "Russia/Ukraine",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "global markets"
+      },
+      "source_info": {
+        "title": "Russia has launched full-scale invasion of Ukraine, Kyiv says",
+        "url": "https://www.reuters.com/world/europe/russia-has-launched-full-scale-invasion-ukraine-kyiv-says-2022-02-24/?utm_source=chatgpt.com",
+        "published_date": "2022-02-24",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Adobe's shares fell about 10% despite strong earnings, after it stopped sales to Russia and Belarus and projected a $75 million revenue hit due to the conflict.",
+      "date": "2022-03-24",
+      "entities": [
+        "Adobe"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Adobe"
+      },
+      "stock_change_pct": 10,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Adobe Shares Fall Due to the Russian Conflict",
+        "url": "https://realinvestmentadvice.com/resources/blog/adobe-shares-fall-due-to-the-russian-conflict/",
+        "published_date": "2022-03-24",
+        "publisher": "Real Investment Advice"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2022-02-24, Russia began a full-scale invasion of Ukraine",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Adobe halted new sales in Russia and Belarus and forecasted $75M revenue impact",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-03-24, Market reacted to reduced earnings outlook despite strong core results, the stock price fell about 10%.  (on 2022-03-24)",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The geopolitical conflict led Adobe to voluntarily halt sales in Russia and adjust revenue forecasts, which raised concerns about financial performance and drove the stock price down.",
+  "counterfactual_analysis": "Had the invasion not occurred, Adobe would likely have maintained operations in Russia and avoided the revenue impact, possibly sustaining a more stable stock price.",
+  "adversarial_confounders": [
+    {
+      "text": "Overall tech sector weakness in Q1 2022",
+      "impact": "Sector-wide pressure may have contributed, but the magnitude of Adobe's drop suggests the Russia decision was the primary factor."
+    }
+  ],
+  "confidence_score": 0.95,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Russia's invasion and sanctions reshaped regional market access",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.8,
+        "commentary": "The invasion of Ukraine and resulting sanctions forced Western firms like Adobe to exit the Russian market and forgo revenue. This political shock directly curtailed Adobe's sales in the region and raised uncertainty about future geopolitical disruptions."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "pair_id": "U00060",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "TSMC said its 2023 capital expenditure would fall to between $32 billion and $36 billion, down from $36.3 billion in 2022, citing softening chip demand and inventory adjustments.",
+      "date": "2023-01-12",
+      "entities": [
+        "TSMC"
+      ],
+      "sectors": [
+        "Semiconductor"
+      ],
+      "country": "Taiwan China",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.4,
+        "target": "TSMC"
+      },
+      "source_info": {
+        "title": "TSMC cuts 2023 capex after record Q4 as chip demand weakens",
+        "url": "https://www.reuters.com/technology/tsmc-q4-profit-up-78-beats-market-expectations-2023-01-12/",
+        "published_date": "2023-01-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "ASML shares dropped about 1.7% despite posting strong earnings and forecasting 25% sales growth, as investors remained cautious amid export restrictions and demand concerns.",
+      "date": "2023-01-25",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "ASML"
+      },
+      "stock_change_pct": 10,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "ASML shares fall 10% as China risks cloud solid Q2 earnings",
+        "url": "https://www.reuters.com/technology/asml-posts-second-quarter-earnings-17-bln-bookings-rise-2024-07-17/",
+        "published_date": "2024-07-17",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "TSMC announced a cut to its 2023 capital expenditure, warning of soft chip demand and inventory adjustments.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors interpreted lower customer spending as signaling weaker future equipment orders for ASML.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Despite ASML exceeding earnings expectations, its stock declined about 10% as broader demand concerns overshadowed the results.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "TSMC is a leading buyer of ASML equipment. When TSMC signalled reduced spending, investors deduced that demand for ASML's lithography systems might weaken. Even though ASML reported strong results, market caution about future orders drove the share price lower.",
+  "counterfactual_analysis": "If TSMC had maintained its capital expenditure levels, investors may have credited ASML's earnings and growth forecast more fully, potentially leading to a share price increase rather than a decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Concerns about U.S. export controls on chip equipment and broader macroeconomic uncertainty could also have weighed on investor sentiment.",
+      "impact": "Those factors likely influenced sentiment as well, but the timing suggests the TSMC cap-ex announcement was the immediate driver."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "high",
+        "commentary": "TSMC's decision to slow capital spending signaled that leading foundries were becoming more selective about tool purchases as demand cooled. With a few large chipmakers controlling most advanced-node capacity, their ability to delay or shift orders gave them leverage over equipment suppliers like ASML and pressured its share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "pair_id": "U00058",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D00013",
+      "causal_salience": "primary",
+      "text": "Cryptocurrency exchange FTX filed for bankruptcy amid allegations of fraud, wiping out billions in customer funds and triggering turbulence across digital asset markets.",
+      "date": "2022-11-11",
+      "entities": [
+        "FTX"
+      ],
+      "sectors": [
+        "cryptocurrency"
+      ],
+      "country": "Bahamas",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "FTX"
+      },
+      "source_info": {
+        "title": "Crypto exchange FTX files for bankruptcy as wunderkind CEO exits",
+        "url": "https://www.reuters.com/business/ftx-start-us-bankruptcy-proceedings-ceo-exit-2022-11-11/",
+        "published_date": "2022-11-11",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bank of America's shares slipped about 2% as the collapse of FTX intensified risk aversion and raised questions about banks' exposure to volatile crypto markets.",
+      "date": "2022-11-11",
+      "entities": [
+        "Bank of America"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Bank of America"
+      },
+      "stock_change_pct": 2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Crypto stocks slide as FTX prepares for bankruptcy proceedings",
+        "url": "https://www.reuters.com/markets/crypto-stocks-slide-ftx-prepares-bankruptcy-proceedings-2022-11-11/",
+        "published_date": "2022-11-11",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "FTX, once one of the largest crypto exchanges, filed for U.S. bankruptcy amid fraud allegations and massive customer fund losses.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The collapse damaged player confidence in digital assets and elevated overall risk aversion in markets.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Bank of America's shares fell around -2% as investors reduced exposure to financial firms amid heightened uncertainty linked to crypto contagion fears.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The collapse of FTX represented a dramatic failure within the digital asset industry, driving investor risk-off sentiment. Even banks with limited crypto exposure saw share prices decline due to broader market uncertainty.",
+  "counterfactual_analysis": "Had FTX avoided bankruptcy or been rescued without massive customer losses, risk appetite would likely have been stronger and Bank of America's stock possibly less affected.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent macroeconomic developments, such as inflation data releases or central bank commentary, may also have influenced investor behavior.",
+      "impact": "These could have shaped sentiment broadly, but the abrupt crypto collapse served as the immediate trigger for risk aversion."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Softening global chip demand after a pandemic boom",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Signs of inventory corrections and weaker end-market demand suggested that the semiconductor cycle was past its peak. This macro slowdown made investors more cautious on even well-positioned equipment makers, limiting the upside from strong near-term results."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "90 days",
+        "conditions_score": 0.7,
+        "commentary": "After a surge of orders during the chip shortage, customers began digesting excess stock and pushing out new equipment purchases. Over time, that digestion phase helps reset the cycle, but in the interim it dampens order momentum and tempers optimism around companies like ASML."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

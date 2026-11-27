@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00095",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Alaska Airlines suffered an in-flight panel blowout on a 737-9 operated flight, prompting the carrier to ground its affected fleet for inspections.",
+      "date": "2024-01-05",
+      "entities": [
+        "Alaska Airlines"
+      ],
+      "sectors": [
+        "airlines",
+        "safety"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Alaska Airlines"
+      },
+      "source_info": {
+        "title": "Alaska Airlines grounds Boeing 737 Max 9 fleet after section blows out midair",
+        "url": "https://www.cnbc.com/2024/01/06/alaska-airlines-grounds-boeing-737-max-9-fleet-after-section-blows-out-midair.html",
+        "published_date": "2024-01-06",
+        "publisher": "CNBC"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "Boeing stock fell about 4.1% as investors assessed fallout from the MAX 9 incident and prolonged groundings.",
+      "date": "2024-01-16",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 4.1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Boeing shares fall as MAX 9 grounding continues",
+        "url": "https://www.reuters.com/business/aerospace-defense/boeing-shares-fall-max-9-grounding-continues-2024-01-16/",
+        "published_date": "2024-01-16",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A major safety incident at a large U.S. airline creates uncertainty around MAX 9 operations.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Market expects broader operational and delivery disruptions.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investor sentiment toward the planemaker weakens; Boeing shares fall about 4.1%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported the Alaska Airlines incident and subsequent market reaction reflected in Boeing's share price decline.",
+  "counterfactual_analysis": "Without the Alaska Airlines incident, investors would likely have priced in a faster return to normal MAX 9 operations.",
+  "adversarial_confounders": [
+    {
+      "text": "General market volatility",
+      "impact": "Could have contributed to share price moves independent of the specific incident."
+    }
+  ],
+  "confidence_score": 0.95,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "11 days",
+        "conditions_score": 0.85,
+        "commentary": "The Alaska Airlines MAX 9 panel blowout triggered groundings, inspections and intense media scrutiny that amplified concerns about Boeing's safety culture. Each new headline and operational setback reinforced investor anxiety, creating a feedback loop in which safety issues, regulatory actions and share-price weakness fed into one another."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Intensified regulatory oversight after a safety incident",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "After a dramatic in-flight failure, regulators typically tighten oversight, order detailed inspections and may restrict operations until root causes are addressed. This heightened legal and regulatory pressure added to Boeing's costs and uncertainty around the MAX programme, supporting a sharp negative reaction in the stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

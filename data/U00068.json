@@ -1,0 +1,109 @@
+{
+  "pair_id": "U00068",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "At a rare meeting, Chinese President Xi Jinping convened top technology entrepreneurs including Alibaba's Jack Ma and Huawei's Ren Zhengfei, signalling renewed government support for private companies while excluding Baidu's founder Robin Li from the attendee list.",
+      "date": "2025-02-17",
+      "entities": [
+        "Alibaba",
+        "Huawei"
+      ],
+      "sectors": [
+        "technology"
+      ],
+      "country": "China",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Alibaba"
+      },
+      "source_info": {
+        "title": "China's Xi holds rare meet with business leaders amid US tech rivalry",
+        "url": "https://www.reuters.com/world/china/chinas-xi-attends-symposium-private-enterprises-delivers-speech-2025-02-17/",
+        "published_date": "2025-02-17",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Baidu's Hong Kong-listed shares slid as much as 8.8% before closing down 7%, wiping roughly $2.4 billion off its market value, after investors noticed that company founder Robin Li was not seen at Xi's meeting with other tech giants.",
+      "date": "2025-02-17",
+      "entities": [
+        "Baidu"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "China",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Baidu"
+      },
+      "stock_change_pct": 7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Baidu share slide wipes $2.4 billion off market value amid speculation over Xi meeting",
+        "url": "https://www.reuters.com/technology/baidu-share-slide-wipes-24-billion-off-market-value-amid-speculation-over-xi-2025-02-17/",
+        "published_date": "2025-02-17",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "President Xi's gathering of notable tech leaders such as Jack Ma and Ren Zhengfei was seen as an endorsement of those companies and a signal that the government was willing to collaborate closely with selected firms.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The conspicuous absence of Baidu's founder Robin Li led investors to speculate that Baidu was not part of this group of favoured companies, raising concerns about its relationship with regulators.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As rumours spread, Baidu's stock sold off sharply, dropping 8.8% intraday and finishing the day down 7%, erasing roughly $2.4 billion in market value.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "An invitation to a high-profile government meeting can confer legitimacy on technology firms in China. When competitors were publicly embraced and Baidu was not, investors interpreted this as a negative signal about Baidu's regulatory standing, leading to an immediate sell-off.",
+  "counterfactual_analysis": "If Robin Li had been seen at the meeting or if the meeting had not taken place, investors would likely not have raised doubts about Baidu's status with the government, and the stock decline may have been much less severe.",
+  "adversarial_confounders": [
+    {
+      "text": "General weakness in Chinese equity markets that day",
+      "impact": "A broader market downturn could have contributed to Baidu's fall independently of meeting-related speculation."
+    },
+    {
+      "text": "Other company-specific news or rumours",
+      "impact": "Unrelated negative announcements or social media rumours could have added to selling pressure."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Semiconductor cycle normalization after a prolonged boom",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "After years of shortages and rush orders, many chip end-markets began to normalize, leading customers to digest inventories and slow new tool purchases. Investors viewed this cyclical cooling as a natural part of the semi cycle, tempering near-term growth expectations for ASML while still believing in its longer-term structural drivers."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

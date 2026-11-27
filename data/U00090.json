@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00090",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Spirit AeroSystems disclosed a quality issue involving elongated fastener holes on the aft pressure bulkhead on certain 737 fuselage units.",
+      "date": "2023-08-23",
+      "entities": [
+        "Spirit AeroSystems"
+      ],
+      "sectors": [
+        "aerospace",
+        "manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Spirit AeroSystems"
+      },
+      "source_info": {
+        "title": "Spirit AeroSystems 737 Aft Bulkhead Statement",
+        "url": "https://www.spiritaero.com/pages/release/spirit-aerosystems-737-aft-bulkhead-statement/",
+        "published_date": "2023-08-23",
+        "publisher": "Spirit AeroSystems"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Boeing shares fell about 4.5% the following day as delivery targets came under pressure from the supplier defect.",
+      "date": "2023-08-24",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 4.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Boeing shares fall as 737 goal at risk from supplier defect involving Spirit",
+        "url": "https://www.reuters.com/business/aerospace-defense/boeing-shares-fall-737-delivery-goal-risk-defect-involving-spirit-2023-08-24/",
+        "published_date": "2023-08-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Supplier discloses a manufacturing non-conformance in fuselage components.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Markets infer delivery delays and higher rework costs.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Boeing shares drop 4.5% on the revised expectations.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Spirit's statement and subsequent Reuters coverage tied the defect to near-term Boeing delivery risk and a stock decline.",
+  "counterfactual_analysis": "Absent the supplier defect, investors would expect a steadier 737 delivery cadence.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro news on the same day",
+      "impact": "Could have influenced trading alongside the defect headlines."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "supply_constraint",
+        "industry_barriers": "high",
+        "commentary": "A critical aerostructures supplier's quality lapse forced Boeing to halt or slow deliveries, revealing how dependent it remained on a concentrated upstream base. That disruption weakened Boeing's own bargaining position and raised the risk of penalties and rework costs, prompting investors to mark down the shares on renewed execution concerns."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

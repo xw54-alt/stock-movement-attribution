@@ -1,0 +1,115 @@
+{
+  "pair_id": "U00012",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "A major fire at SPS Technologies, a key supplier of titanium components for aerospace, disrupted its production lines and supply to aircraft manufacturers.",
+      "date": "2025-02-20",
+      "entities": [
+        "SPS Technologies"
+      ],
+      "sectors": [
+        "manufacturing",
+        "aerospace"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "SPS Technologies"
+      },
+      "source_info": {
+        "title": "SPS Technologies fire enters 4th day; supply concerns grow",
+        "url": "https://www.nbcphiladelphia.com/news/local/sps-technologies-fire-day-4/4114394/",
+        "published_date": "2025-02-20",
+        "publisher": "NBC Philadelphia"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Airbus warned airlines that delivery delays will continue for three years, citing ongoing supply chain disruptions in their titanium parts pipeline.",
+      "date": "2025-05-28",
+      "entities": [
+        "Airbus"
+      ],
+      "sectors": [
+        "Transportation & Logistics",
+        "Industrials & Manufacturing"
+      ],
+      "country": "Multinational",
+      "effect_type": "supply_disruption",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Airbus"
+      },
+      "stock_change_pct": 0.38,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Airbus warns airlines that delays will last three years, sources say",
+        "url": "https://www.reuters.com/business/aerospace-defense/airbus-warns-airlines-that-delays-will-last-three-years-sources-say-2025-05-28/",
+        "published_date": "2025-05-28",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2025-02-20, Fire at SPS Technologies halts titanium supply production",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Airbus experiences titanium parts shortages affecting aircraft production lines",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-05-28, Airbus warns airlines of prolonged three-year delivery delays, with stock price fell 0.38%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A fire at SPS Technologies disrupted essential titanium supply, constraining Airbus's production schedule and prompting the company to warn airlines of multi-year delivery delays.",
+  "counterfactual_analysis": "If the fire had been contained quickly or alternative suppliers were available, Airbus likely could have avoided or shortened the delivery delay warning.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader industry-wide supply chain pressures post-COVID",
+      "impact": "General material shortages may also influence delivery timelines, but Reuters emphasizes the SPS fire as a critical catalyst."
+    }
+  ],
+  "confidence_score": 0.65,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "The entrance of well-funded rivals and the need to defend share in key cities increased competitive pressure on Airbnb's core marketplace. As hosts and guests gained more alternatives, investors worried that Airbnb would have to spend more on marketing and incentives to sustain growth."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Slowing travel demand and higher costs pressured discretionary stays",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.7,
+        "commentary": "Macro headwinds and softer consumer spending made travelers more price-sensitive and selective about short-term rentals. These economic conditions amplified the impact of competitive and regulatory challenges, feeding into the stock's post-earnings decline."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

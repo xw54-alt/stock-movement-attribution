@@ -1,0 +1,106 @@
+{
+  "pair_id": "U00094",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "IndiGo placed a record 500-jet order for Airbus A320neo-family aircraft at the Paris Air Show, locking in long-term narrowbody capacity with a rival platform and signaling sustained backlog momentum and pricing power for Airbus.",
+      "date": "2023-06-19",
+      "entities": [
+        "IndiGo",
+        "Airbus"
+      ],
+      "sectors": [
+        "airlines",
+        "aerospace"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Airbus"
+      },
+      "source_info": {
+        "title": "Airbus wins record 500-plane order from India's IndiGo",
+        "url": "https://www.reuters.com/business/aerospace-defense/airbus-wins-historic-500-plane-indigo-order-2023-06-19/",
+        "published_date": "2023-06-19",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Boeing shares fell roughly 3.5% on 2023-06-20 as investors priced in competitive headwinds, potential share loss on future narrowbody campaigns, and the read-through from a strengthened Airbus order book.",
+      "date": "2023-06-20",
+      "entities": [
+        "Boeing"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Boeing"
+      },
+      "stock_change_pct": 3.5,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Boeing Stock Dips. Airbus May Have Won a Big China Order, Report Says.",
+        "url": "https://www.msn.com/en-us/travel/news/boeing-stock-dips-airbus-may-have-won-a-big-china-order-report-says/ar-AA1G4WWT",
+        "published_date": "2023-06-20",
+        "publisher": "msn.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A rival secures a record 500-jet A320neo-family order at the Paris Air Show, locking in scarce production slots for years, signaling stronger backlog visibility and higher switching costs for airlines, and reinforcing the rival's bargaining power in single-aisle campaigns.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors infer tougher competitive win rates for the U.S. planemaker on upcoming narrowbody contests, potential pricing pressure to defend share, and a relative backlog momentum gap-together implying weaker near-term order flow and margin headwinds versus the rival.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On the next trading day (2023-06-20), Boeing stock declines 3.5% as the market prices in perceived share-loss risk, possible pricing concessions, and the read-through from an enlarged rival order book.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The mega-order tilted the near-term narrative toward Airbus dominance in high-volume narrowbodies; financial press noted a negative read-through for the U.S. rival's shares the next day.",
+  "counterfactual_analysis": "Without the order, competitive pressure signals would have been weaker and the short-term share-price reaction for BA likely more muted.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous 737 quality headlines",
+      "impact": "Other news flow during the Paris Air Show may have amplified the selloff relative to the competitive impact alone."
+    }
+  ],
+  "confidence_score": 0.95,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "IndiGo's record 500-jet order significantly deepened Airbus's single-aisle backlog, signaling airlines' willingness to commit long term to its A320neo platform. That mega-order intensified rivalry in the narrowbody market and raised fears that Boeing would lose share on future campaigns, pressuring its stock."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

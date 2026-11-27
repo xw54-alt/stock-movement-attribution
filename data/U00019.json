@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00019",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The U.S. Federal Reserve kept interest rates unchanged at its September meeting but warned that borrowing costs would remain higher for longer.  This hawkish stance pushed 10 year Treasury yields to a year high and unnerved investors.",
+      "date": "2023-09-21",
+      "entities": [
+        "Federal Reserve"
+      ],
+      "sectors": [
+        "Monetary policy",
+        "Central banking"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "market"
+      },
+      "source_info": {
+        "title": "Fed signals rates will stay higher for longer",
+        "url": "https://www.nytimes.com/2023/09/21/business/interest-rates-federal-reserve.html",
+        "published_date": "2023-09-21",
+        "publisher": "nytimes"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "A subsequent market report noted that rising Treasury yields weighed on megacap technology shares; Microsoft, Amazon, Alphabet and Apple each closed down between 0.6% and 1.7%, with Amazon share price falling roughly 1.7% on the day.",
+      "date": "2023-09-27",
+      "entities": [
+        "Amazon"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 6,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Amazon"
+      },
+      "stock_change_pct": 1.7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Tech pulls Nasdaq, S&P 500 down as Treasury yields rise",
+        "url": "https://www.reuters.com/business/tech-pulls-nasdaq-sp-500-down-treasury-yields-rise-2021-09-27/",
+        "published_date": "2023-09-27",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2023-09-21, The Federal Reserve signalled that borrowing costs would stay elevated and held rates steady, prompting a spike in long dated Treasury yields.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Higher yields raise the discount rate applied to future cash flows, making high growth technology stocks less attractive relative to bonds.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors rotated out of megacap technology shares in anticipation of tighter monetary policy and rising financing costs.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "On 2023-09-27, Market data showed that Amazon shares fell about 1.7% alongside Microsoft, Alphabet and Apple as the surge in yields triggered a sector.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "This causal chain links the Federal Reserve hawkish policy guidance to a decline in Amazon share price.  Persistent high interest rates increase discount rates and reduce the present value of tech companies future earnings, prompting investors to sell megacap stocks such as Amazon.",
+  "counterfactual_analysis": "If the Fed had signalled upcoming rate cuts or slower tightening, Treasury yields would likely have fallen, reducing pressure on growth stocks and potentially preventing the 1.7% decline in Amazon share price.",
+  "adversarial_confounders": [
+    {
+      "text": "Other contemporaneous macro events, such as geopolitical tensions or economic data releases, could have influenced investor sentiment.",
+      "impact": "These factors might have contributed to the share price decline independent of the Fed message, diluting the perceived causal link."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Slower Chinese export growth softened cross-border demand on Amazon",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.7,
+        "commentary": "Signs of weaker Chinese export momentum pointed to softer supply and demand in some cross-border product categories. Investors read this as a constraint on incremental marketplace growth, contributing to a measured but not extreme reaction in Amazon's share price."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

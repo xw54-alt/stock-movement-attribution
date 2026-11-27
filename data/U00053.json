@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00053",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D00006",
+      "causal_salience": "primary",
+      "text": "Nomura and Credit Suisse warned they could suffer billions of dollars in losses from deals with family office Archegos Capital, sparking fears about prime broker exposures across global banks.",
+      "date": "2021-03-28",
+      "entities": [
+        "Nomura",
+        "Credit Suisse"
+      ],
+      "sectors": [
+        "financial services"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Archegos counterparties"
+      },
+      "source_info": {
+        "title": "Credit Suisse and Nomura face multi-billion prime brokerage losses from Archegos sell-off",
+        "url": "https://www.thetradenews.com/us-buy-side-firms-struggle-to-see-benefit-of-new-rules-for-electronic-treasury-venues/",
+        "published_date": "2021-03-29",
+        "publisher": "the trade news"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Bank of America's shares dropped between 1.6% and 2.5% as a hedge fund's default sent shockwaves through financial markets.",
+      "date": "2021-03-29",
+      "entities": [
+        "Bank of America"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Bank of America"
+      },
+      "stock_change_pct": 2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Wall Street set to slip as bank stocks fall on hedge fund default concerns",
+        "url": "https://www.reuters.com/business/futures-slip-bank-stocks-fall-hedge-fund-default-concerns-2021-03-29/",
+        "published_date": "2021-03-29",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Major lenders Nomura and Credit Suisse revealed potential multibillion-dollar losses tied to the collapse of Archegos Capital.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors feared that other banks might be exposed to similar derivatives and that losses could ripple through the financial system.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Bank of America's share price fell around −2% as the market sold off bank stocks on concerns of widespread prime brokerage losses.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Warnings from Nomura and Credit Suisse about massive losses from Archegos raised alarm over hidden leverage in the financial system. This contagion anxiety prompted investors to sell shares in Bank of America and other major banks to avoid potential fallout.",
+  "counterfactual_analysis": "If Archegos's positions had not unraveled, or if counterparties had quickly contained the losses, investor confidence in the banking sector would have remained more stable and Bank of America's stock might not have declined.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market volatility and worries about rising bond yields might also have weighed on bank shares.",
+      "impact": "These factors could contribute to price movements but do not fully explain the sharp decline following the Archegos revelations."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "162 days",
+        "conditions_score": 0.7,
+        "commentary": "Concerns about integration, customer churn and leverage initially dampened enthusiasm for the VMware deal and Broadcom's long-term story. As approvals came through and execution improved, stronger reported results helped offset some of those fears, creating a balancing loop between regulatory risk and demonstrated performance."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Antitrust scrutiny and regulatory reviews of big tech deals",
+        "pestel_impact_score": 0.75,
+        "conditions_score": 0.7,
+        "commentary": "Regulators around the world have grown more skeptical of large tech acquisitions, increasing the risk that complex deals will be delayed or blocked. That legal uncertainty weighed on Broadcom's VMware acquisition narrative and made investors more cautious about pricing in the full strategic upside."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

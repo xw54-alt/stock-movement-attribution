@@ -1,0 +1,105 @@
+{
+  "pair_id": "U00083",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The U.S. Inflation Reduction Act modified the federal EV tax credit so that only vehicles undergoing final assembly in North America qualify, motivating automakers to shift production to the region to ensure eligibility for the incentive.",
+      "date": "2022-08-16",
+      "entities": [
+        "Inflation Reduction Act"
+      ],
+      "sectors": [
+        "automotive",
+        "policy"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.65,
+        "target": "EV tax credit"
+      },
+      "source_info": {
+        "title": "U.S. Inflation Reduction Act reshapes EV tax credit rules, emphasizing North American assembly",
+        "url": "https://afdc.energy.gov/laws/electric-vehicles-for-tax-credit",
+        "published_date": "2022-08-16",
+        "publisher": "energy.gov"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "BMW announced an €800 million investment to expand its San Luis Potosí plant in Mexico to produce high-voltage batteries and assemble its next-generation electric 'Neue Klasse' vehicles, creating about 1,000 jobs.",
+      "date": "2023-02-03",
+      "entities": [
+        "BMW"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "Mexico",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "BMW"
+      },
+      "stock_change_pct": 2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Carmaker BMW to invest around $870 million in Mexico in EV push",
+        "url": "https://www.reuters.com/business/autos-transportation/carmaker-bmw-invest-around-870-mln-mexico-ev-push-2023-02-03/",
+        "published_date": "2023-02-04",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The U.S. Inflation Reduction Act required that only electric vehicles assembled in North America qualify for federal tax credits.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "To ensure its EVs remain eligible for incentives in its largest market, BMW evaluated its supply chain and looked for opportunities to assemble electric cars and batteries within the region.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "BMW committed €800 million to expand its Mexican plant for EV and battery production, signalling its strategic pivot to North American manufacturing and lifting investor confidence; BMW shares rose about 2% after the announcement.",
+      "logic_operator": "THEN"
+    }
+  ],
+  "rationale": "By linking EV tax credit eligibility to North American assembly, the IRA created a strong incentive for automakers to localize production. BMW responded quickly by investing in its Mexican facility to assemble EVs and batteries, ensuring its products qualify for U.S. incentives.",
+  "counterfactual_analysis": "Without the IRA's North American assembly requirement, BMW could have continued producing EVs primarily in Europe and China, delaying investment in Mexico and reducing its eligibility for U.S. tax credits.",
+  "adversarial_confounders": [
+    {
+      "text": "Rising demand for EVs globally",
+      "impact": "Strong underlying demand for electric vehicles may have encouraged BMW to expand capacity regardless of tax credit rules"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Slowing growth and consumer uncertainty in key auto markets",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Weaker macro data and cautious consumer sentiment in Europe and China signaled that demand for new cars was likely to moderate. For Mercedes-Benz, those economic clouds meant that strong pricing and mix could not fully offset concerns about future orders, tempering the market's enthusiasm for its results."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

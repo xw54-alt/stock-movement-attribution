@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00024",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Nvidia forecast second-quarter revenue more than 50% above Wall Street estimates, citing surging demand for AI chips used in generative AI services and data centers, and said it would significantly increase supply to meet demand.",
+      "date": "2023-05-24",
+      "entities": [
+        "Nvidia Corporation"
+      ],
+      "sectors": [
+        "Semiconductors",
+        "Artificial Intelligence"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Nvidia Corporation"
+      },
+      "source_info": {
+        "title": "Nvidia's Blowout Forecast Sparks Huge Rally in All Things AI",
+        "url": "https://www.bloomberg.com/news/articles/2023-05-24/nvidia-ignites-ai-related-stock-rally-after-blow-out-forecast",
+        "published_date": "2023-05-24",
+        "publisher": "bloomberg"
+      },
+      "causal_strength_score": 9
+    }
+  ],
+  "effects": [
+    {
+      "text": "The positive forecast triggered a rally in AI-related stocks; AMD's share price surged about 11% on May 25 2023, as investors anticipated that AMD would benefit from the booming demand for AI semiconductors.",
+      "date": "2023-05-25",
+      "entities": [
+        "Advanced Micro Devices"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Advanced Micro Devices"
+      },
+      "stock_change_pct": 11,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Nvidia's blowout forecast sparks AI frenzy and boosts chip stocks",
+        "url": "https://finance.yahoo.com/news/nvidia-ignites-ai-related-stock-230804470.html",
+        "published_date": "2023-05-25",
+        "publisher": "yahoo finance"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Nvidia projected quarterly revenue more than 50% above Wall Street estimates on May 24 2023, noting surging demand for AI chips and promising to ramp up supply.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The forecast signaled that AI chip demand across data centers and consumer products was accelerating, lifting investor expectations for the entire semiconductor sector.",
+      "logic_operator": "BECAUSE"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors reasoned that competitors like AMD, which produces CPUs and GPUs for AI workloads, would also benefit from the expanding market and increase their sales.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "This optimism spurred AMD's share price to rise around 11% on May 25 2023, as part of a broader AI stock rally.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Reuters reported that after Nvidia's blowout forecast, AMD shares jumped about 11% as part of a broader rally in AI-related stocks.",
+  "counterfactual_analysis": "Without Nvidia's exceptional revenue forecast and commentary on AI demand, the market would likely not have reassessed growth prospects for AI chip makers; AMD's share price would not have risen as sharply.",
+  "adversarial_confounders": [
+    {
+      "text": "Simultaneous analyst upgrades or price-target increases for AMD.",
+      "impact": "Analyst actions could independently boost AMD's stock, inflating the perceived impact of Nvidia's forecast."
+    },
+    {
+      "text": "Macroeconomic factors such as lower interest rates improving valuations for tech stocks.",
+      "impact": "Broad market conditions could have contributed to the rally regardless of Nvidia's news."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "30 days",
+        "conditions_score": 0.8,
+        "commentary": "Sharp increases in global container shipping rates pushed Amazon's fulfillment costs higher and squeezed unit economics. As these elevated costs persisted in contracts and surcharges over subsequent weeks, they reinforced management's cautious tone on margins and investor worries about profitability."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

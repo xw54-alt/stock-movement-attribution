@@ -1,0 +1,108 @@
+{
+  "pair_id": "U00006",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "FDA issued a drug safety communication requiring boxed warnings for JAK inhibitors including Rinvoq, citing increased risk of serious heart-related events, cancer, blood clots, and death.",
+      "date": "2021-09-01",
+      "entities": [
+        "FDA",
+        "AbbVie",
+        "Pfizer",
+        "Eli Lilly"
+      ],
+      "sectors": [
+        "pharmaceuticals",
+        "healthcare"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "AbbVie"
+      },
+      "source_info": {
+        "title": "Janus Kinase (JAK) Inhibitors Drug Safety Communication",
+        "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requires-warnings-about-increased-risk-serious-heart-related-events-cancer-blood-clots-and-death",
+        "published_date": "2021-09-01",
+        "publisher": "U.S. Food & Drug Administration"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "AbbVie's stock dropped more significantly than Pfizer and Lilly after the FDA's JAK inhibitor warning, as Rinvoq was more exposed to the new labeling.",
+      "date": "2021-09-01",
+      "entities": [
+        "AbbVie"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "AbbVie"
+      },
+      "stock_change_pct": 7.1,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "AbbVie Stock: Why A New FDA Order Hit It Harder Than Pfizer, Lilly",
+        "url": "https://www.investors.com/news/technology/abbvie-stock-why-a-new-fda-order-hit-it-harder-than-pfizer-lilly/",
+        "published_date": "2021-09-01",
+        "publisher": "investors.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2021-09-01, FDA announced stricter boxed warnings on JAK inhibitors, including AbbVie's Rinvoq",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors anticipated limited use and future sales impact on Rinvoq",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2021-09-01, AbbVie's stock declined more sharply(7.1%) than Pfizer and Lilly due to greater exposure (on 2021-09-01)",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The FDA's announcement created a strong negative signal around Rinvoq's safety, which was a key product for AbbVie, causing the stock to fall more than its peers.",
+  "counterfactual_analysis": "Without the FDA warning, AbbVie's stock would likely have remained stable or performed in line with industry peers.",
+  "adversarial_confounders": [
+    {
+      "text": "General pharmaceutical sector fluctuations",
+      "impact": "Might have mildly influenced stock prices, but AbbVie's disproportionate drop indicates specific exposure."
+    }
+  ],
+  "confidence_score": 0.9,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - FDA safety warnings tightened the regulatory environment for JAK inhibitors",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.75,
+        "commentary": "The FDA's boxed warning immediately raised the legal and compliance burden for JAK inhibitors, especially for drugs like Rinvoq with high exposure. Stricter labeling and perceived liability risk reduced the franchise's long-term revenue potential and weighed heavily on AbbVie's valuation."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

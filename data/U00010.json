@@ -1,0 +1,111 @@
+{
+  "pair_id": "U00010",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "The European Parliament adopted harmonized rules requiring short-term rental platforms to collect and share detailed host and listing data with authorities to fight illegal rentals and ensure market transparency.",
+      "date": "2024-02-29",
+      "entities": [
+        "European Parliament",
+        "EU Member States",
+        "Airbnb",
+        "Booking",
+        "Expedia"
+      ],
+      "sectors": [
+        "regulation",
+        "technology",
+        "travel"
+      ],
+      "country": "European Union",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.6,
+        "target": "short-term rental platforms"
+      },
+      "source_info": {
+        "title": "New rules for a responsible and transparent short-term rental sector",
+        "url": "https://www.europarl.europa.eu/news/en/press-room/20240223IPR18094/new-rules-for-a-responsible-and-transparent-short-term-rental-sector",
+        "published_date": "2024-02-29",
+        "publisher": "European Parliament"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Airbnb's stock trading volume dropped 44.25% to $378 million, with the share price falling 1.2%, amid increased regulatory scrutiny in key markets.",
+      "date": "2025-07-11",
+      "entities": [
+        "Airbnb"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Consumer Discretionary"
+      ],
+      "country": "United States / Europe",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Airbnb"
+      },
+      "stock_change_pct": 1.2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Airbnb Trading Volume Drops 44.25% to $378 Million Ranking 243rd in Market",
+        "url": "https://www.ainvest.com/news/airbnb-trading-volume-drops-44-25-378-million-ranking-243rd-market-2507/",
+        "published_date": "2025-07-11",
+        "publisher": "Ainvest Fintech"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2024-02-29, EU adopts stringent transparency rules for short-term rental platforms",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Regulatory uncertainty increases for platforms like Airbnb",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2025-07-11, Investor confidence weakens, trading volume drops significantly, with the share price falling 1.2% (on 2025-07-11)",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "New EU regulations increased compliance uncertainty for Airbnb, causing investors to reduce trading activity and triggering a notable drop in volume and share price.",
+  "counterfactual_analysis": "If the EU had delayed or softened the transparency rules, Airbnb likely would have retained higher trading volumes and market sentiment.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market inertia or unrelated tech sector shifts",
+      "impact": "May have also contributed to the volume decrease independently."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Mandatory data-sharing rules increased compliance and transparency demands",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "EU rules requiring platforms to share detailed listing data with authorities raise compliance costs and legal exposure for Airbnb. Greater transparency also makes it easier for regulators to curb illegal rentals, potentially dampening growth in some high-margin markets."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

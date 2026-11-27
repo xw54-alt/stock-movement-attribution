@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00062",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "U.S. smartphone sales slumped 10% in January 2024 as consumers delayed upgrades for cheaper Android devices and the market showed signs of peaking.",
+      "date": "2024-02-21",
+      "entities": [
+        "U.S. smartphone market"
+      ],
+      "sectors": [
+        "Consumer electronics",
+        "Smartphones"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Smartphone sector"
+      },
+      "source_info": {
+        "title": "US Smartphone Sales Dip 10% as Consumers Delay Upgrades",
+        "url": "https://www.pymnts.com/news/retail/2024/report-us-smartphone-sales-dip-10-percent-as-consumers-delay-upgrades/",
+        "published_date": "2024-02-21",
+        "publisher": "pymnts"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "ASML shares plummeted 15.6% - their steepest drop since 1998 - after leaked third-quarter results revealed weak bookings and a trimmed 2025 sales forecast, underscoring sustained weakness outside the AI market.",
+      "date": "2024-10-15",
+      "entities": [
+        "ASML"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "Netherlands",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "ASML"
+      },
+      "stock_change_pct": 15.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Tech stocks hurt STOXX 600, ASML logs biggest one-day drop in 26 years",
+        "url": "https://www.reuters.com/markets/europe/european-shares-climb-two-week-highs-oil-stocks-slump-2024-10-15/",
+        "published_date": "2024-10-15",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In early 2024, U.S. smartphone sales declined sharply as consumers delayed upgrades, weakening demand across the consumer electronics sector.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "This contraction signalled a broader slowdown in demand for non-AI semiconductors, prompting chipmakers to pull back on capital expenditures.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "ASML's Q3 2024 leaked results showed weak bookings and a lowered 2025 forecast, consistent with reduced fab investment tied to non-AI applications.",
+      "logic_operator": "RESULT"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors reacted negatively to the outlook, driving ASML's shares down 15.6%-its steepest one-day drop since 1998.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The early 2024 slump in smartphone demand hinted at weakening chip demand beyond the AI sector. ASML, heavily reliant on global fab expansions, later reported poor bookings aligned with that slowdown. The correlation reinforced investor concerns, triggering a major drop in stock price.",
+  "counterfactual_analysis": "Had smartphone sales remained stable or grown, chipmakers might have sustained higher investment levels, leading to stronger ASML bookings and a more optimistic sales forecast-likely avoiding the sharp stock selloff.",
+  "adversarial_confounders": [
+    {
+      "text": "Export restrictions affecting sales to China",
+      "impact": "Could have independently contributed to ASML's weak bookings and forecast cut."
+    },
+    {
+      "text": "Unexpected delays in EUV shipment schedules",
+      "impact": "May have affected revenue and outlook, unrelated to smartphone market trends."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Breakthrough AI models and hardware driving a new compute cycle",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Rapid advances in large-scale AI systems and specialized accelerators dramatically increased demand for leading-edge chips and cloud infrastructure. This technological wave helped push ASML's order book to record levels, reinforcing the market's view that it sits at the core of a secular AI-driven investment cycle."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

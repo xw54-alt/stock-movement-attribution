@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00013",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "Snap CEO Evan Spiegel warned in an internal memo that Snap would miss its quarterly revenue goals and slow hiring amid inflation, the war in Ukraine and Apple's iOS privacy changes.",
+      "date": "2022-05-23",
+      "entities": [
+        "Snap"
+      ],
+      "sectors": [
+        "social media",
+        "digital advertising"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "digital ads peers"
+      },
+      "source_info": {
+        "title": "Snap says it will miss this quarter's revenue goals and slow hiring",
+        "url": "https://techcrunch.com/2022/05/23/snap-slow-hiring-miss-revenue-goal/",
+        "published_date": "2022-05-23",
+        "publisher": "TechCrunch"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Following Snap's warning, digital-advertising peers sold off; Alphabet declined in sympathy as investors priced in sector headwinds.",
+      "date": "2022-10-20",
+      "entities": [
+        "Alphabet"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Alphabet"
+      },
+      "stock_change_pct": 2,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Meta, Alphabet, Pinterest shares shudder on Snap warning",
+        "url": "https://www.reuters.com/technology/meta-alphabet-pinterest-shares-shudder-snap-warning-2022-10-20/",
+        "published_date": "2022-10-20",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "On 2022-05-23, Snap warned it would miss revenue goals and slow hiring, signaling softer ad demand.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Investors extrapolated weaker digital-ad trends to peers like Alphabet and Meta, raising sector risk premia.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On 2022-10-20, Alphabet fell roughly 2% alongside sector weakness after Snap's update (approximate intraday move).",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "A negative read-through from Snap increased perceived macro and platform-policy headwinds for ad-dependent peers.",
+  "counterfactual_analysis": "Absent Snap's warning, Alphabet may not have experienced the same sympathy sell-off that session.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro risk-off days",
+      "impact": "Broader market weakness could have contributed to Alphabet's move independently of Snap."
+    }
+  ],
+  "confidence_score": 0.62,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Aggressive discounting and new supply from competing platforms intensified rivalry in urban short-stay markets. This forced Airbnb to trade price for volume in some regions, undercutting profitability and contributing to the sharp share-price reaction."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - High interest rates and inflation weighed on discretionary travel budgets",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.75,
+        "commentary": "Elevated borrowing costs and broader inflation left many consumers with less room for discretionary travel and experiences. Those pressures made Airbnb's forward guidance particularly vulnerable, as investors saw less upside for demand recovery in the near term."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}
