@@ -127,7 +127,7 @@
       "model": "SystemDynamics",
       "details": {
         "feedback_loop_type": "reinforcing",
-        "time_delay": "0–9 days (by event date)",
+        "time_delay": "9 days",
         "conditions_score": 0.82,
         "commentary": "Positive news about AI chips and the valuation of a private data-platform company encouraged capital to flow into the sector. Investors' increased expectations for AI data infrastructure contributed to Snowflake's nearly twenty percent stock-price rise, reinforcing enthusiasm for potential beneficiaries of AI adoption."
       }
