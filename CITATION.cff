@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper as the primary scholarly reference when using this dataset. Also identify the dataset repository and release you used."
+title: "Financial Causal-News Dataset for Stock-Movement Attribution"
+type: dataset
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/xw54-alt/stock-movement-attribution"
+authors:
+  - family-names: Wu
+    given-names: Xiaoliang
+  - family-names: Yu
+    given-names: Mo
+  - family-names: Li
+    given-names: Jing
+  - family-names: Xu
+    given-names: Liyan
+  - family-names: Li
+    given-names: Xinyuan
+preferred-citation:
+  type: conference-paper
+  title: "Evaluating Reasoning-Intensive Retrieval through Information-Seeking and Causal Attribution in Stock Price Dynamics"
+  authors:
+    - family-names: Wu
+      given-names: Xiaoliang
+    - family-names: Yu
+      given-names: Mo
+    - family-names: Li
+      given-names: Jing
+    - family-names: Xu
+      given-names: Liyan
+    - family-names: Li
+      given-names: Xinyuan
+  collection-title: "Findings of the Association for Computational Linguistics: EACL 2027"
+  year: 2027
+  url: "https://openreview.net/forum?id=0NGyFn5up7"
