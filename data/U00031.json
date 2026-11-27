@@ -54,11 +54,11 @@
         "published_date": "2020-11-09",
         "publisher": "cnbc.com"
       },
-      "effect_strength_score": 9,
+
       "impact_strength_score": 9,
       "effect_type": "stock_movement",
-      "impact_direction": null,
-      "direct_or_indirect": null
+      "impact_direction": "positive",
+      "direct_or_indirect": "indirect"
     }
   ],
   "causal_reasoning_chain": [
