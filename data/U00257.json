@@ -1,0 +1,149 @@
+{
+  "pair_id": "U00257",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D001",
+      "causal_salience": "primary",
+      "text": "AMD CEO Lisa Su warned that the personal computer market would slow in 2022 after two strong years, citing market saturation and inflation-driven weakness.",
+      "date": "2022-06-09",
+      "entities": [
+        "AMD"
+      ],
+      "sectors": [
+        "Semiconductor",
+        "PC"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "AMD"
+      },
+      "source_info": {
+        "title": "AMD flags slow market for PCs in 2022",
+        "url": "https://www.reuters.com/technology/amd-flags-slow-market-pcs-2022-2022-06-09/",
+        "published_date": "2022-06-09",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D002",
+      "causal_salience": "secondary",
+      "text": "Research firm Gartner predicted that global computer shipments would fall 9.5% in 2022 as China's slowing economy, high inflation and supply-chain disruptions cut consumer and business demand.",
+      "date": "2022-06-30",
+      "entities": [
+        "Gartner"
+      ],
+      "sectors": [
+        "Technology",
+        "PC"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.7,
+        "target": "Global PC market"
+      },
+      "source_info": {
+        "title": "Global smartphone, PC shipments to decline in 2022 on China slowdown - Gartner",
+        "url": "https://www.reuters.com/technology/global-smartphone-pc-shipments-decline-2022-china-slowdown-gartner-2022-06-30/",
+        "published_date": "2022-06-30",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "Intel slashed its full-year profit and revenue forecast, cut capital spending and warned of layoffs, citing a steep decline in PC sales and economic uncertainty; despite the gloomy outlook, the stock climbed about 5% after hours as investors anticipated management was taking decisive action.",
+      "date": "2022-10-27",
+      "entities": [
+        "Intel"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Intel"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Intel cuts forecast and warns of layoffs as PC slump hits profits",
+        "url": "https://www.bloomberg.com/news/articles/2022-10-27/intel-cuts-sales-forecasts-pledges-further-cost-reductions",
+        "published_date": "2022-10-27",
+        "publisher": "bloomberg.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Analysts and industry observers noted that both AMD and research firm Gartner pointed to a sharp slowdown in the personal computer market in mid-2022. AMD's chief executive warned that two years of pandemic-driven growth had saturated demand and that inflation was squeezing consumer budgets, while Gartner projected a 9.5% decline in global PC shipments due to China's economic slowdown, high inflation and persistent supply-chain disruptions.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "These warnings signaled to investors that demand for PC processors would weaken significantly over the coming months. Expecting slower sales, chipmakers faced pressure to reassess revenue expectations, trim capital expenditures and prepare for leaner times. The combined pessimistic signals raised the probability that Intel, as the dominant PC processor supplier, would need to adjust its own guidance and cost structure.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "In October 2022, Intel responded to the deteriorating demand environment by slashing its full-year profit and revenue forecast, cutting capital spending and warning of thousands of job cuts. Management explained that weak PC demand and macroeconomic uncertainty forced it to realign operations. Investors interpreted the proactive cuts as necessary and the stock, though facing negative news, rose about 5% after hours.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The PC market warnings from AMD and Gartner created expectations that demand would decline, pressuring Intel to lower its own forecast and cut costs. The warnings provided the causal impetus for Intel's profit warning.",
+  "counterfactual_analysis": "If AMD and Gartner had not issued bearish forecasts on the PC market, Intel might have maintained its guidance longer and delayed cost cuts, likely avoiding a dramatic forecast revision and subsequent stock volatility.",
+  "adversarial_confounders": [
+    {
+      "text": "Other macroeconomic factors such as rising interest rates and geopolitical tensions",
+      "impact": "Could also have contributed to Intel's weaker outlook and investor caution during 2022"
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "demand_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competition_in_shrinking_pc_market",
+        "industry_barriers": "medium",
+        "commentary": "When overall PC demand weakened, chipmakers were forced to fight harder for a shrinking pool of orders. That intensifying rivalry made it harder for Intel to keep factories full and pushed management toward drastic cost-cutting."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - inflation and China's slowdown",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.78,
+        "commentary": "High inflation, rising rates and China's slowdown squeezed consumer spending on new PCs and phones. Those macroeconomic headwinds translated into weaker unit demand for processors, directly undermining Intel's revenue outlook."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "140 days",
+        "conditions_score": 0.78,
+        "commentary": "Industry warnings about falling shipments fed into lower OEM orders, which in turn led chipmakers to slash production plans. As Intel responded with forecast cuts and layoffs, it reinforced investors' perception of a deep cyclical downturn."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

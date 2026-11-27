@@ -1,0 +1,152 @@
+{
+  "pair_id": "U00211",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "REUTERS-20220211-GSC",
+      "causal_salience": "primary",
+      "text": "Through late 2021 and early 2022, a global supply-chain crisis caused material shortages, logistics bottlenecks, and component delays that constrained industrial manufacturing worldwide.",
+      "date": "2022-01-11",
+      "entities": [],
+      "sectors": [
+        "Supply Chain",
+        "Manufacturing",
+        "Economy"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Industrial Manufacturing Sector"
+      },
+      "source_info": {
+        "title": "World's damaged supply chains brace for painful recovery",
+        "url": "https://www.reuters.com/markets/europe/worlds-damaged-supply-chains-brace-painful-recovery-2022-02-11/",
+        "published_date": "2022-01-11",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "REUTERS-20220112-USCPI",
+      "causal_salience": "primary",
+      "text": "U.S. inflation accelerated to a four-decade high, with December 2021 CPI up 7.0% year over year, lifting costs for raw materials, freight and labor and squeezing manufacturers' margins.",
+      "date": "2022-01-12",
+      "entities": [],
+      "sectors": [
+        "Economy",
+        "Manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Manufacturing Sector"
+      },
+      "source_info": {
+        "title": "U.S. consumer prices post biggest rise in nearly 40 years",
+        "url": "https://www.reuters.com/world/us/us-consumer-prices-increase-strongly-december-2022-01-12/",
+        "published_date": "2022-01-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "General Electric reported quarterly revenue below expectations and warned that supply-chain disruptions and inflationary pressures would persist; investors sold the stock.",
+      "date": "2022-01-25",
+      "entities": [
+        "General Electric"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing",
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "General Electric"
+      },
+      "stock_change_pct": 7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "GE's shares fall as supply-chain woes hit Q4 revenue",
+        "url": "https://www.reuters.com/business/ge-expects-better-profit-higher-cash-flow-2022-2022-01-25/",
+        "published_date": "2022-01-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Global supply-chain bottlenecks hindered industrial companies' ability to source parts and deliver finished products, constraining revenue conversion from backlogs.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "At the same time, U.S. inflation at a 40-year high raised input and logistics costs, compressing profit margins across manufacturing.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "As a diversified industrial, GE was exposed to both headwinds, which weighed on quarterly results and outlook.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "When GE reported the revenue miss and flagged persistent pressures, investors reacted; the shares fell about 7% intraday on Jan 25, 2022.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Concurrent supply-chain constraints and elevated inflation limited GE's ability to fulfill demand at acceptable margins, producing a revenue miss and cautious outlook that triggered a negative stock reaction.",
+  "counterfactual_analysis": "If supply chains had been stable and inflation lower, GE likely would have converted backlog at better margins, reducing the chance of a miss and the associated equity sell-off.",
+  "adversarial_confounders": [
+    {
+      "text": "Idiosyncratic execution issues in specific GE divisions.",
+      "impact": "Management and industry peers primarily pointed to external macro factors at the time; internal issues were likely secondary."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "Bargaining Power of Suppliers",
+        "role_in_chain": "Supplier",
+        "industry_barriers": "high",
+        "commentary": "The supply-chain crisis shifted bargaining power toward component and logistics suppliers. With high qualification and capacity barriers, GE had limited ability to switch suppliers quickly, so earnings were hit."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - High inflation and supply-chain disruption",
+        "pestel_impact_score": 0.92,
+        "conditions_score": 0.9,
+        "commentary": "Global bottlenecks and high inflation created a very adverse macro backdrop for GE's industrial businesses. These economic conditions raised input costs and slowed deliveries, directly weakening revenue and margins."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "90 days",
+        "conditions_score": 0.8,
+        "commentary": "Order backlogs and production delays took several months to show up fully in reported results. This lagged adjustment meant the supply shock was still depressing earnings even after some pressures started to ease."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

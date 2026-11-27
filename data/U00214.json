@@ -1,0 +1,155 @@
+{
+  "pair_id": "U00214",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "REUTERS-20210916-D",
+      "causal_salience": "primary",
+      "text": "A global shortage of semiconductor chips, which began in late 2020, severely disrupted the automotive industry throughout 2021, forcing widespread factory shutdowns and exposing the vulnerability of long, overseas supply chains.",
+      "date": "2021-09-16",
+      "entities": [],
+      "sectors": [
+        "Automotive",
+        "Semiconductors",
+        "Supply Chain"
+      ],
+      "country": "Global",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.95,
+        "target": "Automotive Industry"
+      },
+      "source_info": {
+        "title": "Chip supply, testing woes to further curb light vehicle production in 2021 - IHS Markit",
+        "url": "https://www.reuters.com/business/autos-transportation/chip-supply-testing-woes-further-curb-light-vehicle-production-2021-ihs-markit-2021-09-16/",
+        "published_date": "2021-09-16",
+        "publisher": "reuters.com"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "AP-20210608-E",
+      "causal_salience": "secondary",
+      "text": "The U.S. government signaled strong support for onshoring critical supply chains, including semiconductors and electric vehicle batteries, creating a favorable political and financial environment for domestic manufacturing investments.",
+      "date": "2021-06-08",
+      "entities": [
+        "U.S. Government"
+      ],
+      "sectors": [
+        "Government Policy",
+        "Manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Domestic Manufacturing"
+      },
+      "source_info": {
+        "title": "Biden to launch task force on bottlenecks in supply chains",
+        "url": "https://apnews.com/article/health-coronavirus-pandemic-business-government-and-politics-18507296bc00039214cb3909422ea0d4",
+        "published_date": "2021-06-08",
+        "publisher": "apnews.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "General Motors announced a $7 billion investment in four Michigan manufacturing sites to expand EV and battery capacity, including converting Orion Assembly for electric pickups and building an Ultium battery cell plant in Lansing.",
+      "date": "2022-01-25",
+      "entities": [
+        "General Motors"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Energy & Utilities",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.9,
+        "target": "General Motors"
+      },
+      "stock_change_pct": 3.6,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "GM's $7 billion investment intensifies EV battle with Ford, Tesla",
+        "url": "https://www.reuters.com/business/autos-transportation/gms-7-billion-investment-intensifies-ev-battle-with-ford-tesla-2022-01-25/",
+        "published_date": "2022-01-25",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The global semiconductor shortage disrupted automakers' production plans and exposed the fragility of long, overseas supply chains.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "At the same time, U.S. policy support for onshoring created tailwinds and incentives for domestic manufacturing of batteries and EV components.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Motivated by supply-chain risk and policy support, GM committed $7 billion to expand EV and battery production in Michigan.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors viewed the onshoring and EV capacity expansion as a strategic positive; GM shares (NYSE: GM) rose about 3.6% in premarket trading on January 25, 2022 after the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The chip shortage highlighted vulnerabilities, while U.S. policy improved the economics of domestic investment. GM's $7B Michigan commitment addressed both, triggering a stock price gain.",
+  "counterfactual_analysis": "Without the chip crisis, urgency to onshore would have been lower; without policy support, the financial rationale would have been weaker. Both drivers were essential.",
+  "adversarial_confounders": [
+    {
+      "text": "Concurrent EV investment announcements by other automakers.",
+      "impact": "Relevant, but GM's stock move was directly linked to its Michigan announcement."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "Bargaining Power of Suppliers",
+        "role_in_chain": "Supply Constraint",
+        "industry_barriers": "high",
+        "commentary": "The chip crunch exposed how concentrated and powerful upstream semiconductor suppliers were in autos. By investing in EV and battery plants, GM aimed to reduce dependence on constrained suppliers and regain control over key inputs."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Incentives for domestic manufacturing",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.88,
+        "commentary": "Federal and state incentives for EVs and domestic manufacturing improved the economics of building in Michigan. These political supports helped justify GM's multi billion dollar commitment despite recent supply disruptions."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "231 days",
+        "conditions_score": 0.82,
+        "commentary": "Acute shortages triggered a balancing loop where painful production cuts pushed automakers to onshore and add capacity. Over time, new EV and battery plants are meant to reduce the severity of future supply shocks and stabilize output."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

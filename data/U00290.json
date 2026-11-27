@@ -1,0 +1,155 @@
+{
+  "pair_id": "U00290",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20240102_red_sea_attacks",
+      "causal_salience": "primary",
+      "text": "In early January 2024, Houthi militants escalated attacks on merchant vessels in the Red Sea/Bab el-Mandeb, forcing major carriers including Maersk and Hapag-Lloyd to pause Suez transits and reroute around the Cape of Good Hope. Longer voyages reduced effective capacity on Asia-Europe trades, tightening supply.",
+      "date": "2024-01-02",
+      "entities": [
+        "Houthi militants",
+        "Hapag-Lloyd",
+        "Maersk"
+      ],
+      "sectors": [
+        "Transportation",
+        "Logistics"
+      ],
+      "country": "Yemen",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "global shipping"
+      },
+      "source_info": {
+        "title": "Global shipping firms continue to pause Red Sea shipments",
+        "url": "https://www.investing.com/news/economy/maersk-to-decide-on-red-sea-route-on-tuesday-after-attack-3265486",
+        "published_date": "2024-01-02",
+        "publisher": "investing.com"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": "20240102_cma_cgm_rate_hike",
+      "causal_salience": "secondary",
+      "text": "On the same day, CMA CGM announced substantial Asia-linked freight rate increases, citing Red Sea disruption and a demand surge that created an imbalance between capacity and cargo-signalling expectations of tight supply and elevated rates.",
+      "date": "2024-01-02",
+      "entities": [
+        "CMA CGM"
+      ],
+      "sectors": [
+        "Transportation",
+        "Logistics"
+      ],
+      "country": "France",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.68,
+        "target": "CMA CGM"
+      },
+      "source_info": {
+        "title": "CMA CGM raises Asia freight rates as conflict squeezes supply",
+        "url": "https://gcaptain.com/cma-cgm-hikes-shipping-rates-between-asia-and-mediterranean/",
+        "published_date": "2024-01-02",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "By Aug 1, 2024, Maersk lifted its full-year guidance, citing unexpectedly high freight rates from the prolonged Red Sea crisis. Management raised EBITDA guidance to $9-$11 billion and said capacity constraints were propping up prices. Shares initially rose ~4.2% before slipping ~0.7% later as traders questioned duration.",
+      "date": "2024-08-01",
+      "entities": [
+        "Maersk"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "Denmark",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.72,
+        "target": "Maersk"
+      },
+      "stock_change_pct": 4.2,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Maersk lifts guidance as Red Sea disruption keeps freight rates high",
+        "url": "https://gcaptain.com/maersk-sees-red-sea-disruption-lasting-through-2024/",
+        "published_date": "2024-08-01",
+        "publisher": "gCaptain"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Red Sea attacks forced detours around Africa, reducing effective capacity and creating a supply shock on Asia-Europe lanes.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "CMA CGM's rate hikes validated expectations that tightness would persist, anchoring higher pricing across trades.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "With disruption persisting into mid-2024, elevated rates supported carrier revenues; Maersk raised guidance on Aug 1, 2024 and shares briefly rallied 4.2%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Persistent security disruption constrained supply while competitors lifted prices, sustaining elevated freight rates; this improved Maersk's outlook and briefly lifted its shares.",
+  "counterfactual_analysis": "If the Red Sea crisis had eased quickly or carriers refrained from raising rates, supply/demand would have normalised sooner, likely preventing Maersk's guidance lift and share uptick.",
+  "adversarial_confounders": [
+    {
+      "text": "Potential ceasefire/escort measures reopening Suez",
+      "impact": "Faster route normalisation would reduce rates and weaken the causal link from conflict to guidance upgrades."
+    },
+    {
+      "text": "European demand volatility",
+      "impact": "A demand downturn could offset price gains, muting revenue benefits for carriers."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "rate_setting",
+        "industry_barriers": "high",
+        "commentary": "Attacks in the Red Sea effectively reduced available capacity and gave major carriers more leverage in setting rates. CMA CGM's decision to raise Asia freight prices confirmed that the industry could pass through higher costs, improving Maersk's short-term bargaining power over shippers."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - conflict in the Red Sea and security risks",
+        "pestel_impact_score": 0.86,
+        "conditions_score": 0.82,
+        "commentary": "The security crisis in a key trade corridor is a political shock that rerouted vessels and lengthened voyages. As long as the conflict persisted, this geopolitical risk kept freight markets tighter than they would have been based on economic fundamentals alone."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "212 days",
+        "conditions_score": 0.78,
+        "commentary": "Each additional month of disruption locked carriers into longer routes and higher operating costs that supported elevated freight rates. Those firmer rates fed through to upgraded guidance at Maersk, which in turn encouraged investors to assume that the favourable conditions would last longer."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

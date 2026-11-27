@@ -1,0 +1,128 @@
+{
+  "pair_id": "U00296",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D467367080298283",
+      "causal_salience": "primary",
+      "text": "By mid-2023, Starbucks' U.S. business was dominated by cold beverages. Mixed drinks like cold brew lattes, iced espresso and cold-foam customizations made up roughly 75% of beverage sales, with toppings such as cold foam generating more than $1 billion in revenue annually. This showed customizable cold drinks were both popular and highly profitable.",
+      "date": "2023-08-02",
+      "entities": [
+        "Starbucks"
+      ],
+      "sectors": [
+        "Coffee",
+        "Beverages"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Starbucks"
+      },
+      "source_info": {
+        "title": "Cold Drinks Now Represent 75 Percent of Starbucks' Sales",
+        "url": "https://www.qsrmagazine.com/food/beverage/cold-drinks-now-represent-75-percent-of-starbucks-sales/",
+        "published_date": "2023-08-02",
+        "publisher": "QSR Magazine"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "In December 2023 McDonald's unveiled a beverage-led concept called CosMc's. The small-format pilot stores offer cold beverages such as espresso drinks, flavored lemonades and specialty slushies, aiming to tap the mixed-drink trend that has boosted sales at Starbucks. McDonald's planned about 10 CosMc's locations in Illinois and Texas as a limited test.",
+      "date": "2023-12-07",
+      "entities": [
+        "McDonald's"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Consumer Staples"
+      ],
+      "country": "United States",
+      "effect_type": "product_launch",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.65,
+        "target": "McDonald's"
+      },
+      "stock_change_pct": 0.02,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "McDonald's tests CosMc's stores as burger chain boosts beverages focus",
+        "url": "https://www.reuters.com/business/retail-consumer/mcdonalds-tests-cosmcs-stores-burger-chain-boosts-beverages-focus-2023-12-07/",
+        "published_date": "2023-12-07",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Starbucks' cold beverage platform became the primary growth engine in 2023: about 75% of U.S. beverage sales were cold and premium add-ons like cold foam generated over $1 billion annually. The data showed consumers would pay for customized, indulgent cold drinks.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Competitors recognized that high-margin cold beverages attract younger customers and raise average order value. Chains without a robust beverage platform risked ceding share to coffeehouses.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "McDonald's launched CosMc's-a beverage-led, small-format test with about 10 planned locations across Illinois and Texas-pursuing the same cold-drink economics demonstrated by Starbucks; on 2023-12-07, McDonald's shares closed down approximately 0.02%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Starbucks validated strong demand and margins for customizable cold beverages. McDonald's responded with CosMc's to capture similar economics and new dayparts, linking competitor performance to its strategic move.",
+  "counterfactual_analysis": "Absent Starbucks' surge in cold beverage sales, McDonald's would have had weaker evidence for a standalone drink concept and might have prioritized core menu initiatives instead.",
+  "adversarial_confounders": [
+    {
+      "text": "Industry-wide consumer shift toward premium specialty drinks.",
+      "impact": "Common trends could drive both Starbucks' results and McDonald's decision independently."
+    },
+    {
+      "text": "McDonald's internal research pipelines.",
+      "impact": "Pre-existing innovation plans may confound attribution solely to Starbucks' performance."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "product_innovation",
+        "industry_barriers": "medium",
+        "commentary": "Starbucks' dominance in customizable cold beverages captured a lucrative day part and reset expectations for what a modern drink menu should offer. McDonald's launched the CosMc's concept to defend share in that high margin segment and compete more directly with specialty coffee rivals on variety and personalization."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Social - Preference for customizable cold beverages",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.8,
+        "commentary": "Younger consumers increasingly treat flavoured cold coffee and other mixed drinks as an affordable indulgence and a way to express personal taste. That social shift toward customization made a beverage led concept attractive for McDonald's, since tailored cold drinks can drive repeat visits and higher average tickets."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "127 days",
+        "conditions_score": 0.75,
+        "commentary": "As more customers adopt complex cold drink orders, brands that offer the widest customisation options attract more visits and social media attention. If CosMc's resonates with guests, growing demand could justify additional locations and menu innovation, further strengthening McDonald's position in the cold beverage trend."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

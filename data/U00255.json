@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00255",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "IBM_D7",
+      "causal_salience": "primary",
+      "text": "U.S. President Donald Trump issued an executive order requiring federal agencies to review and terminate 'unnecessary' contracts as part of a cost-cutting campaign.",
+      "date": "2025-02-26",
+      "entities": [
+        "Donald Trump",
+        "U.S. Government"
+      ],
+      "sectors": [
+        "Government"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Government Contractors"
+      },
+      "source_info": {
+        "title": "Trump directs agencies to review, terminate 'unnecessary' contracts",
+        "url": "https://www.reuters.com/world/us/trump-issues-order-doge-cost-cutting-efforts-white-house-says-2025-02-26/",
+        "published_date": "2025-02-26",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "IBM's shares fell nearly 7% after it announced that 15 government contracts were shelved following the Trump administration's cost-cutting directives, resulting in roughly $100 million in lost business.",
+      "date": "2025-04-24",
+      "entities": [
+        "IBM"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "IBM"
+      },
+      "stock_change_pct": 7.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "IBM slides as federal spending cuts, uncertain economy impact consulting business",
+        "url": "https://www.reuters.com/business/ibm-slides-federal-spending-cuts-uncertain-economy-impact-consulting-business-2025-04-24/",
+        "published_date": "2025-04-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In February 2025, U.S. President Donald Trump directed federal agencies to review and terminate 'unnecessary' contracts, launching a sweeping cost-cutting drive.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The order signaled that federal spending on contracts would be scaled back, creating uncertainty for contractors and raising the risk that existing agreements could be cancelled or delayed.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Two months later, IBM announced that 15 of its government contracts were shelved, amounting to roughly $100 million in lost business, and investors reacted by pushing the stock down nearly 7%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The executive order to cut unnecessary federal contracts directly reduced IBM's government business, triggering a drop in revenue expectations and causing its share price to fall.",
+  "counterfactual_analysis": "Without the cost-cutting order, IBM's federal contracts would likely have continued, and its stock might not have experienced a similar decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader market sell-offs or unrelated disappointing news about IBM could have impacted the stock.",
+      "impact": "These could exaggerate or diminish the observed effect."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "budget_shock_from_key_customer",
+        "industry_barriers": "medium",
+        "commentary": "IBM's U.S. federal business depends on a limited number of large government buyers, so a budget shock from Washington hits revenue quickly. When the administration moved to review and cut 'unjustified' contracts, that concentrated buying power turned into significant downside risk."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - government spending cuts",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.8,
+        "commentary": "The executive order introduced a sudden political constraint on federal technology spending. By shrinking available funds for discretionary IT projects, it directly undercut IBM's prospects in one of its key markets."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "57 days",
+        "conditions_score": 0.78,
+        "commentary": "As agencies cancelled or delayed projects, revenue expectations and analyst models ratcheted down. Each new contract review reinforced investor concerns and kept pressure on IBM's share price until the scope of the cuts became clearer."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

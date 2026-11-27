@@ -1,0 +1,136 @@
+{
+  "pair_id": "U00231",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "228b6fff-d752-4451",
+      "causal_salience": "primary",
+      "text": "On December 10, 2024, Equinor, BP and TotalEnergies (as NEP partners) took final investment decisions for two UK carbon capture and storage projects in the East Coast Cluster. NEP intends to store up to an initial 4 million tonnes of CO₂ per year; equity interests are 45% Equinor, 45% BP and 10% TotalEnergies.",
+      "date": "2024-12-10",
+      "entities": [
+        "Equinor",
+        "BP",
+        "TotalEnergies",
+        "Northern Endurance Partnership"
+      ],
+      "sectors": [
+        "Oil & Gas",
+        "Energy Transition"
+      ],
+      "country": "United Kingdom",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "NEP FID"
+      },
+      "source_info": {
+        "title": "Equinor, BP, TotalEnergies seal investment into Britain's carbon capture projects",
+        "url": "https://www.reuters.com/sustainability/climate-energy/equinor-bp-totalenergies-seal-investment-into-britains-carbon-capture-projects-2024-12-10/",
+        "published_date": "2024-12-10",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 5, 2025, Halliburton announced it had been awarded a Northern Endurance Partnership contract to provide completions and downhole monitoring services for the UK's first large-scale CCS system in the East Coast Cluster.",
+      "date": "2025-08-05",
+      "entities": [
+        "Halliburton",
+        "Northern Endurance Partnership"
+      ],
+      "sectors": [
+        "Energy & Utilities"
+      ],
+      "country": "United Kingdom",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 5,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.65,
+        "target": "Halliburton"
+      },
+      "stock_change_pct": 0.05,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Northern Endurance Partnership awards Halliburton contract for carbon capture and storage monitoring",
+        "url": "https://www.halliburton.com/en/about-us/press-release/nep-awards-halliburton-contract-ccs-monitoring",
+        "published_date": "2025-08-05",
+        "publisher": "Halliburton"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "NEP partners took FID for UK CCS projects (initial 4 Mtpa), releasing capital and green-lighting execution in the East Coast Cluster.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Execution requires specialized completions and downhole monitoring to safely inject and store CO₂, creating immediate demand for capable vendors.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Halliburton's completions and monitoring capabilities positioned it to win the NEP award once the projects moved into the build phase.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Shares showed a modest positive close-to-close reaction on the announcement day (0.05%).",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The FID moved NEP from planning into execution, directly creating demand for completions and monitoring services. Halliburton's established capabilities made it a natural awardee, and the stock reacted modestly positively on the day.",
+  "counterfactual_analysis": "If NEP partners had delayed or canceled FID, the project would not have proceeded to execution in 2025; Halliburton would likely not have received the award and the related (albeit small) positive stock reaction would not have occurred.",
+  "adversarial_confounders": [
+    {
+      "text": "Pre-existing commercial relationships or pricing terms could independently explain vendor selection regardless of the FID timing.",
+      "impact": "Reduces the uniqueness of FID as the driver of the award outcome."
+    },
+    {
+      "text": "Competing vendors may have opted out or faced technical constraints, improving Halliburton's odds independently of project sanctioning.",
+      "impact": "Introduces selection bias unrelated to macro project progress."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "pricing_pressure",
+        "industry_barriers": "high",
+        "commentary": "Major oil companies act as powerful buyers in CCS tenders, pushing service firms to compete hard on capability and price. Winning the NEP monitoring contract shows Halliburton can still secure work despite that buyer leverage."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - UK CCS policy framework",
+        "pestel_impact_score": 0.78,
+        "conditions_score": 0.72,
+        "commentary": "Supportive UK climate policy and CCS incentives helped move the East Coast Cluster from concept to final investment decision. Once that policy-driven investment was locked in, it created concrete demand for Halliburton's specialized monitoring services."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "238 days",
+        "conditions_score": 0.68,
+        "commentary": "Final investment decisions lead to construction, which then triggers awards for completion and monitoring contracts. Each successful CCS project provides Halliburton with references that can reinforce its chances of winning future tenders."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

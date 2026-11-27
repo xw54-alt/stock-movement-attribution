@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00220",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "text": "On July 27, 2024, Europe's largest software firm SAP reported that its second-quarter operating profit adjusted for special items jumped 33% to about 1.94 billion euros, beating analysts' expectations. Revenues rose 10% and the company said its restructuring programme would retrain thousands of employees with artificial-intelligence skills. SAP's shares rose as much as 7%, reaching a record high, and management raised its profit guidance for 2025.",
+      "date": "2024-07-23",
+      "entities": [
+        "SAP"
+      ],
+      "sectors": [
+        "enterprise software",
+        "technology"
+      ],
+      "country": "Germany",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.83,
+        "target": "SAP"
+      },
+      "source_info": {
+        "title": "SAP shares at all-time high after adjusted profit beats market view",
+        "url": "https://www.reuters.com/technology/sap-shares-all-time-high-after-adjusted-profit-beats-market-view-2024-07-23/",
+        "published_date": "2024-07-23",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4,
+      "causal_salience": "primary",
+      "source_doc_id": null
+    }
+  ],
+  "effects": [
+    {
+      "text": "Goldman Sachs' first-quarter 2025 earnings release on April 14, 2025 highlighted a 27% jump in equities trading revenue, helping the bank beat analyst estimates and causing its share price to rise about 1% to $499.26.",
+      "date": "2025-04-14",
+      "entities": [
+        "Goldman Sachs"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.65,
+        "target": "Goldman Sachs"
+      },
+      "source_info": {
+        "title": "Goldman Sachs profit beats estimates as traders ride volatile markets",
+        "url": "https://www.reuters.com/business/finance/goldman-sachs-profit-jumps-traders-deliver-gains-2025-04-14/",
+        "published_date": "2025-04-14",
+        "publisher": "Reuters"
+      },
+      "stock_change_direction": "up",
+      "stock_change_pct": 1.0
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "SAP's July 2024 earnings report showed that corporate spending on enterprise software remained robust. Adjusted operating profit increased by one-third and the firm's shares jumped 6%, reaching an all-time high. Management increased guidance and announced plans to retrain staff for AI-enabled services.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Strong results from major enterprise software vendors signalled that companies were investing aggressively in digital transformation. This implied healthy corporate balance sheets and a willingness to fund growth initiatives, factors that typically feed demand for capital-market services, M&A advice and trading.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By April 2025, when Goldman Sachs announced its first-quarter results, the favourable environment for corporate spending had translated into higher trading and underwriting activity. Investors rewarded the bank's earnings beat by lifting its stock roughly 1%, demonstrating how the earlier surge in enterprise spending set the stage for a positive share-price reaction.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The effect article notes that Goldman's shares rose following its strong trading revenue. SAP's earlier earnings beat and record share rally signalled robust corporate technology spending, which in turn supported trading volumes and advisory demand benefiting Goldman.",
+  "counterfactual_analysis": "Had SAP's results indicated weak corporate spending, expectations for investment-banking activity would have been lower. Goldman's trading revenue might have been less impressive, and its share price could have remained flat after its earnings release.",
+  "adversarial_confounders": [
+    {
+      "text": "Economic data surprises",
+      "impact": "Unexpected macroeconomic indicators-such as inflation or employment reports-between July 2024 and April 2025 could influence investor sentiment and bank earnings independently, potentially confounding the relationship."
+    }
+  ],
+  "confidence_score": 0.4,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Enterprise cloud/AI adoption",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.7,
+        "commentary": "Strong spending on cloud and AI from clients like SAP showed that the new technology cycle was backed by real budgets. This technological shift supports demand for equity issuance, hedging and other services provided by investment banks."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "265 days",
+        "conditions_score": 0.72,
+        "commentary": "Large software and AI announcements in 2024 helped seed a pipeline of trades and deals that flowed into 2025 results. As banks monetize that pipeline through higher equities revenue, it reinforces client willingness to pursue new transactions."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

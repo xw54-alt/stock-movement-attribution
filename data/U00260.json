@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00260",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D006",
+      "causal_salience": "primary",
+      "text": "At its Advancing AI event in June 2025, AMD unveiled the 'Helios' AI server based on its MI400 series chips and announced that OpenAI would use its upcoming MI450 accelerators; the company's acquisitions of AI start-ups were said to strengthen its engineering talent.",
+      "date": "2025-06-12",
+      "entities": [
+        "AMD"
+      ],
+      "sectors": [
+        "Semiconductor",
+        "AI"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "AMD"
+      },
+      "source_info": {
+        "title": "AMD unveils AI server as OpenAI taps its newest chips",
+        "url": "https://www.reuters.com/business/amd-ceo-unveils-new-ai-chips-2025-06-12/",
+        "published_date": "2025-06-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Intel's shares sank about 8% after its CEO said the company might exit chip manufacturing if it failed to secure a major customer, noting that spending would be slashed and some plant projects halted. Analysts linked the gloom to Intel's difficulty competing for AI clients as rivals like AMD captured marquee customers.",
+      "date": "2025-07-25",
+      "entities": [
+        "Intel"
+      ],
+      "sectors": [
+        "Technology & Telecommunications"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Intel"
+      },
+      "stock_change_pct": 8.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Intel slumps as potential foundry exit deepens investor gloom",
+        "url": "https://finance.yahoo.com/news/intel-shares-drop-almost-6-061459193.html",
+        "published_date": "2025-07-25",
+        "publisher": "yahoo.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "During AMD's June 2025 'Advancing AI' event, the company unveiled its Helios AI server powered by MI400 chips and announced that OpenAI would adopt its forthcoming MI450 accelerators. The announcements highlighted AMD's growing traction among top AI customers and underscored the strength of its product roadmap.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "AMD's success signaled intensifying competition in the AI hardware market, reducing the pool of potential flagship customers for rival foundries. Investors inferred that companies like Intel would struggle to win lucrative AI contracts if competitors already secured key clients.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "On July 25 2025, Intel's CEO warned that the company might exit chip manufacturing absent a major customer, slashing spending and halting some projects. Analysts suggested that the lack of big wins in AI-contrasted with AMD's recent victories-prompted the warning, triggering an 8% decline in Intel's stock.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "AMD's Helios launch and its partnership with OpenAI showcased the company's momentum in AI chips, highlighting the scarcity of major clients available to Intel. The competitive pressure contributed to Intel's threat to exit manufacturing and the subsequent share decline.",
+  "counterfactual_analysis": "Had AMD not secured high-profile AI customers, Intel might have been under less pressure and could have continued pursuing foundry customers without threatening to exit chip manufacturing.",
+  "adversarial_confounders": [
+    {
+      "text": "Broader slowdown in data-center spending or a general tech stock sell-off",
+      "impact": "Could have amplified Intel's share decline independently of AMD's announcements"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "hyperscaler_customer_concentration",
+        "industry_barriers": "high",
+        "commentary": "Hyperscale AI buyers like OpenAI can swing huge volumes to the chipmakers that win their designs. AMD's high-profile win increased buyer bargaining leverage over trailing suppliers and made Intel's competitive position look more precarious."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - hyperscaler AI compute build out and accelerator adoption",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.82,
+        "commentary": "The rapid build-out of AI data centres and accelerator hardware is reshaping the technological landscape of compute. As AMD secured key AI design wins, the technological tide appeared to favour its architecture over Intel's, deepening concern about Intel's strategic options."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "43 days",
+        "conditions_score": 0.84,
+        "commentary": "Design wins at major AI customers tend to attract more software optimisation and future workloads to the same platform. As AMD's momentum grew and Intel floated the idea of exiting the foundry business, investors saw a reinforcing loop of share loss and strategic retreat."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

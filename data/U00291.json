@@ -1,0 +1,127 @@
+{
+  "pair_id": "U00291",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "20240103_msc_expansion",
+      "causal_salience": "primary",
+      "text": "On Jan 3, 2024, MSC cemented its lead after adding over one million TEUs in 2023 and keeping 100+ ships on order, raising oversupply concerns.",
+      "date": "2024-01-04",
+      "entities": [
+        "MSC"
+      ],
+      "sectors": [
+        "Transportation",
+        "Logistics"
+      ],
+      "country": "Switzerland",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "MSC"
+      },
+      "source_info": {
+        "title": "MSC adds over one million TEUs in fleet expansion, outpacing Maersk",
+        "url": "https://www.marineinsight.com/shipping-news/msc-overtakes-maersk-in-becoming-the-worlds-largest-shipping-line/",
+        "published_date": "2024-01-04",
+        "publisher": "marineinsight.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Feb 8, 2024, Maersk warned that a glut of new vessels would hit profits more than expected and that any Red Sea boost would be temporary; the stock fell 17%.",
+      "date": "2024-02-08",
+      "entities": [
+        "Maersk"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "Denmark",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Maersk"
+      },
+      "stock_change_pct": 17.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Maersk warns overcapacity will hit profits as Red Sea boost fades",
+        "url": "https://www.reuters.com/business/maersk-q4-profit-lags-forecast-expects-vessel-oversupply-hit-2024-earnings-2024-02-08/",
+        "published_date": "2024-02-08",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "MSC's rapid fleet growth signalled a pending oversupply that would pressure freight rates.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "As new tonnage entered service while demand normalised post-pandemic, utilisation and pricing power weakened across carriers.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Maersk warned of profit pressure on Feb 8, 2024; investors sold the stock (-17%).",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "MSC's capacity build-out exacerbated a supply imbalance, undermining pricing and margins for incumbents; Maersk's guidance validated the oversupply thesis, prompting a sharp share reaction.",
+  "counterfactual_analysis": "If MSC had deferred/cancelled orders, the supply/demand balance would be tighter; Maersk's guidance and share reaction likely would have been less negative.",
+  "adversarial_confounders": [
+    {
+      "text": "Unexpected demand rebound",
+      "impact": "Stronger global trade could absorb extra capacity, weakening the causal link between MSC expansion and Maersk's warning."
+    },
+    {
+      "text": "Delivery delays/regulatory constraints",
+      "impact": "Slower new-build deliveries would reduce near-term oversupply and mitigate margin pressure."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "competitive_positioning",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "capacity_race",
+        "industry_barriers": "high",
+        "commentary": "Container shipping is controlled by a handful of global carriers that can order large fleets, so one player's capacity decisions quickly influence pricing for everyone. MSC's aggressive ship ordering deepened the capacity race and forced Maersk to admit that oversupply would crush rate power and profits, which investors punished with a steep share price drop."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Global overcapacity and weak freight rates",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "As the post pandemic trade boom faded, slower demand collided with a wave of new vessel deliveries, creating structural overcapacity on key routes. That economic backdrop left Maersk highly exposed to falling freight rates, so its warning that oversupply would overwhelm any temporary Red Sea boost translated directly into a very negative market reaction."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "35 days",
+        "conditions_score": 0.8,
+        "commentary": "Strong profits in good years encouraged carriers to over order ships, which later produced excess capacity and eroded freight prices. When Maersk cut its outlook and the stock slumped, it reinforced the lesson that capacity booms sow the seeds of the next downturn, making investors more cautious about future expansion cycles."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

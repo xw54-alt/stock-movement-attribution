@@ -1,0 +1,149 @@
+{
+  "pair_id": "U00279",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D02",
+      "causal_salience": "primary",
+      "text": "GAO's May 16, 2024 findings show TR-3 (Technology Refresh-3) issues - including L3Harris's integrated core processor production and TR-3 software instability - halted U.S. acceptance of many new F-35s and created a sizable backlog.",
+      "date": "2024-05-16",
+      "entities": [
+        "L3Harris"
+      ],
+      "sectors": [
+        "Defense",
+        "Aerospace"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "L3Harris"
+      },
+      "source_info": {
+        "title": "Backlog of upgraded F-35s could take a year to clear: GAO",
+        "url": "https://breakingdefense.com/2024/05/backlog-of-upgraded-f-35s-could-take-a-year-to-clear-gao/",
+        "published_date": "2024-05-16",
+        "publisher": "Breaking Defense"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D03",
+      "causal_salience": "secondary",
+      "text": "GAO later documented that Pratt & Whitney delivered all 123 F-35 engines late in 2024, continuing chronic engine delivery delays.",
+      "date": "2024-09-30",
+      "entities": [
+        "Pratt & Whitney"
+      ],
+      "sectors": [
+        "Aerospace",
+        "Defense"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Pratt & Whitney"
+      },
+      "source_info": {
+        "title": "F-35 JOINT STRIKE FIGHTER: Program Continues to Face Late Deliveries and Cost Growth",
+        "url": "https://www.gao.gov/assets/gao-25-107632.pdf",
+        "published_date": "2025-09-03",
+        "publisher": "U.S. Government Accountability Office (GAO)"
+      },
+      "causal_strength_score": 6
+    }
+  ],
+  "effects": [
+    {
+      "text": "On October 22, 2024, Lockheed Martin reported Q3 results that missed revenue expectations, citing F-35 contractual authorization and TR-3-related delays; LMT shares fell about 5% on the day.",
+      "date": "2024-10-22",
+      "entities": [
+        "Lockheed Martin"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.84,
+        "target": "Lockheed Martin"
+      },
+      "stock_change_pct": 5.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Lockheed Martin's stock fell after missing revenue estimates due to F-35 delays",
+        "url": "https://www.investopedia.com/lockheed-martin-stock-sinks-as-f-35-sales-decline-weighs-on-revenue-8732059",
+        "published_date": "2024-10-22",
+        "publisher": "Investopedia"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "TR-3 issues (L3Harris ICP production and software instability) halted acceptance of many new F-35s, driving a sizable backlog at Lockheed's facilities.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Chronic engine delivery delays at Pratt & Whitney during 2024 further constrained completions, exacerbating the backlog and deferring revenue recognition.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "By Q3-2024, undelivered jets and deferred authorizations depressed reported sales; on 2024-10-22, investors reacted and LMT stock fell ~5%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The combined TR-3 and engine supply disruptions limited Lockheed's ability to deliver finished F-35s, pushing revenue out of Q3-2024. The earnings miss and guidance context triggered a one-day share-price decline.",
+  "counterfactual_analysis": "Had TR-3 and engine deliveries been on-schedule, Lockheed would have recognized more F-35 revenue in Q3-2024, reducing investor concern and likely avoiding a ~5% one-day drop.",
+  "adversarial_confounders": [
+    {
+      "text": "Other news (e.g., guidance changes, classified program charges) could independently affect LMT's stock.",
+      "impact": "These factors may confound precise attribution of the one-day move to F-35 supply issues alone."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "specialised_components_create_delivery_bottlenecks",
+        "industry_barriers": "high",
+        "commentary": "The F-35 program relies on a small set of highly specialised suppliers whose production issues can bottleneck final assembly for Lockheed Martin. Persistent problems with TR-3 hardware and engine deliveries highlighted the bargaining power those upstream partners hold, constraining jet output and exposing Lockheed to revenue misses that investors punished."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - avionics software maturity and engine production stability",
+        "pestel_impact_score": 0.88,
+        "conditions_score": 0.86,
+        "commentary": "Advanced fighter upgrades are constrained by complex software integration and strict airworthiness standards enforced by defence authorities. Delays in certifying the TR-3 configuration and in receiving engines translated regulatory and technical friction directly into slower aircraft acceptance, weighing on Lockheed Martin's reported sales and credibility with the Pentagon."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "159 days",
+        "conditions_score": 0.86,
+        "commentary": "When components arrive late, nearly finished aircraft pile up in inventory and more revenue is pushed into future quarters. As the backlog swelled and management acknowledged the impact on 2024 guidance, investor concern about execution grew and contributed to the roughly five percent drop in Lockheed's share price when the company updated the market."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

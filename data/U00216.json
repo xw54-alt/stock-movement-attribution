@@ -1,0 +1,126 @@
+{
+  "pair_id": "U00216",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "FDA-20220401-B",
+      "causal_salience": "primary",
+      "text": "The U.S. Food and Drug Administration (FDA) approved a CAR T-cell therapy, Yescarta, for an earlier line of treatment in adults with large B-cell lymphoma, significantly expanding the eligible patient population.",
+      "date": "2022-04-01",
+      "entities": [
+        "U.S. Food and Drug Administration"
+      ],
+      "sectors": [
+        "Pharmaceuticals",
+        "Regulation",
+        "Oncology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.95,
+        "target": "Yescarta"
+      },
+      "source_info": {
+        "title": "FDA approves axicabtagene ciloleucel for second-line treatment of large B-cell lymphoma",
+        "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-axicabtagene-ciloleucel-second-line-treatment-large-b-cell-lymphoma",
+        "published_date": "2022-04-01",
+        "publisher": "fda.gov"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Gilead Sciences reported that cell therapy sales jumped 79% to $398 million in Q3 2022, helping it beat profit expectations; the stock rose about 4% after-hours on October 27, 2022.",
+      "date": "2022-10-27",
+      "entities": [
+        "Gilead Sciences",
+        "Kite Pharma"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences",
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "Gilead Sciences Inc."
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Gilead profit tops expectations despite lower COVID drug sales, outlook raised",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gilead-reports-lower-3rd-quarter-profit-covid-drug-sales-slow-2022-10-27/",
+        "published_date": "2022-10-27",
+        "publisher": "reuters.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The FDA granted approval for Yescarta to be used as a second-line therapy in large B-cell lymphoma, expanding its eligible patient pool.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "This regulatory expansion drove greater adoption by physicians and increased demand for the therapy, boosting sales in subsequent quarters.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "In Q3 2022, Gilead reported sharply higher cell therapy sales contributing to an earnings beat; GILD rose about 4% after-hours on October 27, 2022.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "FDA approval expanded the addressable market for Yescarta, driving cell therapy revenue growth that supported Gilead's earnings beat and a positive share-price reaction.",
+  "counterfactual_analysis": "Without the expanded approval, the eligible market would have been smaller, limiting sales growth and diminishing the subsequent stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Manufacturing improvements or commercial execution.",
+      "impact": "Helpful for capturing demand, but the catalyst was the regulatory expansion enabling broader use."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "high",
+        "commentary": "Earlier line approval lets Yescarta reach patients who might otherwise rely on chemotherapy or other therapies. A stronger branded position in this broader group reduces the appeal of substitutes and supports pricing power."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - Regulatory approval",
+        "pestel_impact_score": 0.98,
+        "conditions_score": 0.9,
+        "commentary": "FDA approval is a decisive legal gate that suddenly enlarges the addressable market for Yescarta. This regulatory change directly enabled the sharp jump in cell therapy revenue seen in the quarter."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "209 days",
+        "conditions_score": 0.86,
+        "commentary": "As clinicians gain experience and payers reimburse more cases, usage of Yescarta can build over several quarters. Higher revenue then supports further investment in cell therapy, reinforcing growth of the franchise."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

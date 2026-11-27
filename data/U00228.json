@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00228",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D007",
+      "causal_salience": "primary",
+      "text": "On 20 January 2022, consumer goods giant Unilever announced it would not raise its 50-billion-pound offer for GSK's consumer health arm after three proposals were rejected. Unilever's retreat meant GSK would proceed with spinning off the Haleon consumer health business and focus on its core pharmaceuticals and vaccines operations.",
+      "date": "2022-01-20",
+      "entities": [
+        "Unilever"
+      ],
+      "sectors": [
+        "Consumer Goods",
+        "Pharmaceuticals"
+      ],
+      "country": "United Kingdom",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.65,
+        "target": "GSK"
+      },
+      "source_info": {
+        "title": "Unilever will not raise rejected 50 bln pound bid for GSK consumer business",
+        "url": "https://www.reuters.com/business/retail-consumer/unilever-says-it-will-not-increase-50-bln-pound-offer-gsk-consumer-business-2022-01-19/",
+        "published_date": "2022-01-20",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 3
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2 November 2022, GSK raised its full-year sales and profit guidance after a strong third quarter driven by record sales of its shingles vaccine Shingrix and higher-than-expected revenue from its COVID-19 therapy Xevudy. GSK shares touched a 2-1/2-month high before closing down 0.7%, with analysts noting that the spin-off of Haleon allowed the company to focus more squarely on its pharmaceuticals business.",
+      "date": "2022-11-02",
+      "entities": [
+        "GSK"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences"
+      ],
+      "country": "United Kingdom",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 4,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "neutral",
+        "intensity": 0.6,
+        "target": "GSK"
+      },
+      "stock_change_pct": 0.7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "GSK lifts 2022 forecast after stronger-than-expected quarter",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gsk-lifts-2022-forecast-after-stronger-than-expected-quarter-2022-11-02/",
+        "published_date": "2022-11-02",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Unilever's decision to abandon its takeover bid removed uncertainty about the future of GSK's consumer health unit. With no looming acquisition, GSK pursued its plan to spin off the Haleon business and refocus on high-margin vaccines and prescription medicines.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "By proceeding with the spin-off, GSK simplified its structure and redirected management attention toward its pharmaceutical pipeline. Investors anticipated that a leaner company could deliver stronger growth by allocating capital to research and development rather than consumer goods.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When GSK reported a robust third quarter in November 2022 and raised its full-year guidance, the benefits of focusing on vaccines and specialty drugs became apparent. Shares touched an intra-day high but closed slightly lower amid profit-taking and litigation noise.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Unilever's withdrawal cleared the path for the Haleon spin-off. That strategic clarity enabled GSK to prioritize pharmaceuticals and vaccines, contributing to stronger operations and a guidance upgrade within the year.",
+  "counterfactual_analysis": "If Unilever had continued its pursuit or completed an acquisition, GSK could have faced integration complexity or different capital allocation, potentially delaying focus on its pipeline and undermining the subsequent guidance raise.",
+  "adversarial_confounders": [
+    {
+      "text": "The easing of COVID-19 restrictions in 2022 increased doctor visits and vaccination rates across the industry.",
+      "impact": "Improved macro conditions may have boosted Shingrix and Xevudy sales independent of corporate restructuring."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Portfolio simplification and capital allocation",
+        "pestel_impact_score": 0.7,
+        "conditions_score": 0.65,
+        "commentary": "By dropping its bid, Unilever cleared the way for GSK to complete the Haleon spin-off and refocus on pharmaceuticals and vaccines. That portfolio simplification aligned with investor preferences for clearer capital allocation and made it easier to judge the core business on its own merits."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "286 days",
+        "conditions_score": 0.7,
+        "commentary": "Spinning out Haleon reduced management distraction and freed cash and balance sheet capacity for higher-return drug and vaccine projects. As new launches like Shingrix and Xevudy outperformed, the guidance upgrades reinforced confidence that the post-spin structure was supporting stronger underlying growth, even if the share price reaction on the day was modest."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "pair_id": "U00284",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C2025A",
+      "causal_salience": "secondary",
+      "text": "By late 2024 mortgage rates remained around 6.2%, adding hundreds of dollars to monthly payments and dampening home-improvement spending.",
+      "date": "2024-09-17",
+      "entities": [
+        "Freddie Mac"
+      ],
+      "sectors": [
+        "Mortgage",
+        "Housing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Housing Market"
+      },
+      "source_info": {
+        "title": "Data Spotlight: The Impact of Changing Mortgage Interest Rates",
+        "url": "https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-the-impact-of-changing-mortgage-interest-rates/",
+        "published_date": "2024-09-17",
+        "publisher": "Consumer Financial Protection Bureau"
+      },
+      "causal_strength_score": 6
+    },
+    {
+      "source_doc_id": "C2025B",
+      "causal_salience": "primary",
+      "text": "Home Depot said it would keep prices steady but cautioned that U.S. tariffs could make some items unavailable, signaling potential supply disruptions and price competition.",
+      "date": "2025-05-20",
+      "entities": [
+        "Home Depot"
+      ],
+      "sectors": [
+        "Home Improvement",
+        "Retail"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.68,
+        "target": "Home Improvement Sector"
+      },
+      "source_info": {
+        "title": "Home Depot to keep prices steady despite tariffs",
+        "url": "https://www.reuters.com/business/retail-consumer/home-depot-beats-quarterly-sales-estimates-stable-demand-2025-05-20/",
+        "published_date": "2025-05-20",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Despite delivering a smaller-than-expected drop in sales, Lowe's shares fell about 2% as the company pledged to remain price competitive amid tariffs and high borrowing costs.",
+      "date": "2025-05-21",
+      "entities": [
+        "Lowe's Companies"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 4,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.72,
+        "target": "Lowe's Companies"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Lowe's beats estimates but warns on price competitiveness; shares drop",
+        "url": "https://www.reuters.com/business/retail-consumer/lowes-beats-quarterly-comparable-sales-estimates-2025-05-21/",
+        "published_date": "2025-05-21",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Mortgage rates remained elevated in late 2024, with interest rates around 6.2%, significantly increasing monthly payments and reducing consumers' ability to finance home purchases and renovations. High borrowing costs discouraged discretionary spending on big-ticket home-improvement projects.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "On May 20 2025 Home Depot announced it would keep prices steady for most products despite U.S. tariffs, but warned that some items might become unavailable due to trade restrictions. The statement highlighted supply-chain uncertainty and hinted at competitive price pressure that could squeeze margins at peers such as Lowe's.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors worried that a combination of sustained high borrowing costs and increased price competition would erode profitability at home-improvement retailers. The prospect of tariffs making certain products scarce added to concerns about supply disruptions and cost inflation.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "When Lowe's reported its quarterly results on May 21 2025, it posted a smaller-than-expected decline in sales but emphasized efforts to stay price competitive. Shares fell about 2% as investors weighed the margin risks posed by tariffs and elevated mortgage rates.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Sustained high mortgage rates weakened demand for large renovations while Home Depot's tariff-driven pricing strategy signaled increased competition and supply risk. These twin pressures weighed on investor expectations and caused Lowe's stock to decline despite relatively solid results.",
+  "counterfactual_analysis": "Without the combination of elevated mortgage rates and Home Depot's price freeze amid tariffs, investor concerns about Lowe's margins would have been less acute and the stock might not have declined.",
+  "adversarial_confounders": [
+    {
+      "text": "A general stock market pullback or worries about consumer spending could have pressured Lowe's shares independently of these factors.",
+      "impact": "Broader market volatility may have exacerbated the decline."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "pricing_strategy",
+        "industry_barriers": "medium",
+        "commentary": "Home Depot's pledge to hold prices effectively dared Lowe's to match discounts or risk losing share in a mature market. That pricing pressure, layered on top of weaker demand, makes rivalry more punishing and leaves Lowe's with less flexibility on margins."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - interest rates and housing affordability",
+        "pestel_impact_score": 0.78,
+        "conditions_score": 0.72,
+        "commentary": "Elevated mortgage rates and stretched affordability reduce the number of households willing to take on big renovation loans. With fewer financed projects in the pipeline, Lowe's must work harder to generate growth from cash-funded repairs and smaller jobs."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "246 days",
+        "conditions_score": 0.72,
+        "commentary": "High borrowing costs cool housing turnover and remodeling, depressing volumes and nudging retailers toward promotional activity. As Lowe's leans into sharper pricing to defend traffic, earnings guidance softens, which then reinforces cautious consumer and investor sentiment."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

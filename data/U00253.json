@@ -1,0 +1,126 @@
+{
+  "pair_id": "U00253",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "IBM_D1",
+      "causal_salience": "primary",
+      "text": "IBM completed the separation of its managed infrastructure services business, forming Kyndryl and allowing the company to focus on hybrid cloud and AI.",
+      "date": "2021-11-03",
+      "entities": [
+        "IBM",
+        "Kyndryl"
+      ],
+      "sectors": [
+        "Technology",
+        "Cloud",
+        "Infrastructure"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.85,
+        "target": "IBM"
+      },
+      "source_info": {
+        "title": "IBM Completes Separation of Managed Infrastructure Services Business to Kyndryl",
+        "url": "https://newsroom.ibm.com/2021-11-03-IBM-Completes-the-Separation-of-Kyndryl",
+        "published_date": "2021-11-03",
+        "publisher": "ibm.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "IBM's first earnings as a restructured company showed higher revenue growth and improved margins, and its stock jumped about 7%.",
+      "date": "2022-01-24",
+      "entities": [
+        "IBM"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "IBM"
+      },
+      "stock_change_pct": 7.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "IBM marks strong start to new chapter as cloud revenue booms",
+        "url": "https://www.reuters.com/business/ibm-beats-revenue-expectations-cloud-consulting-strength-2022-01-24/",
+        "published_date": "2022-01-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In November 2021, IBM completed the separation of its managed infrastructure services business, creating Kyndryl. This strategic divestiture freed resources and allowed IBM to refocus on its higher-growth hybrid cloud and AI segments.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "With the low-margin infrastructure unit spun off, IBM streamlined its operations and concentrated investment on hybrid cloud and consulting services. Investors expected that a leaner portfolio would translate into stronger revenue growth and margins.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By January 2022, IBM reported its first earnings as a restructured company and delivered higher revenue growth and improved margins. The market rewarded the transformation, and IBM shares rose around 7% after the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Separating the slow-growing infrastructure business removed a drag on IBM's performance and signaled management's commitment to high-margin cloud and AI initiatives, boosting investor confidence.",
+  "counterfactual_analysis": "If IBM had kept the managed infrastructure unit, its revenue growth would have remained sluggish, and investors may not have responded with a 7% stock gain.",
+  "adversarial_confounders": [
+    {
+      "text": "A general rally in technology stocks or positive macroeconomic news may have also lifted IBM's shares.",
+      "impact": "Could partially explain the stock increase"
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "financial_restructuring",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "portfolio_shift_to_higher_margin_competition",
+        "industry_barriers": "medium",
+        "commentary": "Shedding the low-margin infrastructure services arm let IBM focus on higher-value cloud and software markets. By concentrating resources in more attractive segments, IBM improved its ability to compete profitably against other enterprise vendors."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - shift toward hybrid cloud and AI services",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.76,
+        "commentary": "Enterprise IT budgets were shifting toward hybrid cloud, AI and subscription-based services. The Kyndryl spin-off aligned IBM's portfolio with those technology trends, making the positive earnings surprise more convincing to investors."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "82 days",
+        "conditions_score": 0.78,
+        "commentary": "Early progress on the new strategy improved growth and margin indicators, which boosted confidence in management's plan. That confidence made it easier for IBM to keep funding cloud and AI initiatives, reinforcing the transformation narrative over time."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

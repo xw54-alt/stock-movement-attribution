@@ -1,0 +1,130 @@
+{
+  "pair_id": "U00295",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D334740348867231",
+      "causal_salience": "primary",
+      "text": "After Russia's invasion of Ukraine in early 2022, several Western consumer brands including Starbucks, Coca-Cola and PepsiCo suspended operations in Russia amid mounting public pressure and humanitarian concerns, signalling a broader corporate exit from the market.",
+      "date": "2022-03-08",
+      "entities": [
+        "Starbucks",
+        "Coca-Cola",
+        "PepsiCo"
+      ],
+      "sectors": [
+        "Food & Beverage",
+        "Retail"
+      ],
+      "country": "Russia",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Russia"
+      },
+      "source_info": {
+        "title": "Starbucks, Coca-Cola and Pepsi suspend operations in Russia",
+        "url": "https://www.theguardian.com/world/2022/mar/08/mcdonalds-bows-to-pressure-and-closes-all-its-russian-restaurants",
+        "published_date": "2022-03-08",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On 2022-05-16, McDonald's announced it would permanently exit Russia after more than 30 years, saying it would sell its nearly 850 restaurants to a local licensee and recognize a non-cash charge of about $1.2-$1.4 billion.",
+      "date": "2022-05-16",
+      "entities": [
+        "McDonald's"
+      ],
+      "sectors": [
+        "Consumer Discretionary",
+        "Consumer Staples"
+      ],
+      "country": "Russia",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "McDonald's"
+      },
+      "stock_change_pct": 0.4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Golden arches to go dark in Russia as McDonald's exits after 30 years",
+        "url": "https://www.reuters.com/business/mcdonalds-exit-russia-after-30-years-2022-05-16/",
+        "published_date": "2022-05-16",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The invasion of Ukraine sparked a humanitarian crisis that led major Western brands to pull out of Russia; Starbucks, Coca-Cola and PepsiCo suspended their operations in early March 2022, signalling that continuing to operate in Russia was increasingly untenable for consumer-facing multinationals.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "As more companies exited, reputational and operational risks for remaining brands rose. Stakeholders criticized McDonald's for its continued presence and shrinking Western supplier/partner networks increased cost and complexity.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "McDonald's concluded a temporary suspension was insufficient and announced a permanent exit on May 16, 2022; investors treated the move as a necessary but costly decision, and McDonald's stock fell about 0.4% that day.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Peer exits after the invasion increased reputational pressure and operational friction for consumer brands in Russia. McDonald's subsequent decision to sell its Russian business and recognize a large non-cash charge fits the timeline and was followed by a modest same-day stock decline.",
+  "counterfactual_analysis": "Had Starbucks, Coca-Cola and other peers not suspended operations in Russia, pressure on McDonald's would likely have been lower. McDonald's might have prolonged a temporary suspension instead of a full exit, avoiding the immediate $1.2-$1.4 billion write-off.",
+  "adversarial_confounders": [
+    {
+      "text": "Sanctions and regulatory restrictions could independently force a market exit.",
+      "impact": "Policy constraints may have been a parallel driver, making peer influence difficult to isolate."
+    },
+    {
+      "text": "War-related supply chain disruptions and rising operating costs in Russia.",
+      "impact": "Operational difficulties could contribute to the decision apart from reputational considerations."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "geoeconomic_realignment",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "channel_power",
+        "industry_barriers": "medium",
+        "commentary": "Global consumer brands depend heavily on how they are perceived by customers, employees and investors, who can exert real pressure when they see a market presence as unacceptable. Once peers like Starbucks and Coca-Cola suspended operations in Russia, McDonald's faced mounting stakeholder pressure that narrowed its strategic options and made a full exit increasingly likely."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Geopolitical conflict and sanctions",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Russia's invasion of Ukraine triggered sanctions, currency controls and legal uncertainty that sharply raised the political risk of operating there. Those geopolitical conditions undermined the long term viability of McDonald's Russian business, so the company ultimately chose to absorb a large non cash charge and withdraw rather than stay exposed."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "69 days",
+        "conditions_score": 0.8,
+        "commentary": "Each high profile Western company leaving Russia strengthened the perception that remaining carried reputational and regulatory dangers. That rising pressure created a reinforcing loop in which exits by peers made McDonald's own decision to sell its restaurants more acceptable and even expected, culminating in its permanent market exit."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

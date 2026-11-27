@@ -1,0 +1,119 @@
+{
+  "pair_id": "U00246",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D1",
+      "causal_salience": "primary",
+      "text": "On 31 March 2020, the UK's Prudential Regulation Authority (PRA), part of the Bank of England, ordered major lenders to cancel 2019 dividends and halt share buybacks to conserve capital amid the COVID-19 crisis.",
+      "date": "2020-03-31",
+      "entities": [
+        "Prudential Regulation Authority",
+        "Bank of England"
+      ],
+      "sectors": [
+        "Banking",
+        "Financial Services"
+      ],
+      "country": "United Kingdom",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "HSBC"
+      },
+      "source_info": {
+        "title": "UK banks scrap dividends after PRA order",
+        "url": "https://www.theguardian.com/business/2020/mar/31/uk-banks-agree-to-scrap-dividends-and-bonuses-due-to-recession-fears",
+        "published_date": "2020-03-31",
+        "publisher": "The Guardian"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "HSBC's Hong Kong-listed shares fell sharply after the dividend suspension.  On 1 April 2020, the stock dropped about 9.51% to HK$40.0 as investors reacted to the bank's decision to scrap dividends and buybacks.",
+      "date": "2020-04-01",
+      "entities": [
+        "HSBC Holdings Plc"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "Hong Kong",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "HSBC"
+      },
+      "stock_change_pct": 9.51,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "HSBC shares plunge after dividend cancellation",
+        "url": "https://www.malaymail.com/news/money---international/2020/04/01/hsbc-and-standard-chartered-shares-dive-after-dividends-scrapped/1852458",
+        "published_date": "2020-04-01",
+        "publisher": "Malay Mail"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "logic_operator": "cause_event",
+      "description": "Faced with the economic shock of COVID-19, the Bank of England's Prudential Regulation Authority instructed banks to conserve capital by cancelling dividends and buybacks. This regulatory intervention meant HSBC could no longer distribute profits to shareholders."
+    },
+    {
+      "step_id": 2,
+      "logic_operator": "THEN",
+      "description": "HSBC's board complied with the directive and publicly announced the suspension of its 2019 dividend and all planned repurchases.  The decision signalled that capital distributions would be withheld for an extended period while the pandemic's economic impact unfolded."
+    },
+    {
+      "step_id": 3,
+      "logic_operator": "RESULT",
+      "description": "The loss of expected dividend income and the perception of heightened risk prompted investors to sell. As trading opened on 1 April 2020, HSBC's shares in Hong Kong fell roughly 9.51 %, reflecting a steep negative reaction to the dividend cancellation."
+    }
+  ],
+  "rationale": "The PRA's order directly removed a significant cash return that shareholders had been expecting from HSBC.  In banking, dividend policy is a key signal of financial strength; suspending payouts during a crisis conveys conservatism and potential trouble.  Investors responded quickly by marking down the stock, consistent with a direct causal chain from the regulatory directive to the share-price decline.",
+  "counterfactual_analysis": "Had the PRA not intervened, HSBC would likely have paid its dividend and continued planned buybacks.  Shareholders would have retained confidence in the bank's earnings power, and the stock would not have suffered such a sharp one-day drop.  Without the dividend cancellation, other macro stresses alone would probably not have produced a 9.51 % decline in one session.",
+  "adversarial_confounders": [
+    {
+      "text": "Broad market turmoil caused by the early pandemic",
+      "impact": "Global equity markets were extremely volatile in late March 2020, so some portion of HSBC's share decline could be attributable to market-wide risk aversion rather than the dividend decision alone."
+    },
+    {
+      "text": "Other banks also scrapped dividends simultaneously",
+      "impact": "Peer banks' actions reinforced negative sentiment toward the sector, making it difficult to isolate HSBC's move from industry-wide factors that depressed share prices."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - regulatory intervention",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "The PRA's order to cancel bank dividends and buybacks illustrated how regulatory decisions can override management and shareholder preferences in a crisis. That intervention immediately altered the financial policy landscape for HSBC, forcing income focused investors to reassess the stock's appeal."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "1 days",
+        "conditions_score": 0.8,
+        "commentary": "By halting capital returns, regulators aimed to build bank resilience and reduce the risk of future systemic stress. The sudden loss of expected dividends triggered a sharp price drop, but over time the stronger capital position was intended to stabilize confidence as a balancing effect of prudential policy."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

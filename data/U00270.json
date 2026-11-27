@@ -1,0 +1,132 @@
+{
+  "pair_id": "U00270",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "In early March 2023, the sudden collapses of Silicon Valley Bank and Signature Bank rattled confidence in regional lenders.  Depositors withdrew funds from smaller institutions and rushed to open accounts at large banks, overwhelming call centers and prompting banks to accelerate their onboarding processes.",
+      "date": "2023-03-14",
+      "entities": [
+        "Silicon Valley Bank",
+        "Signature Bank"
+      ],
+      "sectors": [
+        "Banking"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.9,
+        "target": "Regional banks"
+      },
+      "source_info": {
+        "title": "JPMorgan, other big U.S. banks flooded with new clients post SVB collapse",
+        "url": "https://www.reuters.com/business/finance/jpmorgan-other-big-us-banks-flooded-with-new-clients-post-svb-collapse-ft-2023-03-14/",
+        "published_date": "2023-03-14",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On May 1, 2023, regulators seized the failing First Republic Bank and sold most of its assets and deposits to JPMorgan Chase in an FDIC-led transaction.  Following news of the deal and deposit inflows, JPMorgan shares rose 2.14%, making the bank the top gainer on the Dow Jones Industrial Average.",
+      "date": "2023-05-01",
+      "entities": [
+        "JPMorgan Chase & Co"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "JPMorgan Chase & Co"
+      },
+      "stock_change_pct": 2.14,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "First Republic collapse sparks regional bank shares sell-off",
+        "url": "https://www.reuters.com/business/finance/first-republic-collapse-sparks-sector-wide-regional-bank-shares-sell-off-2023-05-01/",
+        "published_date": "2023-05-01",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The collapses of Silicon Valley Bank and Signature Bank in March 2023 undermined trust in smaller lenders and exposed fragilities in uninsured deposits.  News reports described depositors inundating large banks with account-opening requests as they sought to safeguard their funds.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "As money moved from regional banks to giants such as JPMorgan, the country's largest lender accumulated roughly $50 billion in additional deposits by the end of March.  This inflow strengthened JPMorgan's liquidity position relative to other mid-sized institutions, giving it both capital and credibility in the midst of a confidence crisis.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "First Republic Bank, another mid-sized lender, suffered severe deposit outflows and ultimately entered FDIC receivership.  In an auction conducted by regulators, JPMorgan's financial strength-bolstered by the March deposit surge-allowed it to outbid rivals and agree to purchase most of First Republic's assets and assume its deposits.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Investors interpreted the acquisition as a sign that JPMorgan would gain market share and deposit franchise value from the crisis.  When trading opened on May 1, 2023, JPMorgan's stock rose about 2.14%, outperforming the broader banking sector and making it the biggest gainer on the Dow Jones index.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The collapse of SVB and Signature Bank catalyzed an unprecedented flight of deposits from regional banks to America's banking giants.  That influx of funds fortified JPMorgan's balance sheet at a time when First Republic Bank was teetering.  Because JPMorgan had both the liquidity and regulatory approval to acquire First Republic, the market rewarded the bank by bidding up its stock once the deal was announced.",
+  "counterfactual_analysis": "If depositors had not shifted their funds to large banks after the SVB and Signature failures, JPMorgan would have had less excess liquidity and might not have emerged as the winning bidder for First Republic.  Without the deposit surge and resulting deal, JPMorgan's shares would likely have moved in line with peers instead of rising over 2% on May 1, 2023.",
+  "adversarial_confounders": [
+    {
+      "text": "General optimism about the strength of the U.S. economy in early May",
+      "impact": "May partially explain the observed price move."
+    },
+    {
+      "text": "Expectations of future Federal Reserve interest-rate decisions",
+      "impact": "May partially explain the observed price move."
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "flight_to_safety_shifts_depositor_power",
+        "industry_barriers": "high",
+        "commentary": "The failures of regional lenders drove depositors to move money toward banks they viewed as safest, effectively increasing customers' bargaining power over funding terms. By absorbing First Republic and its deposits, JPMorgan consolidated more low cost funding and strengthened its competitive position relative to smaller rivals."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Regulatory - deposit insurance and bank resolution regime",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Deposit insurance rules and the government's willingness to broker a quick sale of First Republic showed how regulatory decisions shape the distribution of risk and franchise value in the banking system. In this case, policy choices steered assets and deposits toward an already dominant institution, improving JPMorgan's outlook."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "48 days",
+        "conditions_score": 0.8,
+        "commentary": "Each regional bank failure increased uncertainty and pushed more deposits toward the largest institutions, which then appeared even more secure in the eyes of customers and markets. The First Republic deal reinforced that positive feedback loop, with deposit inflows and state backed acquisitions supporting JPMorgan's share price as confidence returned."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

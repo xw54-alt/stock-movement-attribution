@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00203",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "REUTERS-2024-06-27-FCX",
+      "causal_salience": "primary",
+      "text": "Indonesia banned exports of all raw minerals from June 2023, aiming to drive downstream processing. However, the government granted Freeport Indonesia a temporary exemption to export copper concentrate through May 31, 2024, to enable completion of their new smelter in Gresik.",
+      "date": "2023-06-01",
+      "entities": [
+        "Government of Indonesia"
+      ],
+      "sectors": [
+        "Mining",
+        "Government Policy"
+      ],
+      "country": "Indonesia",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Freeport-McMoRan"
+      },
+      "source_info": {
+        "title": "Freeport Indonesia launches $3.7 bln Gresik copper smelter to meet renewables demand",
+        "url": "https://www.reuters.com/markets/commodities/freeport-indonesia-launches-37-bln-gresik-copper-smelter-2024-06-27/",
+        "published_date": "2024-06-27",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "After this regulatory shift, markets reacted negatively as investors adjusted forecasts to account for the higher capital requirements and execution risk tied to building domestic refining capacity.",
+      "date": "2024-06-28",
+      "entities": [
+        "Freeport-McMoRan"
+      ],
+      "sectors": [
+        "Financial Services",
+        "Materials & Chemicals"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "Freeport-McMoRan"
+      },
+      "stock_change_pct": 4,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Freeport may export up to 900,000 metric tons of Grasberg copper concentrate in second half",
+        "url": "https://www.reuters.com/markets/commodities/freeport-may-export-up-900000-metric-tons-grasberg-copper-concentrate-second-2024-05-07/",
+        "published_date": "2024-05-07",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Indonesia imposed a ban on raw mineral exports starting June 2023 to encourage domestic processing, but temporarily exempted Freeport until mid-2024 to finish smelter construction.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "This requirement forced Freeport to invest heavily in domestic smelting capacity, raising capital expenditure and execution risks.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As markets absorbed the financial implications of required investments and policy uncertainty, investor sentiment turned cautious, and Freeport's stock weakened-dropping approximately 4% in the days following the announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The export ban altered Freeport's core operating model and imposed substantial investment burdens. The market re-priced the company accordingly, reflecting increased financial and execution risks tied to policy-driven operational shifts.",
+  "counterfactual_analysis": "Absent the export ban or with a clearer, longer exemption, Freeport would have sustained its export revenue without pushing costly downstream investment decisions, likely avoiding the downward stock reaction.",
+  "adversarial_confounders": [
+    {
+      "text": "Global copper price fluctuations",
+      "impact": "Volatility in commodity prices also affects mining stock performance, but this company-specific policy shift represented a more direct and structural driver for investor concern."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "regulatory_change",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "regulatory_power",
+        "role_in_chain": "government_intervention",
+        "industry_barriers": "high",
+        "commentary": "Indonesia's export ban and selective exemptions highlighted the state's structural bargaining power over miners operating in its jurisdiction. Freeport's dependence on that resource base meant it had to accept higher domestic investment and tighter terms to preserve access."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - Resource nationalism and trade policy",
+        "pestel_impact_score": 0.9,
+        "conditions_score": 0.85,
+        "commentary": "Resource nationalism and shifting trade rules forced mining companies to redesign supply chains around in country processing. Those political decisions increased expected capital spending and regulatory risk for Freeport, justifying a more cautious valuation by global investors."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "393 days",
+        "conditions_score": 0.8,
+        "commentary": "The policy change triggered a balancing loop in which higher required investment and uncertainty reduced the appeal of new projects. As investors marked down the stock, Freeport faced a stronger incentive to prove smelter execution and negotiate more stable terms, gradually restoring confidence."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

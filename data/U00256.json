@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00256",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "IBM_D5",
+      "causal_salience": "primary",
+      "text": "Microsoft reported that its Azure cloud services grew 50% in the December 2020 quarter as the COVID-19 pandemic accelerated remote work and learning, driving a 5% jump in its shares.",
+      "date": "2021-01-26",
+      "entities": [
+        "Microsoft"
+      ],
+      "sectors": [
+        "Cloud Computing",
+        "Technology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Microsoft"
+      },
+      "source_info": {
+        "title": "Microsoft earnings rise as pandemic boosts cloud computing, Xbox sales",
+        "url": "https://www.reuters.com/business/microsoft-earnings-rise-pandemic-boosts-cloud-computing-xbox-sales-2021-01-26/",
+        "published_date": "2021-01-26",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "After investing in hybrid cloud, IBM reported improved revenue growth in January 2022 and its shares climbed roughly 7% following the earnings release.",
+      "date": "2022-01-24",
+      "entities": [
+        "IBM"
+      ],
+      "sectors": [
+        "Technology & Telecommunications",
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "IBM"
+      },
+      "stock_change_pct": 7.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "IBM marks strong start to new chapter as cloud revenue booms",
+        "url": "https://www.reuters.com/business/ibm-beats-revenue-expectations-cloud-consulting-strength-2022-01-24/",
+        "published_date": "2022-01-24",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "In January 2021, Microsoft announced that Azure cloud computing revenue surged 50% as the pandemic drove work and learning online. The strong results and 5% share jump underscored how quickly enterprises were adopting cloud technology.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Microsoft's blockbuster cloud performance signaled to the broader industry that investing in cloud infrastructure could yield substantial growth. IBM and other competitors took note, increasing their focus on hybrid cloud and related services.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "After emphasizing hybrid cloud and consulting, IBM reported improved revenue growth in January 2022. Investors viewed the performance as evidence that the company was tapping into the same cloud migration trend, and IBM's share price rose about 7% following its earnings announcement.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Microsoft's surge in cloud revenue demonstrated robust demand for cloud services. IBM's decision to double down on hybrid cloud positioned it to benefit from the same trend, and the market rewarded the strategy.",
+  "counterfactual_analysis": "Had Microsoft's cloud business been weak, IBM might have been less aggressive in its cloud pivot, potentially resulting in weaker performance and a smaller stock gain.",
+  "adversarial_confounders": [
+    {
+      "text": "General recovery of the technology sector in 2021 could also have lifted IBM shares.",
+      "impact": "Might explain part of the price rise independent of Microsoft's signal."
+    }
+  ],
+  "confidence_score": 0.5,
+  "reasoning_type": "macro_trend",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "benchmark_from_leading_cloud_competitor",
+        "industry_barriers": "medium",
+        "commentary": "Microsoft's blowout Azure results raised the benchmark for success in a cloud market where IBM was trying to regain relevance. Facing that rivalry forced IBM to sharpen its hybrid cloud and consulting proposition to show investors it could still grow."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - accelerated cloud adoption and remote work digitalization",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "The pandemic accelerated remote work and digitalisation, pushing organisations to move workloads to the cloud much faster than planned. This technology shift expanded the addressable market for IBM's hybrid cloud and consulting services, supporting its later earnings beat."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "363 days",
+        "conditions_score": 0.78,
+        "commentary": "As leading cloud providers reported strong growth, more customers shifted critical workloads into the cloud, reinforcing the trend. IBM's subsequent results benefited from that momentum, creating a reinforcing loop between industry adoption and its own strategic pivot."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

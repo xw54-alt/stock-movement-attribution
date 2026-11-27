@@ -1,0 +1,152 @@
+{
+  "pair_id": "U00217",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D2022-10-27-RTR-GILD-Veklury",
+      "causal_salience": "primary",
+      "text": "As COVID-19 hospitalizations fell in late 2022, demand for the hospital-administered antiviral Veklury (remdesivir) declined; Gilead's Q3 2022 results showed Veklury sales down 52% year over year, reflecting lower hospitalizations and the availability of vaccinations and alternative treatments.",
+      "date": "2022-10-27",
+      "entities": [
+        "Gilead Sciences",
+        "Veklury (remdesivir)"
+      ],
+      "sectors": [
+        "Pharmaceuticals",
+        "Healthcare"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "Gilead Sciences Inc."
+      },
+      "source_info": {
+        "published_date": "2022-10-27",
+        "publisher": "Reuters",
+        "title": "Gilead profit tops expectations despite lower COVID drug sales",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gilead-reports-lower-3rd-quarter-profit-covid-drug-sales-slow-2022-10-27/"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D2023-07-21-RTR-GILD-Magrolimab",
+      "causal_salience": "secondary",
+      "text": "Gilead scrapped the Phase 3 ENHANCE study of its antibody magrolimab in higher-risk MDS due to futility, signaling a major setback for a key oncology asset and raising concerns about the program's outlook.",
+      "date": "2023-07-21",
+      "entities": [
+        "Gilead Sciences",
+        "magrolimab"
+      ],
+      "sectors": [
+        "Pharmaceuticals",
+        "Oncology"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Gilead Sciences (magrolimab program)"
+      },
+      "source_info": {
+        "published_date": "2023-07-21",
+        "publisher": "Reuters",
+        "title": "Gilead scraps late-stage trial of blood cancer treatment",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gilead-stops-late-stage-trial-blood-cancer-treatment-2023-07-21/"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "Gilead issued 2024 guidance below Wall Street estimates (product sales $27.1-$27.5 billion; adjusted EPS $6.85-$7.25) and shares fell nearly 3% in after-hours trading on the day, reflecting pressure from declining COVID-related sales and pipeline setbacks.",
+      "date": "2024-02-06",
+      "entities": [
+        "Gilead Sciences"
+      ],
+      "sectors": [
+        "Healthcare & Life Sciences",
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Gilead Sciences"
+      },
+      "stock_change_pct": 3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "published_date": "2024-02-06",
+        "publisher": "Reuters",
+        "title": "Gilead quarterly revenue drops 4%, oral COVID drug fails trial",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/gilead-quarterly-revenue-drops-4-oral-covid-drug-fails-trial-2024-02-06/"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Lower COVID-19 hospitalizations in late 2022 reduced demand for hospital-based antivirals; Gilead reported sharply lower Veklury sales, signaling a structural headwind to that revenue stream.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "In mid-2023, Gilead discontinued a key late-stage magrolimab study in MDS on futility, diminishing expected oncology growth and elevating perceived pipeline risk.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "By February 2024, these pressures contributed to guidance that trailed consensus; investors marked down the stock, which fell 3% after hours on the guidance release and related updates.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Receding pandemic hospitalizations eroded Veklury demand while the magrolimab setback reduced near-term oncology growth prospects. Together, they constrained Gilead's 2024 outlook, prompting a negative share-price reaction.",
+  "counterfactual_analysis": "If hospital COVID admissions had remained elevated or magrolimab had succeeded in Phase 3, Gilead's 2024 outlook would likely have been stronger and the stock reaction less negative.",
+  "adversarial_confounders": [
+    {
+      "text": "Sector-wide biotech volatility or macro risk-off moves around the print.",
+      "impact": "Could amplify the share reaction but do not undermine the link between guidance shortfall, declining COVID revenue, and magrolimab setbacks."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "threat_of_substitutes",
+        "role_in_chain": "demand_erosion",
+        "industry_barriers": "high",
+        "commentary": "Vaccines, prior infections and other antivirals became effective substitutes for hospital based remdesivir. As more patients and doctors rely on these options, Gilead's leverage and volume for Veklury naturally decline."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Legal - FDA clinical holds and trial futility outcomes",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.72,
+        "commentary": "Regulatory outcomes on trials and clinical holds affected how quickly new drugs could offset shrinking COVID revenue. These legal and regulatory factors shaped the long term sales mix and pushed management toward cautious guidance."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "467 days",
+        "conditions_score": 0.78,
+        "commentary": "As the pandemic faded, falling Veklury use fed into lower cash flows and pressure on future investment plans. That balancing loop contributed to softer long term guidance and the negative share price reaction."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

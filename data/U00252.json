@@ -1,0 +1,124 @@
+{
+  "pair_id": "U00252",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "D0005",
+      "causal_salience": "primary",
+      "text": "Hyundai Motor India's $3.3 billion initial public offering drew orders for more than twice the shares on offer on 17 October 2024. The oversubscription was driven by strong demand from institutional investors even as retail buyers hesitated because the company sought a rich valuation of around $19 billion.",
+      "date": "2024-10-17",
+      "entities": [
+        "Hyundai Motor India"
+      ],
+      "sectors": [
+        "IPO",
+        "Automotive"
+      ],
+      "country": "India",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Hyundai Motor India"
+      },
+      "source_info": {
+        "title": "Hyundai Motor India IPO oversubscribed more than twice",
+        "url": "https://www.just-auto.com/news/hyundai-ipo-oversubscribed-as-institutional-investors-weigh-in/",
+        "published_date": "2024-10-18",
+        "publisher": "just-auto.com"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "When Hyundai Motor India shares began trading on 22 October 2024, they fell as much as 7.6% below the IPO price and closed at 1,819.60 rupees versus the offer price of 1,960. The weak debut reflected investor concerns that the issue was overpriced relative to the company's earnings and a broader slowdown in India's auto sector.",
+      "date": "2024-10-22",
+      "entities": [
+        "Hyundai"
+      ],
+      "sectors": [
+        "Financial Services",
+        "Consumer Discretionary"
+      ],
+      "country": "India",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.85,
+        "target": "Hyundai"
+      },
+      "stock_change_pct": 1.3,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Hyundai Motor India shares slump on trading debut",
+        "url": "https://theprint.in/india/hyundai-indias-shares-fall-1-3-in-debut-trade-after-record-3-3-billion-ipo/2322650/",
+        "published_date": "2024-10-22",
+        "publisher": "theprint.in"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Hyundai Motor India's blockbuster IPO was oversubscribed more than twice on 17 October 2024, with institutional investors clamouring for shares despite the company's ambitious US$19 billion valuation target. Retail investors were less enthusiastic, raising questions about whether the price was too steep for a business operating in a slowing auto market.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "The heavy subscription created lofty expectations for the stock while simultaneously fuelling debate that valuations had detached from fundamentals. Analysts cautioned that such exuberance could set the stage for disappointment once trading began, especially given macro headwinds facing India's automotive sector.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When the shares debuted on 22 October 2024 they tumbled 7.6 percent below the issue price, closing at 1,819.60 rupees. The negative market reaction underscored investors' belief that the IPO was over-valued, and the stock's fall reflected the adjustment from subscription euphoria to trading reality.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "An over-subscribed IPO at a high valuation can inflate expectations but also sets a high bar for performance. In Hyundai Motor India's case, the very enthusiasm that drove orders ultimately contributed to a weak debut when the stock faced scrutiny, making this a clear self-causal dynamic.",
+  "counterfactual_analysis": "If the IPO had been priced more conservatively or if subscription levels had been moderate, the debut might have been more stable. Absent the hype around oversubscription, investors could have approached the listing with measured expectations, reducing the risk of a sharp decline.",
+  "adversarial_confounders": [
+    {
+      "text": "A broader sell-off in Indian equities during the week of the listing due to inflation concerns.",
+      "impact": "Market-wide factors may also have pressured Hyundai Motor India's share price on debut."
+    }
+  ],
+  "confidence_score": 0.6,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_buyers",
+        "role_in_chain": "valuation_discipline",
+        "industry_barriers": "medium",
+        "commentary": "Overheated IPO demand gave early institutional investors scope to push back once trading began. When the stock opened below a rich offer price, those buyers quickly used that bargaining power to mark the shares down."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - high valuations and investor sentiment",
+        "pestel_impact_score": 0.78,
+        "conditions_score": 0.72,
+        "commentary": "Loose liquidity and bullish sentiment had allowed richly priced deals to come to market, but macro worries were already building. In that environment, any sign of overvaluation translated into a sharp swing in sentiment against the debut."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "5 days",
+        "conditions_score": 0.72,
+        "commentary": "Oversubscription headlines created a short-lived positive feedback loop that raised expectations for the listing. Once the shares broke issue price, disappointment fed further selling and turned that loop into a steep first-day slump."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

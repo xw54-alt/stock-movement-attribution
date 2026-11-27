@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00244",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "C10006",
+      "causal_salience": "primary",
+      "text": "U.S. President Donald Trump announced plans to double tariffs on Chinese steel and aluminum to 50%, aiming to protect domestic producers but raising raw-material costs.",
+      "date": "2025-05-30",
+      "entities": [
+        "U.S. Government",
+        "Donald Trump"
+      ],
+      "sectors": [
+        "Trade Policy"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.75,
+        "target": "U.S. Government"
+      },
+      "source_info": {
+        "title": "Trump doubles tariffs on Chinese steel and aluminum",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/06/adjusting-imports-of-aluminum-and-steel-into-the-united-states/",
+        "published_date": "2025-06-03",
+        "publisher": "whitehouse.gov"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "Honeywell raised its 2025 profit forecast as planemakers ramped production and demand for its avionics and flight control systems grew. However, the company warned that higher tariffs on imported materials would increase costs, and its shares fell about 4.7%.",
+      "date": "2025-07-24",
+      "entities": [
+        "Honeywell"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.8,
+        "target": "Honeywell"
+      },
+      "stock_change_pct": 4.7,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Honeywell raises 2025 forecasts but flags tariff pressures",
+        "url": "https://finviz.com/news/114505/why-honeywell-hon-shares-are-plunging-today",
+        "published_date": "2025-07-24",
+        "publisher": "finviz.com"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "The U.S. administration's decision to double tariffs on Chinese steel and aluminum increased input costs across industrial supply chains and heightened fears of higher manufacturing expenses.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Honeywell, which relies on specialized metals for its aerospace products, anticipated that the tariff hike would squeeze margins even as demand grew with Boeing and Airbus increasing production.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "When Honeywell raised its 2025 profit forecast, it simultaneously warned about tariff-related cost pressures; investors focused on the risks and the stock fell by roughly 4.7%.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The sudden increase in tariffs raised concerns about higher input costs for manufacturers like Honeywell. Even though demand was strong, the anticipated margin pressure outweighed positive news and caused the stock to decline.",
+  "counterfactual_analysis": "Without the tariff hike, Honeywell's cost outlook would have been more favourable, and investors might have focused on the demand recovery, potentially leading to a stock increase rather than a decline.",
+  "adversarial_confounders": [
+    {
+      "text": "General macroeconomic uncertainties and interest rate hikes",
+      "impact": "Could have dampened investor enthusiasm regardless of tariff news"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "policy_ripple",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Political - trade policy",
+        "pestel_impact_score": 0.85,
+        "conditions_score": 0.8,
+        "commentary": "Plans to double tariffs on Chinese steel and aluminum showed how abruptly trade policy can change input costs for industrial companies. That political risk meant Honeywell had to factor higher raw material prices into its outlook even as demand from planemakers remained strong."
+      }
+    },
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "bargaining_power_of_suppliers",
+        "role_in_chain": "cost pressure",
+        "industry_barriers": "medium",
+        "commentary": "Tariff driven cost increases effectively strengthened the bargaining power of upstream metal producers who could pass through higher prices. Downstream manufacturers like Honeywell faced squeezed margins unless they could push those costs onto customers or find alternative suppliers."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "55 days",
+        "conditions_score": 0.75,
+        "commentary": "Rising order volumes from planemakers initially supported Honeywell's profit outlook, but escalating material costs acted as a counterweight on margins. Over time, this push and pull created a balancing loop where higher revenues were partially offset by higher input prices, which the share price decline began to discount."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

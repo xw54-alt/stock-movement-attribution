@@ -1,0 +1,114 @@
+{
+  "pair_id": "U00218",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "text": "On April 15, 2024, Goldman Sachs reported first-quarter results that exceeded analysts' expectations. The bank posted earnings of roughly $8.79 per share on revenue around $14.21 billion, with trading and debt-underwriting businesses offsetting softness in investment banking. Net revenue of about $12.22 billion and net earnings of roughly $3.2 billion demonstrated the success of its strategy to pivot back to core institutional clients.",
+      "date": "2024-04-15",
+      "entities": [
+        "Goldman Sachs"
+      ],
+      "sectors": [
+        "investment banking",
+        "trading"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.82,
+        "target": "Goldman Sachs"
+      },
+      "source_info": {
+        "title": "Goldman Sachs profit beats as investment banking fuels highest earnings since 2021",
+        "url": "https://www.reuters.com/business/finance/goldman-sachs-profit-jumps-28-investment-banking-strength-2024-04-15/",
+        "published_date": "2024-04-15",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 9,
+      "causal_salience": "primary",
+      "source_doc_id": null
+    }
+  ],
+  "effects": [
+    {
+      "text": "Following the strong first-quarter results, Goldman Sachs' share price rallied nearly 5% to about $408 in early trading on April 16, 2024. Investors interpreted the earnings beat as evidence that the firm's strategy was working, prompting a swift run-up in the stock.",
+      "date": "2024-04-16",
+      "entities": [
+        "Goldman Sachs"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 9,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.86,
+        "target": "Goldman Sachs"
+      },
+      "source_info": {
+        "title": "Goldman's plan B unexpectedly upgraded to a B-plus",
+        "url": "https://www.reuters.com/breakingviews/goldmans-plan-b-unexpectedly-upgraded-b-plus-2024-04-15/",
+        "published_date": "2024-04-16",
+        "publisher": "Reuters"
+      },
+      "stock_change_direction": "up",
+      "stock_change_pct": 4.9
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Goldman Sachs announced first-quarter 2024 earnings on April 15. The bank's core institutional businesses-particularly trading and debt-underwriting-outperformed expectations, generating revenue and net income well above analyst forecasts. Management emphasised that its strategic retreat from consumer lending allowed it to focus resources on these profitable segments, delivering a strong set of numbers.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Analysts and investors interpreted the results as a sign that Goldman's strategic pivot was paying off. Commentators noted that trading revenues and fixed-income underwriting gains surpassed those of many peers, easing concerns about weak investment banking. This improved investor confidence and increased demand for the company's shares.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "As a result of this optimism, Goldman Sachs' stock price surged almost 5% to roughly $408 the next day. The sizable percentage gain underscores how the earnings beat translated directly into a higher market valuation.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The effect article notes that Goldman's shares jumped nearly 5 % immediately after the strong quarterly results. The rally can be directly attributed to the earnings beat, which reassured investors that the firm's strategic shift back to its core trading and underwriting businesses was succeeding.",
+  "counterfactual_analysis": "Had Goldman's trading and underwriting revenues not outperformed expectations, investor sentiment would likely have remained cautious. In that case, the share price might have been flat or even declined rather than surging nearly 5 % following the results.",
+  "adversarial_confounders": [
+    {
+      "text": "Broad market rally",
+      "impact": "U.S. stock indices also traded higher around mid-April 2024, which could have independently contributed to Goldman's share gains. However, the magnitude of Goldman's jump exceeded the broader market, suggesting the earnings beat was the primary driver."
+    }
+  ],
+  "confidence_score": 0.95,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Economic - Capital-markets reopening",
+        "pestel_impact_score": 0.82,
+        "conditions_score": 0.7,
+        "commentary": "Improved capital markets conditions and steady trading volumes created a friendlier backdrop for Goldman Sachs. This economic environment amplified the upside from its refocus on core institutional clients in the first quarter."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "90 days",
+        "conditions_score": 0.76,
+        "commentary": "A strong earnings beat boosts management credibility and investor confidence, encouraging more client activity. That higher activity can reinforce revenue and support the stock over subsequent quarters."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

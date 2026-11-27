@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00294",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D2007",
+      "causal_salience": "primary",
+      "text": "Widespread COVID-19 vaccination campaigns and the reopening of economies encouraged more people to travel for leisure in late 2021. As restrictions eased, occupancy rates at hotels recovered from pandemic lows, signaling a broad rebound in consumer mobility.",
+      "date": "2021-11-02",
+      "entities": [
+        "Global vaccination campaigns"
+      ],
+      "sectors": [
+        "Public Health",
+        "Hospitality"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.75,
+        "target": "Travel demand"
+      },
+      "source_info": {
+        "title": "Marriott rides leisure travel demand to offset China drag, shares at record",
+        "url": "https://www.reuters.com/business/retail-consumer/marriott-profit-doubles-leisure-travel-boosts-demand-2021-11-03/",
+        "published_date": "2021-11-03",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "As leisure travel rebounded, Marriott reported third-quarter revenue and profit that exceeded expectations and projected continued growth in demand. Investors responded by pushing the stock up about 4 percent to a record high, anticipating that sustained leisure demand would support future earnings.",
+      "date": "2021-11-03",
+      "entities": [
+        "Marriott International"
+      ],
+      "sectors": [
+        "Consumer Discretionary"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "positive",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.8,
+        "target": "Marriott International"
+      },
+      "stock_change_pct": 4.0,
+      "stock_change_direction": "up",
+      "source_info": {
+        "title": "Marriott rides leisure travel demand to offset China drag, shares at record",
+        "url": "https://www.reuters.com/business/retail-consumer/marriott-profit-doubles-leisure-travel-boosts-demand-2021-11-03/",
+        "published_date": "2021-11-03",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Global vaccination programs enabled governments to ease travel restrictions and reopen economies. With the threat of severe illness declining, consumers regained confidence in traveling for leisure, leading to a surge in hotel bookings and occupancy.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Marriott's third-quarter results reflected this resurgence: revenue and profit improved sharply from pandemic lows, and occupancy rates in key regions rose. Management forecast that leisure demand could continue growing into 2022 despite lingering regional restrictions.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Investors viewed the strong financial performance as evidence of a durable recovery. Marriott's stock price rose about 4 percent on the earnings release as market participants anticipated further gains from sustained leisure travel.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The key driver of Marriott's stock increase was the broad recovery in leisure travel made possible by effective vaccines and the reopening of economies. Improved occupancy rates and better-than-expected earnings signaled that the company was on a strong rebound trajectory, prompting investors to buy shares.",
+  "counterfactual_analysis": "If vaccines had been less effective or if restrictions had remained in place, leisure travel would not have rebounded as strongly. Marriott's earnings would have been weaker, and the stock likely would not have reached a record high.",
+  "adversarial_confounders": [
+    {
+      "text": "The general stock market was trending upward during the same period.",
+      "impact": "A broad risk-on rally could account for part of the share price increase and may overstate the effect of travel demand alone."
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "demand_recovery",
+        "industry_barriers": "medium",
+        "commentary": "As leisure travel returned after the pandemic, global hotel chains fought aggressively to capture returning guests through price, loyalty benefits and marketing. Marriott's ability to convert the broad demand rebound into stronger than expected revenue and profit showed it was competing effectively for nights, which investors rewarded with a higher share price."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Social - Increased consumer confidence from vaccination",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.75,
+        "commentary": "Mass vaccination campaigns and the easing of restrictions made consumers feel safer about flying and staying in hotels again. That shift in social attitudes unlocked pent up demand for leisure trips, creating a supportive environment for Marriott's earnings beat and upbeat outlook."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "1 days",
+        "conditions_score": 0.75,
+        "commentary": "As more people travelled and had positive experiences, word of mouth and social media posts encouraged others to resume trips, further lifting occupancy. Higher occupancy improved profitability and funded service upgrades, which in turn reinforced travellers' willingness to book with Marriott."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

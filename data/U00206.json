@@ -1,0 +1,156 @@
+{
+  "pair_id": "U00206",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D2023-09-12-RTR-RTX",
+      "causal_salience": "primary",
+      "text": "RTX's Pratt & Whitney unit discovered a powder-metal defect in its geared turbofan engines, requiring inspections of hundreds of engines and forcing airlines and suppliers to brace for capacity shortages. The defect rippled across the global aerospace industry, deepening supply-chain problems and depressing RTX's shares.",
+      "date": "2023-09-12",
+      "entities": [
+        "RTX",
+        "Pratt & Whitney"
+      ],
+      "sectors": [
+        "Aerospace",
+        "Engine manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "RTX"
+      },
+      "source_info": {
+        "published_date": "2023-09-12",
+        "publisher": "Reuters",
+        "title": "RTX jet engine problem ripples across global aerospace industry",
+        "url": "https://www.reuters.com/business/aerospace-defense/airlines-suppliers-warn-hit-rtx-engine-snag-2023-09-12/"
+      },
+      "causal_strength_score": 7
+    },
+    {
+      "source_doc_id": "D2024-07-23-RTR-LMT",
+      "causal_salience": "secondary",
+      "text": "Lockheed Martin raised its 2024 sales target after U.S. regulators resumed acceptance of F-35 jets and demand for missiles remained strong. The company resumed F-35 deliveries and said annual sales would outpace earlier forecasts, sending its shares up around 3.2%.",
+      "date": "2024-07-23",
+      "entities": [
+        "Lockheed Martin"
+      ],
+      "sectors": [
+        "Defense",
+        "Aerospace"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "positive",
+        "intensity": 0.7,
+        "target": "Lockheed Martin"
+      },
+      "source_info": {
+        "published_date": "2024-07-23",
+        "publisher": "Reuters",
+        "title": "Lockheed Martin lifts 2024 sales target on fighter jet, missile demand",
+        "url": "https://www.reuters.com/business/aerospace-defense/lockheed-martin-lifts-2024-sales-target-fighter-jet-missile-demand-2024-07-23/"
+      },
+      "causal_strength_score": 4
+    }
+  ],
+  "effects": [
+    {
+      "text": "General Dynamics' Q2 2024 results showed revenue above Wall Street estimates but profits missed expectations as Gulfstream delivered only 11 G700 jets versus 15 originally planned. Persistent supply-chain constraints led to lower business-jet deliveries, and shares fell about 4.6% after the report.",
+      "date": "2024-07-24",
+      "entities": [
+        "General Dynamics",
+        "Gulfstream G700"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.8,
+        "target": "General Dynamics"
+      },
+      "stock_change_pct": 4.6,
+      "stock_change_direction": "down",
+      "source_info": {
+        "published_date": "2024-07-24",
+        "publisher": "Reuters",
+        "title": "Lower G700 business jet deliveries hit General Dynamics results, shares fall",
+        "url": "https://www.reuters.com/business/aerospace-defense/general-dynamics-quartely-revenue-rises-higher-defense-demand-2024-07-24/"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "A powder-metal defect discovered in Pratt & Whitney's geared turbofan engines forced widespread inspections and grounded many engines, tightening propulsion supply across the industry. Engine availability became a bottleneck for aircraft and business-jet programs reliant on these systems.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Lockheed Martin's raised sales forecast and resumption of F-35 deliveries signaled that defense primes were overcoming production setbacks. The upbeat outlook heightened expectations that peers, including Gulfstream, would also meet delivery goals.",
+      "logic_operator": "AND"
+    },
+    {
+      "step_id": 3,
+      "description": "Gulfstream relied on suppliers linked to Pratt & Whitney engines. The defect constrained supply, while competitor optimism raised expectations. This mismatch pressured General Dynamics to deliver more jets than feasible.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "When General Dynamics reported Q2 2024 results, only 11 G700 jets were delivered versus 15 planned due to engine shortages. With investors primed by Lockheed's strong outlook, the shortfall led to a 4.6% share-price decline.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "The engine defect restricted Gulfstream's access to powerplants, while Lockheed's strong forecast set higher expectations. This combination of constrained supply and elevated expectations caused investors to punish General Dynamics for missing targets.",
+  "counterfactual_analysis": "If Pratt & Whitney's engines had not suffered defects and Lockheed had not lifted expectations, Gulfstream might have met delivery targets or faced less investor disappointment, reducing the share-price decline.",
+  "adversarial_confounders": [
+    {
+      "text": "Market-wide volatility or macroeconomic uncertainty could also have pressured shares independently of the supply and competitor factors.",
+      "impact": "Moderate negative influence"
+    }
+  ],
+  "confidence_score": 0.8,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "Bargaining Power of Suppliers",
+        "role_in_chain": "Supplier",
+        "industry_barriers": "high",
+        "commentary": "The powder metal defect at Pratt & Whitney underscored how concentrated power is in a handful of engine suppliers serving both airlines and business jet makers. General Dynamics' reliance on those engines for Gulfstream meant it could not easily pivot to alternatives when problems emerged, reducing its effective bargaining leverage."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Engine manufacturing defects",
+        "pestel_impact_score": 0.8,
+        "conditions_score": 0.8,
+        "commentary": "Post pandemic air travel recovery and strict safety oversight kept pressure on engine makers to prioritize inspections and in service fleets. Within that macro and regulatory setting, inspection campaigns and certification work soaked up capacity, prolonging the supply chain strain that ultimately limited Gulfstream deliveries."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "316 days",
+        "conditions_score": 0.8,
+        "commentary": "Engine inspections and production disruptions translated directly into fewer G700s rolling off the line, which pulled down near term profit even as headline demand stayed strong. The resulting 4.6 percent share price drop reflected a balancing loop where persistent supply constraints forced the market to temper its expectations for margin expansion."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

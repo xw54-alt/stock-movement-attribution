@@ -1,0 +1,155 @@
+{
+  "pair_id": "U00287",
+  "causal_structure_type": "multi_cause_single_effect",
+  "is_self_causal": true,
+  "causes": [
+    {
+      "source_doc_id": "DLY001",
+      "causal_salience": "primary",
+      "text": "Lyft said extreme wildfires and winter storms in the western United States disrupted ride-hailing demand, and forecast first-quarter 2025 gross bookings of $4.05-$4.20 billion, below Wall Street estimates.",
+      "date": "2025-02-11",
+      "entities": [
+        "Extreme weather",
+        "Wildfires"
+      ],
+      "sectors": [
+        "Ride-hailing",
+        "Transportation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "Lyft"
+      },
+      "source_info": {
+        "title": "Lyft's first-quarter bookings forecast pressured by fierce competition and wildfires",
+        "url": "https://www.reuters.com/business/autos-transportation/lyfts-first-quarter-bookings-forecast-pressured-by-fierce-competition-with-uber-2025-02-11/",
+        "published_date": "2025-02-11",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    },
+    {
+      "source_doc_id": "DLY002",
+      "causal_salience": "secondary",
+      "text": "Lyft warned that lower pricing trends from late 2024 were persisting as it matched Uber's aggressive pricing, signalling competitive pressure that could squeeze margins.",
+      "date": "2025-02-12",
+      "entities": [
+        "Uber Technologies Inc"
+      ],
+      "sectors": [
+        "Ride-hailing",
+        "Transportation"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.65,
+        "target": "Lyft"
+      },
+      "source_info": {
+        "title": "Lyft shares sink as tough competition takes a toll on bookings forecast",
+        "url": "https://www.reuters.com/business/autos-transportation/lyft-shares-sink-tough-competition-takes-toll-bookings-forecast-2025-02-12/",
+        "published_date": "2025-02-12",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 7
+    }
+  ],
+  "effects": [
+    {
+      "text": "On Feb 12, 2025, investors reacted to Lyft's weaker bookings outlook and ongoing price competition; the shares fell roughly 9-10% during Wednesday trade as brokers cut price targets.",
+      "date": "2025-02-12",
+      "entities": [
+        "Lyft Inc"
+      ],
+      "sectors": [
+        "Transportation & Logistics"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 8,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.86,
+        "target": "Lyft Inc"
+      },
+      "stock_change_pct": 9.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Lyft shares sink as tough competition takes a toll on bookings forecast",
+        "url": "https://www.reuters.com/business/autos-transportation/lyft-shares-sink-tough-competition-takes-toll-bookings-forecast-2025-02-12/",
+        "published_date": "2025-02-12",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "Extreme weather curtailed ride demand; Lyft guided Q1 2025 gross bookings to $4.05-$4.20 billion, below estimates (read-through: weaker near-term volumes).",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Competitive dynamics persisted: matching Uber's pricing signalled margin pressure and sustained rivalry.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "Brokers trimmed targets; sentiment deteriorated.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "Feb 12, 2025: Lyft shares fell about 9-10% (premarket lows deeper), reflecting weaker outlook plus pricing pressure.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Environmental disruptions and persistent price competition jointly weakened the bookings and margin outlook, prompting a negative re-rating.",
+  "counterfactual_analysis": "Absent extreme weather and aggressive price matching, bookings would likely have been closer to estimates and the share reaction milder.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro market volatility in early 2025",
+      "impact": "A technology-led risk-off move could have dragged Lyft independently of its fundamentals."
+    }
+  ],
+  "confidence_score": 0.85,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "competitive_pressure",
+        "industry_barriers": "medium",
+        "commentary": "Ride-hailing is a classic duopoly with aggressive price matching and rich incentives, leaving little room for error on volumes. When Lyft has to match Uber's pricing into weather-weakened demand, rivalry directly squeezes its ability to earn an adequate return."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Environmental - extreme weather events",
+        "pestel_impact_score": 0.78,
+        "conditions_score": 0.7,
+        "commentary": "Wildfires and severe storms reduce mobility, disrupt nightlife and tourism, and can keep drivers off the road. These environmental shocks make near-term bookings more volatile and amplify the downside of any competitive missteps in pricing or incentives."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "1 days",
+        "conditions_score": 0.72,
+        "commentary": "Extreme weather depresses ride volumes, leading to weaker guidance and a sharp share-price reaction. The resulting pressure to regain growth often pushes Lyft toward more promotions or investment, which can further strain margins if demand does not snap back quickly."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

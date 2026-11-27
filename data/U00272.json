@@ -1,0 +1,137 @@
+{
+  "pair_id": "U00272",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": null,
+      "causal_salience": "primary",
+      "text": "On August 21, 2023, credit-rating agency S&P Global downgraded the long-term ratings of several regional U.S. banks - including Associated Banc-Corp, Valley National Bancorp, UMB Financial, Comerica Bank and KeyCorp - citing funding pressures and high exposure to commercial real estate. The downgrades were expected to raise borrowing costs for affected lenders and highlighted persistent balance-sheet risks across the industry.",
+      "date": "2023-08-21",
+      "entities": [
+        "S&P Global Ratings",
+        "Associated Banc-Corp",
+        "Valley National Bancorp",
+        "UMB Financial Corp",
+        "Comerica Bank",
+        "KeyCorp"
+      ],
+      "sectors": [
+        "Banking",
+        "Credit Rating"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.82,
+        "target": "Regional banks"
+      },
+      "source_info": {
+        "title": "Shares of US banks drop after S&P downgrades some ratings",
+        "url": "https://www.reuters.com/business/finance/sp-downgrades-multiple-us-banks-citing-tough-operating-conditions-2023-08-22/",
+        "published_date": "2023-08-22",
+        "publisher": "Reuters"
+      },
+      "causal_strength_score": 8
+    }
+  ],
+  "effects": [
+    {
+      "text": "On August 22, 2023, investors sold shares of large U.S. banks even though they were not directly downgraded. JPMorgan Chase & Co and Bank of America both fell almost 2%, while Citigroup, Wells Fargo, Goldman Sachs and Morgan Stanley each lost about 1%, as the ratings action heightened worries about sector-wide funding pressures.",
+      "date": "2023-08-22",
+      "entities": [
+        "JPMorgan Chase & Co"
+      ],
+      "sectors": [
+        "Financial Services"
+      ],
+      "country": "United States",
+      "effect_type": "stock_movement",
+      "impact_direction": "negative",
+      "impact_strength_score": 7,
+      "direct_or_indirect": "indirect",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.78,
+        "target": "JPMorgan Chase & Co"
+      },
+      "stock_change_pct": 2.0,
+      "stock_change_direction": "down",
+      "source_info": {
+        "title": "Shares of US banks drop after S&P downgrades some ratings",
+        "url": "https://www.reuters.com/business/finance/sp-downgrades-multiple-us-banks-citing-tough-operating-conditions-2023-08-22/",
+        "published_date": "2023-08-22",
+        "publisher": "Reuters"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "S&P Global identified funding risks and exposure to commercial real estate as vulnerabilities for certain regional lenders and downgraded multiple mid-sized banks.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Downgrades increase capital costs and signal broader solvency concerns; investors inferred profits could be squeezed by rising funding costs and weak credit quality even at banks not explicitly downgraded.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "The day after the announcement, traders reduced exposure to the sector amid renewed scrutiny and fears that stress could spread beyond regional banks.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 4,
+      "description": "JPMorgan shares fell nearly 2% as part of the sector-wide sell-off, reflecting spillovers from the negative ratings signal.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "Ratings agencies shape perceptions of bank stability. S&P's downgrades signaled deteriorating credit conditions and likely higher funding costs, prompting a broad sell-off that extended to large banks such as JPMorgan.",
+  "counterfactual_analysis": "Absent the downgrades - or had S&P affirmed the sector's outlook - investors would have had less reason to de-risk; JPMorgan's shares might have remained stable instead of declining on August 22, 2023.",
+  "adversarial_confounders": [
+    {
+      "text": "Concerns about Federal Reserve interest-rate policy",
+      "impact": "May partially explain the observed price move."
+    },
+    {
+      "text": "Ongoing geopolitical tensions that can drive risk-off sentiment",
+      "impact": "May partially explain the observed price move."
+    }
+  ],
+  "confidence_score": 0.7,
+  "reasoning_type": "operational_disruption",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "industry_rivalry",
+        "role_in_chain": "risk_signal_and_funding_competition",
+        "industry_barriers": "high",
+        "commentary": "US banks operate in a consolidated yet fiercely competitive industry where access to affordable funding is essential for defending market share. S&P's downgrades raised funding cost expectations for several lenders and signalled tougher operating conditions across the sector, intensifying rivalry for stable deposits and contributing to the drop in JPMorgan's stock even though it remained one of the strongest players."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Regulatory - rating actions and prudential standards",
+        "pestel_impact_score": 0.84,
+        "conditions_score": 0.8,
+        "commentary": "Bank credit ratings interact with post crisis capital rules and investor mandates, so formal downgrades can quickly restrict which lenders large institutions are willing to fund. By cutting several regionals and citing a difficult environment, S&P amplified macro concerns about US banking health and helped trigger a broad risk off move that pulled JPMorgan shares lower."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "reinforcing",
+        "time_delay": "1 days",
+        "conditions_score": 0.8,
+        "commentary": "Negative rating actions prompt risk managers to reduce exposure, which pressures bank share prices and can further erode confidence in the sector. In this episode the downgrade headlines led to accelerated selling of financials, weaker stock prices reinforced worries about the outlook for profits and funding, and the feedback loop translated into an outsized one day decline for JPMorgan."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}

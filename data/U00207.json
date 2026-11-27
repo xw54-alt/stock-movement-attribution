@@ -1,0 +1,123 @@
+{
+  "pair_id": "U00207",
+  "causal_structure_type": "single_cause_single_effect",
+  "is_self_causal": false,
+  "causes": [
+    {
+      "source_doc_id": "D2024-04-23-RTR-GE",
+      "causal_salience": "primary",
+      "text": "GE Aerospace raised its full-year profit forecast but cautioned that supply-chain constraints persisted and it was cutting its 2024 estimate for LEAP engine output. Executives said demand was strong but tight engine supply would limit production and deliveries would grow only modestly.",
+      "date": "2024-04-23",
+      "entities": [
+        "GE Aerospace"
+      ],
+      "sectors": [
+        "Aerospace",
+        "Engine manufacturing"
+      ],
+      "country": "United States",
+      "sentiment": {
+        "direction": "mixed",
+        "intensity": 0.6,
+        "target": "GE Aerospace"
+      },
+      "source_info": {
+        "published_date": "2024-04-23",
+        "publisher": "Reuters",
+        "title": "GE Aerospace lifts 2024 profit forecast amid supply-chain challenges",
+        "url": "https://www.reuters.com/business/aerospace-defense/ge-aerospace-lifts-2024-profit-forecast-strong-sales-engine-parts-services-2024-04-23/"
+      },
+      "causal_strength_score": 5
+    }
+  ],
+  "effects": [
+    {
+      "text": "General Dynamics reported a more than 10% rise in third-quarter 2024 revenue on defense demand, but profits were pressured as Gulfstream delivered fewer G700 business jets due to engines arriving later than hoped amid an elongated certification timeline. Guidance was revised down and shares were flat to slightly negative.",
+      "date": "2024-10-23",
+      "entities": [
+        "General Dynamics"
+      ],
+      "sectors": [
+        "Industrials & Manufacturing"
+      ],
+      "country": "United States",
+      "effect_type": "earnings_surprise",
+      "impact_direction": "negative",
+      "impact_strength_score": 4,
+      "direct_or_indirect": "direct",
+      "sentiment": {
+        "direction": "negative",
+        "intensity": 0.6,
+        "target": "General Dynamics"
+      },
+      "stock_change_pct": 8.76,
+      "stock_change_direction": "down",
+      "source_info": {
+        "published_date": "2024-10-23",
+        "publisher": "Reuters",
+        "title": "General Dynamics' revenue rise on defense, but profits hit by bizjet deliveries",
+        "url": "https://www.reuters.com/business/aerospace-defense/general-dynamics-revenue-rises-defense-demand-2024-10-23/"
+      }
+    }
+  ],
+  "causal_reasoning_chain": [
+    {
+      "step_id": 1,
+      "description": "GE Aerospace's update highlighted persistent industry-wide engine and component constraints and lowered its LEAP output estimate, signaling that tight propulsion-related supply would remain a bottleneck through 2024.",
+      "logic_operator": "cause_event"
+    },
+    {
+      "step_id": 2,
+      "description": "Such constraints, together with elongated certification timelines for new platforms, limited the pace of engine arrivals to airframers and business-jet programs, increasing the risk of delivery shortfalls.",
+      "logic_operator": "THEN"
+    },
+    {
+      "step_id": 3,
+      "description": "By Q3 2024, General Dynamics reported fewer-than-expected G700 deliveries due to engines arriving later than hoped amid certification delays; profits were squeezed and guidance was cut, with a muted share reaction.",
+      "logic_operator": "RESULT"
+    }
+  ],
+  "rationale": "An industry environment of constrained engine supply and certification-driven delays-flagged earlier by GE-contributed to Gulfstream's lower G700 deliveries, weighing on General Dynamics' profitability.",
+  "counterfactual_analysis": "If engine supply and certification timelines had normalized sooner, Gulfstream likely would have delivered more G700s, supporting stronger aerospace margins and a better earnings outcome for General Dynamics.",
+  "adversarial_confounders": [
+    {
+      "text": "Macro volatility or separate quality issues at specific suppliers could also depress deliveries and margins independent of GE's outlook.",
+      "impact": "moderate negative influence"
+    }
+  ],
+  "confidence_score": 0.75,
+  "reasoning_type": "supply_shock",
+  "business_models": [
+    {
+      "model": "PorterFiveForces",
+      "details": {
+        "force": "Bargaining Power of Suppliers",
+        "role_in_chain": "Supplier",
+        "industry_barriers": "high",
+        "commentary": "Tight LEAP engine availability reminded airframers and business jet producers how dependent they remain on a small oligopoly of engine suppliers. General Dynamics had little choice but to accept slower deliveries from GE Aerospace, exposing the limits of its bargaining power when key components are scarce."
+      }
+    },
+    {
+      "model": "PESTEL",
+      "details": {
+        "pestel_factor": "Technological - Engine manufacturing and certification constraints",
+        "pestel_impact_score": 0.75,
+        "conditions_score": 0.75,
+        "commentary": "Strong travel demand and a still fragile aerospace supply chain created an environment where even small certification or production bottlenecks had outsized effects. Against that backdrop, GE's caution on engine output translated into slower business jet deliveries for Gulfstream, constraining how quickly General Dynamics could convert its backlog into earnings."
+      }
+    },
+    {
+      "model": "SystemDynamics",
+      "details": {
+        "feedback_loop_type": "balancing",
+        "time_delay": "183 days",
+        "conditions_score": 0.75,
+        "commentary": "Repeated delays in engine arrivals pushed G700 deliveries to the right, prompting a downward revision to guidance despite robust underlying demand. That adjustment worked as a balancing mechanism, resetting expectations so that future progress on the supply chain would show through as upside rather than disappointment, which is why the stock reaction was only slightly negative."
+      }
+    }
+  ],
+  "license": {
+    "name": "Creative Commons Attribution-NonCommercial 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  }
+}
